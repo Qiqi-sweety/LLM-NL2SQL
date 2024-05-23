@@ -1,0 +1,12 @@
+# spider测试
+cd others_sql/evaluation/
+python3 evaluation_spider.py --gold=../../spider/dev_gold.sql --pred=../../spider/dev_pred.sql --db=../../spider/database/ --table=../../spider/tables.json
+
+# bird测试
+cd /home/zch/spider-qwen/bird-dev/dev
+python3 /home/zch/spider-qwen/others_sql/evaluation/evaluation_bird_ex.py --predicted_sql_json_path=/home/zch/spider-qwen/bird-dev/dev/dev_pred.sql --ground_truth_sql_path=dev.sql --data_mode=dev --db_root_path=dev_databases/ --difficulty=simple --mode_predict=gt --diff_json_path=dev.json
+python3 /home/zch/spider-qwen/others_sql/evaluation/evaluation_bird_ex.py --predicted_sql_json_path=/home/zch/spider-qwen/bird-dev/dev/dev_pred_knowledge.sql --ground_truth_sql_path=dev.sql --data_mode=dev --db_root_path=dev_databases/ --difficulty=simple --mode_predict=gt --diff_json_path=dev.json
+python3 /home/zch/spider-qwen/others_sql/evaluation/evaluation_bird_ves.py --predicted_sql_json_path=/home/zch/spider-qwen/bird-dev/dev/dev_pred_knowledge.sql --ground_truth_sql_path=dev.sql --data_mode=dev --db_root_path=dev_databases/  --mode_predict=gt --diff_json_path=dev.json
+
+## small
+python3 /home/zch/spider-qwen/others_sql/evaluation/evaluation_bird_ex.py --predicted_sql_json_path=/home/zch/spider-qwen/bird-dev/dev/dev_pred_small.sql --ground_truth_sql_path=dev_small.sql --data_mode=dev --db_root_path=dev_databases/ --difficulty=simple --mode_predict=gt --diff_json_path=dev_small.json
