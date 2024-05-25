@@ -4,8 +4,8 @@ import sqlite3
 import argparse
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-# DEFAULT_LLM = "Qwen/CodeQwen1.5-13B-Chat"
-DEFAULT_LLM = "defog/llama-3-sqlcoder-8b"
+DEFAULT_LLM = "Qwen/CodeQwen1.5-13B-Chat"
+# DEFAULT_LLM = "defog/llama-3-sqlcoder-8b"
 # DEFAULT_LLM = "Symbol-LLM/Symbol-LLM-13B-Instruct"
 
 constraint=" When generating SQL, we should always consider constraints: \n \
