@@ -26,7 +26,7 @@ def run(args):
         
         print("On database:", db)
         print("LLM response:", response)
-        print("Ground truth:", item['query'])
+        print("Ground truth:", item['query'] if args.data_name == 'spider' else item['SQL'])
         print("====================================")
 
         response = response.replace('\n',' ') + '\n'

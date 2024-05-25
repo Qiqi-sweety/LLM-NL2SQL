@@ -9,8 +9,23 @@ This repository contains the code for the LLM NL2SQL Benchmark.
 Use the following commands to install the required packages.
 
 ```sh
+pip install nltk
 pip install torch
+pip install sqlparse
 pip install accelerate
 pip install transformers
 pip install sentencepiece
+
+python -c "import nltk; nltk.download('punkt')"
 ```
+
+## Result
+
+Spider Dataset:
+
+                     easy                 medium               hard                 extra                all                 
+count                248                  446                  174                  166                  1034                
+=====================   EXECUTION ACCURACY     =====================
+Code Qwen 7B.         0.754                0.652                0.477                0.343                0.598
+SQL Coder 8B         0.758                0.637                0.368                0.283                0.564
+Symbol LLM 13B       0.867                0.670                0.506                0.301                0.631
