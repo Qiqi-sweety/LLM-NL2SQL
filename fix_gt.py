@@ -1,19 +1,14 @@
-import os
 from tqdm import tqdm
 from utils import (
     get_args,
-    get_schema,
-    get_prompt,
-    generate_sql,
     load_dataset,
     get_output_file,
-    load_tokenizer_and_model,
 )
 
 def run(args):
     dataset = load_dataset(args.data_path)
     result_file = get_output_file(args.result_path, mode='r')
-    output_file = open('dev_pred_gt.sql', 'w')
+    output_file = open(args.gt_result_path, 'w')
 
     for item in tqdm(dataset):
         db = item['db_id']

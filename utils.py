@@ -95,5 +95,6 @@ def get_args():
     else:
         raise ValueError('data_name must be spider or bird')
     args.result_path = f'output/{args.data_name}/{args.model_name}/dev_pred.sql'
+    args.gt_result_path = f'output/{args.data_name}/{args.model_name}/dev_pred_gt.sql'
 
     return args
