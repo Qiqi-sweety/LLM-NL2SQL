@@ -6,9 +6,10 @@ from utils import (
 )
 
 def run(args):
+    assert args.data_name == 'bird'
     dataset = load_dataset(args.data_path)
     result_file = get_output_file(args.result_path, mode='r')
-    output_file = open(args.gt_result_path, 'w')
+    output_file = get_output_file(args.gt_result_path, mode='w')
 
     for item in tqdm(dataset):
         db = item['db_id']
