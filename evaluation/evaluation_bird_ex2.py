@@ -7,6 +7,8 @@ import sqlite3
 import multiprocessing as mp
 from func_timeout import func_timeout, FunctionTimedOut
 
+names=[]
+
 def replace_multiple_spaces(text):
     # 定义正则表达式，匹配多个空字符
     pattern = r'\s+'
@@ -82,14 +84,22 @@ def package_sqls(sql_path, db_root_path, mode='gpt', data_mode='dev'):
         for idx, sql_str in enumerate(sql_txt):
             sql, db_name = sql_str.strip().split('\t')
             clean_sqls.append(sql)
+            names.append(db_name)
             db_path_list.append(db_root_path + db_name + '/' + db_name + '.sqlite')
 
+    else:
+        sqls = open(sql_path, encoding='utf8')
+        sql_txt = sqls.readlines()
+        for idx, sql_str in enumerate(sql_txt):
+            # sql, db_name = sql_str.strip().split('\t')
+            clean_sqls.append(sql_str)
+            db_name=names[idx]
+            db_path_list.append(db_root_path + db_name + '/' + db_name + '.sqlite')
     return clean_sqls, db_path_list
 
 def run_sqls_parallel(sqls, db_places, num_cpus=1, meta_time_out=30.0):
     pool = mp.Pool(processes=num_cpus)
     for i, sql_pair in enumerate(sqls):
-
         predicted_sql, ground_truth = sql_pair
         pool.apply_async(execute_model, args=(predicted_sql, ground_truth, db_places[i], i, meta_time_out), callback=result_callback)
     pool.close()
@@ -160,15 +170,14 @@ if __name__ == '__main__':
     args_parser.add_argument('--diff_json_path',type=str,default='./data/bird/dev.json')
     args = args_parser.parse_args()
     exec_result = []
-
+    gt_queries, db_paths_gt = package_sqls(args.ground_truth_sql_path, args.db_root_path, mode='gt',
+                                           data_mode=args.data_mode)
     pred_queries, db_paths = package_sqls(args.predicted_sql_json_path, args.db_root_path, 
-                                          mode=args.mode_predict, data_mode=args.data_mode)
+                                          mode='gt2', data_mode=args.data_mode)
     if len(pred_queries) == 0:
         raise ValueError(f'Empty data in {args.predicted_sql_json_path}')
     # generate gt sqls:
-    gt_queries, db_paths_gt = package_sqls(args.ground_truth_sql_path, args.db_root_path, mode='gt',
-                                           data_mode=args.data_mode)
-
+    
     assert len(pred_queries) == len(gt_queries), "len(pred_queries) != len(gt_queries)"
     query_pairs = list(zip(pred_queries, gt_queries))
     run_sqls_parallel(query_pairs, db_places=db_paths, num_cpus=args.num_cpus, meta_time_out=args.meta_time_out)
@@ -179,7 +188,7 @@ if __name__ == '__main__':
     if not os.path.exists(out_dir):
         os.makedirs(out_dir, exist_ok=True)
     result_json_path = os.path.join(out_dir, f'eval_result_{args.data_mode}.json')
-    
+
     # relocate idx of exec_result
     raw_json_data = load_json(args.diff_json_path)
     pred_sqls = [replace_multiple_spaces(s) for s in pred_queries]

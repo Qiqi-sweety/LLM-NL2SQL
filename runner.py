@@ -29,7 +29,11 @@ def run(args):
         print("Ground truth:", item['query'] if args.data_name == 'spider' else item['SQL'])
         print("====================================")
 
-        response = response.replace('\n',' ') + '\n'
+        response = response.replace('\n',' ')
+        if args.data_name == 'spider':
+            response = response + '\n'
+        elif args.data_name == 'bird':
+            response = response + '\t' + db + '\n'
         result_file.write(response)
 
     result_file.close()
