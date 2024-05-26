@@ -84,15 +84,6 @@ def package_sqls(sql_path, db_root_path, mode='gpt', data_mode='dev'):
             clean_sqls.append(sql)
             db_path_list.append(db_root_path + db_name + '/' + db_name + '.sqlite')
 
-    else:
-        sqls = open(sql_path, encoding='utf8')
-        sql_txt = sqls.readlines()
-        for idx, sql_str in enumerate(sql_txt):
-            # sql, db_name = sql_str.strip().split('\t')
-            clean_sqls.append(sql_str)
-            db_name=names[idx]
-            db_path_list.append(db_root_path + db_name + '/' + db_name + '.sqlite')
-
     return clean_sqls, db_path_list
 
 def run_sqls_parallel(sqls, db_places, num_cpus=1, meta_time_out=30.0):

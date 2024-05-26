@@ -35,11 +35,11 @@ def load_dataset(data_path):
         dataset = json.load(f)
     return dataset
 
-def get_output_file(output_path):
+def get_output_file(output_path, mode='w'):
     directory = os.path.dirname(output_path)
     os.makedirs(directory, exist_ok=True)
 
-    return open(output_path, 'w')
+    return open(output_path, mode)
 
 def get_schema(db_path):
     # connect to the database
