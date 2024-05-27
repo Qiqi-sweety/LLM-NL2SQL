@@ -11,6 +11,7 @@ Use the following commands to install the required packages.
 ```sh
 pip install nltk
 pip install torch
+pip install protobuf
 pip install sqlparse
 pip install accelerate
 pip install func_timeout

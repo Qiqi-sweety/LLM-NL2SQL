@@ -6,11 +6,14 @@ from utils import (
     get_prompt,
     generate_sql,
     load_dataset,
+    seed_everything,
     get_output_file,
+    get_evidence_prompt,
     load_tokenizer_and_model,
 )
 
 def run(args):
+    seed_everything(42)
     tokenizer, model = load_tokenizer_and_model(args.model_name)
     dataset = load_dataset(args.data_path)
     result_file = get_output_file(args.result_path)
@@ -20,7 +23,13 @@ def run(args):
 
         db_path = os.path.join(args.schema_path, db, f'{db}.sqlite')
         schema = get_schema(db_path)
-        prompt = get_prompt(schema, item['question'])
+
+        if args.data_name == 'spider':
+            prompt = get_prompt(schema, item['question']) 
+        elif args.data_name == 'bird':
+            prompt = get_evidence_prompt(schema, item['question'], item['evidence'])
+        else:
+            raise ValueError('data_name must be spider or bird')
 
         response = generate_sql(prompt, tokenizer, model)
         

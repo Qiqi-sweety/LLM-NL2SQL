@@ -18,6 +18,19 @@ constraint=" When generating SQL, we should always consider constraints: \n \
 - If use `ORDER BY <column> ASC|DESC`, add `GROUP BY <column>` before to select distinct values \
 "
 
+def seed_everything(seed: int):  
+    import random, os
+    import numpy as np
+    import torch
+
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    torch.backends.cudnn.benchmark = True
+    torch.backends.cudnn.deterministic = True
+    os.environ['PYTHONHASHSEED'] = str(seed)
+
 def load_tokenizer_and_model(model_name):
     tokenizer = AutoTokenizer.from_pretrained(
         model_name
@@ -57,6 +70,12 @@ def get_prompt(schema:str, question:str) -> str:
     base_ans_prompt = "\n" + "And lastly, only write sql with no comments." 
     return base_prompt + base_ans_prompt
 
+def get_evidence_prompt(schema:str, question:str, evidence:str) -> str:
+    base_prompt = "The databse schema is as follows:\n" + schema + "\n Write Sql for the following question:" + question
+    knowledge_prompt = "\n " + "Consider the extra knowledge, it is very useful to help you understand the question and the corresponding sql: " + evidence
+    base_ans_prompt = "\n" + "And lastly, only write sql with no comments."
+    return base_prompt + knowledge_prompt + base_ans_prompt
+
 def get_cot_prompt(schema:str, question:str) -> str:
     base_prompt = "The databse schema is as follows:\n" + schema + "\n Write Sql for the following question:" + question
     ans_prompt = "\n" + "Think step by step, but only write sql with no comments." 
@@ -72,10 +91,16 @@ def generate_sql(prompt, tokenizer, model):
         tokenize=False,
         add_generation_prompt=True
     )
-    model_inputs = tokenizer([text], return_tensors="pt").to('cuda')
+    model_inputs = tokenizer(
+        [text], 
+        return_tensors="pt",
+        return_attention_mask=True
+    ).to('cuda')
     generated_ids = model.generate(
         model_inputs.input_ids,
-        max_new_tokens=512
+        max_new_tokens=512,
+        attention_mask=model_inputs.attention_mask,
+        pad_token_id=tokenizer.eos_token_id
     )
     generated_ids = [
         output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
