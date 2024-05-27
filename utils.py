@@ -54,6 +54,11 @@ def get_schema(db_path):
 
 def get_prompt(schema:str, question:str) -> str:
     base_prompt = "The databse schema is as follows:\n" + schema + "\n Write Sql for the following question:" + question
+    base_ans_prompt = "\n" + "And lastly, only write sql with no comments." 
+    return base_prompt + base_ans_prompt
+
+def get_cot_prompt(schema:str, question:str) -> str:
+    base_prompt = "The databse schema is as follows:\n" + schema + "\n Write Sql for the following question:" + question
     ans_prompt = "\n" + "Think step by step, but only write sql with no comments." 
     return base_prompt + constraint + ans_prompt
 
