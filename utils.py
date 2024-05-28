@@ -137,8 +137,17 @@ def generate_sql(prompt, tokenizer, model, chat_mode:bool = True):
             pad_token_id=tokenizer.eos_token_id
         )
         response = tokenizer.decode(outputs[0][len(model_inputs[0])-1:-1])
-        
-    return response
+    
+    # fetch code block
+    if "```" in response:
+        sql = response.split("```")[1]
+    else:
+        sql = response
+
+    if 'sql\n' in sql[:4]:
+        sql = sql[4:]
+
+    return sql
 
 def get_args():
     parser = argparse.ArgumentParser()
