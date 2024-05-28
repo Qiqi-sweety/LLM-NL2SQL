@@ -4,8 +4,8 @@ import sqlite3
 import argparse
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-# DEFAULT_LLM = "seeklhy/codes-7b"
-DEFAULT_LLM = "Qwen/CodeQwen1.5-7B-Chat"
+DEFAULT_LLM = "seeklhy/codes-7b"
+# DEFAULT_LLM = "Qwen/CodeQwen1.5-7B-Chat"
 # DEFAULT_LLM = "defog/llama-3-sqlcoder-8b"
 # DEFAULT_LLM = "Symbol-LLM/Symbol-LLM-13B-Instruct"
 
@@ -65,15 +65,22 @@ def get_schema(db_path):
     schema = "\n\n".join(statement[0] for statement in schema_statements if statement[0] is not None)
     return schema
 
-def get_prompt(schema:str, question:str) -> str:
-    base_prompt = "The databse schema is as follows:\n" + schema + "\n Write Sql for the following question:" + question
-    base_ans_prompt = "\n" + "And lastly, only write sql with no comments." 
-    return base_prompt + base_ans_prompt
+def get_prompt(schema:str, question:str, evidence:str = None, chat_mode:bool = True) -> str:
+    # base prompt for the question
+    base_prompt = "The databse schema is as follows:\n" + schema + "\nWrite Sql for the following question: " + question
+    
+    # if extra knowledge is provided, add it to the prompt
+    if evidence is not None:
+        knowledge_prompt = "\n " + "Consider the extra knowledge, it is very useful to help you understand the question and the corresponding sql: " + evidence
+    else:
+        knowledge_prompt = ""
+    
+    # if chat mode is enabled, add the chat mode prompt
+    if chat_mode:
+        base_ans_prompt = "\n" + "And lastly, only write sql with no comments." 
+    else:
+        base_ans_prompt = "\n" + "Answer : SELECT"
 
-def get_evidence_prompt(schema:str, question:str, evidence:str) -> str:
-    base_prompt = "The databse schema is as follows:\n" + schema + "\n Write Sql for the following question:" + question
-    knowledge_prompt = "\n " + "Consider the extra knowledge, it is very useful to help you understand the question and the corresponding sql: " + evidence
-    base_ans_prompt = "\n" + "And lastly, only write sql with no comments."
     return base_prompt + knowledge_prompt + base_ans_prompt
 
 def get_cot_prompt(schema:str, question:str) -> str:
@@ -81,33 +88,45 @@ def get_cot_prompt(schema:str, question:str) -> str:
     ans_prompt = "\n" + "Think step by step, but only write sql with no comments." 
     return base_prompt + constraint + ans_prompt
 
-def generate_sql(prompt, tokenizer, model):
-    messages = [
-        {"role": "system", "content": "You are a powerful data analysist, reading database schema and write SQL to analyse data."},
-        {"role": "user", "content": prompt}
-    ]
-    text = tokenizer.apply_chat_template(
-        messages,
-        tokenize=False,
-        add_generation_prompt=True
-    )
-    model_inputs = tokenizer(
-        [text], 
-        return_tensors="pt",
-        return_attention_mask=True
-    ).to('cuda')
-    generated_ids = model.generate(
-        model_inputs.input_ids,
-        max_new_tokens=512,
-        attention_mask=model_inputs.attention_mask,
-        pad_token_id=tokenizer.eos_token_id
-    )
-    generated_ids = [
-        output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
-    ]
+def generate_sql(prompt, tokenizer, model, chat_mode:bool = True):
+    if chat_mode:
+        messages = [
+            {"role": "system", "content": "You are a powerful data analysist, reading database schema and write SQL to analyse data."},
+            {"role": "user", "content": prompt}
+        ]
+        text = tokenizer.apply_chat_template(
+            messages,
+            tokenize=False,
+            add_generation_prompt=True
+        )
 
-    response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
+        model_inputs = tokenizer(
+            [text], 
+            return_tensors="pt",
+            return_attention_mask=True
+        ).to('cuda')
+        generated_ids = model.generate(
+            model_inputs.input_ids,
+            max_new_tokens=512,
+            attention_mask=model_inputs.attention_mask,
+            pad_token_id=tokenizer.eos_token_id
+        )
+        generated_ids = [
+            output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
+        ]
 
+        response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
+
+    else:
+        model_inputs = tokenizer.encode(prompt, return_tensors="pt").to('cuda')
+        outputs = model.generate(
+            model_inputs,
+            max_length=2048,
+            # attention_mask=model_inputs.new_full(model_inputs.shape, 1),
+            pad_token_id=tokenizer.eos_token_id
+        )
+        response = tokenizer.decode(outputs[0][len(model_inputs[0])-1:-1])
+        
     return response
 
 def get_args():
@@ -126,5 +145,7 @@ def get_args():
         raise ValueError('data_name must be spider or bird')
     args.result_path = f'output/{args.data_name}/{args.model_name}/dev_pred.sql'
     args.gt_result_path = f'output/{args.data_name}/{args.model_name}/dev_pred_gt.sql'
+
+    args.chat_mode = args.model_name not in ["seeklhy/codes-7b"]
 
     return args

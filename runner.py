@@ -8,7 +8,6 @@ from utils import (
     load_dataset,
     seed_everything,
     get_output_file,
-    get_evidence_prompt,
     load_tokenizer_and_model,
 )
 
@@ -23,15 +22,10 @@ def run(args):
 
         db_path = os.path.join(args.schema_path, db, f'{db}.sqlite')
         schema = get_schema(db_path)
+        evidence = item.get('evidence', None)
 
-        if args.data_name == 'spider':
-            prompt = get_prompt(schema, item['question']) 
-        elif args.data_name == 'bird':
-            prompt = get_evidence_prompt(schema, item['question'], item['evidence'])
-        else:
-            raise ValueError('data_name must be spider or bird')
-
-        response = generate_sql(prompt, tokenizer, model)
+        prompt = get_prompt(schema, item['question'], evidence, args.chat_mode) 
+        response = generate_sql(prompt, tokenizer, model, args.chat_mode)
         
         print("On database:", db)
         print("LLM response:", response)
