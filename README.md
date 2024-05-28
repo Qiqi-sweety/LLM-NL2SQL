@@ -92,19 +92,47 @@ Symbol LLM 13B       0.96                 0.18                 1.89             
 
 #### ACCURACY
 
-| Model         | simple | moderate | challenging | total |
-|---------------|--------|----------|-------------|-------|
-| CodeS 7B      | -      | -        | -           | -     |
-| Code Qwen 7B  | 40.76  | 23.23    | 15.97       | 33.12 |
-| SQL Coder 8B  | 38.27  | 20.22    | 18.75       | 30.96 |
-| Symbol LLM 13B| 28.00  | 11.18    | 9.72        | 21.19 |
+| Model          | simple | moderate | challenging | total |
+| -------------- | ------ | -------- | ----------- | ----- |
+| CodeS 7B       | -      | -        | -           | -     |
+| Code Qwen 7B   | 40.76  | 23.23    | 15.97       | 33.12 |
+| SQL Coder 8B   | 38.27  | 20.22    | 18.75       | 30.96 |
+| Symbol LLM 13B | 28.00  | 11.18    | 9.72        | 21.19 |
 
 #### VES
 
-| Model         | simple | moderate | challenging | total |
-|---------------|--------|----------|-------------|-------|
-| CodeS 7B      | -      | -        | -           | -     |
-| Code Qwen 7B  | 0.64   | 0.00     | 0.75        | 0.45  |
-| SQL Coder 8B  | 0.00   | 0.00     | 0.00        | 0.00  |
-| Symbol LLM 13B| 0.96   | 0.18     | 1.89        | 0.81  |
+| Model          | simple | moderate | challenging | total |
+| -------------- | ------ | -------- | ----------- | ----- |
+| CodeS 7B       | -      | -        | -           | -     |
+| Code Qwen 7B   | 0.64   | 0.00     | 0.75        | 0.45  |
+| SQL Coder 8B   | 0.00   | 0.00     | 0.00        | 0.00  |
+| Symbol LLM 13B | 0.96   | 0.18     | 1.89        | 0.81  |
+
+
+
+## 测试结果V2
+
+#### Spider-Dev数据集
+
+|                         | **easy** | **medium** | **hard** | **extremely hard** | **all** |
+| ----------------------- | -------- | ---------- | -------- | ------------------ | ------- |
+| Count                   | 248      | 446        | 74       | 166                | 1034    |
+| **CodeQwen1.5-7B-Chat** |          |            |          |                    |         |
+| Exact Execution (EX)    | 84.3     | 75.6       | 58.0     | 43.4               | 69.5    |
+| Exact Match（EM）       | 73.0     | 43.5       | 30.5     | 19.3               | 44.5    |
+| **CodeS 7B**            |          |            |          |                    |         |
+| Exact Execution (EX)    | 86.3     | 73.3       | 52.9     | 28.3               | 65.8    |
+| Exact Match（EM）       | 69.4     | 29.8       | 24.7     | 6.6                | 34.7    |
+
+#### BIRD-DEV数据集
+
+|                         | **easy** | **medium** | **hard** | **all** |
+| ----------------------- | -------- | ---------- | -------- | ------- |
+| Count                   | 925      | 465        | 144      | 1534    |
+| **CodeQwen1.5-7B-Chat** |          |            |          |         |
+| Exact Execution (EX)    | 39.6     | 24.1       | 22.2     | 33.3    |
+| Valid Efficiency (VES)  | 43.7     | 23.7       | 21.8     | 35.6    |
+| **CodeS 7B**            |          |            |          |         |
+| Exact Execution (EX)    | 29.3     | 11.8       | 8.3      | 22.0    |
+| Valid Efficiency (VES)  | 34.6     | 12.4       | 6.4      | 25.2    |
 
