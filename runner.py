@@ -20,7 +20,7 @@ def run(args):
     for item in tqdm(dataset):
         db = item['db_id']
 
-        db_path = os.path.join(args.schema_path, db, f'{db}.sqlite')
+        db_path = os.path.join(args.schema_path, db, f'{db}.sql')
         schema = get_schema(db_path)
         evidence = item.get('evidence', None)
 

@@ -4,8 +4,8 @@ import sqlite3
 import argparse
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-DEFAULT_LLM = "seeklhy/codes-7b"
-# DEFAULT_LLM = "Qwen/CodeQwen1.5-7B-Chat"
+# DEFAULT_LLM = "seeklhy/codes-7b"
+DEFAULT_LLM = "Qwen/CodeQwen1.5-7B-Chat"
 # DEFAULT_LLM = "defog/llama-3-sqlcoder-8b"
 # DEFAULT_LLM = "Symbol-LLM/Symbol-LLM-13B-Instruct"
 
@@ -55,6 +55,11 @@ def get_output_file(output_path, mode='w'):
     return open(output_path, mode)
 
 def get_schema(db_path):
+    with open(db_path, 'r') as f:
+        schema = f.read()
+    return schema
+
+def get_table_schema(db_path):
     # connect to the database
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
@@ -63,6 +68,12 @@ def get_schema(db_path):
     conn.close()
 
     schema = "\n\n".join(statement[0] for statement in schema_statements if statement[0] is not None)
+    return schema
+
+def get_dump_schema(db_path):
+    # connect to the database
+    conn = sqlite3.connect(db_path)
+    schema = "\n".join(conn.iterdump())
     return schema
 
 def get_prompt(schema:str, question:str, evidence:str = None, chat_mode:bool = True) -> str:
@@ -137,12 +148,7 @@ def get_args():
     args = parser.parse_args()
 
     args.data_path = f'data/{args.data_name}'
-    if args.data_name == 'spider':
-        args.schema_path = f'{args.data_path}/database'
-    elif args.data_name == 'bird':
-        args.schema_path = f'{args.data_path}/dev_databases'
-    else:
-        raise ValueError('data_name must be spider or bird')
+    args.schema_path = f'output/{args.data_name}/database'
     args.result_path = f'output/{args.data_name}/{args.model_name}/dev_pred.sql'
     args.gt_result_path = f'output/{args.data_name}/{args.model_name}/dev_pred_gt.sql'
 

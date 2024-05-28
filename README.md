@@ -11,6 +11,7 @@ Use the following commands to install the required packages.
 ```sh
 pip install nltk
 pip install torch
+pip install chardet
 pip install protobuf
 pip install sqlparse
 pip install accelerate
@@ -37,7 +38,7 @@ Symbol LLM 13B       0.851                0.650                0.414            
                      easy                 medium               hard                 extra                all                 
 count                248                  446                  174                  166                  1034                
 =====================   EXECUTION ACCURACY     =====================
-Code Qwen 7B         0.758                0.684                0.489                0.404                0.624
+execution            0.815                0.733                0.517                0.361                0.657
 SQL Coder 8B         0.762                0.628                0.402                0.271                0.565
 Symbol LLM 13B       0.895                0.758                0.609                0.440                0.715
 ```
