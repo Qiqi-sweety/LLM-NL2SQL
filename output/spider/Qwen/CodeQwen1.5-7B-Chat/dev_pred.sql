@@ -252,7 +252,7 @@ SELECT FlightNo FROM flights WHERE DestAirport = 'APG'
 SELECT FlightNo FROM flights WHERE SourceAirport IN (SELECT AirportCode FROM airports WHERE City = 'Aberdeen')
 SELECT FlightNo FROM flights WHERE SourceAirport = 'KZR'
 SELECT DISTINCT t1.FlightNo FROM flights AS t1 JOIN airports AS t2 ON t1.DestAirport = t2.AirportCode WHERE t2.City = 'Aberdeen';
-Sure, here's the SQL query to give the flight numbers of flights arriving in Aberdeen:  ```sql SELECT flights.FlightNo  FROM flights  JOIN airports  ON flights.DestAirport = airports.AirportCode  WHERE airports.City = 'Aberdeen'; ```
+SELECT flights.FlightNo  FROM flights  JOIN airports  ON flights.DestAirport = airports.AirportCode  WHERE airports.City = 'Aberdeen'; 
 SELECT COUNT(*) FROM flights AS T1 JOIN airports AS T2 ON T1.DestAirport = T2.AirportCode WHERE T2.City IN ('Aberdeen', 'Abilene')
 SELECT COUNT(*) FROM flights WHERE DestAirport IN (SELECT AirportCode FROM airports WHERE City = 'Aberdeen' OR City = 'Abilene')
 SELECT AirportName FROM airports WHERE AirportCode NOT IN (SELECT SourceAirport FROM flights UNION ALL SELECT DestAirport FROM flights)
@@ -307,7 +307,7 @@ SELECT COUNT(DISTINCT T2.Template_ID) FROM Documents AS T1 INNER JOIN Templates 
 SELECT COUNT(DISTINCT Templates.Template_ID) FROM Documents JOIN Templates ON Documents.Template_ID = Templates.Template_ID
 SELECT COUNT(*) FROM Documents WHERE Template_ID IN (SELECT Template_ID FROM Templates WHERE Template_Type_Code = 'PPT')
 SELECT COUNT(*) FROM Documents JOIN Templates ON Documents.Template_ID = Templates.Template_ID JOIN Ref_Template_Types ON Templates.Template_Type_Code = Ref_Template_Types.Template_Type_Code WHERE Ref_Template_Types.Template_Type_Code = 'PPT'
-Here's the SQL query to solve the question:  ```sql SELECT  T.Template_ID,  COUNT(D.Document_ID) AS Number_of_Documents FROM  Templates T JOIN  Documents D ON T.Template_ID = D.Template_ID GROUP BY  T.Template_ID; ```  And here's the SQL query without comments:  ```sql SELECT  T.Template_ID,  COUNT(D.Document_ID) AS Number_of_Documents FROM  Templates T JOIN  Documents D ON T.Template_ID = D.Template_ID GROUP BY  T.Template_ID; ```
+SELECT  T.Template_ID,  COUNT(D.Document_ID) AS Number_of_Documents FROM  Templates T JOIN  Documents D ON T.Template_ID = D.Template_ID GROUP BY  T.Template_ID; 
 SELECT Template_ID, COUNT(*) FROM Documents GROUP BY Template_ID
 SELECT t2.template_id, t1.template_type_code  FROM Ref_Template_Types AS t1  JOIN Templates AS t2 ON t1.template_type_code = t2.template_type_code  GROUP BY t2.template_id  ORDER BY COUNT(t2.template_id) DESC  LIMIT 1;
 SELECT T1.Template_ID, T2.Template_Type_Code FROM Documents AS T1 JOIN Templates AS T2 ON T1.Template_ID = T2.Template_ID GROUP BY T1.Template_ID ORDER BY COUNT(*) DESC LIMIT 1
@@ -316,7 +316,7 @@ SELECT T1.Template_ID FROM Templates AS T1 JOIN Documents AS T2 ON T1.Template_I
 SELECT T1.Template_ID FROM Templates AS T1 LEFT JOIN Documents AS T2 ON T1.Template_ID = T2.Template_ID WHERE T2.Template_ID IS NULL
 SELECT T1.Template_ID FROM Templates AS T1 LEFT JOIN Documents AS T2 ON T1.Template_ID = T2.Template_ID WHERE T2.Template_ID IS NULL
 SELECT count(*) FROM Templates
-Sure, here's the SQL query to count the number of templates:  ``` SELECT COUNT(*) FROM Templates; ```
+ SELECT COUNT(*) FROM Templates; 
 SELECT Templates.Template_ID ,  Templates.Version_Number ,  Templates.Template_Type_Code FROM Templates
 SELECT T1.Template_ID, T1.Version_Number, T1.Template_Type_Code FROM Templates AS T1 JOIN Ref_Template_Types AS T2 ON T1.Template_Type_Code = T2.Template_Type_Code
 SELECT DISTINCT Template_Type_Code FROM Templates;  SELECT DISTINCT Template_Type_Code FROM Templates;
@@ -337,7 +337,7 @@ SELECT MIN(Version_Number), Template_Type_Code FROM Templates ORDER BY Version_N
 SELECT T1.Version_Number, T1.Template_Type_Code FROM Templates AS T1 INNER JOIN Ref_Template_Types AS T2 ON T1.Template_Type_Code = T2.Template_Type_Code ORDER BY T1.Version_Number LIMIT 1
 SELECT T1.Template_Type_Code FROM Ref_Template_Types AS T1 JOIN Templates AS T2 ON T1.Template_Type_Code = T2.Template_Type_Code JOIN Documents AS T3 ON T2.Template_ID = T3.Template_ID WHERE T3.Document_Name = 'Data base'
 SELECT T1.Template_Type_Code FROM Ref_Template_Types AS T1 INNER JOIN Templates AS T2 ON T1.Template_Type_Code = T2.Template_Type_Code INNER JOIN Documents AS T3 ON T2.Template_ID = T3.Template_ID WHERE T3.Document_Name = 'Database'
-Here's the SQL query to fetch all document names using templates with template type code 'BK':  ```sql SELECT D.Document_Name FROM Documents D JOIN Templates T ON D.Template_ID = T.Template_ID JOIN Ref_Template_Types R ON T.Template_Type_Code = R.Template_Type_Code WHERE R.Template_Type_Code = 'BK'; ```  To write SQL with no comments, you can remove the SQL statements:  ```sql SELECT D.Document_Name FROM Documents D JOIN Templates T ON D.Template_ID = T.Template_ID JOIN Ref_Template_Types R ON T.Template_Type_Code = R.Template_Type_Code WHERE R.Template_Type_Code = 'BK'; ```
+SELECT D.Document_Name FROM Documents D JOIN Templates T ON D.Template_ID = T.Template_ID JOIN Ref_Template_Types R ON T.Template_Type_Code = R.Template_Type_Code WHERE R.Template_Type_Code = 'BK'; 
 SELECT Document_Name FROM Documents WHERE Template_ID IN (SELECT Template_ID FROM Templates WHERE Template_Type_Code = 'BK')
 SELECT T1.Template_Type_Code, COUNT(*) AS Document_Count  FROM Ref_Template_Types AS T1  JOIN Templates AS T2 ON T1.Template_Type_Code = T2.Template_Type_Code  JOIN Documents AS T3 ON T2.Template_ID = T3.Template_ID  GROUP BY T1.Template_Type_Code
 SELECT T1.Template_Type_Code, COUNT(T2.Document_ID) FROM Ref_Template_Types AS T1 JOIN Documents AS T2 ON T1.Template_Type_Code = T2.Template_Type_Code GROUP BY T1.Template_Type_Code;
@@ -377,7 +377,7 @@ SELECT T2.Document_ID FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.Document_
 SELECT Document_ID FROM Documents WHERE Document_ID NOT IN (SELECT Document_ID FROM Paragraphs)
 SELECT D.Document_ID FROM Documents D JOIN Paragraphs P ON D.Document_ID = P.Document_ID GROUP BY D.Document_ID HAVING COUNT(P.Paragraph_ID) BETWEEN 1 AND 2
 SELECT Document_ID FROM Documents WHERE Document_ID IN (SELECT Document_ID FROM Paragraphs GROUP BY Document_ID HAVING COUNT(*) BETWEEN 1 AND 2)
-Here is the SQL query to solve the problem:  ```sql SELECT D.Document_ID  FROM Documents D  JOIN Paragraphs P ON D.Document_ID = P.Document_ID  WHERE P.Paragraph_Text IN ('Brazil', 'Ireland') GROUP BY D.Document_ID  HAVING COUNT(DISTINCT P.Paragraph_Text) = 2; ```
+SELECT D.Document_ID  FROM Documents D  JOIN Paragraphs P ON D.Document_ID = P.Document_ID  WHERE P.Paragraph_Text IN ('Brazil', 'Ireland') GROUP BY D.Document_ID  HAVING COUNT(DISTINCT P.Paragraph_Text) = 2; 
 SELECT D.Document_ID FROM Documents D JOIN Paragraphs P ON D.Document_ID = P.Document_ID WHERE P.Paragraph_Text = 'Brazil' INTERSECT SELECT D.Document_ID FROM Documents D JOIN Paragraphs P ON D.Document_ID = P.Document_ID WHERE P.Paragraph_Text = 'Ireland'
 SELECT COUNT(*) FROM teacher
 SELECT count(*) FROM teacher
@@ -422,7 +422,7 @@ SELECT t2.ID ,  t2.Name ,  t2.Level_of_membership FROM visit AS t1 JOIN visitor 
 SELECT Museum_ID, Name FROM museum ORDER BY (SELECT COUNT(*) FROM visit WHERE Museum_ID = museum.Museum_ID) DESC LIMIT 1
 SELECT Name FROM museum WHERE Museum_ID NOT IN (SELECT Museum_ID FROM visit)
 SELECT v.Name , v.Age FROM visitor v JOIN visit vv ON v.ID = vv.visitor_ID WHERE vv.Num_of_Ticket = (SELECT MAX(Num_of_Ticket) FROM visit)
-Here's the SQL query to calculate the average and maximum number of tickets bought in all visits:  ```sql SELECT AVG(Num_of_Ticket) AS Avg_tickets, MAX(Num_of_Ticket) AS Max_tickets FROM visit; ```  This query calculates the average and maximum number of tickets by taking the average and maximum values of the "Num_of_Ticket" column in the "visit" table. The result will be a single row with two columns, named "Avg_tickets" and "Max_tickets".
+SELECT AVG(Num_of_Ticket) AS Avg_tickets, MAX(Num_of_Ticket) AS Max_tickets FROM visit; 
 SELECT sum(v.Total_spent) FROM visit v JOIN visitor vis ON v.visitor_ID  =  vis.ID WHERE vis.Level_of_membership  =  1
 SELECT T2.Name FROM visit AS T1 JOIN visitor AS T2 ON T1.visitor_ID = T2.ID JOIN museum AS T3 ON T1.Museum_ID = T3.Museum_ID WHERE T3.Open_Year < 2009 INTERSECT SELECT T2.Name FROM visit AS T1 JOIN visitor AS T2 ON T1.visitor_ID = T2.ID JOIN museum AS T3 ON T1.Museum_ID = T3.Museum_ID WHERE T3.Open_Year > 2011
 SELECT COUNT(*) FROM visitor WHERE ID NOT IN (SELECT visitor_ID FROM visit WHERE Museum_ID IN (SELECT Museum_ID FROM museum WHERE Open_Year > '2010'))
@@ -492,7 +492,7 @@ SELECT hand, COUNT(*) FROM players GROUP BY hand
 SELECT COUNT(*) FROM ship WHERE disposition_of_ship = 'Captured'
 SELECT name, tonnage FROM ship ORDER BY name DESC
 SELECT name, date, result FROM battle;
-Here is the SQL query to find the maximum and minimum death toll caused each time:  ```sql SELECT      b.name AS battle_name,     MIN(d.killed + d.injured) AS min_death_toll,     MAX(d.killed + d.injured) AS max_death_toll FROM      battle AS b JOIN      ship AS s ON b.id = s.lost_in_battle JOIN      death AS d ON s.id = d.caused_by_ship_id GROUP BY      b.id, b.name; ```
+SELECT      b.name AS battle_name,     MIN(d.killed + d.injured) AS min_death_toll,     MAX(d.killed + d.injured) AS max_death_toll FROM      battle AS b JOIN      ship AS s ON b.id = s.lost_in_battle JOIN      death AS d ON s.id = d.caused_by_ship_id GROUP BY      b.id, b.name; 
 SELECT AVG(injured) FROM death
 SELECT killed, injured FROM death JOIN ship ON death.caused_by_ship_id = ship.id WHERE tonnage = 't'
 SELECT T1.name, T1.result FROM battle AS T1 INNER JOIN ship AS T2 ON T1.id = T2.lost_in_battle WHERE T1.bulgarian_commander != 'Boril'
@@ -591,7 +591,7 @@ SELECT count(*) FROM Cartoon WHERE Written_by = 'Joseph Kuhr'
 SELECT COUNT(*) FROM Cartoon WHERE Written_by = 'Joseph Kuhr'
 SELECT Title, Director FROM Cartoon ORDER BY Original_air_date
 SELECT t2.title, t2.directed_by FROM tv_series AS t1 JOIN cartoon AS t2 ON t1.channel = t2.channel ORDER BY t2.original_air_date
-Sure, here is the SQL query to achieve this:  ```sql SELECT Title FROM Cartoon WHERE Directed_by IN ('Ben Jones', 'Brandon Vietti'); ```  This query selects the Title from the Cartoon table where the Directed_by field is either 'Ben Jones' or 'Brandon Vietti'. The IN keyword allows you to specify multiple values in a WHERE clause.
+SELECT Title FROM Cartoon WHERE Directed_by IN ('Ben Jones', 'Brandon Vietti'); 
 SELECT Title FROM Cartoon WHERE Directed_by = 'Ben Jones' OR Directed_by = 'Brandon Vietti'
 SELECT T2.Country, COUNT(*) AS Number_of_Channels  FROM TV_Channel AS T1 JOIN TV_series AS T2 ON T1.id = T2.Channel  GROUP BY T2.Country  ORDER BY Number_of_Channels DESC  LIMIT 1
 SELECT Country, COUNT(id) as Number_of_TV_Channels FROM TV_Channel GROUP BY Country ORDER BY Number_of_TV_Channels DESC LIMIT 1
@@ -698,7 +698,7 @@ SELECT COUNT(*) FROM VOTES WHERE state IN ('NY', 'CA')
 SELECT count(1) FROM CONTESTANTS WHERE contestant_number NOT IN (SELECT DISTINCT contestant_number FROM votes)
 SELECT t1.area_code FROM area_code_state AS t1 JOIN votes AS t2 ON t1.state = t2.state GROUP BY t1.area_code ORDER BY count(*) DESC LIMIT 1
 SELECT created, state, phone_number FROM VOTES INNER JOIN CONTESTANTS ON VOTES.contestant_number = CONTESTANTS.contestant_number WHERE CONTESTANTS.contestant_name = 'Tabatha Gehling'
-Here is the SQL query to solve the problem:  ```sql SELECT DISTINCT a.area_code FROM VOTES v1 JOIN CONTESTANTS c1 ON v1.contestant_number = c1.contestant_number JOIN AREA_CODE_STATE a ON v1.state = a.state JOIN VOTES v2 ON v1.phone_number = v2.phone_number AND v2.state = v1.state JOIN CONTESTANTS c2 ON v2.contestant_number = c2.contestant_number WHERE c1.contestant_name = 'Tabatha Gehling' AND c2.contestant_name = 'Kelly Clauss' ```  The query above first joins the VOTES table with CONTESTANTS table twice on the condition that phone numbers match and the contestant_name is the same. Then it finds the DISTINCT area codes from the joined table, which indicates the area codes where voters voted both for Tabatha Gehling and Kelly Clauss.
+SELECT DISTINCT a.area_code FROM VOTES v1 JOIN CONTESTANTS c1 ON v1.contestant_number = c1.contestant_number JOIN AREA_CODE_STATE a ON v1.state = a.state JOIN VOTES v2 ON v1.phone_number = v2.phone_number AND v2.state = v1.state JOIN CONTESTANTS c2 ON v2.contestant_number = c2.contestant_number WHERE c1.contestant_name = 'Tabatha Gehling' AND c2.contestant_name = 'Kelly Clauss' 
 SELECT contestant_name FROM CONTESTANTS WHERE contestant_name LIKE '%Al%'
 SELECT name FROM country WHERE IndepYear > 1950
 SELECT Name FROM country WHERE IndepYear > 1950
@@ -871,7 +871,7 @@ SELECT grade FROM Highschooler WHERE name = 'Kyle'
 SELECT name FROM Highschooler WHERE grade = 10
 SELECT name FROM Highschooler WHERE grade = 10;
 SELECT ID FROM Highschooler WHERE name = 'Kyle'
-Sure, here's the SQL query to find Kyle's ID:  ```sql SELECT ID FROM Highschooler WHERE name = 'Kyle'; ```  Note that the given schema does not contain any information about Kyle, so this query will return no results. If you have more information about Kyle's ID or name, let me know and I can update the query accordingly.
+SELECT ID FROM Highschooler WHERE name = 'Kyle'; 
 SELECT count(*) FROM Highschooler WHERE grade = 9 OR grade = 10
 SELECT COUNT(*) FROM Highschooler WHERE grade = 9 OR grade = 10
 SELECT grade ,  count(*) FROM Highschooler GROUP BY grade
@@ -888,7 +888,7 @@ SELECT T2.name FROM friend AS T1 JOIN Highschooler AS T2 ON T1.student_id = T2.I
 SELECT name FROM Highschooler WHERE ID IN (SELECT friend_id FROM Friend WHERE student_id IN (SELECT ID FROM Highschooler) GROUP BY student_id ORDER BY COUNT(*) DESC LIMIT 1)
 SELECT name FROM highschooler WHERE ID IN (SELECT student_id FROM friend GROUP BY student_id HAVING COUNT(*) >= 3)
 SELECT name FROM Highschooler WHERE ID IN (SELECT student_id FROM Friend GROUP BY student_id HAVING COUNT(*) >= 3)
-Sure, here's the SQL query to get the names of all of Kyle's friends: ``` SELECT T2.name FROM Highschooler AS T1  JOIN Friend AS T3 ON T1.ID = T3.student_id  JOIN Highschooler AS T2 ON T3.friend_id = T2.ID  WHERE T1.name = 'Kyle' ``` Note that I'm assuming that Kyle's ID is stored in the "name" column of the "Highschooler" table (which is not a common practice). If Kyle's ID is stored in a different column, you'll need to modify the query accordingly. And here's the SQL query with no comments: ``` SELECT T2.name FROM Highschooler AS T1  JOIN Friend AS T3 ON T1.ID = T3.student_id  JOIN Highschooler AS T2 ON T3.friend_id = T2.ID  WHERE T1.name = 'Kyle' ```
+ SELECT T2.name FROM Highschooler AS T1  JOIN Friend AS T3 ON T1.ID = T3.student_id  JOIN Highschooler AS T2 ON T3.friend_id = T2.ID  WHERE T1.name = 'Kyle' 
 SELECT T3.name FROM Highschooler AS T1 JOIN Friend AS T2 ON T1.ID = T2.friend_id JOIN Highschooler AS T3 ON T2.student_id = T3.ID WHERE T1.name = 'Kyle';
 SELECT COUNT(*) FROM Friend WHERE student_id IN (SELECT ID FROM Highschooler WHERE name = 'Kyle')
 SELECT COUNT(DISTINCT T2.Friend_id) AS num_friends FROM Highschooler AS T1 JOIN Friend AS T2 ON T1.id = T2.student_id WHERE T1.name = 'Kyle'
@@ -996,7 +996,7 @@ SELECT email_address ,  cell_number ,  home_phone FROM professionals
 SELECT email_address, cell_number, home_phone FROM Professionals
 SELECT breed_code, size_code FROM Dogs
 SELECT DISTINCT breed_code, size_code FROM Dogs
-Here's the SQL query to retrieve the first names of all professionals along with the description of the treatment they have done: ```sql SELECT P.first_name, TT.treatment_type_description FROM Professionals AS P JOIN Treatments AS T ON P.professional_id = T.professional_id JOIN Treatment_Types AS TT ON T.treatment_type_code = TT.treatment_type_code ```
+SELECT P.first_name, TT.treatment_type_description FROM Professionals AS P JOIN Treatments AS T ON P.professional_id = T.professional_id JOIN Treatment_Types AS TT ON T.treatment_type_code = TT.treatment_type_code 
 SELECT P.first_name, TT.treatment_type_description FROM Professionals AS P JOIN Treatments AS T ON P.professional_id = T.professional_id JOIN Treatment_Types AS TT ON T.treatment_type_code = TT.treatment_type_code
 SELECT count(*) FROM singer
 SELECT count(*) FROM singer

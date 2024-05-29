@@ -5,9 +5,9 @@ import argparse
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 # DEFAULT_LLM = "seeklhy/codes-7b"
-DEFAULT_LLM = "Qwen/CodeQwen1.5-7B-Chat"
+# DEFAULT_LLM = "Qwen/CodeQwen1.5-7B-Chat"
 # DEFAULT_LLM = "defog/llama-3-sqlcoder-8b"
-# DEFAULT_LLM = "Symbol-LLM/Symbol-LLM-13B-Instruct"
+DEFAULT_LLM = "Symbol-LLM/Symbol-LLM-13B-Instruct"
 
 constraint=" When generating SQL, we should always consider constraints: \n \
 【Constraints】\n \
@@ -132,8 +132,8 @@ def generate_sql(prompt, tokenizer, model, chat_mode:bool = True):
         model_inputs = tokenizer.encode(prompt, return_tensors="pt").to('cuda')
         outputs = model.generate(
             model_inputs,
-            max_length=2048,
-            # attention_mask=model_inputs.new_full(model_inputs.shape, 1),
+            max_new_tokens=512,
+            attention_mask=model_inputs.new_full(model_inputs.shape, 1),
             pad_token_id=tokenizer.eos_token_id
         )
         response = tokenizer.decode(outputs[0][len(model_inputs[0])-1:-1])
@@ -161,6 +161,6 @@ def get_args():
     args.result_path = f'output/{args.data_name}/{args.model_name}/dev_pred.sql'
     args.gt_result_path = f'output/{args.data_name}/{args.model_name}/dev_pred_gt.sql'
 
-    args.chat_mode = args.model_name not in ["seeklhy/codes-7b"]
+    args.chat_mode = args.model_name not in ["seeklhy/codes-7b", "Symbol-LLM/Symbol-LLM-13B-Instruct"]
 
     return args

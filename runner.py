@@ -27,7 +27,9 @@ def run(args):
         prompt = get_prompt(schema, item['question'], evidence, args.chat_mode) 
         response = generate_sql(prompt, tokenizer, model, args.chat_mode)
         
+        print()
         print("On database:", db)
+        print("Question:", item['question'])
         print("LLM response:", response)
         print("Ground truth:", item['query'] if args.data_name == 'spider' else item['SQL'])
         print("====================================")

@@ -8,13 +8,14 @@ def preprocess(input_folder, output_folder):
         os.makedirs(output_folder + '/' + folder_name + '/', exist_ok=True)
 
         sqlite_file = f"{input_folder}/{folder_name}/{folder_name}.sqlite"
-        data_schema_file = f"{input_folder}/{folder_name}/schema.sql"
         schema_file = f"{output_folder}/{folder_name}/schema.sql"
 
-        if os.path.exists(data_schema_file):
-            order = f"cp {data_schema_file} {schema_file}"
-        else:
-            order = f"sqlite3 {sqlite_file} .dump > {schema_file}"
+        order = f"sqlite3 {sqlite_file} .dump > {schema_file}"
+        # data_schema_file = f"{input_folder}/{folder_name}/schema.sql"
+        # if os.path.exists(data_schema_file):
+        #     order = f"cp {data_schema_file} {schema_file}"
+        # else:
+        #     order = f"sqlite3 {sqlite_file} .dump > {schema_file}"
 
         print(f"running command: {order}")
         subprocess.run(order, shell=True, check=True)
