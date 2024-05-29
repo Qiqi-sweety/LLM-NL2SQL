@@ -4,8 +4,9 @@ import sqlite3
 import argparse
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
+DEFAULT_LLM = "Qwen/Qwen1.5-7B-Chat"
 # DEFAULT_LLM = "seeklhy/codes-7b"
-DEFAULT_LLM = "seeklhy/codes-15b"
+# DEFAULT_LLM = "seeklhy/codes-15b"
 # DEFAULT_LLM = "Qwen/CodeQwen1.5-7B-Chat"
 # DEFAULT_LLM = "defog/llama-3-sqlcoder-8b"
 # DEFAULT_LLM = "Symbol-LLM/Symbol-LLM-7B-Instruct"
@@ -157,6 +158,7 @@ def get_args():
     parser.add_argument('-d', '--data_name', type=str, default='spider')
 
     args = parser.parse_args()
+    print(args)
 
     args.data_path = f'data/{args.data_name}'
     args.schema_path = f'output/{args.data_name}/database'

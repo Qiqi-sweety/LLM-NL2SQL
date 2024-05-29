@@ -14,8 +14,6 @@ from utils import (
 )
 
 def run(args):
-    print(args)
-
     seed_everything(42)
     tokenizer, model = load_tokenizer_and_model(args.model_name)
     dataset = load_dataset(args.data_path)
