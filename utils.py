@@ -5,9 +5,11 @@ import argparse
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 # DEFAULT_LLM = "seeklhy/codes-7b"
+DEFAULT_LLM = "seeklhy/codes-15b"
 # DEFAULT_LLM = "Qwen/CodeQwen1.5-7B-Chat"
 # DEFAULT_LLM = "defog/llama-3-sqlcoder-8b"
-DEFAULT_LLM = "Symbol-LLM/Symbol-LLM-13B-Instruct"
+# DEFAULT_LLM = "Symbol-LLM/Symbol-LLM-7B-Instruct"
+# DEFAULT_LLM = "Symbol-LLM/Symbol-LLM-13B-Instruct"
 
 constraint=" When generating SQL, we should always consider constraints: \n \
 【Constraints】\n \
@@ -161,6 +163,6 @@ def get_args():
     args.result_path = f'output/{args.data_name}/{args.model_name}/dev_pred.sql'
     args.gt_result_path = f'output/{args.data_name}/{args.model_name}/dev_pred_gt.sql'
 
-    args.chat_mode = args.model_name not in ["seeklhy/codes-7b", "Symbol-LLM/Symbol-LLM-13B-Instruct"]
+    args.chat_mode = ("codes" not in args.model_name) and ("Symbol-LLM" not in args.model_name)
 
     return args

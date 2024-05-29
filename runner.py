@@ -1,5 +1,7 @@
 import os
 from tqdm import tqdm
+
+from fix_gt import fix_gt
 from utils import (
     get_args,
     get_schema,
@@ -12,6 +14,8 @@ from utils import (
 )
 
 def run(args):
+    print(args)
+
     seed_everything(42)
     tokenizer, model = load_tokenizer_and_model(args.model_name)
     dataset = load_dataset(args.data_path)
@@ -38,6 +42,9 @@ def run(args):
         result_file.write(response)
 
     result_file.close()
+
+    if args.data_name in ['bird']:
+        fix_gt(args)
 
 if __name__ == '__main__':
     args = get_args()
