@@ -2,6 +2,7 @@ import os
 from tqdm import tqdm
 
 from fix_gt import fix_gt
+from evaluation import evaluation
 from utils import (
     get_args,
     get_schema,
@@ -43,6 +44,7 @@ def run(args):
 
     if args.data_name in ['bird']:
         fix_gt(args)
+    evaluation(args)
 
 if __name__ == '__main__':
     args = get_args()
