@@ -46,7 +46,7 @@ Qwen 14B             0.629                0.191                0.086            
 CodeS 15B            0.758                0.321                0.184                0.054                0.360
 
 Qwen 32B
-SQL Coder 34B
+SQL Coder 34B        0.222                0.260                0.172                0.036                0.200
 
 
                      easy                 medium               hard                 extra                all                 
@@ -61,6 +61,8 @@ SQL Coder 8B         0.762                0.639                0.402            
 Symbol LLM 13B       0.911                0.783                0.580                0.464                0.728
 Qwen 14B             0.867                0.720                0.471                0.398                0.662
 CodeS 15B            0.863                0.738                0.500                0.337                0.663
+
+SQL Coder 34B        0.702                0.668                0.460                0.283                0.579
 ```
 
 
@@ -80,6 +82,8 @@ Symbol LLM 13B       25.84                9.89                 8.33             
 Qwen 14B             39.68                16.99                10.42                30.05
 CodeS 15B            29.19                12.90                8.33                 22.29
 
+SQL Coder 34B        43.78                24.73                17.36                35.53
+
 
                      simple               moderate             challenging          total               
 count                925                  465                  144                  1534                
@@ -89,9 +93,12 @@ CodeS 7B             0.00                 0.00                 0.00             
 Code Qwen 7B         0.75                 0.61                 0.00                 0.64
 Symbol LLM 7B        0.95                 0.00                 0.00                 0.58
 SQL Coder 8B         0.00                 0.00                 0.00                 0.00
+
 Symbol LLM 13B       1.04                 0.00                 0.75                 0.70
 Qwen 14B             0.00                 0.00                 0.00                 0.00
 CodeS 15B            0.00                 0.00                 0.00                 0.00
+
+SQL Coder 34B        0.00                 0.00                 0.00                 0.00
 ```
 
 
