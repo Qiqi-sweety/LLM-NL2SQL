@@ -4,11 +4,14 @@ import sqlite3
 import argparse
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-DEFAULT_LLM = "Qwen/Qwen1.5-7B-Chat"
+# DEFAULT_LLM = "Qwen/Qwen1.5-7B-Chat"
+# DEFAULT_LLM = "Qwen/Qwen1.5-14B-Chat"
+# DEFAULT_LLM = "Qwen/Qwen1.5-32B-Chat"
+# DEFAULT_LLM = "Qwen/CodeQwen1.5-7B-Chat"
 # DEFAULT_LLM = "seeklhy/codes-7b"
 # DEFAULT_LLM = "seeklhy/codes-15b"
-# DEFAULT_LLM = "Qwen/CodeQwen1.5-7B-Chat"
 # DEFAULT_LLM = "defog/llama-3-sqlcoder-8b"
+DEFAULT_LLM = "defog/sqlcoder-34b-alpha"
 # DEFAULT_LLM = "Symbol-LLM/Symbol-LLM-7B-Instruct"
 # DEFAULT_LLM = "Symbol-LLM/Symbol-LLM-13B-Instruct"
 
@@ -149,6 +152,9 @@ def generate_sql(prompt, tokenizer, model, chat_mode:bool = True):
 
     if 'sql\n' in sql[:4]:
         sql = sql[4:]
+
+    if sql == "":
+        sql = ";"
 
     return sql
 
