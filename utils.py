@@ -4,9 +4,15 @@ import sqlite3
 import argparse
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
+# DEFAULT_LLM = "Qwen/Qwen1.5-7B-Chat"
+# DEFAULT_LLM = "Qwen/Qwen1.5-14B-Chat"
+DEFAULT_LLM = "Qwen/Qwen1.5-32B-Chat"
+# DEFAULT_LLM = "Qwen/CodeQwen1.5-7B-Chat"
 # DEFAULT_LLM = "seeklhy/codes-7b"
-DEFAULT_LLM = "Qwen/CodeQwen1.5-7B-Chat"
+# DEFAULT_LLM = "seeklhy/codes-15b"
 # DEFAULT_LLM = "defog/llama-3-sqlcoder-8b"
+# DEFAULT_LLM = "defog/sqlcoder-34b-alpha"
+# DEFAULT_LLM = "Symbol-LLM/Symbol-LLM-7B-Instruct"
 # DEFAULT_LLM = "Symbol-LLM/Symbol-LLM-13B-Instruct"
 
 constraint=" When generating SQL, we should always consider constraints: \n \
@@ -132,13 +138,25 @@ def generate_sql(prompt, tokenizer, model, chat_mode:bool = True):
         model_inputs = tokenizer.encode(prompt, return_tensors="pt").to('cuda')
         outputs = model.generate(
             model_inputs,
-            max_length=2048,
-            # attention_mask=model_inputs.new_full(model_inputs.shape, 1),
+            max_new_tokens=512,
+            attention_mask=model_inputs.new_full(model_inputs.shape, 1),
             pad_token_id=tokenizer.eos_token_id
         )
         response = tokenizer.decode(outputs[0][len(model_inputs[0])-1:-1])
-        
-    return response
+    
+    # fetch code block
+    if "```" in response:
+        sql = response.split("```")[1]
+    else:
+        sql = response
+
+    if 'sql\n' in sql[:4]:
+        sql = sql[4:]
+
+    if sql == "":
+        sql = ";"
+
+    return sql
 
 def get_args():
     parser = argparse.ArgumentParser()
@@ -146,12 +164,13 @@ def get_args():
     parser.add_argument('-d', '--data_name', type=str, default='spider')
 
     args = parser.parse_args()
+    print(args)
 
     args.data_path = f'data/{args.data_name}'
     args.schema_path = f'output/{args.data_name}/database'
     args.result_path = f'output/{args.data_name}/{args.model_name}/dev_pred.sql'
     args.gt_result_path = f'output/{args.data_name}/{args.model_name}/dev_pred_gt.sql'
 
-    args.chat_mode = args.model_name not in ["seeklhy/codes-7b"]
+    args.chat_mode = ("codes" not in args.model_name) and ("Symbol-LLM" not in args.model_name)
 
     return args

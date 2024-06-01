@@ -5,7 +5,7 @@ from utils import (
     get_output_file,
 )
 
-def run(args):
+def fix_gt(args):
     assert args.data_name == 'bird'
     dataset = load_dataset(args.data_path)
     result_file = get_output_file(args.result_path, mode='r')
@@ -24,4 +24,4 @@ def run(args):
 
 if __name__ == '__main__':
     args = get_args()
-    run(args)
+    fix_gt(args)

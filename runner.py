@@ -1,5 +1,8 @@
 import os
 from tqdm import tqdm
+
+from fix_gt import fix_gt
+from evaluation import evaluation
 from utils import (
     get_args,
     get_schema,
@@ -27,7 +30,9 @@ def run(args):
         prompt = get_prompt(schema, item['question'], evidence, args.chat_mode) 
         response = generate_sql(prompt, tokenizer, model, args.chat_mode)
         
+        print()
         print("On database:", db)
+        print("Question:", item['question'])
         print("LLM response:", response)
         print("Ground truth:", item['query'] if args.data_name == 'spider' else item['SQL'])
         print("====================================")
@@ -36,6 +41,10 @@ def run(args):
         result_file.write(response)
 
     result_file.close()
+
+    if args.data_name in ['bird']:
+        fix_gt(args)
+    evaluation(args)
 
 if __name__ == '__main__':
     args = get_args()

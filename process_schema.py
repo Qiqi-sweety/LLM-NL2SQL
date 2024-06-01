@@ -8,9 +8,9 @@ def preprocess(input_folder, output_folder):
         os.makedirs(output_folder + '/' + folder_name + '/', exist_ok=True)
 
         sqlite_file = f"{input_folder}/{folder_name}/{folder_name}.sqlite"
-        data_schema_file = f"{input_folder}/{folder_name}/schema.sql"
         schema_file = f"{output_folder}/{folder_name}/schema.sql"
 
+        data_schema_file = f"{input_folder}/{folder_name}/schema.sql"
         if os.path.exists(data_schema_file):
             order = f"cp {data_schema_file} {schema_file}"
         else:
