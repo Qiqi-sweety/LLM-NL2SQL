@@ -58,7 +58,6 @@ python -c "import nltk; nltk.download('punkt')"
 
 ### Bird Dataset
 
-
 | **Bird**             | simple | moderate | challenging | total |
 |----------------------|--------|----------|-------------|-------|
 | count                | 925    | 465      | 144         | 1534  |
@@ -84,4 +83,32 @@ python -c "import nltk; nltk.download('punkt')"
 | CodeS 15B            | 0.00   | 0.00     | 0.00        | 0.00  |
 | Qwen 32B             | 0.00   | 0.00     | 0.00        | 0.00  |
 | SQL Coder 34B        | 0.00   | 0.00     | 0.00        | 0.00  |
+
+
+## 测试结果V2
+
+#### Spider-Dev数据集
+
+|                         | **easy** | **medium** | **hard** | **extremely hard** | **all** |
+| ----------------------- | -------- | ---------- | -------- | ------------------ | ------- |
+| Count                   | 248      | 446        | 74       | 166                | 1034    |
+| **CodeQwen1.5-7B-Chat** |          |            |          |                    |         |
+| Exact Execution (EX)    | 84.3     | 75.6       | 58.0     | 43.4               | 69.5    |
+| Exact Match（EM）       | 73.0     | 43.5       | 30.5     | 19.3               | 44.5    |
+| **CodeS 7B**            |          |            |          |                    |         |
+| Exact Execution (EX)    | 86.3     | 73.3       | 52.9     | 28.3               | 65.8    |
+| Exact Match（EM）       | 69.4     | 29.8       | 24.7     | 6.6                | 34.7    |
+
+#### BIRD-DEV数据集
+
+|                         | **easy** | **medium** | **hard** | **all** |
+| ----------------------- | -------- | ---------- | -------- | ------- |
+| Count                   | 925      | 465        | 144      | 1534    |
+| **CodeQwen1.5-7B-Chat** |          |            |          |         |
+| Exact Execution (EX)    | 39.6     | 24.1       | 22.2     | 33.3    |
+| Valid Efficiency (VES)  | 43.7     | 23.7       | 21.8     | 35.6    |
+| **CodeS 7B**            |          |            |          |         |
+| Exact Execution (EX)    | 29.3     | 11.8       | 8.3      | 22.0    |
+| Valid Efficiency (VES)  | 34.6     | 12.4       | 6.4      | 25.2    |
+
 
