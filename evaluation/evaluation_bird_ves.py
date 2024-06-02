@@ -172,8 +172,7 @@ if __name__ == '__main__':
     args_parser.add_argument('--data_mode', type=str, required=True, default='dev')
     args_parser.add_argument('--db_root_path', type=str, required=True, default='')
     args_parser.add_argument('--num_cpus', type=int, default=1)
-    args_parser.add_argument('--meta_time_out', type=float, default=5.0)
-    # args_parser.add_argument('--meta_time_out', type=float, default=30.0)
+    args_parser.add_argument('--meta_time_out', type=float, default=30.0)
     args_parser.add_argument('--mode_gt', type=str, default='gt')
     args_parser.add_argument('--mode_predict', type=str, default='gpt')
     args_parser.add_argument('--diff_json_path', type=str, required=True, default='')
@@ -190,8 +189,7 @@ if __name__ == '__main__':
 
     assert len(pred_queries) == len(gt_queries), "len(pred_queries) != len(gt_queries)"
     query_pairs = list(zip(pred_queries, gt_queries))
-    run_sqls_parallel(query_pairs, iterate_num=10, db_places=db_paths, num_cpus=args.num_cpus, meta_time_out=args.meta_time_out)
-    # run_sqls_parallel(query_pairs, iterate_num=100, db_places=db_paths, num_cpus=args.num_cpus, meta_time_out=args.meta_time_out)
+    run_sqls_parallel(query_pairs, iterate_num=100, db_places=db_paths, num_cpus=args.num_cpus, meta_time_out=args.meta_time_out)
     exec_result = sort_results(exec_result)
     print('start calculate')
     simple_ves, moderate_ves, challenging_ves, ves, count_lists = \
