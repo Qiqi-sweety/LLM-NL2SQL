@@ -6,8 +6,8 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 
 # DEFAULT_LLM = "Qwen/Qwen1.5-7B-Chat"
 # DEFAULT_LLM = "Qwen/Qwen1.5-14B-Chat"
-DEFAULT_LLM = "Qwen/Qwen1.5-32B-Chat"
-# DEFAULT_LLM = "Qwen/CodeQwen1.5-7B-Chat"
+# DEFAULT_LLM = "Qwen/Qwen1.5-32B-Chat"
+DEFAULT_LLM = "Qwen/CodeQwen1.5-7B-Chat"
 # DEFAULT_LLM = "seeklhy/codes-7b"
 # DEFAULT_LLM = "seeklhy/codes-15b"
 # DEFAULT_LLM = "defog/llama-3-sqlcoder-8b"

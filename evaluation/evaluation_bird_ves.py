@@ -10,7 +10,6 @@ from func_timeout import func_timeout, FunctionTimedOut
 import time
 import math
 
-names=[]
 
 def result_callback(result):
     exec_result.append(result)
@@ -98,20 +97,7 @@ def package_sqls(sql_path, db_root_path, mode='gpt', data_mode='dev'):
         for idx, sql_str in enumerate(sql_txt):
             sql, db_name = sql_str.strip().split('\t')
             clean_sqls.append(sql)
-            names.append(db_name)
             db_path_list.append(db_root_path + db_name + '/' + db_name + '.sqlite')
-
-    else:
-        sqls = open(sql_path, encoding='utf8')
-        sql_txt = sqls.readlines()
-        for idx, sql_str in enumerate(sql_txt):
-            # sql, db_name = sql_str.strip().split('\t')
-            clean_sqls.append(sql_str)
-            db_name=names[idx]
-            db_path_list.append(db_root_path + db_name + '/' + db_name + '.sqlite')
-    
-    return clean_sqls, db_path_list
-
 
     return clean_sqls, db_path_list
 
@@ -187,25 +173,25 @@ if __name__ == '__main__':
     args_parser.add_argument('--db_root_path', type=str, required=True, default='')
     args_parser.add_argument('--num_cpus', type=int, default=1)
     args_parser.add_argument('--meta_time_out', type=float, default=5.0)
+    # args_parser.add_argument('--meta_time_out', type=float, default=30.0)
     args_parser.add_argument('--mode_gt', type=str, default='gt')
     args_parser.add_argument('--mode_predict', type=str, default='gpt')
     args_parser.add_argument('--diff_json_path', type=str, required=True, default='')
     args = args_parser.parse_args()
     exec_result = []
 
+    pred_queries, db_paths = package_sqls(args.predicted_sql_json_path, args.db_root_path, 
+                                          mode=args.mode_predict, data_mode=args.data_mode)
+    if len(pred_queries) == 0:
+        raise ValueError(f'Empty data in {args.predicted_sql_json_path}')
     # generate gt sqls:
     gt_queries, db_paths_gt = package_sqls(args.ground_truth_sql_path, args.db_root_path, mode='gt',
                                            data_mode=args.data_mode)
-    
-    pred_queries, db_paths = package_sqls(args.predicted_sql_json_path, args.db_root_path, mode='gt2',
-                                          data_mode=args.data_mode)
-    if len(pred_queries) == 0:
-        raise ValueError(f'Empty data in {args.predicted_sql_json_path}')
-    
 
     assert len(pred_queries) == len(gt_queries), "len(pred_queries) != len(gt_queries)"
     query_pairs = list(zip(pred_queries, gt_queries))
-    run_sqls_parallel(query_pairs, iterate_num=100, db_places=db_paths, num_cpus=args.num_cpus, meta_time_out=args.meta_time_out)
+    run_sqls_parallel(query_pairs, iterate_num=10, db_places=db_paths, num_cpus=args.num_cpus, meta_time_out=args.meta_time_out)
+    # run_sqls_parallel(query_pairs, iterate_num=100, db_places=db_paths, num_cpus=args.num_cpus, meta_time_out=args.meta_time_out)
     exec_result = sort_results(exec_result)
     print('start calculate')
     simple_ves, moderate_ves, challenging_ves, ves, count_lists = \
@@ -214,5 +200,4 @@ if __name__ == '__main__':
     print_data(score_lists, count_lists)
     print('===========================================================================================')
     print("Finished evaluation")
-
 
