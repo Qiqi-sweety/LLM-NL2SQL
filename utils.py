@@ -7,7 +7,8 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 # DEFAULT_LLM = "Qwen/Qwen1.5-7B-Chat"
 # DEFAULT_LLM = "Qwen/Qwen1.5-14B-Chat"
 # DEFAULT_LLM = "Qwen/Qwen1.5-32B-Chat"
-DEFAULT_LLM = "Qwen/CodeQwen1.5-7B-Chat"
+# DEFAULT_LLM = "Qwen/CodeQwen1.5-7B-Chat"
+DEFAULT_LLM = "meta-llama/Meta-Llama-3-8B"
 # DEFAULT_LLM = "seeklhy/codes-7b"
 # DEFAULT_LLM = "seeklhy/codes-15b"
 # DEFAULT_LLM = "defog/llama-3-sqlcoder-8b"
@@ -171,6 +172,6 @@ def get_args():
     args.result_path = f'output/{args.data_name}/{args.model_name}/dev_pred.sql'
     args.gt_result_path = f'output/{args.data_name}/{args.model_name}/dev_pred_gt.sql'
 
-    args.chat_mode = ("codes" not in args.model_name) and ("Symbol-LLM" not in args.model_name)
+    args.chat_mode = all(keyword not in args.model_name for keyword in ["codes", "Symbol-LLM", "meta-llama"])
 
     return args
