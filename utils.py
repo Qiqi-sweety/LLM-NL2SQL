@@ -8,7 +8,8 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 # DEFAULT_LLM = "Qwen/Qwen1.5-14B-Chat"
 # DEFAULT_LLM = "Qwen/Qwen1.5-32B-Chat"
 # DEFAULT_LLM = "Qwen/CodeQwen1.5-7B-Chat"
-DEFAULT_LLM = "meta-llama/Meta-Llama-3-8B"
+# DEFAULT_LLM = "meta-llama/Meta-Llama-3-8B"
+DEFAULT_LLM = "THUDM/glm-4-9b-chat"
 # DEFAULT_LLM = "seeklhy/codes-7b"
 # DEFAULT_LLM = "seeklhy/codes-15b"
 # DEFAULT_LLM = "defog/llama-3-sqlcoder-8b"
@@ -40,13 +41,15 @@ def seed_everything(seed: int):
 
 def load_tokenizer_and_model(model_name):
     tokenizer = AutoTokenizer.from_pretrained(
-        model_name
+        model_name,
+        trust_remote_code=True,
     )
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
         torch_dtype="auto",
         device_map="auto",
-    )
+        trust_remote_code=True,
+    ).eval()
     return tokenizer, model
 
 def load_dataset(data_path):
