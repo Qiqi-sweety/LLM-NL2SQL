@@ -18,9 +18,10 @@ inputs = inputs.to(device)
 model = AutoModelForCausalLM.from_pretrained(
     "THUDM/glm-4-9b-chat",
     torch_dtype=torch.bfloat16,
+    device_map="auto",
     low_cpu_mem_usage=True,
     trust_remote_code=True
-).to(device).eval()
+).eval()
 
 gen_kwargs = {"max_length": 2500, "do_sample": True, "top_k": 1}
 with torch.no_grad():

@@ -1,5 +1,6 @@
 import os
 import json
+import chardet
 import sqlite3
 import argparse
 from transformers import AutoTokenizer, AutoModelForCausalLM
@@ -65,7 +66,9 @@ def get_output_file(output_path, mode='w'):
     return open(output_path, mode)
 
 def get_schema(db_path):
-    with open(db_path, 'r') as f:
+    with open(db_path, 'rb') as f:
+        encoding = chardet.detect(f.read())['encoding']
+    with open(db_path, 'r', encoding=encoding) as f:
         schema = f.read()
     return schema
 
