@@ -35,6 +35,7 @@ def preprocess(input_folder, output_folder):
                     insert_count += 1
                 else:
                     output_file.write(line)
+                    insert_count = 0
         output_file.close()
 
 preprocess('data/spider/database', 'output/spider/database')
