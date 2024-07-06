@@ -1,17 +1,15 @@
 import os
 import json
-import chardet
-import sqlite3
 import argparse
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 # DEFAULT_LLM = "Qwen/Qwen1.5-7B-Chat"
 # DEFAULT_LLM = "Qwen/Qwen1.5-14B-Chat"
 # DEFAULT_LLM = "Qwen/Qwen1.5-32B-Chat"
-DEFAULT_LLM = "Qwen/Qwen2-7B-Instruct"
+# DEFAULT_LLM = "Qwen/Qwen2-7B-Instruct"
 # DEFAULT_LLM = "Qwen/CodeQwen1.5-7B-Chat"
 # DEFAULT_LLM = "meta-llama/Meta-Llama-3-8B"
-# DEFAULT_LLM = "THUDM/glm-4-9b-chat"
+DEFAULT_LLM = "THUDM/glm-4-9b-chat"
 # DEFAULT_LLM = "seeklhy/codes-7b"
 # DEFAULT_LLM = "seeklhy/codes-15b"
 # DEFAULT_LLM = "defog/llama-3-sqlcoder-8b"
@@ -65,30 +63,6 @@ def get_output_file(output_path, mode='w'):
     os.makedirs(directory, exist_ok=True)
 
     return open(output_path, mode, encoding='utf8')
-
-def get_schema(db_path):
-    with open(db_path, 'rb') as f:
-        encoding = chardet.detect(f.read())['encoding']
-    with open(db_path, 'r', encoding=encoding) as f:
-        schema = f.read()
-    return schema
-
-def get_table_schema(db_path):
-    # connect to the database
-    conn = sqlite3.connect(db_path)
-    cursor = conn.cursor()
-    cursor.execute("SELECT sql FROM sqlite_master WHERE type='table';")
-    schema_statements = cursor.fetchall()
-    conn.close()
-
-    schema = "\n\n".join(statement[0] for statement in schema_statements if statement[0] is not None)
-    return schema
-
-def get_dump_schema(db_path):
-    # connect to the database
-    conn = sqlite3.connect(db_path)
-    schema = "\n".join(conn.iterdump())
-    return schema
 
 def get_prompt(schema:str, question:str, evidence:str = None, chat_mode:bool = True) -> str:
     # base prompt for the question
@@ -174,7 +148,7 @@ def get_args():
 
     args = parser.parse_args()
     print(args)
-    assert args.strategy in ['zero_shot', 'few_shot', 'baseline']
+    assert args.strategy in ['zero_shot', 'few_shot', 'llm_filter']
 
     args.data_path = f'data/{args.data_name}'
     args.database_path = "data/spider/database" if args.data_name == 'spider' else 'data/bird/dev_databases'

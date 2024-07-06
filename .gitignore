@@ -4,3 +4,4 @@ output/*/database/
 .DS_Store
 output/*/database/
 reference
+temp.sqlite

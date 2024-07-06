@@ -110,8 +110,14 @@
     </form>
     <div class="result-container">
         {% if result %}
-        <h3>执行结果：</h3>
+        <h3>执行结果：</h3>result
         <textarea id="result" rows="8" readonly>{{ result }}</textarea>
+        {% endif %}
+    </div>
+    <div class="result-container">
+        {% if table_schema %}
+        <h3>建表语句：</h3>table_schema
+        <textarea id="table_schema" rows="8" readonly>{{ table_schema }}</textarea>
         {% endif %}
     </div>
 </body>
