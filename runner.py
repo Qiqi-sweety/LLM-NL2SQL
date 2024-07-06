@@ -22,23 +22,22 @@ def run(args):
     
     for item in tqdm(dataset):
         db = item['db_id']
+        sqlite_path = os.path.join(args.database_path, db, f'{db}.sqlite')
+        db_path = os.path.join(args.schema_path, db, f'{db}.sql') 
 
-        if args.data_name == 'bird':
-            if args.strategy == 'zero_shot':
-                db_path = os.path.join(args.database_path, db, f'{db}.sqlite')
-                schema = schema_linking.get_table_schema(db_path)
-            elif args.strategy == 'few_shot':
-                db_path = os.path.join(args.schema_path, db, f'{db}.sql') 
-                schema = schema_linking.get_table_schema_with_insert_data(db_path)
-            elif args.strategy == 'llm_filter':
-                db_path = os.path.join(args.database_path, db, f'{db}.sqlite')
-                filtered_schema_path = f'/data1/MrLiao/agents/NL2SQL/results/Qwen1.5-14B/select_tab_col/col/{item["question_id"]}.json'
-                schema = schema_linking.get_llm_filterd_schema(db_path, filtered_schema_path)
-            else:
-                raise ValueError(f'Unknown strategy: {args.strategy}')
-        else:
-            db_path = os.path.join(args.schema_path, db, f'{db}.sql') 
+        if args.strategy == 'zero_shot':
+            schema = schema_linking.get_table_schema(sqlite_path)
+        elif args.strategy == 'few_shot':
             schema = schema_linking.get_table_schema_with_insert_data(db_path)
+        elif args.strategy == 'llm_filter':
+            try:
+                filtered_schema_path = f'/data1/MrLiao/agents/NL2SQL/results/Qwen1.5-14B/select_tab_col/col/{item["question_id"]}.json'
+                schema = schema_linking.get_llm_filterd_schema(sqlite_path, filtered_schema_path)
+            except:
+                # few shot strategy
+                schema = schema_linking.get_table_schema_with_insert_data(db_path)
+        else:
+            raise ValueError(f'Unknown strategy: {args.strategy}')
 
         evidence = item.get('evidence', None)
 

@@ -18,8 +18,8 @@ def get_llm_filterd_schema(sqlite_path, result_path):
 
 def create_new_database_with_selected_columns(original_db, selected_columns_ori, insert_sql_num=5, test_sql=False):
     if test_sql:
-        if os.path.exists('temp.sqlite'):
-            os.remove('temp.sqlite')
+        if os.path.exists('/tmp/temp.sqlite'):
+            os.remove('/tmp/temp.sqlite')
     
     # 解析输入的列名列表
     selected_columns_dict = {}
@@ -36,7 +36,7 @@ def create_new_database_with_selected_columns(original_db, selected_columns_ori,
 
     # 创建新的数据库
     if test_sql:
-        conn_new = sqlite3.connect('temp.sqlite')
+        conn_new = sqlite3.connect('/tmp/temp.sqlite')
         cursor_new = conn_new.cursor()
 
     create_statements = []
