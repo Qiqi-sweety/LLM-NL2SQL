@@ -1,12 +1,12 @@
 import subprocess
 from utils import get_args
 
-def run_evaluation_spider(model_name):
+def run_evaluation_spider(args):
     gold = "data/spider/dev_gold.sql"
     db = "data/spider/database/"
     table = "data/spider/tables.json"
     etype = "all"
-    pred = f"output/spider/{model_name}/dev_pred.sql"
+    pred = args.result_path
     
     command = [
         "python", "evaluation/evaluation_spider.py",
@@ -19,12 +19,12 @@ def run_evaluation_spider(model_name):
     
     subprocess.run(command)
 
-def run_evaluation_bird(model_name):
+def run_evaluation_bird(args):
     base_command = {
         "ex": "evaluation/evaluation_bird_ex.py",
         "ves": "evaluation/evaluation_bird_ves.py"
     }
-    predicted_sql_json_path = f"output/bird/{model_name}/dev_pred_gt.sql"
+    predicted_sql_json_path = args.gt_result_path
     ground_truth_sql_path = "data/bird/dev_gold.sql"
     data_mode = "dev"
     db_root_path = "data/bird/dev_databases/"
@@ -47,9 +47,9 @@ def run_evaluation_bird(model_name):
 
 def evaluation(args):
     if args.data_name == 'spider':
-        run_evaluation_spider(args.model_name)
+        run_evaluation_spider(args)
     elif args.data_name == 'bird':
-        run_evaluation_bird(args.model_name)
+        run_evaluation_bird(args)
 
 if __name__ == "__main__":
     args = get_args()

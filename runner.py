@@ -11,6 +11,7 @@ from utils import (
     load_dataset,
     seed_everything,
     get_output_file,
+    get_table_schema,
     load_tokenizer_and_model,
 )
 
@@ -23,8 +24,16 @@ def run(args):
     for item in tqdm(dataset):
         db = item['db_id']
 
-        db_path = os.path.join(args.schema_path, db, f'{db}.sql')
-        schema = get_schema(db_path)
+        
+        if args.strategy == 'zero_shot':
+            db_path = os.path.join(args.database_path, db, f'{db}.sqlite')
+            schema = get_table_schema(db_path)
+        elif args.strategy == 'few_shot':
+            db_path = os.path.join(args.schema_path, db, f'{db}.sql') 
+            schema = get_schema(db_path)
+        else:
+            raise ValueError(f'Unknown strategy: {args.strategy}')
+
         evidence = item.get('evidence', None)
 
         prompt = get_prompt(schema, item['question'], evidence, args.chat_mode) 

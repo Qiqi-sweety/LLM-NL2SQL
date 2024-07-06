@@ -64,7 +64,7 @@ def get_output_file(output_path, mode='w'):
     directory = os.path.dirname(output_path)
     os.makedirs(directory, exist_ok=True)
 
-    return open(output_path, mode)
+    return open(output_path, mode, encoding='utf8')
 
 def get_schema(db_path):
     with open(db_path, 'rb') as f:
@@ -169,15 +169,19 @@ def generate_sql(prompt, tokenizer, model, chat_mode:bool = True):
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('-m', '--model_name', type=str, default=DEFAULT_LLM)
-    parser.add_argument('-d', '--data_name', type=str, default='spider')
+    parser.add_argument('-d', '--data_name', type=str, default='bird')
+    parser.add_argument('-s', '--strategy', type=str, default='zero_shot')
 
     args = parser.parse_args()
     print(args)
+    assert args.strategy in ['zero_shot', 'few_shot', 'baseline']
 
     args.data_path = f'data/{args.data_name}'
+    args.database_path = "data/spider/database" if args.data_name == 'spider' else 'data/bird/dev_databases'
+
     args.schema_path = f'output/{args.data_name}/database'
-    args.result_path = f'output/{args.data_name}/{args.model_name}/dev_pred.sql'
-    args.gt_result_path = f'output/{args.data_name}/{args.model_name}/dev_pred_gt.sql'
+    args.result_path = f'output/{args.data_name}/{args.model_name}/{args.strategy}/dev_pred.sql'
+    args.gt_result_path = f'output/{args.data_name}/{args.model_name}/{args.strategy}/dev_pred_gt.sql'
 
     args.chat_mode = all(keyword not in args.model_name for keyword in ["codes", "Symbol-LLM", "meta-llama"])
 

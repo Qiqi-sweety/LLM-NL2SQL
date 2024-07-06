@@ -108,3 +108,31 @@ python runner.py -m [model_name] -d [dataset_name]
 | SQL Coder 34B        | 46.50  | 28.34    | 17.86       | 38.30 |
 
 
+## Schema Linking
+
+Chat-GLM-9B
+
+```
+                     simple               moderate             challenging          total               
+count                925                  465                  144                  1534                
+======================================    ACCURACY    =====================================
+zero shot            46.05                24.52                18.75                36.96
+few shot             48.43                28.82                18.75                39.70  
+```
+
+```
+                     simple               moderate             challenging          total
+count                925                  465                  144                  1534
+=========================================    VES   ========================================
+few shot             51.34                28.94                18.94                41.51
+```
+
+Qwen2-7B
+
+```
+                     simple               moderate             challenging          total
+count                925                  465                  144                  1534
+======================================    ACCURACY    =====================================
+zero shot            43.14                26.45                17.36                35.66
+few shot             45.51                25.38                19.44                36.96
+```
