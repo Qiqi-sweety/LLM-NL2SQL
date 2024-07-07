@@ -10,7 +10,7 @@ def get_roberta_filtered_table_schema(db_path, query):
     # fetch all schemas
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
-    cursor.execute("SELECT nameFROM sqlite_master WHERE type='table';")
+    cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
     results = cursor.fetchall()
 
     # store all table columns info
@@ -50,7 +50,7 @@ def get_roberta_filtered_table_schema(db_path, query):
         similarity_threshold = 0.5
 
         num_used_columns = 0
-        create_table_sql = f"CREATE TABLE '{table_name}' \n(\n"
+        create_table_sql = f"CREATE TABLE `{table_name}` \n(\n"
         foreign_keys_contrains = ""
         for column_info, column_similarity in zip(table_info, columns_similarity):
             column_name = column_info[1]
@@ -65,7 +65,7 @@ def get_roberta_filtered_table_schema(db_path, query):
                 or fully_qualified_name in foreign_keys_set):
                 num_used_columns += 1  
                 
-                create_table_sql += f"\t'{column_name}'\t{column_type}"
+                create_table_sql += f"\t`{column_name}`\t{column_type}"
                 if column_notnull:
                     create_table_sql += "\tNOT NULL"
                 else:
@@ -80,7 +80,7 @@ def get_roberta_filtered_table_schema(db_path, query):
                 referenced_column: str = foreign_keys_map.get(fully_qualified_name)
                 if referenced_column is not None:
                     ref_table, ref_column = referenced_column.split('.')
-                    foreign_keys_contrains += f"\tforeign key ('{column_name}') references '{ref_table}' ('{ref_column}'),\n"
+                    foreign_keys_contrains += f"\tforeign key (`{column_name}`) references `{ref_table}` (`{ref_column}`),\n"
         
         if num_used_columns == 0:
             continue
