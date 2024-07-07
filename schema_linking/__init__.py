@@ -6,3 +6,4 @@ from .vanilla import (
 
 from .llm_filter import get_llm_filterd_table_schema
 from .bert_filter import get_bert_filtered_table_schema
+from .roberta_filter import get_roberta_filtered_table_schema

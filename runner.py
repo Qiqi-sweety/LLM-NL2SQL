@@ -40,6 +40,10 @@ def run(args):
                     schema = schema_linking.get_llm_filterd_table_schema(sqlite_path, filtered_schema_path)
                 elif strategy == 'bert_filter':
                     schema = schema_linking.get_bert_filtered_table_schema(sqlite_path, query + ' ' + evidence)
+                elif strategy == 'roberta_filter':
+                    schema = schema_linking.get_roberta_filtered_table_schema(sqlite_path, query + ' ' + evidence)
+                    print(schema)
+                    exit(0)
                 else:
                     raise ValueError(f'Unknown strategy: {args.strategy}')
             except:

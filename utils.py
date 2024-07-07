@@ -148,7 +148,7 @@ def get_args():
 
     args = parser.parse_args()
     print(args)
-    assert args.strategy in ['zero_shot', 'few_shot', 'llm_filter', 'bert_filter']
+    assert args.strategy in ['zero_shot', 'few_shot', 'llm_filter', 'bert_filter', 'roberta_filter']
 
     args.data_path = f'data/{args.data_name}'
     args.database_path = "data/spider/database" if args.data_name == 'spider' else 'data/bird/dev_databases'
