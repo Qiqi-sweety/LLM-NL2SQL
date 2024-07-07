@@ -2,7 +2,7 @@ import sqlite3
 import os
 import json
 
-def get_llm_filterd_schema(sqlite_path, result_path):
+def get_llm_filterd_table_schema(sqlite_path, result_path):
     if not os.path.exists(result_path):
         raise FileNotFoundError(f"{result_path} does not exist.")
     

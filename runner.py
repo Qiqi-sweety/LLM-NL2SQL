@@ -22,31 +22,36 @@ def run(args):
     
     for item in tqdm(dataset):
         db = item['db_id']
+        query = item['question']
+        evidence = item.get('evidence', None)
+
         sqlite_path = os.path.join(args.database_path, db, f'{db}.sqlite')
         db_path = os.path.join(args.schema_path, db, f'{db}.sql') 
 
-        if args.strategy == 'zero_shot':
+        strategy = args.strategy
+        if strategy == 'zero_shot':
             schema = schema_linking.get_table_schema(sqlite_path)
-        elif args.strategy == 'few_shot':
+        elif strategy == 'few_shot':
             schema = schema_linking.get_table_schema_with_insert_data(db_path)
-        elif args.strategy == 'llm_filter':
+        else:
             try:
-                filtered_schema_path = f'/data1/MrLiao/agents/NL2SQL/results/Qwen1.5-14B/select_tab_col/col/{item["question_id"]}.json'
-                schema = schema_linking.get_llm_filterd_schema(sqlite_path, filtered_schema_path)
+                if strategy == 'llm_filter':
+                    filtered_schema_path = f'/data1/MrLiao/agents/NL2SQL/results/Qwen1.5-14B/select_tab_col/col/{item["question_id"]}.json'
+                    schema = schema_linking.get_llm_filterd_table_schema(sqlite_path, filtered_schema_path)
+                elif strategy == 'bert_filter':
+                    schema = schema_linking.get_bert_filtered_table_schema(sqlite_path, query + ' ' + evidence)
+                else:
+                    raise ValueError(f'Unknown strategy: {args.strategy}')
             except:
                 # few shot strategy
                 schema = schema_linking.get_table_schema_with_insert_data(db_path)
-        else:
-            raise ValueError(f'Unknown strategy: {args.strategy}')
-
-        evidence = item.get('evidence', None)
-
-        prompt = get_prompt(schema, item['question'], evidence, args.chat_mode) 
+        
+        prompt = get_prompt(schema, query, evidence, args.chat_mode) 
         response = generate_sql(prompt, tokenizer, model, args.chat_mode)
         
         print()
         print("On database:", db)
-        print("Question:", item['question'])
+        print("Question:", query)
         print("LLM response:", response)
         print("Ground truth:", item['query'] if args.data_name == 'spider' else item['SQL'])
         print("====================================")

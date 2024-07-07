@@ -14,8 +14,10 @@ def fix_gt(args):
     for item in tqdm(dataset):
         db = item['db_id']
 
-        line = result_file.readline()
-        line = line.strip()
+        line: str = result_file.readline()
+        line = line.strip().replace('\t', ' ')
+        if line.startswith('CREATE'):
+            line = ';'
         response = line + '\t' + db + '\n'
         output_file.write(response)
 

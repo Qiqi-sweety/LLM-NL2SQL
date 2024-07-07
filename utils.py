@@ -54,7 +54,7 @@ def load_tokenizer_and_model(model_name):
 
 def load_dataset(data_path):
     dev_path = os.path.join(data_path, 'dev.json')
-    with open(dev_path, 'r') as f:
+    with open(dev_path, 'r', encoding='utf-8') as f:
         dataset = json.load(f)
     return dataset
 
@@ -148,7 +148,7 @@ def get_args():
 
     args = parser.parse_args()
     print(args)
-    assert args.strategy in ['zero_shot', 'few_shot', 'llm_filter']
+    assert args.strategy in ['zero_shot', 'few_shot', 'llm_filter', 'bert_filter']
 
     args.data_path = f'data/{args.data_name}'
     args.database_path = "data/spider/database" if args.data_name == 'spider' else 'data/bird/dev_databases'
