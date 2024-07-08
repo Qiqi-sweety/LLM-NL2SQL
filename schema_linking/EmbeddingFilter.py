@@ -2,10 +2,18 @@ import torch
 import sqlite3
 from transformers import PreTrainedTokenizer, PreTrainedModel
 
-class SchemaFilter():
-    def __init__(self) -> None:
+from .SchemaLinker import SchemaLinker
+
+class EmbeddingFilter(SchemaLinker):
+    def __init__(self, **kwargs) -> None:
+        super().__init__(**kwargs)
         self.tokenizer: PreTrainedTokenizer = None
         self.model: PreTrainedModel = None
+        
+        self.device = kwargs.pop(
+            "device",
+            torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        )
 
     def get_schema(
             self, 
@@ -98,7 +106,8 @@ class SchemaFilter():
         return schema
 
     def _get_text_embeddings(self, text):
-        tokens = self.tokenizer(text, padding=True, return_tensors='pt')
+        tokens = self.tokenizer(text, padding=True, return_tensors='pt').to(self.device)
         with torch.no_grad():
+            self.model.to(self.device)
             embeddings = self.model(**tokens).last_hidden_state.mean(dim=1)
         return embeddings

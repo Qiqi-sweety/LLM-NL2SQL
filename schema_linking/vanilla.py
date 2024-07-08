@@ -2,6 +2,7 @@
 import chardet
 import sqlite3
 
+
 def get_table_schema(db_path):
     # connect to the database
     conn = sqlite3.connect(db_path)

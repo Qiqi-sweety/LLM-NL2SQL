@@ -1,9 +1,9 @@
 from transformers import RobertaTokenizer, RobertaModel
 
-from .SchemaFilter import SchemaFilter
+from .EmbeddingFilter import EmbeddingFilter
 
-class RobertaFilter(SchemaFilter):
-    def __init__(self) -> None:
-        super().__init__()
+class RobertaFilter(EmbeddingFilter):
+    def __init__(self, **kwargs) -> None:
+        super().__init__(**kwargs)
         self.tokenizer = RobertaTokenizer.from_pretrained('roberta-base')
         self.model = RobertaModel.from_pretrained('roberta-base')

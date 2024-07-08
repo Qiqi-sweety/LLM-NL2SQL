@@ -1,9 +1,9 @@
 from transformers import BertTokenizer, BertModel
 
-from .SchemaFilter import SchemaFilter
+from .EmbeddingFilter import EmbeddingFilter
 
-class BertFilter(SchemaFilter):
-    def __init__(self) -> None:
-        super().__init__()
+class BertFilter(EmbeddingFilter):
+    def __init__(self, **kwargs) -> None:
+        super().__init__(**kwargs)
         self.tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
         self.model = BertModel.from_pretrained('bert-base-uncased')
