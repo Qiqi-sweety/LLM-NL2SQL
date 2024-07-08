@@ -1,4 +1,5 @@
 import os
+import importlib
 from tqdm import tqdm
 
 import schema_linking
@@ -43,8 +44,13 @@ def run(args):
                 elif strategy == 'roberta_filter':
                     schema = schema_linking.get_roberta_filtered_table_schema(sqlite_path, query + ' ' + evidence)
                 else:
-                    raise ValueError(f'Unknown strategy: {args.strategy}')
-            except:
+                    schema_linking_module_class = 'schema_linking.' + args.strategy
+                    schema_linking_module = importlib.import_module(schema_linking_module_class)
+                    schema_linker = getattr(schema_linking_module, args.strategy)
+                    schema = schema_linker.get_schema(sqlite_path, query + ' ' + evidence)
+            except Exception as e:
+                # print exception reson
+                print(e)
                 # few shot strategy
                 schema = schema_linking.get_table_schema_with_insert_data(db_path)
         
