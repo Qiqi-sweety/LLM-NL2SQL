@@ -2,7 +2,7 @@ import torch
 import sqlite3
 from transformers import PreTrainedTokenizer, PreTrainedModel
 
-class SchemaFilter:
+class SchemaFilter():
     def __init__(self) -> None:
         self.tokenizer: PreTrainedTokenizer = None
         self.model: PreTrainedModel = None

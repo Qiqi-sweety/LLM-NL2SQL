@@ -20,6 +20,9 @@ def run(args):
     tokenizer, model = load_tokenizer_and_model(args.model_name)
     dataset = load_dataset(args.data_path)
     result_file = get_output_file(args.result_path)
+
+    schema_linking_module = importlib.import_module('schema_linking.' + args.strategy)
+    schema_linker = getattr(schema_linking_module, args.strategy)()
     
     for item in tqdm(dataset):
         db = item['db_id']
@@ -39,14 +42,7 @@ def run(args):
                 if strategy == 'llm_filter':
                     filtered_schema_path = f'/data1/MrLiao/agents/NL2SQL/results/Qwen1.5-14B/select_tab_col/col/{item["question_id"]}.json'
                     schema = schema_linking.get_llm_filterd_table_schema(sqlite_path, filtered_schema_path)
-                elif strategy == 'bert_filter':
-                    schema = schema_linking.get_bert_filtered_table_schema(sqlite_path, query + ' ' + evidence)
-                elif strategy == 'roberta_filter':
-                    schema = schema_linking.get_roberta_filtered_table_schema(sqlite_path, query + ' ' + evidence)
                 else:
-                    schema_linking_module_class = 'schema_linking.' + args.strategy
-                    schema_linking_module = importlib.import_module(schema_linking_module_class)
-                    schema_linker = getattr(schema_linking_module, args.strategy)
                     schema = schema_linker.get_schema(sqlite_path, query + ' ' + evidence)
             except Exception as e:
                 # print exception reson
