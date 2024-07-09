@@ -120,9 +120,13 @@ count                925                  465                  144              
 zero shot            46.05                24.52                18.75                36.96
 few shot             48.43                28.82                18.75                39.70
 llm filter           18.38                8.39                 3.47                 13.95
+
+vanilla              46.49                28.23                18.62                38.33
 bert filter          34.59                17.63                7.64                 26.92
     + foreign key    38.05                19.14                15.28                30.18
-roberta filter       43.78                23.44                15.28                34.94
+roberta filter       
+    + foreign key    43.78                23.44                15.28                34.94
+    + insert rows    43.78                27.16                17.93                36.31
 ```
 
 ```
