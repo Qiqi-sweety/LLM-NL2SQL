@@ -36,7 +36,7 @@ def run(args):
                 filtered_schema_path = f'/data1/MrLiao/agents/NL2SQL/results/Qwen1.5-14B/select_tab_col/col/{item["question_id"]}.json'
                 schema = schema_linking.get_llm_filterd_table_schema(sqlite_path, filtered_schema_path)
             else:
-                schema_query = query + ' ' + evidence
+                schema_query = query + ' ' + evidence if evidence else query
                 schema = schema_linker.get_schema(sqlite_path, schema_query)
         except Exception as e:
             # few shot strategy

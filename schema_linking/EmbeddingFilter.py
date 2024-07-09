@@ -67,6 +67,7 @@ class EmbeddingFilter(SchemaLinker):
             column_default_value = column_info[4]
             column_pk = column_info[5]
             fully_qualified_name = f"{table_name}.{column_name}"
+            # print(f"{fully_qualified_name}: {column_similarity}")
             
             # Check if the column is a primary key or foreign key
             if (column_similarity > self.similarity_threshold 

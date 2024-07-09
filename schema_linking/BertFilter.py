@@ -7,3 +7,5 @@ class BertFilter(EmbeddingFilter):
         super().__init__(**kwargs)
         self.tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
         self.model = BertModel.from_pretrained('bert-base-uncased')
+
+        self.similarity_threshold = kwargs.pop("similarity_threshold", 0.7)
