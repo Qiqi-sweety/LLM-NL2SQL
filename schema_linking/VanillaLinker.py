@@ -25,11 +25,11 @@ class VanillaLinker(SchemaLinker):
             schema += create_statement + ";\n\n"
 
             # Get the first few rows of the current table for example insert statements
-            cursor.execute(f"SELECT * FROM {table_name} LIMIT {self.num_insert_rows};")
+            cursor.execute(f"SELECT * FROM `{table_name}` LIMIT {self.num_insert_rows};")
             rows = cursor.fetchall()
             if rows:
                 # Get column names for the current table
-                cursor.execute(f"PRAGMA table_info({table_name});")
+                cursor.execute(f"PRAGMA table_info(`{table_name}`);")
                 columns_info = cursor.fetchall()
                 column_names = ", ".join([f"`{info[1]}`" for info in columns_info])
 
