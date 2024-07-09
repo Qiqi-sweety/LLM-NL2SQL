@@ -33,22 +33,18 @@ def run(args):
         db_path = os.path.join(args.schema_path, db, f'{db}.sql') 
 
         strategy = args.strategy
-        if strategy == 'zero_shot':
-            schema = schema_linking.get_table_schema(sqlite_path)
-        elif strategy == 'few_shot':
+        try:
+            if strategy == 'llm_filter':
+                filtered_schema_path = f'/data1/MrLiao/agents/NL2SQL/results/Qwen1.5-14B/select_tab_col/col/{item["question_id"]}.json'
+                schema = schema_linking.get_llm_filterd_table_schema(sqlite_path, filtered_schema_path)
+            else:
+                schema_query = query + ' ' + evidence
+                schema = schema_linker.get_schema(sqlite_path, schema_query)
+        except Exception as e:
+            # print exception reson
+            print(e)
+            # few shot strategy
             schema = schema_linking.get_table_schema_with_insert_data(db_path)
-        else:
-            try:
-                if strategy == 'llm_filter':
-                    filtered_schema_path = f'/data1/MrLiao/agents/NL2SQL/results/Qwen1.5-14B/select_tab_col/col/{item["question_id"]}.json'
-                    schema = schema_linking.get_llm_filterd_table_schema(sqlite_path, filtered_schema_path)
-                else:
-                    schema = schema_linker.get_schema(sqlite_path, query + ' ' + evidence)
-            except Exception as e:
-                # print exception reson
-                print(e)
-                # few shot strategy
-                schema = schema_linking.get_table_schema_with_insert_data(db_path)
         
         prompt = get_prompt(schema, query, evidence, args.chat_mode) 
         response = generate_sql(prompt, tokenizer, model, args.chat_mode)
