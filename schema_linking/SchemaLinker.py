@@ -48,3 +48,25 @@ class SchemaLinker():
             return f"'{value}'"
         else:
             return str(value)
+    
+    def _fetch_table_names(self, cursor: sqlite3.Cursor) -> List[str]:
+        """
+        Fetch all table names from the database.
+        """
+        cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
+        return [row[0] for row in cursor.fetchall()]
+    
+    def _fetch_foreign_key_info(self, cursor: sqlite3.Cursor, table_names: List[str]):
+        # fetch foreign keys
+        foreign_keys_set = set()
+        foreign_keys_map = dict()
+        for table_name in table_names:
+            cursor.execute(f"PRAGMA foreign_key_list(`{table_name}`)")
+            fks = cursor.fetchall()
+            for fk in fks:
+                referenced_column = f"{fk[2]}.{fk[4]}"
+                referencing_column = f"{table_name}.{fk[3]}"
+                foreign_keys_set.add(referenced_column)
+                foreign_keys_set.add(referencing_column)
+                foreign_keys_map[referencing_column] = referenced_column
+        return foreign_keys_set, foreign_keys_map

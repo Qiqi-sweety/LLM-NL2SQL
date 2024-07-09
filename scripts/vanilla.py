@@ -15,9 +15,7 @@ def get_table_schema(db_path):
     return schema
 
 def get_table_schema_with_insert_data(db_path):
-    with open(db_path, 'rb') as f:
-        encoding = chardet.detect(f.read())['encoding']
-    with open(db_path, 'r', encoding=encoding) as f:
+    with open(db_path, 'r', encoding='utf-8') as f:
         schema = f.read()
     return schema
 

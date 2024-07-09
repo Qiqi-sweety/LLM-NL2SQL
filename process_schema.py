@@ -20,7 +20,7 @@ def preprocess(input_folder, output_folder):
         subprocess.run(order, shell=True, check=True)
 
         output_path = f"{output_folder}/{folder_name}/{folder_name}.sql"
-        output_file = open(output_path, "w")
+        output_file = open(output_path, "w", encoding='utf-8')
         with open(schema_file, 'rb') as f:
             result = chardet.detect(f.read())
         print(result)
@@ -38,5 +38,5 @@ def preprocess(input_folder, output_folder):
                     insert_count = 0
         output_file.close()
 
-preprocess('data/spider/database', 'output/spider/database')
+# preprocess('data/spider/database', 'output/spider/database')
 preprocess('data/bird/dev_databases', 'output/bird/database')
