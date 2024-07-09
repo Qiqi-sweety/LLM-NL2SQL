@@ -1,5 +1,4 @@
 import os
-import importlib
 from tqdm import tqdm
 
 import schema_linking
@@ -21,10 +20,8 @@ def run(args):
     tokenizer, model = load_tokenizer_and_model(args.model_name)
     dataset = load_dataset(args.data_path)
     result_file = get_output_file(args.result_path)
+    schema_linker = schema_linking.load_schema_linker(args.strategy)
 
-    schema_linking_module = importlib.import_module('schema_linking.' + args.strategy)
-    schema_linker = getattr(schema_linking_module, args.strategy)()
-    
     for item in tqdm(dataset):
         db = item['db_id']
         query = item['question']
