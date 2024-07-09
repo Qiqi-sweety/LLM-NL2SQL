@@ -1,23 +1,10 @@
 import os
 import json
-import chardet
-import sqlite3
 import argparse
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-# DEFAULT_LLM = "Qwen/Qwen1.5-7B-Chat"
-# DEFAULT_LLM = "Qwen/Qwen1.5-14B-Chat"
-# DEFAULT_LLM = "Qwen/Qwen1.5-32B-Chat"
-DEFAULT_LLM = "Qwen/Qwen2-7B-Instruct"
-# DEFAULT_LLM = "Qwen/CodeQwen1.5-7B-Chat"
-# DEFAULT_LLM = "meta-llama/Meta-Llama-3-8B"
-# DEFAULT_LLM = "THUDM/glm-4-9b-chat"
-# DEFAULT_LLM = "seeklhy/codes-7b"
-# DEFAULT_LLM = "seeklhy/codes-15b"
-# DEFAULT_LLM = "defog/llama-3-sqlcoder-8b"
-# DEFAULT_LLM = "defog/sqlcoder-34b-alpha"
-# DEFAULT_LLM = "Symbol-LLM/Symbol-LLM-7B-Instruct"
-# DEFAULT_LLM = "Symbol-LLM/Symbol-LLM-13B-Instruct"
+# DEFAULT_LLM = "Qwen/Qwen2-7B-Instruct"
+DEFAULT_LLM = "THUDM/glm-4-9b-chat"
 
 constraint=" When generating SQL, we should always consider constraints: \n \
 【Constraints】\n \
@@ -56,7 +43,7 @@ def load_tokenizer_and_model(model_name):
 
 def load_dataset(data_path):
     dev_path = os.path.join(data_path, 'dev.json')
-    with open(dev_path, 'r') as f:
+    with open(dev_path, 'r', encoding='utf-8') as f:
         dataset = json.load(f)
     return dataset
 
@@ -64,31 +51,7 @@ def get_output_file(output_path, mode='w'):
     directory = os.path.dirname(output_path)
     os.makedirs(directory, exist_ok=True)
 
-    return open(output_path, mode)
-
-def get_schema(db_path):
-    with open(db_path, 'rb') as f:
-        encoding = chardet.detect(f.read())['encoding']
-    with open(db_path, 'r', encoding=encoding) as f:
-        schema = f.read()
-    return schema
-
-def get_table_schema(db_path):
-    # connect to the database
-    conn = sqlite3.connect(db_path)
-    cursor = conn.cursor()
-    cursor.execute("SELECT sql FROM sqlite_master WHERE type='table';")
-    schema_statements = cursor.fetchall()
-    conn.close()
-
-    schema = "\n\n".join(statement[0] for statement in schema_statements if statement[0] is not None)
-    return schema
-
-def get_dump_schema(db_path):
-    # connect to the database
-    conn = sqlite3.connect(db_path)
-    schema = "\n".join(conn.iterdump())
-    return schema
+    return open(output_path, mode, encoding='utf8')
 
 def get_prompt(schema:str, question:str, evidence:str = None, chat_mode:bool = True) -> str:
     # base prompt for the question
@@ -169,15 +132,18 @@ def generate_sql(prompt, tokenizer, model, chat_mode:bool = True):
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('-m', '--model_name', type=str, default=DEFAULT_LLM)
-    parser.add_argument('-d', '--data_name', type=str, default='spider')
+    parser.add_argument('-d', '--data_name', type=str, default='bird')
+    parser.add_argument('-s', '--strategy', type=str, default='VanillaLinker')
 
     args = parser.parse_args()
     print(args)
 
     args.data_path = f'data/{args.data_name}'
+    args.database_path = "data/spider/database" if args.data_name == 'spider' else 'data/bird/dev_databases'
+
     args.schema_path = f'output/{args.data_name}/database'
-    args.result_path = f'output/{args.data_name}/{args.model_name}/dev_pred.sql'
-    args.gt_result_path = f'output/{args.data_name}/{args.model_name}/dev_pred_gt.sql'
+    args.result_path = f'output/{args.data_name}/{args.model_name}/{args.strategy}/dev_pred.sql'
+    args.gt_result_path = f'output/{args.data_name}/{args.model_name}/{args.strategy}/dev_pred_gt.sql'
 
     args.chat_mode = all(keyword not in args.model_name for keyword in ["codes", "Symbol-LLM", "meta-llama"])
 

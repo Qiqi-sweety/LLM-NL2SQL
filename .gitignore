@@ -1,5 +1,3 @@
 __pycache__
 data/*/
 output/*/database/
-.DS_Store
-output/*/database/

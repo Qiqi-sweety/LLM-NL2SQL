@@ -27,7 +27,7 @@ python -c "import nltk; nltk.download('punkt')"
 Our evaluation framework supports almost all models that can be downloaded from HuggingFace and Spider dataset and Bird dataset. You can run the benchmark with the following command and specify the model and dataset.
 
 ```sh
-python runner.py -m [model_name] -d [dataset_name]
+python runner.py -m [model_name] -d [dataset_name] -s [schema_linking_strategy]
 ```
 
 ## Result
@@ -108,3 +108,46 @@ python runner.py -m [model_name] -d [dataset_name]
 | SQL Coder 34B        | 46.50  | 28.34    | 17.86       | 38.30 |
 
 
+## Schema Linking
+
+Chat-GLM-9B
+
+
+```
+                     simple               moderate             challenging          total               
+count                925                  465                  144                  1534                
+======================================    ACCURACY    =====================================
+zero shot            46.05                24.52                18.75                36.96
+few shot             48.43                28.82                18.75                39.70
+llm filter           18.38                8.39                 3.47                 13.95
+bert filter          34.59                17.63                7.64                 26.92
+    + foreign key    38.05                19.14                15.28                30.18
+roberta filter       43.78                23.44                15.28                34.94
+```
+
+```
+                     simple               moderate             challenging          total
+count                925                  465                  144                  1534
+=========================================    VES   ========================================
+zero shot            48.28                25.00                19.91                38.56
+few shot             51.34                28.94                18.94                41.51
+llm filter           21.36                10.17                3.35                 16.28
+```
+
+Qwen2-7B
+
+```
+                     simple               moderate             challenging          total
+count                925                  465                  144                  1534
+======================================    ACCURACY    =====================================
+zero shot            43.14                26.45                17.36                35.66
+few shot             45.51                25.38                19.44                36.96
+```
+
+```
+                     simple               moderate             challenging          total
+count                925                  465                  144                  1534
+=========================================    VES   ========================================
+zero shot            43.85                25.89                17.82                35.97
+few shot             46.77                26.30                18.34                37.89
+```
