@@ -27,7 +27,7 @@ python -c "import nltk; nltk.download('punkt')"
 Our evaluation framework supports almost all models that can be downloaded from HuggingFace and Spider dataset and Bird dataset. You can run the benchmark with the following command and specify the model and dataset.
 
 ```sh
-python runner.py -m [model_name] -d [dataset_name]
+python runner.py -m [model_name] -d [dataset_name] -s [schema_linking_strategy]
 ```
 
 ## Result

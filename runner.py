@@ -5,6 +5,7 @@ from tqdm import tqdm
 import schema_linking
 from fix_gt import fix_gt
 from evaluation import evaluation
+from scripts.vanilla import get_table_schema_with_insert_data
 from utils import (
     get_args,
     get_prompt,
@@ -41,10 +42,8 @@ def run(args):
                 schema_query = query + ' ' + evidence
                 schema = schema_linker.get_schema(sqlite_path, schema_query)
         except Exception as e:
-            # print exception reson
-            print(e)
             # few shot strategy
-            schema = schema_linking.get_table_schema_with_insert_data(db_path)
+            schema = get_table_schema_with_insert_data(db_path)
         
         prompt = get_prompt(schema, query, evidence, args.chat_mode) 
         response = generate_sql(prompt, tokenizer, model, args.chat_mode)

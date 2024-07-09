@@ -37,8 +37,8 @@ class VanillaLinker(SchemaLinker):
                 for row in rows:
                     # Properly format the INSERT statement with the actual row values
                     row_values = ', '.join([self._format_value(value) for value in row])
-                    # insert_statement = f"INSERT INTO `{table_name}` VALUES ({row_values});"
-                    insert_statement = f"INSERT INTO `{table_name}` ({column_names}) VALUES ({row_values});"
+                    insert_statement = f"INSERT INTO `{table_name}` VALUES ({row_values});"
+                    # insert_statement = f"INSERT INTO `{table_name}` ({column_names}) VALUES ({row_values});"
                     schema += insert_statement + "\n"
 
                 # Add extra newline for formatting if there were any INSERT statements

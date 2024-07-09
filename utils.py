@@ -3,19 +3,8 @@ import json
 import argparse
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-# DEFAULT_LLM = "Qwen/Qwen1.5-7B-Chat"
-# DEFAULT_LLM = "Qwen/Qwen1.5-14B-Chat"
-# DEFAULT_LLM = "Qwen/Qwen1.5-32B-Chat"
 # DEFAULT_LLM = "Qwen/Qwen2-7B-Instruct"
-# DEFAULT_LLM = "Qwen/CodeQwen1.5-7B-Chat"
-# DEFAULT_LLM = "meta-llama/Meta-Llama-3-8B"
 DEFAULT_LLM = "THUDM/glm-4-9b-chat"
-# DEFAULT_LLM = "seeklhy/codes-7b"
-# DEFAULT_LLM = "seeklhy/codes-15b"
-# DEFAULT_LLM = "defog/llama-3-sqlcoder-8b"
-# DEFAULT_LLM = "defog/sqlcoder-34b-alpha"
-# DEFAULT_LLM = "Symbol-LLM/Symbol-LLM-7B-Instruct"
-# DEFAULT_LLM = "Symbol-LLM/Symbol-LLM-13B-Instruct"
 
 constraint=" When generating SQL, we should always consider constraints: \n \
 【Constraints】\n \
@@ -144,11 +133,10 @@ def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('-m', '--model_name', type=str, default=DEFAULT_LLM)
     parser.add_argument('-d', '--data_name', type=str, default='bird')
-    parser.add_argument('-s', '--strategy', type=str, default='zero_shot')
+    parser.add_argument('-s', '--strategy', type=str, default='VanillaLinker')
 
     args = parser.parse_args()
     print(args)
-    # assert args.strategy in ['zero_shot', 'few_shot', 'llm_filter', 'bert_filter', 'roberta_filter']
 
     args.data_path = f'data/{args.data_name}'
     args.database_path = "data/spider/database" if args.data_name == 'spider' else 'data/bird/dev_databases'
