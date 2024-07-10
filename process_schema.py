@@ -38,5 +38,5 @@ def preprocess(input_folder, output_folder):
                     insert_count = 0
         output_file.close()
 
-# preprocess('data/spider/database', 'output/spider/database')
+preprocess('data/spider/database', 'output/spider/database')
 preprocess('data/bird/dev_databases', 'output/bird/database')
