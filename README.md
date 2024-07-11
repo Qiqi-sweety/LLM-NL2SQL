@@ -124,6 +124,7 @@ llm filter           18.38                8.39                 3.47             
 vanilla              46.49                28.23                18.62                38.33
 bert filter          34.59                17.63                7.64                 26.92
     + foreign key    38.05                19.14                15.28                30.18
+    + insert rows    39.03                22.84                17.93                32.14
 roberta filter       
     + foreign key    43.78                23.44                15.28                34.94
     + insert rows    43.78                27.16                17.93                36.31
