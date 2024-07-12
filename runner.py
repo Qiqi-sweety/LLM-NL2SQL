@@ -60,9 +60,9 @@ def run(args):
 
     result_file.close()
 
-    # if args.data_name in ['bird']:
-    #     fix_gt(args)
-    # evaluation(args)
+    if args.data_name in ['bird']:
+        fix_gt(args)
+    evaluation(args)
 
 if __name__ == '__main__':
     args = get_args()
