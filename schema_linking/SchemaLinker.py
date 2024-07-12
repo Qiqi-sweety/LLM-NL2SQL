@@ -24,16 +24,22 @@ class SchemaLinker():
         # fetch all table names
         table_names = self._fetch_table_names(cursor)
 
-        # fetch all columns infos
-        columns_infos = self._fetch_columns_infos(cursor, table_names)
+        # fetch all table_info
+        table_info = self._fetch_table_info(cursor, table_names)
 
         # fetch foreign key info
         foreign_keys_set, foreign_keys_map = self._fetch_foreign_key_info(cursor, table_names)
 
         schema = ""
         for table_name in table_names:
-            columns_info = columns_infos[table_name]
+            columns_info = table_info[table_name]
+            
+            # get selected columns
             selected_columns = self._get_selected_columns(query, table_name, columns_info, foreign_keys_set=foreign_keys_set, question=question)
+            if len(selected_columns) == 0:
+                continue
+
+            # prepare create table statement and insert statements
             create_statement = self._construct_create_table_statement(table_name, columns_info, selected_columns, foreign_keys_map)
             insert_statements = self._construct_insert_statements(cursor, table_name, selected_columns)
             schema += create_statement + insert_statements
@@ -62,9 +68,7 @@ class SchemaLinker():
             fully_qualified_name = f"{table_name}.{column_name}"
             
             # Check if the column is a primary key or foreign key
-            if column_name in selected_columns:
-                selected_columns.append(column_name)
-                
+            if column_name in selected_columns:                
                 create_statement += f"\t`{column_name}`\t{column_type}"
                 if column_notnull:
                     create_statement += "\tNOT NULL"
@@ -92,6 +96,9 @@ class SchemaLinker():
         """
         Construct insert statements for each row in the table.
         """
+        if len(column_names) == 0:
+            return ""
+        
         insert_statements = ""
         column_names_str = ", ".join([f"`{column_name}`" for column_name in column_names])
 
@@ -119,15 +126,15 @@ class SchemaLinker():
         cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
         return [row[0] for row in cursor.fetchall()]
     
-    def _fetch_columns_infos(self, cursor: sqlite3.Cursor, table_names: List[str]) -> Dict[str, List[List[str]]]:
+    def _fetch_table_info(self, cursor: sqlite3.Cursor, table_names: List[str]) -> Dict[str, List[List[str]]]:
         """
         Fetch all table information (column names and types) from the database.
         """
-        columns_infos = {}
+        table_info = {}
         for table_name in table_names:
             cursor.execute(f"PRAGMA table_info(`{table_name}`)")
-            columns_infos[table_name] = [row[1] for row in cursor.fetchall()]
-        return columns_infos
+            table_info[table_name] = [row for row in cursor.fetchall()]
+        return table_info
 
     def _fetch_foreign_key_info(self, cursor: sqlite3.Cursor, table_names: List[str]):
         # fetch foreign keys

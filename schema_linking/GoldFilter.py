@@ -15,4 +15,4 @@ class GoldFilter(SchemaLinker):
     
     def _get_selected_columns(self, query: str, table_name: str, columns_info: List, **kwargs) -> List[str]:
         question = kwargs.pop("question")
-        return self.gold_schema[question][table_name]
+        return self.gold_schema[question].get(table_name, [])
