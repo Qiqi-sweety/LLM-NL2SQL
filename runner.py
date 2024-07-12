@@ -32,19 +32,18 @@ def run(args):
         db_path = os.path.join(args.schema_path, db_name, f'{db_name}.sql') 
 
         strategy = args.strategy
-        if strategy == 'llm_filter':
-            try:
-                filtered_schema_path = f'/data1/MrLiao/agents/NL2SQL/results/Qwen1.5-14B/select_tab_col/col/{item["question_id"]}.json'
-                schema = schema_linking.get_llm_filterd_table_schema(sqlite_path, filtered_schema_path)
-            except Exception as e:
-                traceback.print_exc()
-                # few shot strategy
-                schema = get_table_schema_with_insert_data(db_path)
-        else:
-            question = db_name + '\t' + query
-            schema_query = query + ' ' + evidence if evidence else query
-            schema = schema_linker.get_schema(sqlite_path, schema_query, question=question)
-            print(schema)
+        try:
+            if strategy == 'llm_filter':
+                    filtered_schema_path = f'/data1/MrLiao/agents/NL2SQL/results/Qwen1.5-14B/select_tab_col/col/{item["question_id"]}.json'
+                    schema = schema_linking.get_llm_filterd_table_schema(sqlite_path, filtered_schema_path)
+            else:
+                question = db_name + '\t' + query
+                schema_query = query + ' ' + evidence if evidence else query
+                schema = schema_linker.get_schema(sqlite_path, schema_query, question=question)
+        except Exception as e:
+            traceback.print_exc()
+            # few shot strategy
+            schema = get_table_schema_with_insert_data(db_path)
         
         prompt = get_prompt(schema, query, evidence, args.chat_mode) 
         response = generate_sql(prompt, tokenizer, model, args.chat_mode)
@@ -61,9 +60,9 @@ def run(args):
 
     result_file.close()
 
-    if args.data_name in ['bird']:
-        fix_gt(args)
-    evaluation(args)
+    # if args.data_name in ['bird']:
+    #     fix_gt(args)
+    # evaluation(args)
 
 if __name__ == '__main__':
     args = get_args()
