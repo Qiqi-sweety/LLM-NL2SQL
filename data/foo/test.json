@@ -1,0 +1,32 @@
+[
+    {
+        "db_id": "california_schools",
+        "question": "What is the highest eligible free rate for K-12 students in the schools in Alameda County?",
+        "evidence": "Eligible free rate for K-12 = `Free Meal Count (K-12)` / `Enrollment (K-12)`",
+        "SQL": ""
+    },
+    {
+        "db_id": "california_schools",
+        "question": "Please list the lowest three eligible free rates for students aged 5-17 in continuation schools.",
+        "evidence": "Eligible free rates for students aged 5-17 = `Free Meal Count (Ages 5-17)` / `Enrollment (Ages 5-17)`",
+        "SQL": ""
+    },
+    {
+        "db_id": "california_schools",
+        "question": "Please list the zip code of all the charter schools in Fresno County Office of Education.",
+        "evidence": "Charter schools refers to `Charter School (Y/N)` = 1 in the table fprm",
+        "SQL": ""
+    },
+    {
+        "db_id": "california_schools",
+        "question": "What is the unabbreviated mailing address of the school with the highest FRPM count for K-12 students?",
+        "evidence": "",
+        "SQL": ""
+    },
+    {
+        "db_id": "california_schools",
+        "question": "Please list the phone numbers of the direct charter-funded schools that are opened after 2000/1/1.",
+        "evidence": "Charter schools refers to `Charter School (Y/N)` = 1 in the frpm",
+        "SQL": ""
+    }
+]
