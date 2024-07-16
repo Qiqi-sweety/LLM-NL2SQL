@@ -112,7 +112,6 @@ python runner.py -m [model_name] -d [dataset_name] -s [schema_linking_strategy]
 
 Chat-GLM-9B
 
-
 ```
                      simple               moderate             challenging          total               
 count                925                  465                  144                  1534                
@@ -163,4 +162,17 @@ few shot             46.77                26.30                18.34            
 gold filter          65.94                37.65                21.54                53.18
 ```
 
-bert-0.7             21.62                13.58                8.97                 17.99
+
+```
+                     simple               moderate             challenging          total               
+count                925                  465                  144                  1534                
+======================================    ACCURACY    =====================================
+vanilla              46.49                28.23                18.62                38.33
+gold filter          55.57                32.76                24.83                45.76
+bert filter          34.59                17.63                7.64                 26.92
+    + foreign key    38.05                19.14                15.28                30.18
+    + insert rows    39.03                22.84                17.93                32.14
+roberta filter       
+    + foreign key    43.78                23.44                15.28                34.94
+    + insert rows    46.78                24.13                19.30                37.33
+```
