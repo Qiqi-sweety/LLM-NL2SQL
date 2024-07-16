@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To retrieve the ids of the powerful pairs, we need to select the `id` column from the `cards` table.",
+        "column_name": "cards.`id`"
+    },
+    {
+        "reasoning": "The question specifies that we need to sort by Kingdom Foil id, which is represented by `cardKingdomFoilId` in the `cards` table.",
+        "column_name": "cards.`cardKingdomFoilId`"
+    },
+    {
+        "reasoning": "We need to filter the cards that are powerful, which is defined as having both `cardKingdomFoilId` and `cardKingdomId` not null. Hence, we need to select these columns.",
+        "column_name": "cards.`cardKingdomFoilId`"
+    },
+    {
+        "reasoning": "Similarly to the previous column, we need to select `cardKingdomId` to filter the powerful cards.",
+        "column_name": "cards.`cardKingdomId`"
+    },
+    {
+        "reasoning": "To sort the results alphabetically by Kingdom Foil id, we need to include it in the ORDER BY clause.",
+        "column_name": "cards.`cardKingdomFoilId`"
+    },
+    {
+        "reasoning": "We need to limit the results to the top three pairs, which requires the LIMIT clause.",
+        "column_name": "cards.`id`"
+    }
+]

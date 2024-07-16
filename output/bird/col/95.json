@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify the youngest clients, we need to compare their birth dates. The `birth_date` column in the `client` table will be used to determine the age of the clients.",
+        "column_name": "client.`birth_date`"
+    },
+    {
+        "reasoning": "To list out the account numbers, we need to reference the `account_id` from the `account` table, which is linked to the `client_id` in the `client` table.",
+        "column_name": "account.`account_id`"
+    },
+    {
+        "reasoning": "The `client_id` is necessary to join the `client` table with the `account` table to get the account numbers of the clients.",
+        "column_name": "client.`client_id`"
+    },
+    {
+        "reasoning": "To calculate the average salary, we need to reference the `A11` column which represents the average salary in the `district` table. This column is used to determine the average salary of the clients.",
+        "column_name": "district.`A11`"
+    },
+    {
+        "reasoning": "The `district_id` is used to join the `client` table with the `district` table to access the `A11` column, which contains the average salary information.",
+        "column_name": "client.`district_id`"
+    },
+    {
+        "reasoning": "The `district_id` is also used to join the `account` table with the `district` table to ensure that we are considering the correct district's average salary.",
+        "column_name": "account.`district_id`"
+    }
+]

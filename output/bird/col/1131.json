@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To calculate the average height of Italy players, we need to select the height column from the Player table.",
+        "column_name": "Player.`height`"
+    },
+    {
+        "reasoning": "To filter the players based on the country, we need to join the Player table with the Country table using the player's country ID.",
+        "column_name": "Player.`player_fifa_api_id`"
+    },
+    {
+        "reasoning": "The player's FIFA API ID is used to join with the Country table to get the country name.",
+        "column_name": "Country.`id`"
+    },
+    {
+        "reasoning": "To filter the players from Italy, we need to select the country name from the Country table.",
+        "column_name": "Country.`name`"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify the player whose sprint speed, agility, and acceleration scores are needed.",
+        "column_name": "Player.`player_name`"
+    },
+    {
+        "reasoning": "To retrieve the player's attributes based on the player's name.",
+        "column_name": "Player_Attributes.`player_api_id`"
+    },
+    {
+        "reasoning": "To link the player's attributes to the correct player record.",
+        "column_name": "Player_Attributes.`player_fifa_api_id`"
+    },
+    {
+        "reasoning": "To get the sprint speed score of the player.",
+        "column_name": "Player_Attributes.`sprint_speed`"
+    },
+    {
+        "reasoning": "To get the agility score of the player.",
+        "column_name": "Player_Attributes.`agility`"
+    },
+    {
+        "reasoning": "To get the acceleration score of the player.",
+        "column_name": "Player_Attributes.`acceleration`"
+    }
+]

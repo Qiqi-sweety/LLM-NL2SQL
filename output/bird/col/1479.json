@@ -1,0 +1,42 @@
+[
+    {
+        "reasoning": "To identify the year from the `Date` column in the `yearmonth` table, which is used to determine the year with the most consumption.",
+        "column_name": "yearmonth.`Date`"
+    },
+    {
+        "reasoning": "To filter the records by the country 'CZK' from the `Country` column in the `gasstations` table.",
+        "column_name": "gasstations.`Country`"
+    },
+    {
+        "reasoning": "To link the transactions to the correct gas station, using the `GasStationID` column from the `transactions_1k` table.",
+        "column_name": "transactions_1k.`GasStationID`"
+    },
+    {
+        "reasoning": "To link the transactions to the correct customer, using the `CustomerID` column from the `transactions_1k` table.",
+        "column_name": "transactions_1k.`CustomerID`"
+    },
+    {
+        "reasoning": "To link the transactions to the correct customer, using the `CustomerID` column from the `yearmonth` table.",
+        "column_name": "yearmonth.`CustomerID`"
+    },
+    {
+        "reasoning": "To calculate the total consumption amount in CZK, using the `Amount` column from the `transactions_1k` table.",
+        "column_name": "transactions_1k.`Amount`"
+    },
+    {
+        "reasoning": "To link the transactions to the correct product, using the `ProductID` column from the `transactions_1k` table.",
+        "column_name": "transactions_1k.`ProductID`"
+    },
+    {
+        "reasoning": "To link the transactions to the correct price, using the `Price` column from the `transactions_1k` table.",
+        "column_name": "transactions_1k.`Price`"
+    },
+    {
+        "reasoning": "To link the transactions to the correct currency, using the `Currency` column from the `customers` table.",
+        "column_name": "customers.`Currency`"
+    },
+    {
+        "reasoning": "To link the transactions to the correct consumption, using the `Consumption` column from the `yearmonth` table.",
+        "column_name": "yearmonth.`Consumption`"
+    }
+]

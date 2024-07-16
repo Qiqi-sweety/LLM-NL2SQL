@@ -1,0 +1,42 @@
+[
+    {
+        "reasoning": "To find the oldest racer, we need to compare the date of birth (dob) of all drivers.",
+        "column_name": "drivers.`dob`"
+    },
+    {
+        "reasoning": "To get the full name of the oldest racer, we need to join the drivers table with the driverStandings table to get the raceId and then join it with the races table to get the year and round.",
+        "column_name": "drivers.`driverId`"
+    },
+    {
+        "reasoning": "To get the full name of the oldest racer, we need to join the drivers table with the driverStandings table to get the raceId and then join it with the races table to get the year and round.",
+        "column_name": "drivers.`forename`"
+    },
+    {
+        "reasoning": "To get the full name of the oldest racer, we need to join the drivers table with the driverStandings table to get the raceId and then join it with the races table to get the year and round.",
+        "column_name": "drivers.`surname`"
+    },
+    {
+        "reasoning": "To find the number of wins of the oldest racer, we need to join the drivers table with the driverStandings table.",
+        "column_name": "driverStandings.`driverId`"
+    },
+    {
+        "reasoning": "To find the number of wins of the oldest racer, we need to join the drivers table with the driverStandings table.",
+        "column_name": "driverStandings.`wins`"
+    },
+    {
+        "reasoning": "To join the driverStandings table with the drivers table, we need to use the foreign key relationship.",
+        "column_name": "driverStandings.`driverId`"
+    },
+    {
+        "reasoning": "To join the driverStandings table with the drivers table, we need to use the foreign key relationship.",
+        "column_name": "drivers.`driverId`"
+    },
+    {
+        "reasoning": "To join the driverStandings table with the races table, we need to use the foreign key relationship.",
+        "column_name": "driverStandings.`raceId`"
+    },
+    {
+        "reasoning": "To join the driverStandings table with the races table, we need to use the foreign key relationship.",
+        "column_name": "races.`raceId`"
+    }
+]

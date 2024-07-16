@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To identify the post by its title, we need to reference the `Title` column from the `posts` table.",
+        "column_name": "posts.`Title`"
+    },
+    {
+        "reasoning": "To find the user who edited the post, we need to reference the `LastEditorUserId` column from the `posts` table.",
+        "column_name": "posts.`LastEditorUserId`"
+    },
+    {
+        "reasoning": "To get the display name of the editor, we need to join with the `users` table using the `LastEditorUserId` and reference the `DisplayName` column.",
+        "column_name": "users.`DisplayName`"
+    }
+]

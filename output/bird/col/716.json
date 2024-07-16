@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To filter comments with scores between 5 and 10.",
+        "column_name": "comments.`Score`"
+    },
+    {
+        "reasoning": "To identify the users who have made these comments.",
+        "column_name": "comments.`UserId`"
+    },
+    {
+        "reasoning": "To count the number of users with 0 up votes among the filtered comments.",
+        "column_name": "votes.`UserId`"
+    },
+    {
+        "reasoning": "To filter votes that are up votes.",
+        "column_name": "votes.`VoteTypeId`"
+    },
+    {
+        "reasoning": "To count the total number of users who have made comments with scores between 5 and 10.",
+        "column_name": "comments.`Id`"
+    },
+    {
+        "reasoning": "To join comments with users to get user details.",
+        "column_name": "users.`Id`"
+    },
+    {
+        "reasoning": "To join votes with users to get user up vote details.",
+        "column_name": "votes.`UserId`"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To retrieve the diagnosis of patients.",
+        "column_name": "Patient.`Diagnosis`"
+    },
+    {
+        "reasoning": "To filter patients with GPT values beyond the normal range.",
+        "column_name": "Laboratory.`GPT`"
+    },
+    {
+        "reasoning": "To join the Laboratory table with the Patient table using the patient ID.",
+        "column_name": "Laboratory.`ID`"
+    },
+    {
+        "reasoning": "To join the Laboratory table with the Patient table using the patient ID.",
+        "column_name": "Patient.`ID`"
+    },
+    {
+        "reasoning": "To sort the results by the date of birth in ascending order.",
+        "column_name": "Patient.`Birthday`"
+    }
+]

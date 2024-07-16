@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To retrieve the molecules with double bonds, we need to select the `molecule_id` from the `bond` table where `bond_type` is ' = '.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "We need to join the `molecule` table to get the `label` of the molecules identified by the `molecule_id` from the `bond` table.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "To filter the molecules with double bonds, we need to select the `bond_type` from the `bond` table.",
+        "column_name": "bond.`bond_type`"
+    },
+    {
+        "reasoning": "To order the results alphabetically by the molecule label, we need to select the `label` from the `molecule` table.",
+        "column_name": "molecule.`label`"
+    },
+    {
+        "reasoning": "To limit the result to the top five molecules, we need to use the `LIMIT` clause, which requires the table name to be specified.",
+        "column_name": "bond.`bond_id`"
+    }
+]

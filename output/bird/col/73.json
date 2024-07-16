@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the Youth Authority School, we need to join the `frpm` table with the `schools` table using the `CDSCode` column.",
+        "column_name": "frpm.`CDSCode`"
+    },
+    {
+        "reasoning": "To filter for the Youth Authority School, we need to use the `StatusType` column from the `schools` table.",
+        "column_name": "schools.`StatusType`"
+    },
+    {
+        "reasoning": "To match the mailing street address of PO Box 1040, we need to use the `MailStreet` column from the `schools` table.",
+        "column_name": "schools.`MailStreet`"
+    },
+    {
+        "reasoning": "To get the free or reduced price meal count for ages 5 to 17, we need to use the `FRPM Count (Ages 5-17)` column from the `frpm` table.",
+        "column_name": "frpm.`FRPM Count (Ages 5-17)`"
+    }
+]

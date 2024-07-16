@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To retrieve the sets that are part of the Shadowmoor block.",
+        "column_name": "sets.`block`"
+    },
+    {
+        "reasoning": "To filter for Italian-language cards.",
+        "column_name": "set_translations.`language`"
+    },
+    {
+        "reasoning": "To join the sets with their translations to filter by language.",
+        "column_name": "sets.`code`"
+    },
+    {
+        "reasoning": "To join the sets with their translations to filter by language.",
+        "column_name": "set_translations.`setCode`"
+    },
+    {
+        "reasoning": "To get the set IDs.",
+        "column_name": "sets.`id`"
+    },
+    {
+        "reasoning": "To order the results alphabetically.",
+        "column_name": "sets.`name`"
+    }
+]

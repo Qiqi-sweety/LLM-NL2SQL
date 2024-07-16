@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To retrieve the set code for the set that was released on a specific date, we need to reference the `code` column from the `sets` table.",
+        "column_name": "sets.`code`"
+    },
+    {
+        "reasoning": "To filter the sets based on the release date, we need to reference the `releaseDate` column from the `sets` table.",
+        "column_name": "sets.`releaseDate`"
+    }
+]

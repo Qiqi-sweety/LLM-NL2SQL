@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To count the occurrences of each bond type.",
+        "column_name": "bond.`bond_type`"
+    },
+    {
+        "reasoning": "To group the data by bond type and count the occurrences.",
+        "column_name": "bond.`molecule_id`"
+    }
+]

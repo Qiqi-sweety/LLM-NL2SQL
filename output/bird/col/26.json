@@ -1,0 +1,42 @@
+[
+    {
+        "reasoning": "To identify the schools in Monterey, we need the County Name and District Name columns from the frpm table.",
+        "column_name": "frpm.`County Name`"
+    },
+    {
+        "reasoning": "To filter for high schools, we need the School Type column from the frpm table.",
+        "column_name": "frpm.`School Type`"
+    },
+    {
+        "reasoning": "To find schools with more than 800 free or reduced price meals for ages 15-17, we need the Percent (%) Eligible Free (Ages 5-17) and FRPM Count (Ages 5-17) columns from the frpm table.",
+        "column_name": "frpm.`Percent (%) Eligible Free (Ages 5-17)`"
+    },
+    {
+        "reasoning": "To join the frpm table with the schools table, we need the CDSCode column from both tables.",
+        "column_name": "frpm.`CDSCode`"
+    },
+    {
+        "reasoning": "To get the full communication address, we need the Street, City, State, and Zip columns from the schools table.",
+        "column_name": "schools.`Street`"
+    },
+    {
+        "reasoning": "To get the full communication address, we need the Street, City, State, and Zip columns from the schools table.",
+        "column_name": "schools.`City`"
+    },
+    {
+        "reasoning": "To get the full communication address, we need the Street, City, State, and Zip columns from the schools table.",
+        "column_name": "schools.`State`"
+    },
+    {
+        "reasoning": "To get the full communication address, we need the Street, City, State, and Zip columns from the schools table.",
+        "column_name": "schools.`Zip`"
+    },
+    {
+        "reasoning": "To filter for high schools, we need the School column from the schools table.",
+        "column_name": "schools.`School`"
+    },
+    {
+        "reasoning": "To filter for high schools, we need the StatusType column from the schools table.",
+        "column_name": "schools.`StatusType`"
+    }
+]

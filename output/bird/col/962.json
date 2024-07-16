@@ -1,0 +1,38 @@
+[
+    {
+        "reasoning": "To filter drivers born before 1985.",
+        "column_name": "drivers.`dob`"
+    },
+    {
+        "reasoning": "To filter races between the years 2000 and 2005.",
+        "column_name": "seasons.`year`"
+    },
+    {
+        "reasoning": "To join the drivers with their standings in the races.",
+        "column_name": "driverStandings.`driverId`"
+    },
+    {
+        "reasoning": "To join the races with their corresponding seasons.",
+        "column_name": "races.`year`"
+    },
+    {
+        "reasoning": "To filter the races by the year and round.",
+        "column_name": "races.`year`"
+    },
+    {
+        "reasoning": "To join the lap times with the drivers.",
+        "column_name": "lapTimes.`driverId`"
+    },
+    {
+        "reasoning": "To join the lap times with the races.",
+        "column_name": "lapTimes.`raceId`"
+    },
+    {
+        "reasoning": "To count the number of drivers born before 1985 with lap numbers over 50.",
+        "column_name": "lapTimes.`lap`"
+    },
+    {
+        "reasoning": "To calculate the percentage of drivers born before 1985 with lap numbers over 50.",
+        "column_name": "lapTimes.`driverId`"
+    }
+]

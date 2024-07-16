@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the race with the specified race number.",
+        "column_name": "races.`raceId`"
+    },
+    {
+        "reasoning": "To find the fastest lap speed in the specified race.",
+        "column_name": "results.`fastestLapSpeed`"
+    },
+    {
+        "reasoning": "To link the fastest lap speed to the driver who achieved it.",
+        "column_name": "results.`driverId`"
+    },
+    {
+        "reasoning": "To retrieve the nationality of the driver who set the fastest lap speed.",
+        "column_name": "drivers.`nationality`"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the specific event that corresponds to the description 'Posters'.",
+        "column_name": "event.`event_name`"
+    },
+    {
+        "reasoning": "To filter the events by the date '2019-09-04'.",
+        "column_name": "event.`event_date`"
+    },
+    {
+        "reasoning": "To retrieve the cost associated with the event, which is stored in the budget table.",
+        "column_name": "budget.`amount`"
+    },
+    {
+        "reasoning": "To join the event table with the budget table using the foreign key relationship.",
+        "column_name": "event.`event_id`"
+    },
+    {
+        "reasoning": "To join the budget table with the event table using the foreign key relationship.",
+        "column_name": "budget.`link_to_event`"
+    }
+]

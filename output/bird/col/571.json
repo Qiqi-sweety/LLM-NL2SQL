@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the posts made by user No.24.",
+        "column_name": "posts.`OwnerUserId`"
+    },
+    {
+        "reasoning": "To count the number of posts made by user No.24.",
+        "column_name": "posts.`Id`"
+    },
+    {
+        "reasoning": "To identify the votes made by user No.24.",
+        "column_name": "votes.`UserId`"
+    },
+    {
+        "reasoning": "To count the number of votes made by user No.24.",
+        "column_name": "votes.`Id`"
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To retrieve the IDs of cards that belong to the duel deck 'a', we need to reference the `id` column from the `cards` table.",
+        "column_name": "cards.`id`"
+    },
+    {
+        "reasoning": "The `duelDeck` column in the `cards` table indicates the duel deck to which the card belongs. We need to filter this column to find cards with the value 'a'.",
+        "column_name": "cards.`duelDeck`"
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To identify the school with the specified grade range, we need the `Low Grade` and `High Grade` columns from the `frpm` table.",
+        "column_name": "frpm.`Low Grade`"
+    },
+    {
+        "reasoning": "To identify the school with the specified lunch provision, we need the `NSLP Provision Status` column from the `frpm` table.",
+        "column_name": "frpm.`NSLP Provision Status`"
+    },
+    {
+        "reasoning": "To filter schools by the county of Merced, we need the `County Code` column from the `frpm` table.",
+        "column_name": "frpm.`County Code`"
+    },
+    {
+        "reasoning": "To identify high schools, we need the `EILCode` column from the `schools` table.",
+        "column_name": "schools.`EILCode`"
+    },
+    {
+        "reasoning": "To get the city location of the school, we need the `City` column from the `schools` table.",
+        "column_name": "schools.`City`"
+    },
+    {
+        "reasoning": "To join the `frpm` table with the `schools` table based on the `CDSCode`, we need the `CDSCode` column from both tables.",
+        "column_name": "frpm.`CDSCode`"
+    },
+    {
+        "reasoning": "To join the `schools` table with the `frpm` table based on the `CDSCode`, we need the `CDSCode` column from both tables.",
+        "column_name": "schools.`CDSCode`"
+    }
+]

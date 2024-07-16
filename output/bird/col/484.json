@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To identify the cards from the set Coldsnap, we need to join the `cards` table with the `sets` table using the `setCode` column.",
+        "column_name": "cards.`id`"
+    },
+    {
+        "reasoning": "To filter the cards by the set name 'Coldsnap', we need to join the `cards` table with the `sets` table using the `setCode` column and select the `name` column from the `sets` table.",
+        "column_name": "sets.`name`"
+    },
+    {
+        "reasoning": "To retrieve the Italian names of the cards, we need to join the `cards` table with the `set_translations` table using the `setCode` column and select the `translation` column from the `set_translations` table.",
+        "column_name": "set_translations.`translation`"
+    },
+    {
+        "reasoning": "To filter the translations by the language 'Italian', we need to join the `cards` table with the `set_translations` table using the `setCode` column and select the `language` column from the `set_translations` table.",
+        "column_name": "set_translations.`language`"
+    },
+    {
+        "reasoning": "To get the converted mana cost of the cards, we need to select the `convertedManaCost` column from the `cards` table.",
+        "column_name": "cards.`convertedManaCost`"
+    },
+    {
+        "reasoning": "To order the results by the highest converted mana cost, we need to use the `ORDER BY` clause with the `convertedManaCost` column.",
+        "column_name": "cards.`convertedManaCost`"
+    },
+    {
+        "reasoning": "To limit the results to the top cards, we need to use the `LIMIT` clause.",
+        "column_name": "cards.`id`"
+    }
+]

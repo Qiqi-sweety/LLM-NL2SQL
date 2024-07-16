@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the card with the colorpie watermark, we need to reference the watermark column from the cards table.",
+        "column_name": "cards.`watermark`"
+    },
+    {
+        "reasoning": "To retrieve the language of the card, we need to join the cards table with the foreign_data table using the uuid foreign key and reference the language column from the foreign_data table.",
+        "column_name": "foreign_data.`language`"
+    },
+    {
+        "reasoning": "To retrieve the flavor text of the card, we need to join the cards table with the foreign_data table using the uuid foreign key and reference the flavorText column from the foreign_data table.",
+        "column_name": "foreign_data.`flavorText`"
+    },
+    {
+        "reasoning": "To list out the type of the card, we need to reference the type column from the cards table.",
+        "column_name": "cards.`type`"
+    }
+]

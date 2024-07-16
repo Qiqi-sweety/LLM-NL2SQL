@@ -1,0 +1,46 @@
+[
+    {
+        "reasoning": "To filter German drivers by nationality.",
+        "column_name": "drivers.`nationality`"
+    },
+    {
+        "reasoning": "To filter drivers born between 1980 and 1990.",
+        "column_name": "drivers.`dob`"
+    },
+    {
+        "reasoning": "To retrieve the names of the drivers.",
+        "column_name": "drivers.`surname`"
+    },
+    {
+        "reasoning": "To join with driverStandings to get the standings information.",
+        "column_name": "drivers.`driverId`"
+    },
+    {
+        "reasoning": "To join with races to get the race information.",
+        "column_name": "driverStandings.`raceId`"
+    },
+    {
+        "reasoning": "To join with lapTimes to get the lap time information.",
+        "column_name": "lapTimes.`raceId`"
+    },
+    {
+        "reasoning": "To join with drivers again to get the driver's name for the final list.",
+        "column_name": "lapTimes.`driverId`"
+    },
+    {
+        "reasoning": "To filter for the earliest lap time.",
+        "column_name": "lapTimes.`time`"
+    },
+    {
+        "reasoning": "To order the results by the lap time in ascending order.",
+        "column_name": "lapTimes.`time`"
+    },
+    {
+        "reasoning": "To limit the results to the top 3 drivers.",
+        "column_name": "lapTimes.`raceId`"
+    },
+    {
+        "reasoning": "To group the results by driverId to ensure each driver is listed once.",
+        "column_name": "lapTimes.`driverId`"
+    }
+]

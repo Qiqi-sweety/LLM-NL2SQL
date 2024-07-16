@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify schools that opened in Alameda County under the jurisdiction of the Elementary School District in 1980, we need the `StatusType` to filter for schools that opened in 1980 and the `DOC` to filter for the Elementary School District.",
+        "column_name": "schools.`StatusType`"
+    },
+    {
+        "reasoning": "To filter for schools that opened in 1980, we need the `OpenDate` column to compare with the year 1980.",
+        "column_name": "schools.`OpenDate`"
+    },
+    {
+        "reasoning": "To filter for the Elementary School District, we need the `DOC` column to match the value 52.",
+        "column_name": "schools.`DOC`"
+    },
+    {
+        "reasoning": "To calculate the monthly average number of schools, we need to count the number of schools that meet the criteria.",
+        "column_name": "schools.`School`"
+    },
+    {
+        "reasoning": "To filter for schools in Alameda County, we need the `County` column to match 'Alameda'.",
+        "column_name": "schools.`County`"
+    },
+    {
+        "reasoning": "To calculate the monthly average, we need to divide the count of schools by 12.",
+        "column_name": "schools.`School`"
+    }
+]

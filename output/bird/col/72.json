@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify the school in Fremont with the EdOpsCode 'SSS', which is the State Special School.",
+        "column_name": "schools.`EdOpsCode`"
+    },
+    {
+        "reasoning": "To filter the schools by the county 'Fremont'.",
+        "column_name": "schools.`County`"
+    },
+    {
+        "reasoning": "To filter the schools by the academic year 2014-2015.",
+        "column_name": "frpm.`Academic Year`"
+    },
+    {
+        "reasoning": "To count the number of students enrolled from ages 5 to 17.",
+        "column_name": "frpm.`Enrollment (Ages 5-17)`"
+    },
+    {
+        "reasoning": "To join the frpm table with the schools table using the CDSCode as the foreign key.",
+        "column_name": "frpm.`CDSCode`"
+    },
+    {
+        "reasoning": "To join the frpm table with the schools table using the CDSCode as the foreign key.",
+        "column_name": "schools.`CDSCode`"
+    }
+]

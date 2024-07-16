@@ -1,0 +1,38 @@
+[
+    {
+        "reasoning": "To filter laboratory records from the year 1984.",
+        "column_name": "Laboratory.`Date`"
+    },
+    {
+        "reasoning": "To calculate the age of the patients and filter those below 50 years old.",
+        "column_name": "Patient.`Birthday`"
+    },
+    {
+        "reasoning": "To filter laboratory records with normal platelet levels.",
+        "column_name": "Laboratory.`PLT`"
+    },
+    {
+        "reasoning": "To join the Laboratory table with the Patient table based on the patient ID.",
+        "column_name": "Laboratory.`ID`"
+    },
+    {
+        "reasoning": "To retrieve the patient's sex for the final output.",
+        "column_name": "Patient.`SEX`"
+    },
+    {
+        "reasoning": "To retrieve the patient's birthday for calculating age.",
+        "column_name": "Patient.`Birthday`"
+    },
+    {
+        "reasoning": "To retrieve the patient's description for the final output.",
+        "column_name": "Patient.`Description`"
+    },
+    {
+        "reasoning": "To retrieve the patient's admission date for the final output.",
+        "column_name": "Patient.`Admission`"
+    },
+    {
+        "reasoning": "To retrieve the patient's diagnosis for the final output.",
+        "column_name": "Patient.`Diagnosis`"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To retrieve the full name of the club member, which is composed of the first name and last name.",
+        "column_name": "member.`first_name`"
+    },
+    {
+        "reasoning": "To retrieve the full name of the club member, which is composed of the first name and last name.",
+        "column_name": "member.`last_name`"
+    },
+    {
+        "reasoning": "To identify the club member's position, which is specified as 'Secretary'.",
+        "column_name": "member.`position`"
+    },
+    {
+        "reasoning": "To link the member to their major, which is necessary to retrieve the college information.",
+        "column_name": "member.`link_to_major`"
+    },
+    {
+        "reasoning": "To retrieve the college name associated with the major of the club member.",
+        "column_name": "major.`college`"
+    }
+]

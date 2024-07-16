@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify the races in which Lewis Hamilton participated.",
+        "column_name": "drivers.`driverRef`"
+    },
+    {
+        "reasoning": "To filter the races for Lewis Hamilton.",
+        "column_name": "drivers.`surname`"
+    },
+    {
+        "reasoning": "To link the driver's participation in races to the races themselves.",
+        "column_name": "driverStandings.`raceId`"
+    },
+    {
+        "reasoning": "To link the races to the lap times.",
+        "column_name": "lapTimes.`raceId`"
+    },
+    {
+        "reasoning": "To filter the lap times for Lewis Hamilton.",
+        "column_name": "lapTimes.`driverId`"
+    },
+    {
+        "reasoning": "To calculate the average of the fastest lap times.",
+        "column_name": "lapTimes.`time`"
+    }
+]

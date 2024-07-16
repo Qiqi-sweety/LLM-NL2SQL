@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To find the race of the superhero named 'Copycat', we need to join the superhero table with the race table using the superhero's race_id.",
+        "column_name": "superhero.`race_id`"
+    },
+    {
+        "reasoning": "We need to retrieve the race name, which is stored in the race table.",
+        "column_name": "race.`id`"
+    },
+    {
+        "reasoning": "We need to retrieve the race name, which is stored in the race table.",
+        "column_name": "race.`race`"
+    },
+    {
+        "reasoning": "To filter the superhero by name, we need to join the superhero table with the superhero table again using the superhero_name.",
+        "column_name": "superhero.`superhero_name`"
+    },
+    {
+        "reasoning": "We need to retrieve the superhero name 'Copycat' to filter the correct superhero.",
+        "column_name": "superhero.`superhero_name`"
+    }
+]

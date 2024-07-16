@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify the related posts, we need to join the `postLinks` table with the `posts` table using the `RelatedPostId` foreign key.",
+        "column_name": "postLinks.`RelatedPostId`"
+    },
+    {
+        "reasoning": "To retrieve the popularity of the post, we need to select the `ViewCount` column from the `posts` table.",
+        "column_name": "posts.`ViewCount`"
+    },
+    {
+        "reasoning": "To list out all related posts, we need to select the `Id` column from the `posts` table to identify each post.",
+        "column_name": "posts.`Id`"
+    },
+    {
+        "reasoning": "To list out all related posts, we need to select the `Title` column from the `posts` table to provide the title of each post.",
+        "column_name": "posts.`Title`"
+    },
+    {
+        "reasoning": "To list out all related posts, we need to select the `OwnerUserId` column from the `posts` table to identify the user who owns the post.",
+        "column_name": "posts.`OwnerUserId`"
+    },
+    {
+        "reasoning": "To list out all related posts, we need to select the `OwnerDisplayName` column from the `posts` table to provide the display name of the user who owns the post.",
+        "column_name": "posts.`OwnerDisplayName`"
+    }
+]

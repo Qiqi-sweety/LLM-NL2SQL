@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To filter the loans by male borrowers, we need to join the `loan` table with the `client` table and select the rows where the `gender` is 'M'.",
+        "column_name": "loan.`account_id`"
+    },
+    {
+        "reasoning": "To filter the loans by male borrowers, we need to join the `loan` table with the `client` table and select the rows where the `gender` is 'M'.",
+        "column_name": "client.`client_id`"
+    },
+    {
+        "reasoning": "To calculate the average loan amount, we need to select the `amount` column from the `loan` table.",
+        "column_name": "loan.`amount`"
+    },
+    {
+        "reasoning": "To group the data by gender, we need to select the `gender` column from the `client` table.",
+        "column_name": "client.`gender`"
+    }
+]

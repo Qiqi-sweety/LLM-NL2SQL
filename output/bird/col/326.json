@@ -1,0 +1,34 @@
+[
+    {
+        "reasoning": "To identify molecules that contain Sulphur atoms, we need to join the `atom` table with the `element` column.",
+        "column_name": "atom.`element`"
+    },
+    {
+        "reasoning": "To filter for molecules with double bonds, we need to join the `bond` table and select for the `bond_type` of '='.",
+        "column_name": "bond.`bond_type`"
+    },
+    {
+        "reasoning": "We need to join the `atom` table with the `molecule` table to get the molecule labels.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "We need to join the `bond` table with the `molecule` table to ensure we're looking at the correct molecules.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "We need to join the `connected` table with the `bond` table to get the bond IDs associated with the atoms.",
+        "column_name": "connected.`bond_id`"
+    },
+    {
+        "reasoning": "We need to join the `connected` table with the `atom` table to get the atom IDs associated with the bonds.",
+        "column_name": "connected.`atom_id`"
+    },
+    {
+        "reasoning": "We need to join the `connected` table with the `atom` table to get the atom IDs associated with the bonds.",
+        "column_name": "connected.`atom_id2`"
+    },
+    {
+        "reasoning": "To select the molecule labels, we need to retrieve the `label` column from the `molecule` table.",
+        "column_name": "molecule.`label`"
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "reasoning": "To identify the molecules with the element chlorine ('cl'), we need to reference the `element` column from the `atom` table.",
+        "column_name": "atom.`element`"
+    },
+    {
+        "reasoning": "To join the `atom` table with the `bond` table to find the bonds associated with atoms, we need to reference the `molecule_id` from the `atom` table.",
+        "column_name": "atom.`molecule_id`"
+    },
+    {
+        "reasoning": "To join the `bond` table with the `molecule` table to get the molecule labels, we need to reference the `molecule_id` from the `bond` table.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "To identify single bond molecules, we need to reference the `bond_type` from the `bond` table.",
+        "column_name": "bond.`bond_type`"
+    },
+    {
+        "reasoning": "To count the number of atoms with chlorine in single bond molecules, we need to reference the `atom_id` from the `atom` table.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "To join the `connected` table with the `bond` table to find the bonds between atoms, we need to reference the `bond_id` from the `connected` table.",
+        "column_name": "connected.`bond_id`"
+    },
+    {
+        "reasoning": "To join the `connected` table with the `atom` table to find the atoms involved in the bonds, we need to reference the `atom_id` from the `connected` table.",
+        "column_name": "connected.`atom_id`"
+    },
+    {
+        "reasoning": "To join the `connected` table with the `atom` table to find the atoms involved in the bonds, we need to reference the `atom_id` from the `connected` table.",
+        "column_name": "connected.`atom_id2`"
+    },
+    {
+        "reasoning": "To get the molecule labels for the single bond molecules, we need to reference the `molecule_id` from the `molecule` table.",
+        "column_name": "molecule.`molecule_id`"
+    }
+]

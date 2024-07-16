@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To find the card with the name 'Angel of Mercy', we need to reference the `name` column from the `cards` table.",
+        "column_name": "cards.`name`"
+    },
+    {
+        "reasoning": "To determine if the card appears on Magic: The Gathering Online, we need to check the `mtgoId` column from the `cards` table, which should not be NULL if the card is available on MTGO.",
+        "column_name": "cards.`mtgoId`"
+    },
+    {
+        "reasoning": "To join the `cards` table with the `sets` table, we need to reference the `setCode` column from the `cards` table and the `code` column from the `sets` table, as they are used to establish the relationship between a card and its set.",
+        "column_name": "cards.`setCode`"
+    },
+    {
+        "reasoning": "To retrieve the set name, we need to reference the `name` column from the `sets` table.",
+        "column_name": "sets.`name`"
+    }
+]

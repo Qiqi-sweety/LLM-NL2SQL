@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To count the number of bonds, we need to reference the bond table.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "To filter the bonds that involve atom 12, we need to reference the connected table to find the bond_id associated with atom 12.",
+        "column_name": "connected.`bond_id`"
+    },
+    {
+        "reasoning": "To filter the bonds that are part of molecule TR009, we need to join with the molecule table to check the molecule_id.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "To identify the atom 12 in the connected table, we need to reference the atom table for the atom_id.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "To filter the bonds that involve molecule TR009, we need to use the LIKE operator to match the bond_id with 'TR009_%'.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "To filter the bonds that involve atom 12, we need to use the LIKE operator to match the atom_id with 'TR009_12'.",
+        "column_name": "atom.`element`"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify patients with SLE, we need to join the Examination table with the Patient table and filter by the Diagnosis column.",
+        "column_name": "Examination.`ID`"
+    },
+    {
+        "reasoning": "To link the Examination table to the Patient table, we use the foreign key relationship between them.",
+        "column_name": "Patient.`ID`"
+    },
+    {
+        "reasoning": "To filter for patients diagnosed with SLE, we need to reference the Diagnosis column in the Examination table.",
+        "column_name": "Examination.`Diagnosis`"
+    },
+    {
+        "reasoning": "To identify patients with a normal white blood cell level, we need to join the Examination table with the Laboratory table and filter by the WBC column.",
+        "column_name": "Laboratory.`ID`"
+    },
+    {
+        "reasoning": "To link the Examination table to the Laboratory table, we use the foreign key relationship between them.",
+        "column_name": "Patient.`ID`"
+    },
+    {
+        "reasoning": "To filter for a normal white blood cell level, we need to reference the WBC column in the Laboratory table.",
+        "column_name": "Laboratory.`WBC`"
+    }
+]

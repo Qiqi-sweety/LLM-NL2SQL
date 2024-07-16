@@ -1,0 +1,6 @@
+[
+    {
+        "reasoning": "To count the total number of superheroes without a full name, we need to reference the superhero table and specifically the `full_name` column to check for NULL values.",
+        "column_name": "superhero.`full_name`"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To filter players born before the year 1986.",
+        "column_name": "Player.`birthday`"
+    },
+    {
+        "reasoning": "To identify players with a 'high' defensive_work_rate.",
+        "column_name": "Player_Attributes.`defensive_work_rate`"
+    },
+    {
+        "reasoning": "To count the number of players meeting the criteria.",
+        "column_name": "Player_Attributes.`id`"
+    },
+    {
+        "reasoning": "To join Player table with Player_Attributes table using player_api_id as the common key.",
+        "column_name": "Player_Attributes.`player_api_id`"
+    },
+    {
+        "reasoning": "To join Player table with Player_Attributes table using player_api_id as the common key.",
+        "column_name": "Player.`player_api_id`"
+    }
+]

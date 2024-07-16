@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To retrieve the code of the drivers, we need to reference the `code` column from the `drivers` table.",
+        "column_name": "drivers.`code`"
+    },
+    {
+        "reasoning": "To filter the drivers based on their nationality, we need to reference the `nationality` column from the `drivers` table.",
+        "column_name": "drivers.`nationality`"
+    }
+]

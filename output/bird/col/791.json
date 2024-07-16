@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To calculate the average height, we need to sum up all the heights and then divide by the total count of superheroes.",
+        "column_name": "superhero.`height_cm`"
+    },
+    {
+        "reasoning": "The COUNT function requires a column to count the number of rows, which in this case is the number of superheroes.",
+        "column_name": "superhero.`id`"
+    }
+]

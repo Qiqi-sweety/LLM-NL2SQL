@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify Lucas di Grassi, we need to reference the driver's surname.",
+        "column_name": "drivers.`surname`"
+    },
+    {
+        "reasoning": "To match the driver's reference with the correct driver, we need to reference the driver's reference.",
+        "column_name": "drivers.`driverRef`"
+    },
+    {
+        "reasoning": "To find the race with the specified year and round, we need to reference the raceId.",
+        "column_name": "races.`raceId`"
+    },
+    {
+        "reasoning": "To get Lucas di Grassi's Q1 result, we need to reference the Q1 result column.",
+        "column_name": "qualifying.`q1`"
+    }
+]

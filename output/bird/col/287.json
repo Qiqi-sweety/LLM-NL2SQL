@@ -1,0 +1,42 @@
+[
+    {
+        "reasoning": "To identify the chemical compounds that contain molecule TR047, we need to join the `molecule` table with the `atom` table using the `molecule_id` column.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "The question specifies that we are looking for molecules with the label 'TR047', so we need to filter the `molecule` table by this label.",
+        "column_name": "molecule.`label`"
+    },
+    {
+        "reasoning": "To find the bonds within these molecules, we need to join the `bond` table with the `molecule` table using the `molecule_id` column.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "We need to filter the bonds to only include double bonds, which are indicated by the `bond_type` column having the value ' = '.",
+        "column_name": "bond.`bond_type`"
+    },
+    {
+        "reasoning": "To calculate the percentage of double bonds, we need to count the total number of bonds for each molecule. This requires joining the `bond` table with the `connected` table using the `bond_id` column.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "We also need to join the `connected` table with the `atom` table using the `atom_id` column to ensure we are counting bonds correctly.",
+        "column_name": "connected.`atom_id`"
+    },
+    {
+        "reasoning": "The `bond_id` column from the `connected` table is used to link the bonds to the atoms they connect, which is necessary for the join with the `bond` table.",
+        "column_name": "connected.`bond_id`"
+    },
+    {
+        "reasoning": "To calculate the percentage, we need to sum the number of double bonds for each molecule. This requires joining the `connected` table with the `bond` table using the `bond_id` column.",
+        "column_name": "connected.`bond_id`"
+    },
+    {
+        "reasoning": "The `atom_id` column from the `connected` table is used to identify the atoms involved in the bonds, which is necessary for the join with the `atom` table.",
+        "column_name": "connected.`atom_id`"
+    },
+    {
+        "reasoning": "The `atom_id2` column from the `connected` table is used to identify the second atom involved in the bonds, which is necessary for the join with the `atom` table.",
+        "column_name": "connected.`atom_id2`"
+    }
+]

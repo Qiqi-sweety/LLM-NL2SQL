@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To retrieve the full name of the away team, we need to join the Match table with the Team table using the away_team_api_id to get the corresponding team information.",
+        "column_name": "Team.`team_long_name`"
+    },
+    {
+        "reasoning": "To identify the away team that scored the most goals, we need to use the away_team_goal column from the Match table.",
+        "column_name": "Match.`away_team_goal`"
+    },
+    {
+        "reasoning": "To join the Match table with the Team table, we need the away_team_api_id from the Match table to match with the team_api_id in the Team table.",
+        "column_name": "Match.`away_team_api_id`"
+    }
+]

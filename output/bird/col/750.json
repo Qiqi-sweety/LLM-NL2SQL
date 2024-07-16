@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To calculate the average weight of all female superheroes, we need to filter the superheroes based on their gender. The gender_id column in the superhero table is linked to the gender table, which contains the gender information.",
+        "column_name": "superhero.`gender_id`"
+    },
+    {
+        "reasoning": "The gender_id column in the superhero table is a foreign key that references the id column in the gender table. We need to join these two tables to filter the superheroes by gender.",
+        "column_name": "gender.`id`"
+    },
+    {
+        "reasoning": "To identify female superheroes, we need to know the gender_id value for females. The knowledge evidence states that female refers to gender_id = 2.",
+        "column_name": "gender.`id`"
+    },
+    {
+        "reasoning": "The superhero table contains the weight information of superheroes, which is required to calculate the average weight.",
+        "column_name": "superhero.`weight_kg`"
+    }
+]

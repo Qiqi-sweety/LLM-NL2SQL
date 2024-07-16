@@ -1,0 +1,42 @@
+[
+    {
+        "reasoning": "To identify the member with the specified phone number.",
+        "column_name": "member.`phone`"
+    },
+    {
+        "reasoning": "To link the member's phone number to the events they attended.",
+        "column_name": "attendance.`link_to_member`"
+    },
+    {
+        "reasoning": "To link the member's ID to the events they attended.",
+        "column_name": "attendance.`link_to_event`"
+    },
+    {
+        "reasoning": "To count the number of events the member attended.",
+        "column_name": "event.`event_id`"
+    },
+    {
+        "reasoning": "To retrieve the event details for the count.",
+        "column_name": "event.`event_name`"
+    },
+    {
+        "reasoning": "To retrieve the event details for the count.",
+        "column_name": "event.`event_date`"
+    },
+    {
+        "reasoning": "To retrieve the event details for the count.",
+        "column_name": "event.`type`"
+    },
+    {
+        "reasoning": "To retrieve the event details for the count.",
+        "column_name": "event.`notes`"
+    },
+    {
+        "reasoning": "To retrieve the event details for the count.",
+        "column_name": "event.`location`"
+    },
+    {
+        "reasoning": "To retrieve the event details for the count.",
+        "column_name": "event.`status`"
+    }
+]

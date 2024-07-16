@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To retrieve the superhero names, which are part of the superhero table.",
+        "column_name": "superhero.`superhero_name`"
+    },
+    {
+        "reasoning": "To filter superheroes by their eye colour, which is linked to the colour table through the eye_colour_id foreign key.",
+        "column_name": "superhero.`eye_colour_id`"
+    },
+    {
+        "reasoning": "To filter superheroes by their eye colour, which is represented in the colour table.",
+        "column_name": "colour.`colour`"
+    },
+    {
+        "reasoning": "To retrieve the height of the superheroes, which is stored in the superhero table.",
+        "column_name": "superhero.`height_cm`"
+    }
+]

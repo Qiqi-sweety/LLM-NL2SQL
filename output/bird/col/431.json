@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify the set that is not available outside of the United States, we need to check the `isForeignOnly` column in the `sets` table.",
+        "column_name": "sets.`isForeignOnly`"
+    },
+    {
+        "reasoning": "To identify sets with foil cards, we need to check the `isFoilOnly` column in the `sets` table.",
+        "column_name": "sets.`isFoilOnly`"
+    },
+    {
+        "reasoning": "To filter sets with Japanese writing, we need to check the `language` column in the `set_translations` table.",
+        "column_name": "set_translations.`language`"
+    },
+    {
+        "reasoning": "To retrieve the set ID, we need to select the `id` column from the `sets` table.",
+        "column_name": "sets.`id`"
+    },
+    {
+        "reasoning": "To join the `sets` table with the `set_translations` table based on the `setCode` column, we need to select this column from both tables.",
+        "column_name": "sets.`code`"
+    },
+    {
+        "reasoning": "To join the `sets` table with the `set_translations` table based on the `setCode` column, we need to select this column from both tables.",
+        "column_name": "set_translations.`setCode`"
+    }
+]

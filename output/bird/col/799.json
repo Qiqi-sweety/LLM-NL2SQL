@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To count the number of superheroes without a publisher, we need to count the rows where the `publisher_id` is NULL.",
+        "column_name": "superhero.`publisher_id`"
+    },
+    {
+        "reasoning": "To count the number of superheroes without a publisher, we need to count the rows where the `publisher_id` is NULL.",
+        "column_name": "superhero.`id`"
+    }
+]

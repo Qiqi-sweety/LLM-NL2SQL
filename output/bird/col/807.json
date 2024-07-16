@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the superhero with the full name 'Helen Parr', we need to reference the superhero's full name column.",
+        "column_name": "superhero.`full_name`"
+    },
+    {
+        "reasoning": "To retrieve the superhero's ID based on the full name, we need to join the superhero table with the hero_power table using the superhero's ID as a common key.",
+        "column_name": "superhero.`id`"
+    },
+    {
+        "reasoning": "To get the list of superpowers associated with the superhero, we need to join the hero_power table with the superpower table using the superhero's ID as a common key.",
+        "column_name": "hero_power.`hero_id`"
+    },
+    {
+        "reasoning": "To get the name of the superpower, we need to reference the power_name column from the superpower table.",
+        "column_name": "superpower.`power_name`"
+    }
+]

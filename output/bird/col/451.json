@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To filter cards available in paper.",
+        "column_name": "cards.`availability`"
+    },
+    {
+        "reasoning": "To identify cards with a positive starting maximum hand size.",
+        "column_name": "cards.`hand`"
+    },
+    {
+        "reasoning": "To count the number of such cards.",
+        "column_name": "cards.`id`"
+    }
+]

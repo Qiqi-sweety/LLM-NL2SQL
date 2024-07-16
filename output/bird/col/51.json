@@ -1,0 +1,34 @@
+[
+    {
+        "reasoning": "To find the school with the lowest average score in reading, we need to join the `satscores` table with the `schools` table to get the school details.",
+        "column_name": "satscores.`cds`"
+    },
+    {
+        "reasoning": "To find the school with the lowest average score in reading, we need to join the `satscores` table with the `schools` table to get the school details.",
+        "column_name": "schools.`CDSCode`"
+    },
+    {
+        "reasoning": "We need to calculate the average score in reading, which is stored in the `AvgScrRead` column of the `satscores` table.",
+        "column_name": "satscores.`AvgScrRead`"
+    },
+    {
+        "reasoning": "To retrieve the school's name, we need to select the `School` column from the `schools` table.",
+        "column_name": "schools.`School`"
+    },
+    {
+        "reasoning": "To get the mailing street address, we need to select the `MailStreet` column from the `schools` table.",
+        "column_name": "schools.`MailStreet`"
+    },
+    {
+        "reasoning": "To ensure we are considering the correct school, we need to join the `frpm` table with the `schools` table using the `CDSCode` column.",
+        "column_name": "frpm.`CDSCode`"
+    },
+    {
+        "reasoning": "To ensure we are considering the correct school, we need to join the `frpm` table with the `schools` table using the `CDSCode` column.",
+        "column_name": "schools.`CDSCode`"
+    },
+    {
+        "reasoning": "We need to select the `School Name` from the `frpm` table to provide the full name of the school in the result.",
+        "column_name": "frpm.`School Name`"
+    }
+]

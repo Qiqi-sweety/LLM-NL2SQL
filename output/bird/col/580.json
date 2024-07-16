@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To retrieve the users with the badge 'Necromancer', we need to join the badges table with the users table using the foreign key relationship between them.",
+        "column_name": "badges.`UserId`"
+    },
+    {
+        "reasoning": "We need to select the user's display name to list the users.",
+        "column_name": "users.`DisplayName`"
+    },
+    {
+        "reasoning": "We need to filter the badges by the name 'Necromancer'.",
+        "column_name": "badges.`Name`"
+    },
+    {
+        "reasoning": "We need to join the badges table with the users table on the User ID to get the user details.",
+        "column_name": "badges.`UserId`"
+    },
+    {
+        "reasoning": "We need to join the badges table with the users table on the User ID to get the user details.",
+        "column_name": "users.`Id`"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To count the number of superheroes with blue eyes, we need to count the superhero records that have the eye_colour_id corresponding to the blue eye colour in the colour table.",
+        "column_name": "superhero.`id`"
+    },
+    {
+        "reasoning": "We need to join the superhero table with the colour table to find the superhero records that have the eye_colour_id corresponding to the blue eye colour.",
+        "column_name": "superhero.`eye_colour_id`"
+    },
+    {
+        "reasoning": "We need to join the superhero table with the colour table to find the superhero records that have the eye_colour_id corresponding to the blue eye colour.",
+        "column_name": "colour.`id`"
+    },
+    {
+        "reasoning": "The colour table needs to be selected to find the blue eye colour record.",
+        "column_name": "colour.`id`"
+    },
+    {
+        "reasoning": "The colour table needs to be selected to find the blue eye colour name.",
+        "column_name": "colour.`colour`"
+    }
+]

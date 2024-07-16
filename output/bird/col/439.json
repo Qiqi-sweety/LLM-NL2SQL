@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To retrieve the set name corresponding to the set code 'ALL', we need to access the 'name' column from the 'sets' table.",
+        "column_name": "sets.`name`"
+    },
+    {
+        "reasoning": "To match the set code 'ALL' with the corresponding set, we need to access the 'code' column from the 'sets' table.",
+        "column_name": "sets.`code`"
+    }
+]

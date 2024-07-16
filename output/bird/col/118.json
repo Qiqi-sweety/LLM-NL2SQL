@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify the loans with an amount less than USD100,000.",
+        "column_name": "loan.`amount`"
+    },
+    {
+        "reasoning": "To filter out the loans that are still running with no issue.",
+        "column_name": "loan.`status`"
+    },
+    {
+        "reasoning": "To calculate the total amount of loans that meet the criteria.",
+        "column_name": "loan.`amount`"
+    },
+    {
+        "reasoning": "To identify the accounts associated with the loans.",
+        "column_name": "loan.`account_id`"
+    },
+    {
+        "reasoning": "To calculate the percentage of accounts with running loans.",
+        "column_name": "account.`account_id`"
+    },
+    {
+        "reasoning": "To ensure we are considering the correct accounts.",
+        "column_name": "account.`account_id`"
+    }
+]

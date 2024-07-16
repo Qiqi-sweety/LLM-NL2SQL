@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To identify the circuits located in the United States, we need to filter the circuits based on the country column.",
+        "column_name": "circuits.`country`"
+    },
+    {
+        "reasoning": "The location coordinates of the circuits are represented by latitude and longitude. We need to select these columns to list the coordinates.",
+        "column_name": "circuits.`lat`"
+    },
+    {
+        "reasoning": "The location coordinates of the circuits are represented by latitude and longitude. We need to select these columns to list the coordinates.",
+        "column_name": "circuits.`lng`"
+    }
+]

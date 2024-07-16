@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify superheroes with blue eyes, we need to reference the superhero table's eye_colour_id column.",
+        "column_name": "superhero.`eye_colour_id`"
+    },
+    {
+        "reasoning": "To count the number of superheroes with blue eyes, we need to reference the superhero table's id column.",
+        "column_name": "superhero.`id`"
+    },
+    {
+        "reasoning": "To calculate the total number of superheroes, we need to reference the superhero table's id column.",
+        "column_name": "superhero.`id`"
+    },
+    {
+        "reasoning": "To join the superhero table with the colour table to get the name of the eye colour, we need to reference the colour table's id column.",
+        "column_name": "colour.`id`"
+    },
+    {
+        "reasoning": "To get the name of the eye colour 'blue', we need to reference the colour table's colour column.",
+        "column_name": "colour.`colour`"
+    }
+]

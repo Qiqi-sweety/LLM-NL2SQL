@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the bond IDs that are double-bonded, we need to reference the `bond_type` column from the `bond` table.",
+        "column_name": "bond.`bond_type`"
+    },
+    {
+        "reasoning": "To filter for carcinogenic compounds, we need to reference the `label` column from the `molecule` table.",
+        "column_name": "molecule.`label`"
+    },
+    {
+        "reasoning": "To link the bonds to their respective molecules, we need to reference the `molecule_id` column from the `bond` table.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "To link the molecules to their labels, we need to reference the `molecule_id` column from the `molecule` table.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "To identify the bond IDs, we need to reference the `bond_id` column from the `bond` table.",
+        "column_name": "bond.`bond_id`"
+    }
+]

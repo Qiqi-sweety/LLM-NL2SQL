@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the bond between the atoms TR000_1 and TR000_2, we need to join the `atom` table with the `connected` table on `atom_id` to find the bonds connecting these atoms.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "We need to join the `connected` table with the `bond` table on `bond_id` to get the bond type information.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "The `bond_type` column is required to determine the type of bond between the two atoms.",
+        "column_name": "bond.`bond_type`"
+    },
+    {
+        "reasoning": "To filter the bonds that connect the specific atoms TR000_1 and TR000_2, we need to join the `connected` table with the `atom` table again on `atom_id2`.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "We need to filter for the specific atoms TR000_1 and TR000_2 in the `atom` table.",
+        "column_name": "atom.`element`"
+    }
+]

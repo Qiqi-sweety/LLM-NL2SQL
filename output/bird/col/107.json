@@ -1,0 +1,38 @@
+[
+    {
+        "reasoning": "To identify the oldest client, we need to compare birth dates.",
+        "column_name": "client.`birth_date`"
+    },
+    {
+        "reasoning": "To find the gender of the client, we need to reference the client table.",
+        "column_name": "client.`gender`"
+    },
+    {
+        "reasoning": "To determine the district where the client opened their account, we need to join the account table.",
+        "column_name": "account.`district_id`"
+    },
+    {
+        "reasoning": "To find the district with the highest average salary, we need to join the district table.",
+        "column_name": "district.`district_id`"
+    },
+    {
+        "reasoning": "To calculate the average salary, we need to reference the district's A11 field.",
+        "column_name": "district.`A11`"
+    },
+    {
+        "reasoning": "To join the account and client tables based on district_id, we need to reference the district_id in the account table.",
+        "column_name": "account.`district_id`"
+    },
+    {
+        "reasoning": "To join the account and client tables based on district_id, we need to reference the district_id in the account table.",
+        "column_name": "district.`district_id`"
+    },
+    {
+        "reasoning": "To join the client and district tables based on district_id, we need to reference the district_id in the client table.",
+        "column_name": "client.`district_id`"
+    },
+    {
+        "reasoning": "To join the client and district tables based on district_id, we need to reference the district_id in the client table.",
+        "column_name": "district.`district_id`"
+    }
+]

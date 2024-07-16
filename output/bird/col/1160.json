@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify female patients, we need to filter by the 'SEX' column in the 'Patient' table.",
+        "column_name": "Patient.`SEX`"
+    },
+    {
+        "reasoning": "To calculate the percentage, we need to count the number of female patients with total protein not within the normal range.",
+        "column_name": "Patient.`ID`"
+    },
+    {
+        "reasoning": "To identify the total protein values, we need to reference the 'TP' column in the 'Laboratory' table.",
+        "column_name": "Laboratory.`TP`"
+    },
+    {
+        "reasoning": "To filter for total protein values not within the normal range, we need to compare the 'TP' column with the normal range values '6.0' and '8.5'.",
+        "column_name": "Laboratory.`TP`"
+    },
+    {
+        "reasoning": "To join the 'Patient' and 'Laboratory' tables based on the patient ID, we need to reference the 'ID' column in both tables.",
+        "column_name": "Patient.`ID`"
+    },
+    {
+        "reasoning": "To join the 'Patient' and 'Laboratory' tables based on the patient ID, we need to reference the 'ID' column in both tables.",
+        "column_name": "Laboratory.`ID`"
+    }
+]

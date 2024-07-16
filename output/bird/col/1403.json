@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To identify the events that are closed.",
+        "column_name": "event.`event_name`"
+    },
+    {
+        "reasoning": "To filter the events that are closed.",
+        "column_name": "event.`status`"
+    },
+    {
+        "reasoning": "To link the budget information to the respective event.",
+        "column_name": "budget.`link_to_event`"
+    },
+    {
+        "reasoning": "To identify the events that have exceeded the budget.",
+        "column_name": "budget.`remaining`"
+    },
+    {
+        "reasoning": "To select the event with the most exceeded budget.",
+        "column_name": "budget.`remaining`"
+    },
+    {
+        "reasoning": "To get the event ID for joining with the budget table.",
+        "column_name": "event.`event_id`"
+    },
+    {
+        "reasoning": "To get the event name for the final output.",
+        "column_name": "event.`event_name`"
+    }
+]

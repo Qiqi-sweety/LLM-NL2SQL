@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To retrieve the name of the event.",
+        "column_name": "event.`event_name`"
+    },
+    {
+        "reasoning": "To retrieve the location of the event.",
+        "column_name": "event.`location`"
+    },
+    {
+        "reasoning": "To join the budget table with the event table using the foreign key relationship.",
+        "column_name": "budget.`link_to_event`"
+    },
+    {
+        "reasoning": "To join the budget table with the event table using the foreign key relationship.",
+        "column_name": "event.`event_id`"
+    }
+]

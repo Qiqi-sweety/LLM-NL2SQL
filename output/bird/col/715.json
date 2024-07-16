@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To filter comments with a score between 1 and 5.",
+        "column_name": "comments.`Score`"
+    },
+    {
+        "reasoning": "To retrieve the display names of the users who made these comments.",
+        "column_name": "comments.`UserId`"
+    },
+    {
+        "reasoning": "To join with the users table to get the display names of the users.",
+        "column_name": "users.`Id`"
+    },
+    {
+        "reasoning": "To filter users with 0 down votes.",
+        "column_name": "users.`DownVotes`"
+    },
+    {
+        "reasoning": "To retrieve the display names of the users.",
+        "column_name": "users.`DisplayName`"
+    }
+]

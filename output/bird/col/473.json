@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the card 'Adarkar Valkyrie', we need to match the card name.",
+        "column_name": "cards.`name`"
+    },
+    {
+        "reasoning": "To determine if the card is available outside the United States, we need to check the 'isForeignOnly' column, which indicates if the card is only available outside the United States.",
+        "column_name": "sets.`isForeignOnly`"
+    },
+    {
+        "reasoning": "To join the cards table with the sets table, we need the card's set code.",
+        "column_name": "cards.`setCode`"
+    },
+    {
+        "reasoning": "To retrieve the set's information, we need to join the sets table.",
+        "column_name": "sets.`code`"
+    },
+    {
+        "reasoning": "To ensure we are looking at the correct set, we need to retrieve the set's name.",
+        "column_name": "sets.`name`"
+    }
+]

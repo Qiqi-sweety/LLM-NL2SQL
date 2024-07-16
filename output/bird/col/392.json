@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To filter cards with the rarity 'uncommon'.",
+        "column_name": "cards.`rarity`"
+    },
+    {
+        "reasoning": "To retrieve the names of the cards.",
+        "column_name": "cards.`name`"
+    },
+    {
+        "reasoning": "To sort the cards by the ruling date in ascending order.",
+        "column_name": "rulings.`date`"
+    },
+    {
+        "reasoning": "To join the cards and rulings tables based on the UUID field.",
+        "column_name": "cards.`uuid`"
+    },
+    {
+        "reasoning": "To join the cards and rulings tables based on the UUID field.",
+        "column_name": "rulings.`uuid`"
+    }
+]

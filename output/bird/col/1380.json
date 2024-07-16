@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To calculate the total amount of money spent for food, we need to sum up the 'spent' column from the 'budget' table.",
+        "column_name": "budget.`spent`"
+    },
+    {
+        "reasoning": "The spent amount is categorized in the 'budget' table, and we need to filter the records where the category is 'Food'.",
+        "column_name": "budget.`category`"
+    }
+]

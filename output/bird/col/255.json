@@ -1,0 +1,38 @@
+[
+    {
+        "reasoning": "To count the number of single bonds, we need to filter the `bond_type` column for the value '-'.",
+        "column_name": "bond.`bond_type`"
+    },
+    {
+        "reasoning": "To identify carcinogenic molecules, we need to check the `label` column for the value '+'.",
+        "column_name": "molecule.`label`"
+    },
+    {
+        "reasoning": "To calculate the proportion, we need to count the number of bonds with `bond_type` = '-'.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "To link the bonds to their respective molecules, we need to join the `bond` table with the `molecule` table using `molecule_id`.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "To link the bonds to their respective atoms, we need to join the `bond` table with the `connected` table using `bond_id`.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "To link the atoms to their respective molecules, we need to join the `connected` table with the `atom` table using `atom_id`.",
+        "column_name": "connected.`atom_id`"
+    },
+    {
+        "reasoning": "To link the atoms to their respective molecules, we need to join the `connected` table with the `atom` table using `atom_id2`.",
+        "column_name": "connected.`atom_id2`"
+    },
+    {
+        "reasoning": "To ensure we are considering only single bonds, we need to join the `bond` table with the `connected` table to check for single bonds.",
+        "column_name": "connected.`bond_id`"
+    },
+    {
+        "reasoning": "To count the number of carcinogenic molecules, we need to join the `molecule` table with the `bond` table using `molecule_id`.",
+        "column_name": "molecule.`molecule_id`"
+    }
+]

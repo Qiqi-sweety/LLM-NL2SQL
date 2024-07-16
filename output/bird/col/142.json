@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the accounts that placed orders, we need to join the `account` table with the `order` table using the foreign key relationship.",
+        "column_name": "account.`account_id`"
+    },
+    {
+        "reasoning": "To filter the orders that are for household payments, we need to join the `order` table with the `trans` table using the foreign key relationship.",
+        "column_name": "order.`order_id`"
+    },
+    {
+        "reasoning": "The `k_symbol` column is used to identify household payments. We need to filter the records where `k_symbol` equals 'SIPO'.",
+        "column_name": "trans.`k_symbol`"
+    },
+    {
+        "reasoning": "To ensure that the orders are placed in Pisek, we need to join the `account` table with the `district` table using the foreign key relationship.",
+        "column_name": "account.`district_id`"
+    },
+    {
+        "reasoning": "The `A2` column in the `district` table represents the district name, which we need to check for 'Pisek'.",
+        "column_name": "district.`A2`"
+    }
+]

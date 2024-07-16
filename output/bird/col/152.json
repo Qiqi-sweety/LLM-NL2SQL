@@ -1,0 +1,38 @@
+[
+    {
+        "reasoning": "To filter the accounts opened starting from the year 1997.",
+        "column_name": "account.`date`"
+    },
+    {
+        "reasoning": "To calculate the average number of crimes committed in 1995.",
+        "column_name": "district.`A15`"
+    },
+    {
+        "reasoning": "To filter regions where the number of crimes exceeds 4000.",
+        "column_name": "district.`A15`"
+    },
+    {
+        "reasoning": "To join the account table with the district table based on district_id.",
+        "column_name": "account.`district_id`"
+    },
+    {
+        "reasoning": "To join the account table with the district table based on district_id.",
+        "column_name": "district.`district_id`"
+    },
+    {
+        "reasoning": "To join the loan table with the account table based on account_id.",
+        "column_name": "loan.`account_id`"
+    },
+    {
+        "reasoning": "To join the loan table with the account table based on account_id.",
+        "column_name": "account.`account_id`"
+    },
+    {
+        "reasoning": "To join the trans table with the account table based on account_id.",
+        "column_name": "trans.`account_id`"
+    },
+    {
+        "reasoning": "To join the trans table with the account table based on account_id.",
+        "column_name": "account.`account_id`"
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To calculate the player's age, we need the current date and the player's birthday.",
+        "column_name": "Player_Attributes.`date`"
+    },
+    {
+        "reasoning": "To calculate the player's age, we need the player's birthday from the Player table.",
+        "column_name": "Player.`birthday`"
+    },
+    {
+        "reasoning": "To filter players with a sprint speed of no less than 97, we need the sprint_speed column from the Player_Attributes table.",
+        "column_name": "Player_Attributes.`sprint_speed`"
+    },
+    {
+        "reasoning": "To ensure we're looking at data between 2013 and 2015, we need the date column from the Player_Attributes table.",
+        "column_name": "Player_Attributes.`date`"
+    },
+    {
+        "reasoning": "To retrieve the player's name, which might be useful for the final output or for further processing.",
+        "column_name": "Player.`player_name`"
+    },
+    {
+        "reasoning": "To join the Player table with the Player_Attributes table using the player_api_id as the foreign key.",
+        "column_name": "Player_Attributes.`player_api_id`"
+    },
+    {
+        "reasoning": "To join the Player table with the Player_Attributes table using the player_api_id as the foreign key.",
+        "column_name": "Player.`player_api_id`"
+    }
+]

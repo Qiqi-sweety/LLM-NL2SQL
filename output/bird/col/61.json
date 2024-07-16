@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify chartered schools, we need to filter the schools table where the 'Charter' column equals '1'.",
+        "column_name": "schools.`Charter`"
+    },
+    {
+        "reasoning": "To filter schools located in the city of Hickman, we need to use the 'City' column from the schools table.",
+        "column_name": "schools.`City`"
+    },
+    {
+        "reasoning": "To identify schools owned by the Elementary School District, we need to use the 'DOC' column from the schools table and filter for the value '52'.",
+        "column_name": "schools.`DOC`"
+    },
+    {
+        "reasoning": "To count the number of schools, we need to use the COUNT function on the school identifier, which is 'School' in the schools table.",
+        "column_name": "schools.`School`"
+    },
+    {
+        "reasoning": "To join the frpm table with the schools table, we need to use the 'CDSCode' column from both tables.",
+        "column_name": "frpm.`CDSCode`"
+    },
+    {
+        "reasoning": "To join the frpm table with the schools table, we need to use the 'CDSCode' column from both tables.",
+        "column_name": "schools.`CDSCode`"
+    }
+]

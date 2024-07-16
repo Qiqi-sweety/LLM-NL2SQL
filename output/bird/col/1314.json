@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To retrieve the full names of the students, we need the first name and last name from the member table.",
+        "column_name": "member.`first_name`"
+    },
+    {
+        "reasoning": "To retrieve the full names of the students, we need the first name and last name from the member table.",
+        "column_name": "member.`last_name`"
+    },
+    {
+        "reasoning": "To filter students by their department, we need to join the member table with the major table using the link_to_major foreign key.",
+        "column_name": "member.`link_to_major`"
+    },
+    {
+        "reasoning": "To filter students by their department, we need to join the major table to get the department information.",
+        "column_name": "major.`department`"
+    },
+    {
+        "reasoning": "To filter students by their department, we need to specify the department name 'Art and Design'.",
+        "column_name": "major.`department`"
+    }
+]

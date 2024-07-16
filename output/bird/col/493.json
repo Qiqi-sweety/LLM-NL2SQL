@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To identify the set 'Commander 2014 Oversized', we need to match the set name from the sets table.",
+        "column_name": "sets.`name`"
+    },
+    {
+        "reasoning": "The parent code for the set is stored in the sets table and is the column we need to retrieve to answer the question.",
+        "column_name": "sets.`parentCode`"
+    }
+]

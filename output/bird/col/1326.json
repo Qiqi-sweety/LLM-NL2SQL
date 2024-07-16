@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To count the number of members, we need to reference the member table's member_id column.",
+        "column_name": "member.`member_id`"
+    },
+    {
+        "reasoning": "To filter members by major, we need to join the member table with the major table using the link_to_major foreign key.",
+        "column_name": "member.`link_to_major`"
+    },
+    {
+        "reasoning": "To filter by the specific major name, we need to reference the major table's major_name column.",
+        "column_name": "major.`major_name`"
+    }
+]

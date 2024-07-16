@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To retrieve the full name of the drivers, which is a combination of 'forename' and 'surname'.",
+        "column_name": "drivers.`forename`"
+    },
+    {
+        "reasoning": "To retrieve the full name of the drivers, which is a combination of 'forename' and 'surname'.",
+        "column_name": "drivers.`surname`"
+    },
+    {
+        "reasoning": "To filter drivers by their nationality, which is 'German'.",
+        "column_name": "drivers.`nationality`"
+    },
+    {
+        "reasoning": "To filter drivers born between the years 1971 and 1985.",
+        "column_name": "drivers.`dob`"
+    },
+    {
+        "reasoning": "To retrieve the Wikipedia page link of the drivers.",
+        "column_name": "drivers.`url`"
+    }
+]

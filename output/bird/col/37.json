@@ -1,0 +1,34 @@
+[
+    {
+        "reasoning": "To find the school with the lowest excellence rate, we need to calculate the rate using the provided formula.",
+        "column_name": "satscores.`NumGE1500`"
+    },
+    {
+        "reasoning": "To find the school with the lowest excellence rate, we need to calculate the rate using the provided formula.",
+        "column_name": "satscores.`NumTstTakr`"
+    },
+    {
+        "reasoning": "To identify the school with the lowest excellence rate, we need to join the satscores table with the schools table using the CDSCode.",
+        "column_name": "satscores.`cds`"
+    },
+    {
+        "reasoning": "To find the school with the lowest excellence rate, we need to join the schools table with the frpm table using the CDSCode to get the school's details.",
+        "column_name": "schools.`CDSCode`"
+    },
+    {
+        "reasoning": "To provide the complete address, we need the street address of the school.",
+        "column_name": "schools.`Street`"
+    },
+    {
+        "reasoning": "To provide the complete address, we need the city of the school.",
+        "column_name": "schools.`City`"
+    },
+    {
+        "reasoning": "To provide the complete address, we need the zip code of the school.",
+        "column_name": "schools.`Zip`"
+    },
+    {
+        "reasoning": "To provide the complete address, we need the state of the school.",
+        "column_name": "schools.`State`"
+    }
+]

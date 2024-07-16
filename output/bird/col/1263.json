@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To find the highest anti-Cardiolipin antibody concentration, we need to reference the `aCL IgA` column from the Examination table.",
+        "column_name": "Examination.`aCL IgA`"
+    },
+    {
+        "reasoning": "To identify patients with abnormal Hematoclit levels, we need to reference the symptoms that might indicate Hematoclit levels.",
+        "column_name": "Examination.`Symptoms`"
+    },
+    {
+        "reasoning": "To retrieve the patient ID, we need to join the Examination table with the Patient table using the foreign key relationship between their ID columns.",
+        "column_name": "Patient.`ID`"
+    }
+]

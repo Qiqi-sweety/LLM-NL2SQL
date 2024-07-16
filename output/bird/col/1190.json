@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify patients with a proteinuria level within the normal range.",
+        "column_name": "Patient.`ID`"
+    },
+    {
+        "reasoning": "To link the patient's ID with their laboratory results.",
+        "column_name": "Laboratory.`ID`"
+    },
+    {
+        "reasoning": "To filter for the normal range of proteinuria.",
+        "column_name": "Laboratory.`U-PRO`"
+    },
+    {
+        "reasoning": "To filter for the normal range of uric acid.",
+        "column_name": "Laboratory.`UA`"
+    }
+]

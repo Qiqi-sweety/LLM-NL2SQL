@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To count the number of members with an extra large t-shirt size, we need to reference the `member` table to filter members by their t-shirt size.",
+        "column_name": "member.`t_shirt_size`"
+    },
+    {
+        "reasoning": "To ensure we are counting members who are actually members, we need to filter by the `position` column in the `member` table.",
+        "column_name": "member.`position`"
+    },
+    {
+        "reasoning": "To count the number of members with an extra large t-shirt size, we need to count the number of rows that match the criteria, which requires the `member_id` column from the `member` table.",
+        "column_name": "member.`member_id`"
+    }
+]

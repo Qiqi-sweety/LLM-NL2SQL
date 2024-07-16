@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To calculate the average height of all superheroes.",
+        "column_name": "superhero.`height_cm`"
+    },
+    {
+        "reasoning": "To retrieve the superhero's height for comparison.",
+        "column_name": "superhero.`height_cm`"
+    },
+    {
+        "reasoning": "To retrieve the superhero's power names.",
+        "column_name": "superpower.`power_name`"
+    },
+    {
+        "reasoning": "To join the superhero table with the hero_power table on the superhero's ID.",
+        "column_name": "superhero.`id`"
+    },
+    {
+        "reasoning": "To join the hero_power table with the superpower table on the power's ID.",
+        "column_name": "hero_power.`power_id`"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the atom with ID 19, we need to filter the 'atom' table by the atom ID.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "To count the number of connections for atom 19, we need to count the occurrences of the atom's ID in the 'connected' table.",
+        "column_name": "connected.`atom_id`"
+    },
+    {
+        "reasoning": "To ensure we are counting connections for the specific atom with ID 19, we need to join the 'atom' table with the 'connected' table on the atom ID.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "To ensure we are counting connections for the specific atom with ID 19, we need to join the 'atom' table with the 'connected' table on the atom ID.",
+        "column_name": "connected.`atom_id`"
+    }
+]

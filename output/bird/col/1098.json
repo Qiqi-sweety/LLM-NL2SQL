@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the team Ajax, we need to reference the team's long name.",
+        "column_name": "Team.`team_long_name`"
+    },
+    {
+        "reasoning": "To retrieve the highest chance creation passing score for Ajax, we need to reference the `chanceCreationPassing` column.",
+        "column_name": "Team_Attributes.`chanceCreationPassing`"
+    },
+    {
+        "reasoning": "To classify the highest chance creation passing score, we need to reference the `chanceCreationPassingClass` column.",
+        "column_name": "Team_Attributes.`chanceCreationPassingClass`"
+    },
+    {
+        "reasoning": "To join the Team table with the Team_Attributes table based on the team's API ID, which is used to identify Ajax's attributes.",
+        "column_name": "Team_Attributes.`team_api_id`"
+    },
+    {
+        "reasoning": "To join the Team table with the Team_Attributes table based on the team's API ID, which is used to identify Ajax's attributes.",
+        "column_name": "Team.`team_api_id`"
+    }
+]

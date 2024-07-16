@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To identify posts with a ViewCount greater than 35000, we need to reference the ViewCount column from the posts table.",
+        "column_name": "posts.`ViewCount`"
+    },
+    {
+        "reasoning": "To filter posts that have not received any comments, we need to reference the CommentCount column from the posts table.",
+        "column_name": "posts.`CommentCount`"
+    }
+]

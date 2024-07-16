@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To find Brent Thomason's major, we need to retrieve the major name associated with his member_id.",
+        "column_name": "major.`major_name`"
+    },
+    {
+        "reasoning": "We need to join the `member` table with the `major` table using the `link_to_major` column to find the major name.",
+        "column_name": "member.`link_to_major`"
+    },
+    {
+        "reasoning": "We need to retrieve the first name and last name of Brent Thomason to identify the correct member.",
+        "column_name": "member.`first_name`"
+    },
+    {
+        "reasoning": "We need to retrieve the first name and last name of Brent Thomason to identify the correct member.",
+        "column_name": "member.`last_name`"
+    }
+]

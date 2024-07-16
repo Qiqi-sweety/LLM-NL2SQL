@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To find the molecule_id associated with the bond of type 'TR00_1_2'.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "To identify the bond_id that corresponds to the 'TR00_1_2' bond type.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "To find the molecule_id associated with the atom named 'TR00_1'.",
+        "column_name": "atom.`molecule_id`"
+    },
+    {
+        "reasoning": "To find the atom_id that corresponds to the atom named 'TR00_1'.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "To find the bond_id that connects the atom with the 'TR00_1' name to the molecule.",
+        "column_name": "connected.`bond_id`"
+    },
+    {
+        "reasoning": "To find the atom_id2 that corresponds to the atom named 'TR00_1'.",
+        "column_name": "connected.`atom_id2`"
+    },
+    {
+        "reasoning": "To retrieve the label of the molecule that has the molecule_id associated with the 'TR00_1_2' bond.",
+        "column_name": "molecule.`label`"
+    }
+]

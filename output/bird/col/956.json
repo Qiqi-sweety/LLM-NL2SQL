@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To filter drivers born after 1975, we need the 'dob' column from the 'drivers' table.",
+        "column_name": "drivers.`dob`"
+    },
+    {
+        "reasoning": "To retrieve the forenames and surnames of the drivers, we need the 'forename' and 'surname' columns from the 'drivers' table.",
+        "column_name": "drivers.`forename`"
+    },
+    {
+        "reasoning": "To filter drivers who have been ranked 2, we need the 'position' column from the 'driverStandings' table.",
+        "column_name": "driverStandings.`position`"
+    },
+    {
+        "reasoning": "To join the 'drivers' table with the 'driverStandings' table, we need the 'driverId' column from both tables.",
+        "column_name": "drivers.`driverId`"
+    },
+    {
+        "reasoning": "To join the 'driverStandings' table with the 'races' table, we need the 'raceId' column from both tables.",
+        "column_name": "driverStandings.`raceId`"
+    }
+]

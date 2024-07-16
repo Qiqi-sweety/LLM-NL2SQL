@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To identify the event 'Women's Soccer', we need to reference the `event_name` column from the 'event' table.",
+        "column_name": "event.`event_name`"
+    },
+    {
+        "reasoning": "To count the number of students who have attended the event, we need to join the 'attendance' table with the 'event' table using the foreign key relationship between 'link_to_event' and 'event_id'.",
+        "column_name": "attendance.`link_to_event`"
+    },
+    {
+        "reasoning": "To count the number of students, we need to join the 'attendance' table with the 'member' table using the foreign key relationship between 'link_to_member' and 'member_id'.",
+        "column_name": "attendance.`link_to_member`"
+    },
+    {
+        "reasoning": "To count the number of students, we need to reference the 'member_id' column from the 'member' table.",
+        "column_name": "member.`member_id`"
+    },
+    {
+        "reasoning": "To count the number of students, we need to reference the 'member_id' column from the 'major' table to ensure we are counting students of the Student_Club, which is associated with a major.",
+        "column_name": "member.`link_to_major`"
+    },
+    {
+        "reasoning": "To count the number of students, we need to reference the 'major_id' column from the 'major' table.",
+        "column_name": "major.`major_id`"
+    },
+    {
+        "reasoning": "To count the number of students, we need to reference the 'major_name' column from the 'major' table to identify the Student_Club.",
+        "column_name": "major.`major_name`"
+    }
+]

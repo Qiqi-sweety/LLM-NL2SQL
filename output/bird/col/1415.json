@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To retrieve the position of members who joined the major of Business, we need to join the 'member' table with the 'major' table using the foreign key 'link_to_major' to identify the members of the Business major.",
+        "column_name": "member.`position`"
+    },
+    {
+        "reasoning": "To filter the members who joined the major of Business, we need to select the 'major_name' from the 'major' table where the name is 'Business'.",
+        "column_name": "major.`major_name`"
+    },
+    {
+        "reasoning": "To establish the join between the 'member' and 'major' tables, we need to use the 'link_to_major' column from the 'member' table and the 'major_id' column from the 'major' table.",
+        "column_name": "member.`link_to_major`"
+    },
+    {
+        "reasoning": "To establish the join between the 'member' and 'major' tables, we need to use the 'major_id' column from the 'major' table.",
+        "column_name": "major.`major_id`"
+    }
+]

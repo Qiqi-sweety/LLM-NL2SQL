@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To retrieve the full name of the students, which is a concatenation of first_name and last_name from the member table.",
+        "column_name": "member.`first_name`"
+    },
+    {
+        "reasoning": "To retrieve the full name of the students, which is a concatenation of first_name and last_name from the member table.",
+        "column_name": "member.`last_name`"
+    },
+    {
+        "reasoning": "To identify the students who received funds, this column is used to join the income table with the member table via the foreign key link_to_member.",
+        "column_name": "income.`link_to_member`"
+    },
+    {
+        "reasoning": "To filter the records for the specific date on which funds were received, this column is used to match the date 9/9/2019.",
+        "column_name": "income.`date_received`"
+    },
+    {
+        "reasoning": "To include the amount received by the students, this column is retrieved from the income table.",
+        "column_name": "income.`amount`"
+    }
+]

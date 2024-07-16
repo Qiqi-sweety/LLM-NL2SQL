@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To identify the Scotland Premier League, we need to join the League table and filter by the name 'Scotland Premier League'.",
+        "column_name": "League.`name`"
+    },
+    {
+        "reasoning": "To link the matches to the Scotland Premier League, we need to join the League table with the Match table using the league_id.",
+        "column_name": "League.`id`"
+    },
+    {
+        "reasoning": "To filter matches from the 2010 season, we need to join the Match table and filter by the season '2009/2010'.",
+        "column_name": "Match.`season`"
+    },
+    {
+        "reasoning": "To identify the away teams, we need to join the Match table with the Team table using the away_team_api_id.",
+        "column_name": "Match.`away_team_api_id`"
+    },
+    {
+        "reasoning": "To get the away team names, we need to select the team_long_name from the Team table.",
+        "column_name": "Team.`team_long_name`"
+    },
+    {
+        "reasoning": "To calculate the difference between away team goals and home team goals, we need to select the away_team_goal and home_team_goal from the Match table.",
+        "column_name": "Match.`away_team_goal`"
+    },
+    {
+        "reasoning": "To filter for away teams that won, we need to use the condition MAX(SUBTRACT(away_team_goal, home_team_goal) > 0).",
+        "column_name": "Match.`home_team_goal`"
+    }
+]

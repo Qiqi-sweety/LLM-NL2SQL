@@ -1,0 +1,34 @@
+[
+    {
+        "reasoning": "To identify the cards in the set with setCode '10E'.",
+        "column_name": "cards.`setCode`"
+    },
+    {
+        "reasoning": "To filter cards with a converted mana cost of 5.",
+        "column_name": "cards.`convertedManaCost`"
+    },
+    {
+        "reasoning": "To retrieve the card names and other relevant information.",
+        "column_name": "cards.`name`"
+    },
+    {
+        "reasoning": "To link the cards to their corresponding set information.",
+        "column_name": "sets.`code`"
+    },
+    {
+        "reasoning": "To filter the sets by the specific set code '10E'.",
+        "column_name": "sets.`code`"
+    },
+    {
+        "reasoning": "To link the cards to their translations.",
+        "column_name": "set_translations.`setCode`"
+    },
+    {
+        "reasoning": "To retrieve the language of the translation.",
+        "column_name": "set_translations.`language`"
+    },
+    {
+        "reasoning": "To link the translations to the sets.",
+        "column_name": "sets.`code`"
+    }
+]

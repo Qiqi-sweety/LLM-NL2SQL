@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To retrieve the name of the set with id = 5, we need to join the `sets` table with the `set_translations` table using the `code` column from `sets` and `setCode` from `set_translations`.",
+        "column_name": "sets.`name`"
+    },
+    {
+        "reasoning": "To get the translation of the set with id = 5, we need to join the `sets` table with the `set_translations` table using the `code` column from `sets` and `setCode` from `set_translations`.",
+        "column_name": "set_translations.`translation`"
+    },
+    {
+        "reasoning": "To filter the set with id = 5, we need to use the `id` column from the `sets` table.",
+        "column_name": "sets.`id`"
+    }
+]

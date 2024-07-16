@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To identify constructors who have been ranked 1, we need to select the `name` column from the constructors table to display their names.",
+        "column_name": "constructors.`name`"
+    },
+    {
+        "reasoning": "The `constructorId` is needed to join the constructorStandings table with the constructors table to get the names of the constructors.",
+        "column_name": "constructors.`constructorId`"
+    },
+    {
+        "reasoning": "The `constructorStandingsId` is used to join the constructorStandings table with the races table to ensure we are considering the correct standings for each race.",
+        "column_name": "constructorStandings.`constructorStandingsId`"
+    },
+    {
+        "reasoning": "The `position` column indicates the ranking of the constructor in the race, and we are interested in those who have been ranked 1.",
+        "column_name": "constructorStandings.`position`"
+    },
+    {
+        "reasoning": "The `raceId` is necessary to join the constructorStandings table with the races table to get the race details.",
+        "column_name": "constructorStandings.`raceId`"
+    },
+    {
+        "reasoning": "The `year` and `round` columns from the races table are not directly needed for the ranking but might be useful for filtering or providing additional context.",
+        "column_name": "races.`year`"
+    },
+    {
+        "reasoning": "The `round` column from the races table is not directly needed for the ranking but might be useful for filtering or providing additional context.",
+        "column_name": "races.`round`"
+    }
+]

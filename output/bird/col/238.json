@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To count the number of molecules with a triple bond type, we need to reference the `bond_type` column from the `bond` table to filter for the triple bond type.",
+        "column_name": "bond.`bond_type`"
+    },
+    {
+        "reasoning": "To count the number of molecules, we need to reference the `molecule_id` column from the `molecule` table to group the results by molecule.",
+        "column_name": "molecule.`molecule_id`"
+    }
+]

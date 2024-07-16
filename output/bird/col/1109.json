@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the team with the short name 'LEI'.",
+        "column_name": "Team.`team_short_name`"
+    },
+    {
+        "reasoning": "To match the team's API ID with the corresponding team in the Team_Attributes table.",
+        "column_name": "Team_Attributes.`team_api_id`"
+    },
+    {
+        "reasoning": "To filter the Team_Attributes records for the specific date.",
+        "column_name": "Team_Attributes.`date`"
+    },
+    {
+        "reasoning": "To retrieve the build up play dribbling class for the team on the specified date.",
+        "column_name": "Team_Attributes.`buildUpPlayDribblingClass`"
+    }
+]

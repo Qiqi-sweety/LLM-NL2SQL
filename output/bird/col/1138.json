@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To find the country where the Poland Ekstraklasa took place, we need to join the 'League' table with the 'Country' table using the foreign key relationship.",
+        "column_name": "League.`country_id`"
+    },
+    {
+        "reasoning": "To find the country where the Poland Ekstraklasa took place, we need to join the 'League' table with the 'Country' table using the foreign key relationship.",
+        "column_name": "Country.`id`"
+    },
+    {
+        "reasoning": "We need to select the country name to identify the country where the Poland Ekstraklasa took place.",
+        "column_name": "Country.`name`"
+    },
+    {
+        "reasoning": "We need to filter the leagues by the name 'Poland Ekstraklasa'.",
+        "column_name": "League.`name`"
+    }
+]

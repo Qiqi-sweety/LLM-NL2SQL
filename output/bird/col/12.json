@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To calculate the SAT excellence rate, we need the number of students who took the test and the number of students who scored above 1500 on the SAT.",
+        "column_name": "satscores.`NumTstTakr`"
+    },
+    {
+        "reasoning": "To calculate the SAT excellence rate, we need the number of students who scored above 1500 on the SAT.",
+        "column_name": "satscores.`NumGE1500`"
+    },
+    {
+        "reasoning": "To filter schools with an SAT excellence rate over 0.3, we need to join the satscores table with the schools table using the CDSCode.",
+        "column_name": "schools.`CDSCode`"
+    },
+    {
+        "reasoning": "To find the highest eligible free rate for students aged 5-17, we need the Free Meal Count for this age group.",
+        "column_name": "frpm.`Free Meal Count (Ages 5-17)`"
+    },
+    {
+        "reasoning": "To find the highest eligible free rate for students aged 5-17, we need the Enrollment count for this age group.",
+        "column_name": "frpm.`Enrollment (Ages 5-17)`"
+    },
+    {
+        "reasoning": "To join the frpm table with the schools table using the CDSCode, which is a foreign key in both tables.",
+        "column_name": "frpm.`CDSCode`"
+    }
+]

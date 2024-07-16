@@ -1,0 +1,54 @@
+[
+    {
+        "reasoning": "To filter the drivers by nationality.",
+        "column_name": "drivers.`nationality`"
+    },
+    {
+        "reasoning": "To filter the drivers by birth year range.",
+        "column_name": "drivers.`dob`"
+    },
+    {
+        "reasoning": "To calculate the average pit stop duration.",
+        "column_name": "pitStops.`duration`"
+    },
+    {
+        "reasoning": "To count the number of pit stops for the average calculation.",
+        "column_name": "pitStops.`stop`"
+    },
+    {
+        "reasoning": "To join the drivers with their pit stops.",
+        "column_name": "pitStops.`driverId`"
+    },
+    {
+        "reasoning": "To join the drivers with their pit stops.",
+        "column_name": "drivers.`driverId`"
+    },
+    {
+        "reasoning": "To join the pit stops with the races.",
+        "column_name": "pitStops.`raceId`"
+    },
+    {
+        "reasoning": "To join the pit stops with the races.",
+        "column_name": "races.`raceId`"
+    },
+    {
+        "reasoning": "To join the races with the seasons to filter by year.",
+        "column_name": "races.`year`"
+    },
+    {
+        "reasoning": "To join the races with the seasons to filter by year.",
+        "column_name": "seasons.`year`"
+    },
+    {
+        "reasoning": "To select the driver's name for the final list.",
+        "column_name": "drivers.`forename`"
+    },
+    {
+        "reasoning": "To select the driver's surname for the final list.",
+        "column_name": "drivers.`surname`"
+    },
+    {
+        "reasoning": "To group the results by driver to calculate the average.",
+        "column_name": "drivers.`driverId`"
+    }
+]

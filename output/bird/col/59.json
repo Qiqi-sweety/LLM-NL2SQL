@@ -1,0 +1,38 @@
+[
+    {
+        "reasoning": "To identify the schools under the administration of Mike Larson and Dante Alvarez, we need to match the first names and last names of the administrators with the provided names.",
+        "column_name": "schools.`AdmFName1`"
+    },
+    {
+        "reasoning": "To identify the schools under the administration of Mike Larson and Dante Alvarez, we need to match the first names and last names of the administrators with the provided names.",
+        "column_name": "schools.`AdmLName1`"
+    },
+    {
+        "reasoning": "To identify the schools under the administration of Mike Larson and Dante Alvarez, we need to match the first names and last names of the administrators with the provided names.",
+        "column_name": "schools.`AdmFName2`"
+    },
+    {
+        "reasoning": "To identify the schools under the administration of Mike Larson and Dante Alvarez, we need to match the first names and last names of the administrators with the provided names.",
+        "column_name": "schools.`AdmLName2`"
+    },
+    {
+        "reasoning": "To identify the schools under the administration of Mike Larson and Dante Alvarez, we need to match the first names and last names of the administrators with the provided names.",
+        "column_name": "schools.`AdmFName3`"
+    },
+    {
+        "reasoning": "To identify the schools under the administration of Mike Larson and Dante Alvarez, we need to match the first names and last names of the administrators with the provided names.",
+        "column_name": "schools.`AdmLName3`"
+    },
+    {
+        "reasoning": "To retrieve the website information for the schools, we need to access the website column from the schools table.",
+        "column_name": "schools.`Website`"
+    },
+    {
+        "reasoning": "To join the frpm table with the schools table based on the CDSCode, which is a common column in both tables.",
+        "column_name": "frpm.`CDSCode`"
+    },
+    {
+        "reasoning": "To join the frpm table with the schools table based on the CDSCode, which is a common column in both tables.",
+        "column_name": "schools.`CDSCode`"
+    }
+]

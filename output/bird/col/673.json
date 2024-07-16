@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To calculate the average number of posts voted by users, we need to count the number of votes per user. This requires joining the `votes` table with the `users` table to get the user's age.",
+        "column_name": "votes.`UserId`"
+    },
+    {
+        "reasoning": "To identify the oldest users, we need to select the maximum age from the `users` table.",
+        "column_name": "users.`Age`"
+    },
+    {
+        "reasoning": "To calculate the average number of posts voted, we need to count the number of votes per user. This requires joining the `votes` table with the `posts` table to get the count of votes per post.",
+        "column_name": "votes.`PostId`"
+    },
+    {
+        "reasoning": "To calculate the average, we need to group the results by user ID.",
+        "column_name": "votes.`UserId`"
+    },
+    {
+        "reasoning": "We need to join the `users` table to get the user's age and to filter out the oldest users.",
+        "column_name": "users.`Id`"
+    },
+    {
+        "reasoning": "We need to join the `users` table to get the user's age and to filter out the oldest users.",
+        "column_name": "users.`DisplayName`"
+    }
+]

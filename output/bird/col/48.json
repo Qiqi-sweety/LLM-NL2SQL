@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify the schools in Orange County, we need the County column from the schools table.",
+        "column_name": "schools.`County`"
+    },
+    {
+        "reasoning": "To filter for merged schools, we need the StatusType column from the schools table.",
+        "column_name": "schools.`StatusType`"
+    },
+    {
+        "reasoning": "To differentiate between Unified and Elementary School Districts, we need the DOC column from the schools table.",
+        "column_name": "schools.`DOC`"
+    },
+    {
+        "reasoning": "To calculate the ratio, we need the count of schools for each type.",
+        "column_name": "schools.`School`"
+    },
+    {
+        "reasoning": "To join the frpm table with the schools table, we need the CDSCode column from both tables.",
+        "column_name": "frpm.`CDSCode`"
+    },
+    {
+        "reasoning": "To join the frpm table with the schools table, we need the CDSCode column from both tables.",
+        "column_name": "schools.`CDSCode`"
+    }
+]

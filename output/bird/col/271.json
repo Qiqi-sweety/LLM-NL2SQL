@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To check if the bond has both chlorine and carbon, we need to retrieve the element information from the 'atom' table.",
+        "column_name": "atom.`element`"
+    },
+    {
+        "reasoning": "We need to join the 'atom' table with the 'connected' table to find the atoms connected by the bond with bond_id 'TR001_1_8'.",
+        "column_name": "connected.`atom_id`"
+    },
+    {
+        "reasoning": "We need to join the 'connected' table with the 'bond' table to filter the bond with the specified bond_id.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "We need to join the 'bond' table with the 'molecule' table to get the molecule information.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "We need to join the 'atom' table with the 'molecule' table to get the molecule information for the atoms.",
+        "column_name": "atom.`molecule_id`"
+    },
+    {
+        "reasoning": "We need to filter the atoms based on the element being chlorine ('cl').",
+        "column_name": "atom.`element`"
+    },
+    {
+        "reasoning": "We need to filter the atoms based on the element being carbon ('c').",
+        "column_name": "atom.`element`"
+    }
+]

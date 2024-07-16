@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To count the number of badges a user has, we need to reference the `UserId` from the badges table.",
+        "column_name": "badges.`UserId`"
+    },
+    {
+        "reasoning": "To filter users with over 200 views, we need to reference the `Views` column from the users table.",
+        "column_name": "users.`Views`"
+    },
+    {
+        "reasoning": "To calculate the average number of badges, we need to count the badges per user. We use `Id` from the badges table to identify unique badges per user.",
+        "column_name": "badges.`Id`"
+    },
+    {
+        "reasoning": "To calculate the average, we need to divide the count of badges by the count of distinct users. We use `DisplayName` to identify unique users.",
+        "column_name": "users.`DisplayName`"
+    },
+    {
+        "reasoning": "To join the badges and users tables based on the user ID, we need to reference the `UserId` from the badges table and the `Id` from the users table.",
+        "column_name": "badges.`UserId`"
+    },
+    {
+        "reasoning": "To join the badges and users tables based on the user ID, we need to reference the `UserId` from the badges table and the `Id` from the users table.",
+        "column_name": "users.`Id`"
+    }
+]

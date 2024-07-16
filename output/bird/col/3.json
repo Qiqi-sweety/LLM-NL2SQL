@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To identify the school with the highest FRPM count for K-12 students, we need to join the `frpm` table with the `schools` table using the `CDSCode` as the foreign key.",
+        "column_name": "frpm.`CDSCode`"
+    },
+    {
+        "reasoning": "To find the school with the highest FRPM count, we need to select the `FRPM Count (K-12)` column from the `frpm` table.",
+        "column_name": "frpm.`FRPM Count (K-12)`"
+    },
+    {
+        "reasoning": "To get the unabbreviated mailing address of the school, we need to select the columns that make up the mailing address from the `schools` table.",
+        "column_name": "schools.`Street`"
+    },
+    {
+        "reasoning": "The abbreviation for the street name is also needed to ensure the address is unabbreviated.",
+        "column_name": "schools.`StreetAbr`"
+    },
+    {
+        "reasoning": "The city name is part of the mailing address and is required to complete the address.",
+        "column_name": "schools.`MailCity`"
+    },
+    {
+        "reasoning": "The ZIP code is necessary for the mailing address.",
+        "column_name": "schools.`MailZip`"
+    },
+    {
+        "reasoning": "The state is part of the mailing address and is required to complete the address.",
+        "column_name": "schools.`MailState`"
+    }
+]

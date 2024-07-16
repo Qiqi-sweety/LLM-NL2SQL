@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To list the full names of superheroes, we need to reference the superhero's full name column.",
+        "column_name": "superhero.`full_name`"
+    },
+    {
+        "reasoning": "The question specifies superheroes with missing weight, which requires us to check the weight_kg column for NULL or 0 values.",
+        "column_name": "superhero.`weight_kg`"
+    }
+]

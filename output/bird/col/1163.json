@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To calculate the age of the patient at the time of admission, we need the patient's birthday.",
+        "column_name": "Patient.`Birthday`"
+    },
+    {
+        "reasoning": "To calculate the age, we need the date of admission (First Date) to subtract from the birthday.",
+        "column_name": "Patient.`First Date`"
+    },
+    {
+        "reasoning": "The patient's ID is needed to join the Examination table with the Patient table.",
+        "column_name": "Patient.`ID`"
+    },
+    {
+        "reasoning": "The patient's ID is also needed to retrieve the corresponding examination record.",
+        "column_name": "Examination.`ID`"
+    }
+]

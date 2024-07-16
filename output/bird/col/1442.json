@@ -1,0 +1,58 @@
+[
+    {
+        "reasoning": "To calculate the percentage of events that went over budget, we need to count the number of events with a negative remaining amount.",
+        "column_name": "event.`event_id`"
+    },
+    {
+        "reasoning": "The event_id is used to join the event and budget tables based on the foreign key relationship.",
+        "column_name": "budget.`link_to_event`"
+    },
+    {
+        "reasoning": "To identify events that went over budget, we need to check if the remaining amount is less than zero.",
+        "column_name": "budget.`remaining`"
+    },
+    {
+        "reasoning": "The event_name is not necessary for the calculation but might be useful for additional context or reporting.",
+        "column_name": "event.`event_name`"
+    },
+    {
+        "reasoning": "The event_date is not necessary for the calculation but might be useful for additional context or reporting.",
+        "column_name": "event.`event_date`"
+    },
+    {
+        "reasoning": "The type, notes, and location columns are not necessary for the calculation but might be useful for additional context or reporting.",
+        "column_name": "event.`type`"
+    },
+    {
+        "reasoning": "The type, notes, and location columns are not necessary for the calculation but might be useful for additional context or reporting.",
+        "column_name": "event.`notes`"
+    },
+    {
+        "reasoning": "The type, notes, and location columns are not necessary for the calculation but might be useful for additional context or reporting.",
+        "column_name": "event.`location`"
+    },
+    {
+        "reasoning": "The status column is not necessary for the calculation but might be useful for additional context or reporting.",
+        "column_name": "event.`status`"
+    },
+    {
+        "reasoning": "The category, spent, amount, and event_status columns are not necessary for the calculation but might be useful for additional context or reporting.",
+        "column_name": "budget.`category`"
+    },
+    {
+        "reasoning": "The spent column is not necessary for the calculation but might be useful for additional context or reporting.",
+        "column_name": "budget.`spent`"
+    },
+    {
+        "reasoning": "The amount column is not necessary for the calculation but might be useful for additional context or reporting.",
+        "column_name": "budget.`amount`"
+    },
+    {
+        "reasoning": "The event_status column is not necessary for the calculation but might be useful for additional context or reporting.",
+        "column_name": "budget.`event_status`"
+    },
+    {
+        "reasoning": "The link_to_event column is used to join the budget table with the event table based on the foreign key relationship.",
+        "column_name": "budget.`link_to_event`"
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "reasoning": "To retrieve the bond information for TR001_10_11, we need to join the bond table with the connected table using the bond_id.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "The bond_id is used to identify the specific bond in question (TR001_10_11).",
+        "column_name": "bond.`bond_type`"
+    },
+    {
+        "reasoning": "To get the molecule information associated with the bond, we need to join the bond table with the molecule table using the molecule_id.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "The molecule_id is used to identify the molecule associated with the bond.",
+        "column_name": "molecule.`label`"
+    },
+    {
+        "reasoning": "To retrieve the atom information for the bond, we need to join the connected table with the atom table using the atom_id.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "The atom_id is used to identify the first atom in the bond.",
+        "column_name": "atom.`element`"
+    },
+    {
+        "reasoning": "To retrieve the atom information for the bond, we need to join the connected table with the atom table using the atom_id.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "The atom_id is used to identify the second atom in the bond.",
+        "column_name": "atom.`element`"
+    }
+]

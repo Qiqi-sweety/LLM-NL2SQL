@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To identify the elements in a double type bond, we need to join the `atom` table with the `bond` table to find the atoms that are part of double bonds.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "We need to join the `bond` table with the `molecule` table to filter the bonds based on the molecule they belong to.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "The `bond_type` column is necessary to filter for double type bonds.",
+        "column_name": "bond.`bond_type`"
+    },
+    {
+        "reasoning": "We need to join the `atom` table with the `molecule` table to get the molecule information for the atoms.",
+        "column_name": "atom.`molecule_id`"
+    },
+    {
+        "reasoning": "The `element` column in the `atom` table is needed to identify the elements in the double type bonds.",
+        "column_name": "atom.`element`"
+    },
+    {
+        "reasoning": "The `molecule` table's `molecule_id` is needed to establish the relationship between the `atom` and `molecule` tables.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "The `label` column in the `molecule` table is not directly needed for the SQL query but could be useful for additional context or output formatting.",
+        "column_name": "molecule.`label`"
+    }
+]

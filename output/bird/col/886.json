@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To determine the year with the most number of races, we need to count the number of races per year.",
+        "column_name": "seasons.`year`"
+    },
+    {
+        "reasoning": "We need to count the number of races per year, which requires the race count. The `round` column from the `races` table will be used to count the number of races.",
+        "column_name": "races.`round`"
+    },
+    {
+        "reasoning": "To join the `seasons` and `races` tables based on the year, we need to reference the `year` column from both tables.",
+        "column_name": "races.`year`"
+    }
+]

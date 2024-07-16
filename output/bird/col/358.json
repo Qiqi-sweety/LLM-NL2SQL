@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To find the border color of a specific card, we need to match the card's name with the one provided in the question.",
+        "column_name": "cards.`name`"
+    },
+    {
+        "reasoning": "Once the card is identified, we can retrieve its border color from this column.",
+        "column_name": "cards.`borderColor`"
+    }
+]

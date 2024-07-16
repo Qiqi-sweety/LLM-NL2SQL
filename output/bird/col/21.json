@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To filter schools located in Los Angeles.",
+        "column_name": "schools.`County`"
+    },
+    {
+        "reasoning": "To count the number of schools with more than 500 free meals but less than 700 free or reduced price meals for K-12.",
+        "column_name": "frpm.`Free Meal Count (K-12)`"
+    },
+    {
+        "reasoning": "To join the frpm table with the schools table using the CDSCode as the foreign key.",
+        "column_name": "frpm.`CDSCode`"
+    },
+    {
+        "reasoning": "To filter schools in Los Angeles.",
+        "column_name": "schools.`City`"
+    },
+    {
+        "reasoning": "To ensure we are looking at K-12 schools.",
+        "column_name": "frpm.`Enrollment (K-12)`"
+    },
+    {
+        "reasoning": "To join the schools table with the frpm table using the CDSCode as the foreign key.",
+        "column_name": "schools.`CDSCode`"
+    }
+]

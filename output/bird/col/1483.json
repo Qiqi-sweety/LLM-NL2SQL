@@ -1,0 +1,38 @@
+[
+    {
+        "reasoning": "To identify the customer in question.",
+        "column_name": "customers.`CustomerID`"
+    },
+    {
+        "reasoning": "To filter transactions for the specified customer.",
+        "column_name": "transactions_1k.`CustomerID`"
+    },
+    {
+        "reasoning": "To filter transactions within the specified date range.",
+        "column_name": "transactions_1k.`Date`"
+    },
+    {
+        "reasoning": "To calculate the total consumption amount.",
+        "column_name": "transactions_1k.`Amount`"
+    },
+    {
+        "reasoning": "To join the transactions with the yearmonth table to filter by customer.",
+        "column_name": "yearmonth.`CustomerID`"
+    },
+    {
+        "reasoning": "To ensure the transactions are for the correct customer.",
+        "column_name": "yearmonth.`CustomerID`"
+    },
+    {
+        "reasoning": "To ensure the transactions are for the correct customer.",
+        "column_name": "customers.`CustomerID`"
+    },
+    {
+        "reasoning": "To filter the yearmonth records to the specified date range.",
+        "column_name": "yearmonth.`Date`"
+    },
+    {
+        "reasoning": "To calculate the total consumption for the specified date range.",
+        "column_name": "yearmonth.`Consumption`"
+    }
+]

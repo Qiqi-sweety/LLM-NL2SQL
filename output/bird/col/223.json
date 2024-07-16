@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To identify the bond with the ID 'TR_000_2_5', we need to reference the bond table.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "The question asks for the atom IDs of the bond, which are stored in the connected table.",
+        "column_name": "connected.`atom_id`"
+    },
+    {
+        "reasoning": "The question asks for the atom IDs of the bond, which are stored in the connected table.",
+        "column_name": "connected.`atom_id2`"
+    }
+]

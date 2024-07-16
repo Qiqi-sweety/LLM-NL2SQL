@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To retrieve the unconverted mana cost of the card 'Ancestor's Chosen', we need to access the column that stores this information in the 'cards' table.",
+        "column_name": "cards.`convertedManaCost`"
+    },
+    {
+        "reasoning": "To identify the specific card 'Ancestor's Chosen', we need to match the card's name. The 'name' column in the 'cards' table is used for this purpose.",
+        "column_name": "cards.`name`"
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To identify the atoms that belong to a molecule, we need to join the `atom` table with the `molecule` table using the foreign key `molecule_id`.",
+        "column_name": "atom.`molecule_id`"
+    },
+    {
+        "reasoning": "To filter the molecules that are labeled as carcinogenic, we need to join the `molecule` table with a condition that checks for the label '+'.",
+        "column_name": "molecule.`label`"
+    },
+    {
+        "reasoning": "To count the number of atoms, we need to select the `atom_id` column from the `atom` table.",
+        "column_name": "atom.`atom_id`"
+    }
+]

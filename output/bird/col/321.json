@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To find the molecule associated with the given atom IDs, we need to join the `atom` table with the `molecule` table using the `molecule_id` column.",
+        "column_name": "atom.`molecule_id`"
+    },
+    {
+        "reasoning": "We need to retrieve the `label` column from the `molecule` table to get the name of the molecule.",
+        "column_name": "molecule.`label`"
+    },
+    {
+        "reasoning": "To filter the atoms by their IDs, we need to select the `atom_id` column from the `atom` table.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "We need to join the `connected` table with the `atom` table to find the bonds between the given atom IDs.",
+        "column_name": "connected.`atom_id`"
+    },
+    {
+        "reasoning": "We need to join the `connected` table with the `bond` table to get the bond types for the connections.",
+        "column_name": "connected.`bond_id`"
+    },
+    {
+        "reasoning": "We need to join the `bond` table with the `molecule` table to ensure we are looking at the correct molecule for the given bond.",
+        "column_name": "bond.`molecule_id`"
+    }
+]

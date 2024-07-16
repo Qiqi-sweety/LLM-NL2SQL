@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To identify the oldest German driver, we need to filter by nationality. The nationality of the driver is stored in the 'nationality' column.",
+        "column_name": "drivers.`nationality`"
+    },
+    {
+        "reasoning": "The oldest driver is determined by the minimum year of birth, which is derived from the 'dob' column. We need to extract the year from the date of birth to compare.",
+        "column_name": "drivers.`dob`"
+    },
+    {
+        "reasoning": "The reference name of the driver is stored in the 'driverRef' column, which is the column we need to select to provide the answer to the question.",
+        "column_name": "drivers.`driverRef`"
+    }
+]

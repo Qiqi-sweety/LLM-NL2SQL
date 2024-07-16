@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To retrieve the event names.",
+        "column_name": "event.`event_name`"
+    },
+    {
+        "reasoning": "To calculate the average parking cost.",
+        "column_name": "budget.`category`"
+    },
+    {
+        "reasoning": "To calculate the average parking cost.",
+        "column_name": "budget.`spent`"
+    },
+    {
+        "reasoning": "To filter the events based on the event status.",
+        "column_name": "event.`status`"
+    },
+    {
+        "reasoning": "To join the budget table with the event table using the foreign key relationship.",
+        "column_name": "budget.`link_to_event`"
+    },
+    {
+        "reasoning": "To join the budget table with the event table using the foreign key relationship.",
+        "column_name": "event.`event_id`"
+    }
+]

@@ -1,0 +1,50 @@
+[
+    {
+        "reasoning": "To identify superheroes with missing weight data.",
+        "column_name": "superhero.`weight_kg`"
+    },
+    {
+        "reasoning": "To link superhero eye colour to its corresponding colour ID.",
+        "column_name": "superhero.`eye_colour_id`"
+    },
+    {
+        "reasoning": "To link superhero hair colour to its corresponding colour ID.",
+        "column_name": "superhero.`hair_colour_id`"
+    },
+    {
+        "reasoning": "To link superhero skin colour to its corresponding colour ID.",
+        "column_name": "superhero.`skin_colour_id`"
+    },
+    {
+        "reasoning": "To link superhero eye colour to its corresponding colour ID.",
+        "column_name": "superhero.`eye_colour_id`"
+    },
+    {
+        "reasoning": "To link superhero hair colour to its corresponding colour ID.",
+        "column_name": "superhero.`hair_colour_id`"
+    },
+    {
+        "reasoning": "To link superhero skin colour to its corresponding colour ID.",
+        "column_name": "superhero.`skin_colour_id`"
+    },
+    {
+        "reasoning": "To link hero_power to superhero via hero_id.",
+        "column_name": "hero_power.`hero_id`"
+    },
+    {
+        "reasoning": "To link hero_power to superpower via power_id.",
+        "column_name": "hero_power.`power_id`"
+    },
+    {
+        "reasoning": "To retrieve superhero names for the final result.",
+        "column_name": "superhero.`superhero_name`"
+    },
+    {
+        "reasoning": "To count the number of superheroes with blue eyes.",
+        "column_name": "colour.`id`"
+    },
+    {
+        "reasoning": "To count the number of superheroes with no eye color.",
+        "column_name": "colour.`id`"
+    }
+]

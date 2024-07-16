@@ -1,0 +1,38 @@
+[
+    {
+        "reasoning": "To identify the school with the lowest average score in reading, we need to join the `satscores` table with the `schools` table to get the school details.",
+        "column_name": "schools.`School`"
+    },
+    {
+        "reasoning": "To filter the schools based on the district name 'Fresno Unified', we need to join the `schools` table with the `frpm` table.",
+        "column_name": "frpm.`District Name`"
+    },
+    {
+        "reasoning": "We need to filter the schools by the district name 'Fresno Unified'.",
+        "column_name": "frpm.`District Name`"
+    },
+    {
+        "reasoning": "To get the telephone number of the school, we need to select the 'Phone' column from the `schools` table.",
+        "column_name": "schools.`Phone`"
+    },
+    {
+        "reasoning": "To calculate the average score in reading, we need to select the 'AvgScrRead' column from the `satscores` table.",
+        "column_name": "satscores.`AvgScrRead`"
+    },
+    {
+        "reasoning": "To order the schools by the average score in reading and select the one with the lowest score, we need to use the school's CDSCode as a reference to join the `satscores` and `schools` tables.",
+        "column_name": "schools.`CDSCode`"
+    },
+    {
+        "reasoning": "To join the `satscores` table with the `schools` table, we need to use the CDSCode as the common key.",
+        "column_name": "satscores.`cds`"
+    },
+    {
+        "reasoning": "To join the `schools` table with the `frpm` table, we need to use the CDSCode as the common key.",
+        "column_name": "schools.`CDSCode`"
+    },
+    {
+        "reasoning": "To filter the schools by the district name 'Fresno Unified', we need to use the CDSCode from the `frpm` table.",
+        "column_name": "frpm.`CDSCode`"
+    }
+]

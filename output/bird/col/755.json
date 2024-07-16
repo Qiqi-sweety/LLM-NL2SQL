@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To filter superheroes by race, we need to join the superhero table with the race table and select the race with the name 'Demi-God'.",
+        "column_name": "superhero.`race_id`"
+    },
+    {
+        "reasoning": "To filter superheroes by race, we need to join the superhero table with the race table and select the race with the name 'Demi-God'.",
+        "column_name": "race.`id`"
+    },
+    {
+        "reasoning": "To retrieve the full name of the superheroes, we need to select the `full_name` column from the superhero table.",
+        "column_name": "superhero.`full_name`"
+    },
+    {
+        "reasoning": "To identify the race of the superheroes, we need to select the `race` column from the race table.",
+        "column_name": "race.`race`"
+    },
+    {
+        "reasoning": "To retrieve the superhero's full name, we need to select the superhero table's `id` to join with the race table.",
+        "column_name": "superhero.`id`"
+    },
+    {
+        "reasoning": "To filter the superheroes by the race 'Demi-God', we need to select the race ID that corresponds to 'Demi-God' from the race table.",
+        "column_name": "race.`id`"
+    }
+]

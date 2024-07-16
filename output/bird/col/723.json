@@ -1,0 +1,38 @@
+[
+    {
+        "reasoning": "To filter superheroes with blue eyes, we need to join the superhero table with the colour table on the eye_colour_id column.",
+        "column_name": "superhero.`eye_colour_id`"
+    },
+    {
+        "reasoning": "To filter superheroes with the superpower 'Agility', we need to join the hero_power table with the superpower table on the power_id column.",
+        "column_name": "hero_power.`power_id`"
+    },
+    {
+        "reasoning": "To count the number of superheroes with blue eyes who have the superpower 'Agility', we need to select the superhero.id column.",
+        "column_name": "superhero.`id`"
+    },
+    {
+        "reasoning": "To filter for the specific eye colour 'Blue', we need to select the colour.id and colour.colour columns from the colour table.",
+        "column_name": "colour.`id`"
+    },
+    {
+        "reasoning": "To filter for the superpower 'Agility', we need to select the superpower.id and superpower.power_name columns from the superpower table.",
+        "column_name": "superpower.`id`"
+    },
+    {
+        "reasoning": "To join the superhero table with the colour table on the eye_colour_id column, we need to select the colour.id column from the colour table.",
+        "column_name": "colour.`id`"
+    },
+    {
+        "reasoning": "To join the hero_power table with the superpower table on the power_id column, we need to select the superpower.id column from the superpower table.",
+        "column_name": "superpower.`id`"
+    },
+    {
+        "reasoning": "To join the hero_power table with the superhero table on the hero_id column, we need to select the superhero.id column from the superhero table.",
+        "column_name": "superhero.`id`"
+    },
+    {
+        "reasoning": "To join the superhero table with the hero_power table on the hero_id column, we need to select the hero_power.hero_id column from the hero_power table.",
+        "column_name": "hero_power.`hero_id`"
+    }
+]

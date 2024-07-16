@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify cards without multiple faces, we need to check if the `side` column is NULL.",
+        "column_name": "cards.`side`"
+    },
+    {
+        "reasoning": "To find the artist of the card art, we need to reference the `artist` column from the cards table.",
+        "column_name": "cards.`artist`"
+    },
+    {
+        "reasoning": "To determine the cost of converted mana, we need to use the `convertedManaCost` column from the cards table.",
+        "column_name": "cards.`convertedManaCost`"
+    },
+    {
+        "reasoning": "To join the cards table with the sets table to filter cards by set, we need the `setCode` column from the cards table.",
+        "column_name": "cards.`setCode`"
+    },
+    {
+        "reasoning": "To join the sets table with the set_translations table to get the translated set names, we need the `setCode` column from the sets table.",
+        "column_name": "sets.`code`"
+    }
+]

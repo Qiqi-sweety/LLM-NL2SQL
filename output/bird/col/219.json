@@ -1,0 +1,38 @@
+[
+    {
+        "reasoning": "To identify carcinogenic molecules, we need to reference the `label` column from the `molecule` table.",
+        "column_name": "molecule.`label`"
+    },
+    {
+        "reasoning": "To filter for molecules with a '+' label, which indicates they are carcinogenic, we need to use the `label` column from the `molecule` table.",
+        "column_name": "molecule.`label`"
+    },
+    {
+        "reasoning": "To count the number of bonds in each molecule, we need to reference the `bond_id` column from the `bond` table.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "To filter for triple type bonds, we need to reference the `bond_type` column from the `bond` table.",
+        "column_name": "bond.`bond_type`"
+    },
+    {
+        "reasoning": "To count the number of triple type bonds in each molecule, we need to join the `bond` table with the `connected` table on `bond_id`.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "To count the number of triple type bonds in each molecule, we need to join the `connected` table with the `atom` table on `atom_id`.",
+        "column_name": "connected.`atom_id`"
+    },
+    {
+        "reasoning": "To count the number of triple type bonds in each molecule, we need to join the `connected` table with the `bond` table on `bond_id`.",
+        "column_name": "connected.`bond_id`"
+    },
+    {
+        "reasoning": "To count the number of triple type bonds in each molecule, we need to join the `bond` table with the `molecule` table on `molecule_id`.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "To calculate the percentage of carcinogenic molecules with triple type bonds, we need to reference the `molecule_id` column from the `molecule` table.",
+        "column_name": "molecule.`molecule_id`"
+    }
+]

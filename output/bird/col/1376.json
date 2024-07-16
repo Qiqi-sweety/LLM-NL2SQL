@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify the events that are closed, we need to reference the `status` column from the `event` table.",
+        "column_name": "event.`status`"
+    },
+    {
+        "reasoning": "To calculate the spend-to-budget ratio, we need the `spent` column from the `budget` table.",
+        "column_name": "budget.`spent`"
+    },
+    {
+        "reasoning": "To calculate the spend-to-budget ratio, we also need the `amount` column from the `budget` table.",
+        "column_name": "budget.`amount`"
+    },
+    {
+        "reasoning": "To join the `event` and `budget` tables based on the relationship between `event_id` and `link_to_event`, we need the `event_id` from the `event` table.",
+        "column_name": "event.`event_id`"
+    },
+    {
+        "reasoning": "To join the `event` and `budget` tables based on the relationship between `event_id` and `link_to_event`, we need the `link_to_event` from the `budget` table.",
+        "column_name": "budget.`link_to_event`"
+    },
+    {
+        "reasoning": "To retrieve the event names for the final result, we need the `event_name` from the `event` table.",
+        "column_name": "event.`event_name`"
+    }
+]

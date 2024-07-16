@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To filter the posts by title containing 'data'.",
+        "column_name": "posts.`Title`"
+    },
+    {
+        "reasoning": "To calculate the total bounty amount of the filtered posts.",
+        "column_name": "votes.`BountyAmount`"
+    },
+    {
+        "reasoning": "To join the votes table with the posts table using the PostId to get the bounty amount associated with each post.",
+        "column_name": "votes.`PostId`"
+    },
+    {
+        "reasoning": "To join the posts table with the users table using the OwnerUserId to get the user details if needed.",
+        "column_name": "posts.`OwnerUserId`"
+    },
+    {
+        "reasoning": "To join the votes table with the users table using the UserId to get the user details if needed.",
+        "column_name": "votes.`UserId`"
+    }
+]

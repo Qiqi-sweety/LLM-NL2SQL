@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To filter the posts by the title 'Integration of Weka and/or RapidMiner into Informatica PowerCenter/Developer'.",
+        "column_name": "posts.`Title`"
+    },
+    {
+        "reasoning": "To retrieve the view count of the post.",
+        "column_name": "posts.`ViewCount`"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify accounts in the Prague region, we need to join the `account` table with the `district` table using the `district_id` foreign key.",
+        "column_name": "account.`account_id`"
+    },
+    {
+        "reasoning": "To identify accounts in the Prague region, we need to join the `account` table with the `district` table using the `district_id` foreign key.",
+        "column_name": "account.`district_id`"
+    },
+    {
+        "reasoning": "To filter accounts based on the region, we need to select the `A3` column from the `district` table, which contains the region information.",
+        "column_name": "district.`A3`"
+    },
+    {
+        "reasoning": "To count the number of accounts, we need to select the `account_id` column from the `account` table.",
+        "column_name": "account.`account_id`"
+    },
+    {
+        "reasoning": "To ensure that we are only considering accounts that are eligible for loans, we need to join the `account` table with the `loan` table using the `account_id` foreign key.",
+        "column_name": "loan.`account_id`"
+    },
+    {
+        "reasoning": "To filter out accounts that have loans, we need to check the `status` column in the `loan` table, which indicates if the loan is eligible or not.",
+        "column_name": "loan.`status`"
+    }
+]

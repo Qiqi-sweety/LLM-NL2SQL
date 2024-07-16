@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To calculate the percentage of players with a strength and stamina score of more than 80, we need to count the number of players who meet this criterion.",
+        "column_name": "Player_Attributes.`id`"
+    },
+    {
+        "reasoning": "The player's strength score is needed to filter out players with a strength score of more than 80.",
+        "column_name": "Player_Attributes.`strength`"
+    },
+    {
+        "reasoning": "The player's stamina score is needed to filter out players with a stamina score of more than 80.",
+        "column_name": "Player_Attributes.`stamina`"
+    },
+    {
+        "reasoning": "To calculate the total number of players, we need to count the unique player_api_id from the Player table.",
+        "column_name": "Player.`player_api_id`"
+    }
+]

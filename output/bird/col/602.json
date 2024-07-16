@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To retrieve the post IDs with a score greater than 60.",
+        "column_name": "posts.`Id`"
+    },
+    {
+        "reasoning": "To retrieve the user IDs that created these posts.",
+        "column_name": "posts.`OwnerUserId`"
+    },
+    {
+        "reasoning": "To join the posts table with the users table to get the user details.",
+        "column_name": "users.`Id`"
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "reasoning": "To identify schools with a mailing state address in California, we need to filter by the state column.",
+        "column_name": "schools.`MailState`"
+    },
+    {
+        "reasoning": "To filter schools by the state 'California', we need to use this column.",
+        "column_name": "schools.`MailState`"
+    },
+    {
+        "reasoning": "To find schools active in San Joaquin, we need to filter by the county name.",
+        "column_name": "schools.`County`"
+    },
+    {
+        "reasoning": "To match the schools with their corresponding records in the frpm table, we need to use the CDSCode as a foreign key.",
+        "column_name": "schools.`CDSCode`"
+    },
+    {
+        "reasoning": "To identify active schools, we need to check the status type.",
+        "column_name": "schools.`StatusType`"
+    },
+    {
+        "reasoning": "To count the number of schools, we need to select the school name.",
+        "column_name": "schools.`School`"
+    },
+    {
+        "reasoning": "To join the schools table with the frpm table, we need to use the CDSCode from the schools table.",
+        "column_name": "frpm.`CDSCode`"
+    },
+    {
+        "reasoning": "To ensure we are counting schools in San Joaquin, we need to filter by the district name.",
+        "column_name": "schools.`District`"
+    }
+]

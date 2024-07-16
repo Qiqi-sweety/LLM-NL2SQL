@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the customers who had the least consumption in LAM, we need to join the `customers` table with the `yearmonth` table to get the customer details.",
+        "column_name": "customers.`CustomerID`"
+    },
+    {
+        "reasoning": "The `Segment` column from the `customers` table is needed to filter customers based on their segment, if the question requires segment-based filtering.",
+        "column_name": "customers.`Segment`"
+    },
+    {
+        "reasoning": "The `Date` column from the `yearmonth` table is necessary to filter the records for the year 2012.",
+        "column_name": "yearmonth.`Date`"
+    },
+    {
+        "reasoning": "The `Consumption` column from the `yearmonth` table is required to determine the consumption of each customer.",
+        "column_name": "yearmonth.`Consumption`"
+    }
+]

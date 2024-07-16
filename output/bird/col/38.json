@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To identify the schools in Los Angeles County, we need to join the `frpm` table with the `schools` table using the `County Code` and `School Code`.",
+        "column_name": "frpm.`County Code`"
+    },
+    {
+        "reasoning": "To identify the schools in Los Angeles County, we need to join the `frpm` table with the `schools` table using the `County Code` and `School Code`.",
+        "column_name": "frpm.`School Code`"
+    },
+    {
+        "reasoning": "To filter the schools by the County Name, we need to join the `frpm` table with the `schools` table using the `County Code` and `School Code`.",
+        "column_name": "schools.`County`"
+    },
+    {
+        "reasoning": "To find the schools with between 2,000 and 3,000 test takers, we need to join the `schools` table with the `satscores` table using the `CDSCode`.",
+        "column_name": "schools.`CDSCode`"
+    },
+    {
+        "reasoning": "To find the schools with between 2,000 and 3,000 test takers, we need to join the `schools` table with the `satscores` table using the `CDSCode`.",
+        "column_name": "satscores.`cds`"
+    },
+    {
+        "reasoning": "To filter the schools by the number of test takers, we need to use the `NumTstTakr` column from the `satscores` table.",
+        "column_name": "satscores.`NumTstTakr`"
+    },
+    {
+        "reasoning": "To retrieve the webpage information for the schools, we need to use the `Website` column from the `schools` table.",
+        "column_name": "schools.`Website`"
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "reasoning": "To identify patients with total bilirubin over the normal range.",
+        "column_name": "Laboratory.`T-BIL`"
+    },
+    {
+        "reasoning": "To filter patients based on the normal range of total bilirubin.",
+        "column_name": "Laboratory.`T-BIL`"
+    },
+    {
+        "reasoning": "To link Laboratory table with Patient table to get patient details.",
+        "column_name": "Laboratory.`ID`"
+    },
+    {
+        "reasoning": "To link Laboratory table with Patient table to get patient details.",
+        "column_name": "Patient.`ID`"
+    },
+    {
+        "reasoning": "To identify patients with a peripheral pattern in ANA examination.",
+        "column_name": "Examination.`ANA Pattern`"
+    },
+    {
+        "reasoning": "To link Examination table with Patient table to get patient details.",
+        "column_name": "Examination.`ID`"
+    },
+    {
+        "reasoning": "To link Examination table with Patient table to get patient details.",
+        "column_name": "Patient.`ID`"
+    },
+    {
+        "reasoning": "To count the number of patients meeting both conditions.",
+        "column_name": "Patient.`ID`"
+    }
+]

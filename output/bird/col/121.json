@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To retrieve the account ID from the account table.",
+        "column_name": "account.`account_id`"
+    },
+    {
+        "reasoning": "To retrieve the account opening date from the account table.",
+        "column_name": "account.`date`"
+    },
+    {
+        "reasoning": "To filter the accounts based on the district name 'Prachatice'. The district name is stored in the 'A2' column of the district table.",
+        "column_name": "district.`A2`"
+    },
+    {
+        "reasoning": "To join the account table with the district table using the district ID as the common key.",
+        "column_name": "account.`district_id`"
+    },
+    {
+        "reasoning": "To join the account table with the district table using the district ID as the common key.",
+        "column_name": "district.`district_id`"
+    }
+]

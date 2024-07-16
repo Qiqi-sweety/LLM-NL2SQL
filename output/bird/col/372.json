@@ -1,0 +1,6 @@
+[
+    {
+        "reasoning": "To count the number of cards with a specific toughness, we need to reference the toughness column from the cards table.",
+        "column_name": "cards.`toughness`"
+    }
+]

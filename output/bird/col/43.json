@@ -1,0 +1,42 @@
+[
+    {
+        "reasoning": "To calculate the average score for all subjects, we need the average math score, average reading score, and average writing score.",
+        "column_name": "satscores.`AvgScrMath`"
+    },
+    {
+        "reasoning": "To calculate the average score for all subjects, we need the average reading score.",
+        "column_name": "satscores.`AvgScrRead`"
+    },
+    {
+        "reasoning": "To calculate the average score for all subjects, we need the average writing score.",
+        "column_name": "satscores.`AvgScrWrite`"
+    },
+    {
+        "reasoning": "To find the school with the lowest average score, we need to calculate the average score for each school.",
+        "column_name": "satscores.`cname`"
+    },
+    {
+        "reasoning": "To find the school with the lowest average score, we need to calculate the average score for each school.",
+        "column_name": "satscores.`cds`"
+    },
+    {
+        "reasoning": "To identify the school, we need its name.",
+        "column_name": "satscores.`sname`"
+    },
+    {
+        "reasoning": "To find the school's county, we need to join with the schools table.",
+        "column_name": "schools.`CDSCode`"
+    },
+    {
+        "reasoning": "To find the school's county, we need to join with the schools table.",
+        "column_name": "schools.`County`"
+    },
+    {
+        "reasoning": "To find the school's district, we need to join with the schools table.",
+        "column_name": "schools.`District`"
+    },
+    {
+        "reasoning": "To find the school's district, we need to join with the schools table.",
+        "column_name": "schools.`School`"
+    }
+]

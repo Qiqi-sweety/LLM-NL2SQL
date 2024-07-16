@@ -1,0 +1,34 @@
+[
+    {
+        "reasoning": "To identify the molecules with double bonds, we need to join the `bond` table with the `molecule` table to filter by `bond_type` = ' = '.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "To calculate the percentage of carbon in these molecules, we need to join the `atom` table with the `molecule` table to get the carbon atoms.",
+        "column_name": "atom.`molecule_id`"
+    },
+    {
+        "reasoning": "We need to count the number of carbon atoms in double-bond molecules to calculate the percentage.",
+        "column_name": "atom.`element`"
+    },
+    {
+        "reasoning": "We need to count the number of atoms in the double-bond molecules to calculate the total mass of the molecule.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "We need to join the `bond` table with the `connected` table to get the bond information for the atoms.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "We need to join the `connected` table with the `atom` table to get the atom information for the bonds.",
+        "column_name": "connected.`atom_id`"
+    },
+    {
+        "reasoning": "We need to join the `connected` table with the `atom` table to get the atom information for the bonds.",
+        "column_name": "connected.`atom_id2`"
+    },
+    {
+        "reasoning": "We need to get the label of the molecule to identify it.",
+        "column_name": "molecule.`label`"
+    }
+]

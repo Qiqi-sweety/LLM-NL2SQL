@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To retrieve the artist names for cards, we need to join the 'cards' table with the 'set_translations' table to filter by the Chinese Simplified language.",
+        "column_name": "cards.`artist`"
+    },
+    {
+        "reasoning": "To filter the cards based on the Chinese Simplified language, we need to join the 'cards' table with the 'set_translations' table using the 'setCode'.",
+        "column_name": "set_translations.`setCode`"
+    },
+    {
+        "reasoning": "To filter the cards based on the Chinese Simplified language, we need to join the 'sets' table with the 'set_translations' table using the 'setCode'.",
+        "column_name": "sets.`code`"
+    },
+    {
+        "reasoning": "To specify that we are looking for Chinese Simplified translations, we need to select the 'translation' column from the 'set_translations' table.",
+        "column_name": "set_translations.`translation`"
+    },
+    {
+        "reasoning": "To ensure that the translation is in Chinese Simplified, we need to filter by the 'language' column.",
+        "column_name": "set_translations.`language`"
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "reasoning": "To list out the account numbers of female clients, we need to reference the `client_id` from the `client` table and join it with the `account` table to get the `account_id`.",
+        "column_name": "client.`client_id`"
+    },
+    {
+        "reasoning": "To filter for female clients, we need to reference the `gender` column from the `client` table.",
+        "column_name": "client.`gender`"
+    },
+    {
+        "reasoning": "To find the oldest clients, we need to reference the `birth_date` column from the `client` table.",
+        "column_name": "client.`birth_date`"
+    },
+    {
+        "reasoning": "To calculate the average salary, we need to reference the `A11` column from the `district` table.",
+        "column_name": "district.`A11`"
+    },
+    {
+        "reasoning": "To calculate the average salary, we need to join the `account` table with the `district` table using the `district_id` foreign key.",
+        "column_name": "account.`district_id`"
+    },
+    {
+        "reasoning": "To calculate the average salary, we need to join the `client` table with the `district` table using the `district_id` foreign key.",
+        "column_name": "client.`district_id`"
+    },
+    {
+        "reasoning": "To get the account numbers, we need to reference the `account_id` from the `account` table.",
+        "column_name": "account.`account_id`"
+    },
+    {
+        "reasoning": "To calculate the gap between the highest and lowest average salary, we need to reference the `A11` column from the `district` table.",
+        "column_name": "district.`A11`"
+    }
+]

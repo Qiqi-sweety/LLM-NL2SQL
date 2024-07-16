@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To retrieve the display names of users.",
+        "column_name": "users.`DisplayName`"
+    },
+    {
+        "reasoning": "To filter users who are adults based on their age.",
+        "column_name": "users.`Age`"
+    }
+]

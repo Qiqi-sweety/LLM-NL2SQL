@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To filter cards with a normal layout, we need to reference the layout column.",
+        "column_name": "cards.`layout`"
+    },
+    {
+        "reasoning": "To filter cards with a 2003 frame version, we need to reference the frameVersion column.",
+        "column_name": "cards.`frameVersion`"
+    },
+    {
+        "reasoning": "To filter cards with a black border color, we need to reference the borderColor column.",
+        "column_name": "cards.`borderColor`"
+    },
+    {
+        "reasoning": "To filter cards available in paper, we need to reference the availability column.",
+        "column_name": "cards.`availability`"
+    },
+    {
+        "reasoning": "To filter cards available in mtgo, we need to reference the availability column.",
+        "column_name": "cards.`availability`"
+    },
+    {
+        "reasoning": "To retrieve the mana cost of the cards, we need to reference the manaCost column.",
+        "column_name": "cards.`manaCost`"
+    }
+]

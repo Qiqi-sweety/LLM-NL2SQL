@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the school with the National Center for Educational Statistics school district identification number, we need to join the `schools` table with the `frpm` table using the `CDSCode` column.",
+        "column_name": "frpm.`CDSCode`"
+    },
+    {
+        "reasoning": "To filter for District Special Education Consortia Schools, we need to use the `EdOpsCode` column from the `schools` table.",
+        "column_name": "schools.`EdOpsCode`"
+    },
+    {
+        "reasoning": "To match the school district identification number, we need to use the `NCESDist` column from the `schools` table.",
+        "column_name": "schools.`NCESDist`"
+    },
+    {
+        "reasoning": "To retrieve the lowest grade for the school, we need to use the `Low Grade` column from the `frpm` table.",
+        "column_name": "frpm.`Low Grade`"
+    }
+]

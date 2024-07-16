@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the molecule with the most double bonds, we need to count the number of double bonds for each molecule.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "The count of double bonds is required to determine which molecule has the most double bonds.",
+        "column_name": "bond.`bond_type`"
+    },
+    {
+        "reasoning": "To link the bond information to the molecule information, we need to join the bond table with the molecule table.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "To identify carcinogenic molecules, we need to check the label of each molecule.",
+        "column_name": "molecule.`label`"
+    },
+    {
+        "reasoning": "To filter out carcinogenic molecules, we need to compare the label with the value '+'.",
+        "column_name": "molecule.`label`"
+    }
+]

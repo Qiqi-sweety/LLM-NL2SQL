@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To identify patients with abnormal GOT levels.",
+        "column_name": "Laboratory.`GOT`"
+    },
+    {
+        "reasoning": "To filter patients with a diagnosis of SLE.",
+        "column_name": "Examination.`Diagnosis`"
+    },
+    {
+        "reasoning": "To count the number of patients with abnormal GOT levels and SLE diagnosis.",
+        "column_name": "Examination.`ID`"
+    },
+    {
+        "reasoning": "To join Examination table with Patient table to get patient details.",
+        "column_name": "Examination.`ID`"
+    },
+    {
+        "reasoning": "To join Examination table with Patient table to get patient details.",
+        "column_name": "Patient.`ID`"
+    },
+    {
+        "reasoning": "To count the total number of patients with abnormal GOT levels.",
+        "column_name": "Laboratory.`ID`"
+    },
+    {
+        "reasoning": "To calculate the percentage of patients with abnormal GOT levels who have a SLE diagnosis.",
+        "column_name": "Examination.`ID`"
+    }
+]

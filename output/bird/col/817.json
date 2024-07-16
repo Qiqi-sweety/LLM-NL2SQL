@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To retrieve the race of the superhero, we need to join the superhero table with the race table using the race_id foreign key.",
+        "column_name": "race.`id`"
+    },
+    {
+        "reasoning": "To filter the superheroes by hair colour, we need to join the superhero table with the colour table using the hair_colour_id foreign key.",
+        "column_name": "colour.`id`"
+    },
+    {
+        "reasoning": "To filter the superheroes by gender, we need to join the superhero table with the gender table using the gender_id foreign key.",
+        "column_name": "gender.`id`"
+    },
+    {
+        "reasoning": "We need to select the superhero's full name to identify the superhero in the final result.",
+        "column_name": "superhero.`full_name`"
+    },
+    {
+        "reasoning": "We need to select the race name to provide the race of the superhero in the final result.",
+        "column_name": "race.`race`"
+    },
+    {
+        "reasoning": "We need to filter the superheroes by hair colour, so we select the hair colour name from the colour table.",
+        "column_name": "colour.`colour`"
+    },
+    {
+        "reasoning": "We need to filter the superheroes by gender, so we select the gender name from the gender table.",
+        "column_name": "gender.`gender`"
+    }
+]

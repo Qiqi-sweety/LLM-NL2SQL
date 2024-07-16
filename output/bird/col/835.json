@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To count the total number of superheroes in Marvel Comics.",
+        "column_name": "publisher.`publisher_name`"
+    },
+    {
+        "reasoning": "To identify superheroes that are aligned with 'Good'.",
+        "column_name": "alignment.`alignment`"
+    },
+    {
+        "reasoning": "To link superheroes to their publisher.",
+        "column_name": "superhero.`publisher_id`"
+    },
+    {
+        "reasoning": "To link superheroes to their alignment.",
+        "column_name": "superhero.`alignment_id`"
+    },
+    {
+        "reasoning": "To count the number of good superheroes in Marvel Comics.",
+        "column_name": "superhero.`id`"
+    }
+]

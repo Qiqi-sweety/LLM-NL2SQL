@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To identify the artists who illustrated cards with black borders, we need to select the artist's name from the cards table.",
+        "column_name": "cards.`artist`"
+    },
+    {
+        "reasoning": "The question specifies that the cards should have black borders, so we need to filter the cards based on the `borderColor` column.",
+        "column_name": "cards.`borderColor`"
+    },
+    {
+        "reasoning": "The question asks for cards that are available only in arena, so we need to filter the cards based on the `availability` column.",
+        "column_name": "cards.`availability`"
+    }
+]

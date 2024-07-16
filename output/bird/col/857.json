@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To find the coordinate position for Abu Dhabi Grand Prix, we need to identify the race with the name 'Abu Dhabi Grand Prix'.",
+        "column_name": "races.`name`"
+    },
+    {
+        "reasoning": "The race's circuitId is needed to join with the circuits table to get the location coordinates.",
+        "column_name": "races.`circuitId`"
+    },
+    {
+        "reasoning": "The circuitId from the races table is used to join with the circuits table to get the circuit's location details.",
+        "column_name": "circuits.`circuitId`"
+    },
+    {
+        "reasoning": "The circuit's name is needed to confirm that we have the correct circuit for Abu Dhabi Grand Prix.",
+        "column_name": "circuits.`name`"
+    },
+    {
+        "reasoning": "The latitude (lat) is the coordinate for the position of the circuit.",
+        "column_name": "circuits.`lat`"
+    },
+    {
+        "reasoning": "The longitude (lng) is the coordinate for the position of the circuit.",
+        "column_name": "circuits.`lng`"
+    }
+]

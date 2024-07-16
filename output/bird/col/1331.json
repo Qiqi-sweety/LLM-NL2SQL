@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the Vice President, we need to reference the `position` column from the `member` table.",
+        "column_name": "member.`position`"
+    },
+    {
+        "reasoning": "To retrieve the amount of funds received, we need to reference the `amount` column from the `income` table.",
+        "column_name": "income.`amount`"
+    },
+    {
+        "reasoning": "To link the Vice President to the income records, we need to reference the `link_to_member` column from the `income` table.",
+        "column_name": "income.`link_to_member`"
+    },
+    {
+        "reasoning": "To get the `member_id` of the Vice President, we need to reference the `member_id` column from the `member` table.",
+        "column_name": "member.`member_id`"
+    }
+]

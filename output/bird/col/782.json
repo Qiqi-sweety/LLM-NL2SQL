@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To retrieve the superhero names.",
+        "column_name": "superhero.`superhero_name`"
+    },
+    {
+        "reasoning": "To filter superheroes with black eye colour.",
+        "column_name": "superhero.`eye_colour_id`"
+    },
+    {
+        "reasoning": "To filter superheroes with black hair colour.",
+        "column_name": "superhero.`hair_colour_id`"
+    },
+    {
+        "reasoning": "To join with the colour table to get the eye colour name.",
+        "column_name": "colour.`id`"
+    },
+    {
+        "reasoning": "To join with the colour table to get the hair colour name.",
+        "column_name": "colour.`id`"
+    },
+    {
+        "reasoning": "To filter for the 'Black' eye colour.",
+        "column_name": "colour.`colour`"
+    },
+    {
+        "reasoning": "To filter for the 'Black' hair colour.",
+        "column_name": "colour.`colour`"
+    }
+]

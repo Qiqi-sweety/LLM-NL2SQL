@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To retrieve the sets that do not appear in Magic: The Gathering Online, we need to filter the sets based on the condition that their `mtgoCode` is NULL or an empty string.",
+        "column_name": "sets.`mtgoCode`"
+    },
+    {
+        "reasoning": "To get the top three sets, we need to order the results based on the `id` column, which is assumed to be a unique identifier for each set.",
+        "column_name": "sets.`id`"
+    },
+    {
+        "reasoning": "To provide the names of the sets, we need to select the `name` column from the `sets` table.",
+        "column_name": "sets.`name`"
+    },
+    {
+        "reasoning": "To ensure the names are in alphabetical order, we need to order by the `name` column.",
+        "column_name": "sets.`name`"
+    },
+    {
+        "reasoning": "To join the `sets` table with the `set_translations` table to get the translations of the set names, we need to reference the `code` column from `sets` and the `setCode` column from `set_translations`.",
+        "column_name": "sets.`code`"
+    },
+    {
+        "reasoning": "To retrieve the translated names of the sets, we need to select the `translation` column from the `set_translations` table.",
+        "column_name": "set_translations.`translation`"
+    }
+]

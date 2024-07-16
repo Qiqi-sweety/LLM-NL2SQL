@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify the atoms connected to the atoms of the TR181 molecule, we need to join the `atom` table with the `molecule` table to filter the atoms of the TR181 molecule.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "We need to join the `atom` table with the `connected` table to find the connections between atoms.",
+        "column_name": "connected.`atom_id`"
+    },
+    {
+        "reasoning": "The `bond_id` column from the `connected` table is necessary to join with the `bond` table to get the bond type information.",
+        "column_name": "connected.`bond_id`"
+    },
+    {
+        "reasoning": "To filter the atoms connected to the TR181 molecule, we need to join the `molecule` table with the `bond` table to find the molecules associated with the bonds.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "The `molecule_id` column from the `molecule` table is used to match the molecule label 'TR181'.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "The `label` column from the `molecule` table is used to filter the specific molecule 'TR181'.",
+        "column_name": "molecule.`label`"
+    }
+]

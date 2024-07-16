@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To count the number of posts with a specific tag, we need to reference the `Id` column from the `posts` table to uniquely identify each post.",
+        "column_name": "posts.`Id`"
+    },
+    {
+        "reasoning": "The question specifies the tag 'careers', which is a `TagName` in the `tags` table. We need to reference this column to filter the posts with the 'careers' tag.",
+        "column_name": "tags.`TagName`"
+    },
+    {
+        "reasoning": "To join the `posts` table with the `tags` table, we need to reference the `Id` column from `posts` and the `ExcerptPostId` column from `tags`.",
+        "column_name": "posts.`Id`"
+    },
+    {
+        "reasoning": "To join the `posts` table with the `tags` table, we need to reference the `Id` column from `posts` and the `ExcerptPostId` column from `tags`.",
+        "column_name": "tags.`ExcerptPostId`"
+    }
+]

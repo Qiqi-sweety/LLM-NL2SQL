@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To filter cards with a white border color.",
+        "column_name": "cards.`borderColor`"
+    },
+    {
+        "reasoning": "To identify cards with unknown power.",
+        "column_name": "cards.`power`"
+    },
+    {
+        "reasoning": "To count the number of such cards.",
+        "column_name": "cards.`id`"
+    }
+]

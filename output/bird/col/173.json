@@ -1,0 +1,74 @@
+[
+    {
+        "reasoning": "To identify the frequency of account statements requested by account number 3.",
+        "column_name": "account.`account_id`"
+    },
+    {
+        "reasoning": "To link the transactions to the specific account.",
+        "column_name": "trans.`account_id`"
+    },
+    {
+        "reasoning": "To filter transactions for account number 3.",
+        "column_name": "trans.`account_id`"
+    },
+    {
+        "reasoning": "To count the frequency of account statement releases.",
+        "column_name": "trans.`type`"
+    },
+    {
+        "reasoning": "To determine the total amount debited.",
+        "column_name": "trans.`amount`"
+    },
+    {
+        "reasoning": "To identify the total debits for the account number 3.",
+        "column_name": "trans.`amount`"
+    },
+    {
+        "reasoning": "To link the debits to the account number 3.",
+        "column_name": "trans.`account_id`"
+    },
+    {
+        "reasoning": "To filter the transactions by the account number 3.",
+        "column_name": "trans.`account_id`"
+    },
+    {
+        "reasoning": "To identify the transactions that are debits.",
+        "column_name": "trans.`operation`"
+    },
+    {
+        "reasoning": "To link the debits to the account number 3.",
+        "column_name": "trans.`account_id`"
+    },
+    {
+        "reasoning": "To identify the transactions with the k_symbol '3539'.",
+        "column_name": "trans.`k_symbol`"
+    },
+    {
+        "reasoning": "To link the k_symbol to the account number 3.",
+        "column_name": "trans.`account_id`"
+    },
+    {
+        "reasoning": "To identify the date of the transactions.",
+        "column_name": "trans.`date`"
+    },
+    {
+        "reasoning": "To link the date of the transactions to the account number 3.",
+        "column_name": "trans.`account_id`"
+    },
+    {
+        "reasoning": "To identify the district associated with the account.",
+        "column_name": "account.`district_id`"
+    },
+    {
+        "reasoning": "To link the district to the account number 3.",
+        "column_name": "account.`account_id`"
+    },
+    {
+        "reasoning": "To identify the frequency of account statements requested by account number 3.",
+        "column_name": "account.`frequency`"
+    },
+    {
+        "reasoning": "To link the frequency to the account number 3.",
+        "column_name": "account.`account_id`"
+    }
+]

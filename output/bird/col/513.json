@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify sets with the expansion type 'commander', this column is necessary.",
+        "column_name": "sets.`type`"
+    },
+    {
+        "reasoning": "To filter sets by their expansion type, this column is required.",
+        "column_name": "sets.`name`"
+    },
+    {
+        "reasoning": "To find the set with the highest total number of cards, this column is essential.",
+        "column_name": "sets.`totalSetSize`"
+    },
+    {
+        "reasoning": "To retrieve the unique identifier for each set, this column is needed.",
+        "column_name": "sets.`id`"
+    }
+]

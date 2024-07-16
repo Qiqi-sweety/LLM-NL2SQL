@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To calculate the average height of superheroes.",
+        "column_name": "superhero.`height_cm`"
+    },
+    {
+        "reasoning": "To filter out superheroes that are not human.",
+        "column_name": "race.`race`"
+    },
+    {
+        "reasoning": "To identify superheroes published by Dark Horse Comics.",
+        "column_name": "publisher.`publisher_name`"
+    },
+    {
+        "reasoning": "To join the superhero table with the race table to filter by race.",
+        "column_name": "superhero.`race_id`"
+    },
+    {
+        "reasoning": "To join the superhero table with the publisher table to filter by publisher name.",
+        "column_name": "superhero.`publisher_id`"
+    }
+]

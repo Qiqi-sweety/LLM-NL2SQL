@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To count the number of accounts, we need to reference the account_id column from the account table.",
+        "column_name": "account.`account_id`"
+    },
+    {
+        "reasoning": "To filter accounts based on the district, we need to join the account table with the district table using the district_id column.",
+        "column_name": "account.`district_id`"
+    },
+    {
+        "reasoning": "To identify the region where the accounts are located, we need to reference the A3 column from the district table.",
+        "column_name": "district.`A3`"
+    },
+    {
+        "reasoning": "To filter transactions that are issuance after transaction, we need to join the account table with the trans table using the account_id column.",
+        "column_name": "trans.`account_id`"
+    },
+    {
+        "reasoning": "To identify the transaction type, we need to reference the type column from the trans table.",
+        "column_name": "trans.`type`"
+    },
+    {
+        "reasoning": "To filter transactions that are issuance after transaction, we need to compare the type column with the string 'POPLATEK PO OBRATU'.",
+        "column_name": "trans.`type`"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To retrieve the short name of the team that meets the specified build-up play speed, dribbling, and passing criteria.",
+        "column_name": "Team.`team_short_name`"
+    },
+    {
+        "reasoning": "To filter the teams based on the build-up play speed attribute value of 31.",
+        "column_name": "Team_Attributes.`buildUpPlaySpeed`"
+    },
+    {
+        "reasoning": "To filter the teams based on the build-up play dribbling attribute value of 53.",
+        "column_name": "Team_Attributes.`buildUpPlayDribbling`"
+    },
+    {
+        "reasoning": "To filter the teams based on the build-up play passing attribute value of 32.",
+        "column_name": "Team_Attributes.`buildUpPlayPassing`"
+    },
+    {
+        "reasoning": "To link the Team table with the Team_Attributes table based on the team API ID.",
+        "column_name": "Team_Attributes.`team_api_id`"
+    },
+    {
+        "reasoning": "To link the Team table with the Team_Attributes table based on the team API ID.",
+        "column_name": "Team.`team_api_id`"
+    }
+]

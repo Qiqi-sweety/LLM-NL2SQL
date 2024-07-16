@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To identify the players Aaron Lennon and Abdelaziz Barrada, we need to reference their names from the Player table.",
+        "column_name": "Player.`player_name`"
+    },
+    {
+        "reasoning": "To determine who is older, we need to compare their birthdays. The Player table contains the birthday information for each player.",
+        "column_name": "Player.`birthday`"
+    }
+]

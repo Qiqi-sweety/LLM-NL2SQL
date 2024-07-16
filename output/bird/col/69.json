@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify schools with a School Ownership Code that are part of the State Special Schools, we need to reference the SOC column from the schools table.",
+        "column_name": "schools.`SOC`"
+    },
+    {
+        "reasoning": "The SOC value of 31 indicates that the school is a State Special School. We need to filter the schools table to include only those with SOC = 31.",
+        "column_name": "schools.`SOCType`"
+    },
+    {
+        "reasoning": "To retrieve the National Center for Educational Statistics school district identification number, we need to reference the NCESDist column from the schools table.",
+        "column_name": "schools.`NCESDist`"
+    },
+    {
+        "reasoning": "The CDSCode column is used to join the frpm and schools tables based on the foreign key relationship provided.",
+        "column_name": "schools.`CDSCode`"
+    },
+    {
+        "reasoning": "The CDSCode column is also needed to join the frpm table with the schools table for the final query.",
+        "column_name": "frpm.`CDSCode`"
+    }
+]

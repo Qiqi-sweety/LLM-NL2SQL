@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the superhero Ajax, we need to match the superhero_name with 'Ajax'.",
+        "column_name": "superhero.`superhero_name`"
+    },
+    {
+        "reasoning": "To retrieve the superpowers associated with Ajax, we need to join the superhero table with the hero_power table using the hero_id.",
+        "column_name": "hero_power.`hero_id`"
+    },
+    {
+        "reasoning": "To retrieve the superpower names, we need to join the hero_power table with the superpower table using the power_id.",
+        "column_name": "superpower.`id`"
+    },
+    {
+        "reasoning": "To retrieve the superpower names, we need to select the power_name column from the superpower table.",
+        "column_name": "superpower.`power_name`"
+    }
+]

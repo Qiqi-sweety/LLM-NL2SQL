@@ -1,0 +1,6 @@
+[
+    {
+        "reasoning": "To filter users who are adults, we need to reference the Age column from the users table.",
+        "column_name": "users.`Age`"
+    }
+]

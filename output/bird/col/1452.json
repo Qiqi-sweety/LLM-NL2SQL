@@ -1,0 +1,38 @@
+[
+    {
+        "reasoning": "To identify the students who are not members.",
+        "column_name": "member.`member_id`"
+    },
+    {
+        "reasoning": "To filter out the students who are not members.",
+        "column_name": "member.`position`"
+    },
+    {
+        "reasoning": "To calculate the average amount paid by students.",
+        "column_name": "expense.`cost`"
+    },
+    {
+        "reasoning": "To link expenses to the students.",
+        "column_name": "expense.`link_to_member`"
+    },
+    {
+        "reasoning": "To link expenses to the events.",
+        "column_name": "expense.`link_to_budget`"
+    },
+    {
+        "reasoning": "To link budgets to events.",
+        "column_name": "budget.`link_to_event`"
+    },
+    {
+        "reasoning": "To link events to members.",
+        "column_name": "attendance.`link_to_member`"
+    },
+    {
+        "reasoning": "To link events to budgets.",
+        "column_name": "budget.`budget_id`"
+    },
+    {
+        "reasoning": "To count the number of events per student.",
+        "column_name": "event.`event_id`"
+    }
+]

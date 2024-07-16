@@ -1,0 +1,38 @@
+[
+    {
+        "reasoning": "To identify the atoms connected in single type bonds, we need to select the `atom_id` from the `atom` table to get the atoms' information.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "We need to join the `connected` table to find the connections between atoms.",
+        "column_name": "connected.`atom_id`"
+    },
+    {
+        "reasoning": "We need to join the `connected` table to find the connections between atoms.",
+        "column_name": "connected.`atom_id2`"
+    },
+    {
+        "reasoning": "To filter for single type bonds, we need to select the `bond_id` from the `bond` table.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "We need to join the `bond` table to filter for single type bonds.",
+        "column_name": "connected.`bond_id`"
+    },
+    {
+        "reasoning": "We need to select the `bond_type` from the `bond` table to filter for single type bonds.",
+        "column_name": "bond.`bond_type`"
+    },
+    {
+        "reasoning": "To get the molecule information for the atoms, we need to join the `atom` table with the `molecule` table.",
+        "column_name": "atom.`molecule_id`"
+    },
+    {
+        "reasoning": "We need to join the `molecule` table to get the molecule label.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "We need to select the molecule label to provide context for the atoms.",
+        "column_name": "molecule.`label`"
+    }
+]

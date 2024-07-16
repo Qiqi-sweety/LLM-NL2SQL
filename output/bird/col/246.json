@@ -1,0 +1,34 @@
+[
+    {
+        "reasoning": "To retrieve the bond type and bond ID of the atom with atom_id 45, we need to join the `atom` table with the `bond` table to get the bond information.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "To retrieve the bond type of the atom with atom_id 45, we need to join the `atom` table with the `bond` table to get the bond information.",
+        "column_name": "bond.`bond_type`"
+    },
+    {
+        "reasoning": "To filter the records for the specific atom with atom_id 45, we need to join the `atom` table with the `bond` table using the `molecule_id` field.",
+        "column_name": "atom.`molecule_id`"
+    },
+    {
+        "reasoning": "To filter the records for the specific atom with atom_id 45, we need to join the `bond` table with the `atom` table using the `molecule_id` field.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "To filter the records for the specific atom with atom_id 45, we need to join the `connected` table with the `atom` table using the `atom_id` field.",
+        "column_name": "connected.`atom_id`"
+    },
+    {
+        "reasoning": "To filter the records for the specific atom with atom_id 45, we need to join the `connected` table with the `atom` table using the `atom_id2` field.",
+        "column_name": "connected.`atom_id2`"
+    },
+    {
+        "reasoning": "To filter the records for the specific atom with atom_id 45, we need to join the `connected` table with the `bond` table using the `bond_id` field.",
+        "column_name": "connected.`bond_id`"
+    },
+    {
+        "reasoning": "To retrieve the molecule label for the atom with atom_id 45, we need to join the `molecule` table to get the molecule information.",
+        "column_name": "molecule.`label`"
+    }
+]

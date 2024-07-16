@@ -1,0 +1,34 @@
+[
+    {
+        "reasoning": "To identify the atoms with the element iodine, we need to filter the 'atom' table by the 'element' column.",
+        "column_name": "atom.`element`"
+    },
+    {
+        "reasoning": "To count the number of bonds for each atom, we need to join the 'atom' table with the 'connected' table on 'atom_id'.",
+        "column_name": "connected.`atom_id`"
+    },
+    {
+        "reasoning": "To count the number of bonds for each atom, we also need to join the 'connected' table with the 'bond' table on 'bond_id'.",
+        "column_name": "connected.`bond_id`"
+    },
+    {
+        "reasoning": "To calculate the average number of bonds, we need to count the 'bond_id' for each atom.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "To group the results by atom, we need to include the 'atom_id' from the 'atom' table.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "To count the number of atoms with the element iodine, we need to include the 'molecule_id' from the 'atom' table to join with the 'molecule' table.",
+        "column_name": "atom.`molecule_id`"
+    },
+    {
+        "reasoning": "To get the label of the molecule, we need to join the 'atom' table with the 'molecule' table on 'molecule_id'.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "To filter the atoms with the element iodine, we need to include the 'label' from the 'molecule' table.",
+        "column_name": "molecule.`label`"
+    }
+]

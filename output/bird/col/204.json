@@ -1,0 +1,42 @@
+[
+    {
+        "reasoning": "To filter the first 100 molecules in number order, we need to select the `molecule_id` from the `molecule` table.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "To identify carcinogenic molecules, we need to check the `label` column in the `molecule` table.",
+        "column_name": "molecule.`label`"
+    },
+    {
+        "reasoning": "To join the `molecule` table with the `atom` table, we need the `molecule_id` from the `molecule` table and the corresponding `molecule_id` from the `atom` table.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "To join the `molecule` table with the `atom` table, we need the `molecule_id` from the `molecule` table and the corresponding `molecule_id` from the `atom` table.",
+        "column_name": "atom.`molecule_id`"
+    },
+    {
+        "reasoning": "To join the `molecule` table with the `bond` table, we need the `molecule_id` from the `molecule` table and the corresponding `molecule_id` from the `bond` table.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "To join the `molecule` table with the `bond` table, we need the `molecule_id` from the `molecule` table and the corresponding `molecule_id` from the `bond` table.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "To join the `atom` table with the `connected` table, we need the `atom_id` from the `atom` table and the corresponding `atom_id` from the `connected` table.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "To join the `atom` table with the `connected` table, we need the `atom_id` from the `atom` table and the corresponding `atom_id` from the `connected` table.",
+        "column_name": "connected.`atom_id`"
+    },
+    {
+        "reasoning": "To join the `bond` table with the `connected` table, we need the `bond_id` from the `bond` table and the corresponding `bond_id` from the `connected` table.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "To join the `bond` table with the `connected` table, we need the `bond_id` from the `bond` table and the corresponding `bond_id` from the `connected` table.",
+        "column_name": "connected.`bond_id`"
+    }
+]

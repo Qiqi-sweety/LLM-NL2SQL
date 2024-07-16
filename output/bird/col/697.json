@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To retrieve the reputation of the user with the display name 'Jarrod Dixon'.",
+        "column_name": "users.`Reputation`"
+    },
+    {
+        "reasoning": "To retrieve the view count of the user with the display name 'Jarrod Dixon'.",
+        "column_name": "users.`Views`"
+    },
+    {
+        "reasoning": "To filter the user records by the display name 'Jarrod Dixon'.",
+        "column_name": "users.`DisplayName`"
+    }
+]

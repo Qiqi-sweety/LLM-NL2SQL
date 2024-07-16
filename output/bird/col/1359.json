@@ -1,0 +1,34 @@
+[
+    {
+        "reasoning": "To identify the budgets associated with the 'Yearly Kickoff' event.",
+        "column_name": "event.`event_id`"
+    },
+    {
+        "reasoning": "To filter the budgets by the 'Advertisement' category.",
+        "column_name": "budget.`category`"
+    },
+    {
+        "reasoning": "To calculate the total amount spent for the 'Yearly Kickoff' event in the 'Advertisement' category.",
+        "column_name": "budget.`amount`"
+    },
+    {
+        "reasoning": "To identify the budgets associated with the 'October Meeting' event.",
+        "column_name": "event.`event_id`"
+    },
+    {
+        "reasoning": "To filter the budgets by the 'Advertisement' category for the 'October Meeting' event.",
+        "column_name": "budget.`category`"
+    },
+    {
+        "reasoning": "To calculate the total amount spent for the 'October Meeting' event in the 'Advertisement' category.",
+        "column_name": "budget.`amount`"
+    },
+    {
+        "reasoning": "To link the budgets to their respective events.",
+        "column_name": "budget.`link_to_event`"
+    },
+    {
+        "reasoning": "To identify the name of the event for filtering purposes.",
+        "column_name": "event.`event_name`"
+    }
+]

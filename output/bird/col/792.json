@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the superhero 'Abomination', we need to reference the superhero_name column from the superhero table.",
+        "column_name": "superhero.`superhero_name`"
+    },
+    {
+        "reasoning": "To retrieve the corresponding superpower of 'Abomination', we need to join the hero_power table with the superhero table using the hero_id column.",
+        "column_name": "hero_power.`hero_id`"
+    },
+    {
+        "reasoning": "To get the superpower name, we need to join the hero_power table with the superpower table using the power_id column.",
+        "column_name": "superpower.`id`"
+    },
+    {
+        "reasoning": "To retrieve the power name associated with the superpower id, we need to reference the power_name column from the superpower table.",
+        "column_name": "superpower.`power_name`"
+    }
+]

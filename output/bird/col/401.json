@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To identify cards with the 'legendary' frame effect.",
+        "column_name": "cards.`frameEffects`"
+    },
+    {
+        "reasoning": "To calculate the percentage of cards with a maximum starting hand size of +3.",
+        "column_name": "cards.`hand`"
+    },
+    {
+        "reasoning": "To count the total number of cards with the 'legendary' frame effect.",
+        "column_name": "cards.`id`"
+    }
+]

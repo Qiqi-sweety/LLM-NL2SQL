@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the students who have attended the event, we need to join the `attendance` table with the `event` table using the foreign key `link_to_event`.",
+        "column_name": "event.`event_name`"
+    },
+    {
+        "reasoning": "To filter the students by their major, we need to join the `member` table with the `major` table using the foreign key `link_to_major`.",
+        "column_name": "major.`major_name`"
+    },
+    {
+        "reasoning": "To retrieve the student's details, we need to select columns from the `member` table.",
+        "column_name": "member.`member_id`"
+    },
+    {
+        "reasoning": "To retrieve the student's first name, which is part of the student's details.",
+        "column_name": "member.`first_name`"
+    },
+    {
+        "reasoning": "To retrieve the student's last name, which is part of the student's details.",
+        "column_name": "member.`last_name`"
+    }
+]

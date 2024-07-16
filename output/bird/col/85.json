@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To calculate the Percent (%) Eligible Free (K-12), we need the `Free Meal Count (K-12)` and `Enrollment (K-12)` from the `frpm` table.",
+        "column_name": "frpm.`Free Meal Count (K-12)`"
+    },
+    {
+        "reasoning": "To calculate the Percent (%) Eligible Free (K-12), we need the `Enrollment (K-12)` from the `frpm` table.",
+        "column_name": "frpm.`Enrollment (K-12)`"
+    },
+    {
+        "reasoning": "To find the school administered by an administrator with the first name 'Alusine', we need to join the `frpm` table with the `schools` table using the `CDSCode` foreign key.",
+        "column_name": "frpm.`CDSCode`"
+    },
+    {
+        "reasoning": "To find the school administered by an administrator with the first name 'Alusine', we need to join the `schools` table with the `frpm` table using the `CDSCode` foreign key.",
+        "column_name": "schools.`CDSCode`"
+    },
+    {
+        "reasoning": "To list the district code of the school, we need the `District Code` from the `frpm` table.",
+        "column_name": "frpm.`District Code`"
+    },
+    {
+        "reasoning": "To find the school administered by an administrator with the first name 'Alusine', we need the `AdmFName1` from the `schools` table.",
+        "column_name": "schools.`AdmFName1`"
+    }
+]

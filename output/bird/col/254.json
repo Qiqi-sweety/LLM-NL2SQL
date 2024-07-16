@@ -1,0 +1,54 @@
+[
+    {
+        "reasoning": "To identify the most common combination of atoms' elements, we need to count the occurrences of each element in the bonds.",
+        "column_name": "atom.`element`"
+    },
+    {
+        "reasoning": "To link the elements to the bonds, we need the molecule_id from the atom table.",
+        "column_name": "atom.`molecule_id`"
+    },
+    {
+        "reasoning": "To count the number of bonds per molecule, we need to join the bond table.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "To link the bonds to the molecules, we need the molecule_id from the bond table.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "To calculate the percentage, we need to count the total number of bonds.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "To identify the most common combination, we need to group by the molecule_id.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "To join the connected table to get the bond_id for each connection.",
+        "column_name": "connected.`bond_id`"
+    },
+    {
+        "reasoning": "To join the connected table to get the atom_id for each connection.",
+        "column_name": "connected.`atom_id`"
+    },
+    {
+        "reasoning": "To join the connected table to get the atom_id2 for each connection.",
+        "column_name": "connected.`atom_id2`"
+    },
+    {
+        "reasoning": "To link the connected table to the bond table, we need the bond_id.",
+        "column_name": "connected.`bond_id`"
+    },
+    {
+        "reasoning": "To link the connected table to the atom table, we need the atom_id.",
+        "column_name": "connected.`atom_id`"
+    },
+    {
+        "reasoning": "To link the connected table to the atom table, we need the atom_id2.",
+        "column_name": "connected.`atom_id2`"
+    },
+    {
+        "reasoning": "To get the label of the molecule for context or display purposes.",
+        "column_name": "molecule.`label`"
+    }
+]

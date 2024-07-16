@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To find the creation date of the maximum number of votes, we need to count the number of votes created on each date.",
+        "column_name": "votes.`CreationDate`"
+    },
+    {
+        "reasoning": "To determine the maximum number of votes created on a single date, we need to count the votes for each date.",
+        "column_name": "votes.`Id`"
+    },
+    {
+        "reasoning": "To join the votes table with the users table to potentially retrieve additional information about the users who cast the votes.",
+        "column_name": "votes.`UserId`"
+    },
+    {
+        "reasoning": "To join the votes table with the posts table to potentially retrieve additional information about the posts that received the votes.",
+        "column_name": "votes.`PostId`"
+    }
+]

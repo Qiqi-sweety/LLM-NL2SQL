@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To retrieve the emails of members who paid more than 20 dollars.",
+        "column_name": "member.`email`"
+    },
+    {
+        "reasoning": "To filter expenses based on the cost being greater than 20 dollars.",
+        "column_name": "expense.`cost`"
+    },
+    {
+        "reasoning": "To filter expenses based on the date range between 9/10/2019 and 11/19/2019.",
+        "column_name": "expense.`expense_date`"
+    },
+    {
+        "reasoning": "To link the expenses to the members who made the payments.",
+        "column_name": "expense.`link_to_member`"
+    },
+    {
+        "reasoning": "To link the expenses to the budgets that contain the expenses' information.",
+        "column_name": "expense.`link_to_budget`"
+    },
+    {
+        "reasoning": "To link the budgets to the events that are associated with the expenses.",
+        "column_name": "budget.`link_to_event`"
+    },
+    {
+        "reasoning": "To ensure that the events are within the specified date range.",
+        "column_name": "event.`event_date`"
+    }
+]

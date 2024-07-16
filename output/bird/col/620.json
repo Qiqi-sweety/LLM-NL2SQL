@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the badges obtained by users on the specified date.",
+        "column_name": "badges.`Date`"
+    },
+    {
+        "reasoning": "To link the badges to the users who obtained them.",
+        "column_name": "badges.`UserId`"
+    },
+    {
+        "reasoning": "To retrieve the views of the users.",
+        "column_name": "users.`Views`"
+    },
+    {
+        "reasoning": "To filter the users who obtained the badge on the specified date.",
+        "column_name": "users.`CreationDate`"
+    }
+]

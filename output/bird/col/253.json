@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the triple bonds, we need to select the `bond_type` column from the `bond` table.",
+        "column_name": "bond.`bond_type`"
+    },
+    {
+        "reasoning": "To retrieve the elements of the atoms involved in the triple bonds, we need to select the `element` column from the `atom` table.",
+        "column_name": "atom.`element`"
+    },
+    {
+        "reasoning": "To join the `bond` table with the `atom` table, we need to select the `atom_id` column from the `atom` table.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "To retrieve the molecule labels for the triple bonds, we need to select the `molecule_id` column from the `bond` table.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "To retrieve the molecule labels for the triple bonds, we need to select the `label` column from the `molecule` table.",
+        "column_name": "molecule.`label`"
+    }
+]

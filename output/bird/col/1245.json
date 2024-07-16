@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To filter the examinations done after 1997/1/1.",
+        "column_name": "Examination.`Examination Date`"
+    },
+    {
+        "reasoning": "To count the number of examinations with the result of an inactivated partial prothrombin time.",
+        "column_name": "Examination.`RVVT`"
+    }
+]

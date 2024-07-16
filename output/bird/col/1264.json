@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To identify patients with blood clots in veins, we need to join the Examination table with the Patient table to access the patient's ID and diagnosis.",
+        "column_name": "Examination.`ID`"
+    },
+    {
+        "reasoning": "To identify patients with blood clots in veins, we need to join the Examination table with the Patient table to access the patient's ID and diagnosis.",
+        "column_name": "Patient.`ID`"
+    },
+    {
+        "reasoning": "The diagnosis of blood clots in veins is associated with APS, which is a condition that can be indicated by the presence of symptoms. Therefore, we need to access the Symptoms column from the Examination table.",
+        "column_name": "Examination.`Symptoms`"
+    },
+    {
+        "reasoning": "To filter patients with a normal level of complement 4, we need to join the Laboratory table with the Patient table to access the laboratory results associated with each patient.",
+        "column_name": "Laboratory.`ID`"
+    },
+    {
+        "reasoning": "To filter patients with a normal level of complement 4, we need to join the Laboratory table with the Patient table to access the laboratory results associated with each patient.",
+        "column_name": "Patient.`ID`"
+    },
+    {
+        "reasoning": "The normal level of complement 4 is defined as C4 > 10. Therefore, we need to access the C4 column from the Laboratory table to filter the results.",
+        "column_name": "Laboratory.`C4`"
+    },
+    {
+        "reasoning": "We need to count the number of different patients, so we need to select the patient's ID from the Patient table.",
+        "column_name": "Patient.`ID`"
+    }
+]

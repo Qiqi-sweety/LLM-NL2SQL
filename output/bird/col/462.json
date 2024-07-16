@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To find the set of cards with 'Ancestor's Chosen', we need to match the card name.",
+        "column_name": "cards.`name`"
+    },
+    {
+        "reasoning": "To get the set code of the card 'Ancestor's Chosen', we need to join the cards table with the sets table using the card's set code.",
+        "column_name": "sets.`code`"
+    },
+    {
+        "reasoning": "To find the Italian name of the set, we need to join the sets table with the set_translations table using the set code.",
+        "column_name": "set_translations.`translation`"
+    },
+    {
+        "reasoning": "To filter the translation for Italian language, we need to specify the language code.",
+        "column_name": "set_translations.`language`"
+    }
+]

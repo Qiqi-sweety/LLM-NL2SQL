@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the comments related to a specific post, we need to join the 'comments' table with the 'posts' table using the foreign key 'PostId'.",
+        "column_name": "comments.`PostId`"
+    },
+    {
+        "reasoning": "To filter the comments based on the post's title, we need to join the 'comments' table with the 'posts' table using the foreign key 'PostId' and select the 'Title' column from the 'posts' table.",
+        "column_name": "posts.`Title`"
+    },
+    {
+        "reasoning": "The question specifies 'about linear regression', which implies that we need to filter the posts by their tags. We join the 'posts' table with the 'tags' table using the foreign key 'ExcerptPostId'.",
+        "column_name": "tags.`TagName`"
+    },
+    {
+        "reasoning": "To retrieve the text of the comments, we need to select the 'Text' column from the 'comments' table.",
+        "column_name": "comments.`Text`"
+    }
+]

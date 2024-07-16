@@ -1,0 +1,38 @@
+[
+    {
+        "reasoning": "To filter events held by the Student_Club, we need to join the `event` table with the `major` table using the foreign key relationship.",
+        "column_name": "event.`event_id`"
+    },
+    {
+        "reasoning": "To filter events held by the Student_Club, we need to join the `event` table with the `major` table using the foreign key relationship.",
+        "column_name": "major.`major_id`"
+    },
+    {
+        "reasoning": "To identify events related to 'Community Service', we need to reference the `type` column in the `event` table.",
+        "column_name": "event.`type`"
+    },
+    {
+        "reasoning": "To calculate the percentage share, we need to sum the count of events with 'Community Service' type.",
+        "column_name": "event.`event_id`"
+    },
+    {
+        "reasoning": "To calculate the total number of events, we need to count all event IDs.",
+        "column_name": "event.`event_id`"
+    },
+    {
+        "reasoning": "To filter events that occurred in 2019, we need to reference the `event_date` column in the `event` table.",
+        "column_name": "event.`event_date`"
+    },
+    {
+        "reasoning": "To identify the events held by the Student_Club, we need to reference the `major_name` column in the `major` table.",
+        "column_name": "major.`major_name`"
+    },
+    {
+        "reasoning": "To identify the events held by the Student_Club, we need to reference the `department` column in the `major` table.",
+        "column_name": "major.`department`"
+    },
+    {
+        "reasoning": "To identify the events held by the Student_Club, we need to reference the `college` column in the `major` table.",
+        "column_name": "major.`college`"
+    }
+]

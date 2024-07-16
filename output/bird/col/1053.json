@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To filter teams with a 'Risky' chance creation passing class.",
+        "column_name": "Team_Attributes.`chanceCreationPassingClass`"
+    },
+    {
+        "reasoning": "To retrieve the short name of the teams.",
+        "column_name": "Team.`team_short_name`"
+    },
+    {
+        "reasoning": "To join Team and Team_Attributes tables based on team_api_id.",
+        "column_name": "Team_Attributes.`team_api_id`"
+    },
+    {
+        "reasoning": "To join Team and Team_Attributes tables based on team_api_id.",
+        "column_name": "Team.`team_api_id`"
+    }
+]

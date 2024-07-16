@@ -1,0 +1,34 @@
+[
+    {
+        "reasoning": "To filter players with an overall rating between 60 to 65.",
+        "column_name": "Player_Attributes.`overall_rating`"
+    },
+    {
+        "reasoning": "To identify players with a low defensive work rate.",
+        "column_name": "Player_Attributes.`defensive_work_rate`"
+    },
+    {
+        "reasoning": "To join Player_Attributes with Player table to get player names and other details.",
+        "column_name": "Player_Attributes.`player_api_id`"
+    },
+    {
+        "reasoning": "To join Player_Attributes with Player table to get player names and other details.",
+        "column_name": "Player.`player_api_id`"
+    },
+    {
+        "reasoning": "To join Player table with Match table to get match details for each player.",
+        "column_name": "Player_Attributes.`player_api_id`"
+    },
+    {
+        "reasoning": "To join Player table with Match table to get match details for each player.",
+        "column_name": "Match.`home_player_1`"
+    },
+    {
+        "reasoning": "To join Player table with Match table to get match details for each player.",
+        "column_name": "Player.`player_api_id`"
+    },
+    {
+        "reasoning": "To ensure we are considering players who are in attack moves and not in defensive roles.",
+        "column_name": "Player_Attributes.`attacking_work_rate`"
+    }
+]

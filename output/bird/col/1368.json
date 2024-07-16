@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the major of the person with the specified phone number, we need to join the `member` table with the `major` table using the foreign key relationship. The `link_to_major` column in the `member` table is used to reference the `major_id` in the `major` table.",
+        "column_name": "member.`link_to_major`"
+    },
+    {
+        "reasoning": "The `major_id` column in the `major` table is necessary to join with the `link_to_major` column in the `member` table to find the corresponding major information.",
+        "column_name": "major.`major_id`"
+    },
+    {
+        "reasoning": "The `major_name` column in the `major` table is the one that contains the name of the major, which is the answer to the question.",
+        "column_name": "major.`major_name`"
+    },
+    {
+        "reasoning": "The `phone` column in the `member` table is needed to filter the member records by the specified phone number.",
+        "column_name": "member.`phone`"
+    }
+]

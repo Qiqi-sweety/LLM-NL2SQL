@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To calculate the total loan amount, we need the amount from the loan table.",
+        "column_name": "loan.`amount`"
+    },
+    {
+        "reasoning": "To identify loans that have been fully paid with no issue, we need to filter by the status 'A'.",
+        "column_name": "loan.`status`"
+    },
+    {
+        "reasoning": "To calculate the percentage, we need to sum the amounts of loans that have been fully paid with no issue.",
+        "column_name": "loan.`amount`"
+    },
+    {
+        "reasoning": "To calculate the total amount of all loans, we need to sum the amounts from the loan table.",
+        "column_name": "loan.`amount`"
+    },
+    {
+        "reasoning": "To join the loan table with the account table, we need the account_id from the loan table.",
+        "column_name": "loan.`account_id`"
+    },
+    {
+        "reasoning": "To calculate the percentage, we need to count the number of accounts that meet the condition.",
+        "column_name": "account.`account_id`"
+    }
+]

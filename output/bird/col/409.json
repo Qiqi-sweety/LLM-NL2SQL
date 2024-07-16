@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify cards that are part of the pre-modern format.",
+        "column_name": "cards.`setCode`"
+    },
+    {
+        "reasoning": "To filter cards with a ruling that includes the text 'This is a triggered mana ability'.",
+        "column_name": "rulings.`text`"
+    },
+    {
+        "reasoning": "To join the cards table with the legalities table to filter by the legal format.",
+        "column_name": "legalities.`uuid`"
+    },
+    {
+        "reasoning": "To join the cards table with the rulings table to filter by the ruling text.",
+        "column_name": "cards.`uuid`"
+    },
+    {
+        "reasoning": "To exclude cards with multiple faces.",
+        "column_name": "cards.`side`"
+    },
+    {
+        "reasoning": "To count the number of qualifying cards.",
+        "column_name": "cards.`id`"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify the schools in Alameda County, we need the County column from the schools table.",
+        "column_name": "schools.`County`"
+    },
+    {
+        "reasoning": "To calculate the eligible free rate for K-12 students, we need the Free Meal Count (K-12) column from the frpm table.",
+        "column_name": "frpm.`Free Meal Count (K-12)`"
+    },
+    {
+        "reasoning": "To calculate the eligible free rate for K-12 students, we need the Enrollment (K-12) column from the frpm table.",
+        "column_name": "frpm.`Enrollment (K-12)`"
+    },
+    {
+        "reasoning": "To join the frpm and schools tables based on the CDSCode, we need the CDSCode column from both tables.",
+        "column_name": "frpm.`CDSCode`"
+    },
+    {
+        "reasoning": "To join the frpm and schools tables based on the CDSCode, we need the CDSCode column from both tables.",
+        "column_name": "schools.`CDSCode`"
+    },
+    {
+        "reasoning": "To filter the schools in Alameda County, we need the County Code column from the frpm table.",
+        "column_name": "frpm.`County Code`"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the card numbers, we need to select the `number` column from the `cards` table.",
+        "column_name": "cards.`number`"
+    },
+    {
+        "reasoning": "To filter out cards with multiple faces, we need to check if the `otherFaceIds` column is null, indicating no other faces exist on the card.",
+        "column_name": "cards.`otherFaceIds`"
+    },
+    {
+        "reasoning": "To filter cards by subtypes, we need to select the `subtypes` column from the `cards` table.",
+        "column_name": "cards.`subtypes`"
+    },
+    {
+        "reasoning": "The `subtypes` column contains a comma-separated list of subtypes. We need to check if 'Angel' and 'Wizard' are included in this list.",
+        "column_name": "cards.`subtypes`"
+    }
+]

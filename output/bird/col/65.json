@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify schools in Santa Clara County.",
+        "column_name": "schools.`County`"
+    },
+    {
+        "reasoning": "To filter schools that are locally funded.",
+        "column_name": "schools.`FundingType`"
+    },
+    {
+        "reasoning": "To count the total number of schools in Santa Clara County.",
+        "column_name": "schools.`CDSCode`"
+    },
+    {
+        "reasoning": "To calculate the total number of schools in Santa Clara County with all types of funding.",
+        "column_name": "schools.`CDSCode`"
+    }
+]

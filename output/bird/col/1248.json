@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To count the number of distinct patients born after 1980/1/1, we need to reference the patient's ID and their birthday.",
+        "column_name": "Patient.`ID`"
+    },
+    {
+        "reasoning": "The birthday column is used to filter patients born after 1980/1/1.",
+        "column_name": "Patient.`Birthday`"
+    },
+    {
+        "reasoning": "To identify abnormal fibrinogen levels, we need to reference the fibrinogen level from the Laboratory table.",
+        "column_name": "Laboratory.`FG`"
+    },
+    {
+        "reasoning": "The FG column is used to filter for normal fibrinogen levels (between 150 and 450).",
+        "column_name": "Laboratory.`FG`"
+    },
+    {
+        "reasoning": "To join the Laboratory table with the Patient table based on the patient's ID, we need to reference the ID column from both tables.",
+        "column_name": "Laboratory.`ID`"
+    },
+    {
+        "reasoning": "The ID column from the Laboratory table is used to join with the Patient table's ID column.",
+        "column_name": "Patient.`ID`"
+    }
+]

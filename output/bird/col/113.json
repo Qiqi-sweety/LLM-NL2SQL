@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the client who applied for the loan, we need to join the `loan` table with the `client` table using the `account_id` foreign key.",
+        "column_name": "loan.`account_id`"
+    },
+    {
+        "reasoning": "To identify the client who applied for the loan, we need to join the `loan` table with the `client` table using the `account_id` foreign key.",
+        "column_name": "client.`client_id`"
+    },
+    {
+        "reasoning": "To filter the loan by the specific amount and date, we need to reference the `amount` and `date` columns from the `loan` table.",
+        "column_name": "loan.`amount`"
+    },
+    {
+        "reasoning": "To filter the loan by the specific date, we need to reference the `date` column from the `loan` table.",
+        "column_name": "loan.`date`"
+    },
+    {
+        "reasoning": "To retrieve the client's birthday, we need to reference the `birth_date` column from the `client` table.",
+        "column_name": "client.`birth_date`"
+    }
+]

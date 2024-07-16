@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To filter the posts that are about data visualization, we need to match the 'Title' column of the 'posts' table with the search term 'data visualization'.",
+        "column_name": "posts.`Title`"
+    },
+    {
+        "reasoning": "To count the number of votes for these posts, we need to reference the 'PostId' column from the 'votes' table.",
+        "column_name": "votes.`PostId`"
+    },
+    {
+        "reasoning": "To ensure that we are counting votes for the correct posts, we need to join the 'posts' table with the 'votes' table using the 'Id' column from 'posts' and 'PostId' column from 'votes'.",
+        "column_name": "posts.`Id`"
+    },
+    {
+        "reasoning": "To ensure that we are counting votes for the correct posts, we need to join the 'posts' table with the 'votes' table using the 'Id' column from 'posts' and 'PostId' column from 'votes'.",
+        "column_name": "votes.`PostId`"
+    },
+    {
+        "reasoning": "To count the votes, we need to use the 'Id' column from the 'votes' table.",
+        "column_name": "votes.`Id`"
+    }
+]

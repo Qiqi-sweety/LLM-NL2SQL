@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify players with the highest potential score for crossing.",
+        "column_name": "Player_Attributes.`crossing`"
+    },
+    {
+        "reasoning": "To filter players who prefer to use their left foots.",
+        "column_name": "Player_Attributes.`preferred_foot`"
+    },
+    {
+        "reasoning": "To find the highest potential score for crossing.",
+        "column_name": "Player_Attributes.`potential`"
+    },
+    {
+        "reasoning": "To link Player_Attributes to Player for player details.",
+        "column_name": "Player_Attributes.`player_api_id`"
+    },
+    {
+        "reasoning": "To link Player_Attributes to Player for player details.",
+        "column_name": "Player.`player_api_id`"
+    },
+    {
+        "reasoning": "To retrieve player names for the final output.",
+        "column_name": "Player.`player_name`"
+    }
+]

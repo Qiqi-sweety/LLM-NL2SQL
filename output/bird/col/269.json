@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To filter the atoms with the element 'iodine'.",
+        "column_name": "atom.`element`"
+    },
+    {
+        "reasoning": "To count the number of bond IDs associated with atoms containing iodine.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "To join the 'atom' table with the 'bond' table based on the molecule ID, which is common between them.",
+        "column_name": "atom.`molecule_id`"
+    },
+    {
+        "reasoning": "To join the 'bond' table with the 'connected' table based on the bond ID, which is used to establish the connection between atoms.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "To ensure that we are counting the bond IDs for the correct atoms, we need to join the 'connected' table with the 'atom' table based on the first atom ID.",
+        "column_name": "connected.`atom_id`"
+    },
+    {
+        "reasoning": "To ensure that we are counting the bond IDs for the correct atoms, we need to join the 'connected' table with the 'atom' table based on the second atom ID.",
+        "column_name": "connected.`atom_id2`"
+    }
+]

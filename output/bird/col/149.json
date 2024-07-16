@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the account types that are not eligible for loans.",
+        "column_name": "account.`account_id`"
+    },
+    {
+        "reasoning": "To link the account information with the district information.",
+        "column_name": "account.`district_id`"
+    },
+    {
+        "reasoning": "To retrieve the district information where the account is located.",
+        "column_name": "district.`district_id`"
+    },
+    {
+        "reasoning": "To filter the districts based on the average income criteria.",
+        "column_name": "district.`A11`"
+    }
+]

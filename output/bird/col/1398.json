@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To retrieve the event name with the highest amount spent on advertisement, we need to select the event name from the event table.",
+        "column_name": "event.`event_name`"
+    },
+    {
+        "reasoning": "To identify the highest amount spent on advertisement, we need to select the spent column from the budget table.",
+        "column_name": "budget.`spent`"
+    },
+    {
+        "reasoning": "To filter the records by the category 'Advertisement', we need to select the category column from the budget table.",
+        "column_name": "budget.`category`"
+    },
+    {
+        "reasoning": "To join the budget table with the event table based on the foreign key relationship, we need to select the event_id column from the event table.",
+        "column_name": "event.`event_id`"
+    },
+    {
+        "reasoning": "To join the budget table with the event table based on the foreign key relationship, we need to select the link_to_event column from the budget table.",
+        "column_name": "budget.`link_to_event`"
+    }
+]
