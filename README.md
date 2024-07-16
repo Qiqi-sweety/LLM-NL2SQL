@@ -130,6 +130,7 @@ roberta filter
     + foreign key    43.78                23.44                15.28                34.94
     + insert rows    46.78                24.13                19.30                37.33
 gte filter           43.78                26.08                18.62                36.05
+qwen filter          35.89                20.04                13.79                29.01
 ```
 
 ```

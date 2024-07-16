@@ -26,7 +26,9 @@ class EmbeddingFilter(SchemaLinker):
         fully_qualified_names = [f"{table_name}.{column_info[1]}" for column_info in columns_info]
         columns_embeddings = self._get_text_embeddings(fully_qualified_names)
         columns_similarity = torch.nn.functional.cosine_similarity(query_embeddings, columns_embeddings)
-        print(columns_similarity)
+        # for column_name, column_similarity in zip(fully_qualified_names, columns_similarity):
+        #     print(column_name, column_similarity)
+        # print()
 
         selected_columns = [
             column_info[1]
@@ -37,6 +39,10 @@ class EmbeddingFilter(SchemaLinker):
                 or f"{table_name}.{column_info[1]}" in foreign_keys_set
             )
         ]
+        
+        # if all columns are foreign key, this table is not used
+        if all(f"{table_name}.{column_name}" in foreign_keys_set for column_name in selected_columns):
+            selected_columns = []
 
         return selected_columns
 
