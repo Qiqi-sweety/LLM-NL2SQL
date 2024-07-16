@@ -129,6 +129,7 @@ bert filter          34.59                17.63                7.64             
 roberta filter       
     + foreign key    43.78                23.44                15.28                34.94
     + insert rows    46.78                24.13                19.30                37.33
+gte filter           43.78                26.08                18.62                36.05
 ```
 
 ```
@@ -138,6 +139,7 @@ count                925                  465                  144              
 zero shot            48.28                25.00                19.91                38.56
 few shot             51.34                28.94                18.94                41.51
 llm filter           21.36                10.17                3.35                 16.28
+gte filter           45.77                27.73                19.37                37.82
 ```
 
 Qwen2-7B
