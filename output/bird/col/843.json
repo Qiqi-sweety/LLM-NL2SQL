@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To retrieve the hero ID of superheroes with intelligence as their power, we need to select the hero ID from the superhero table.",
+        "column_name": "superhero.`id`"
+    },
+    {
+        "reasoning": "To identify the intelligence power, we need to join the superhero table with the hero_power table to find the superhero IDs associated with powers.",
+        "column_name": "hero_power.`hero_id`"
+    },
+    {
+        "reasoning": "To filter the powers by 'Intelligence', we need to join the hero_power table with the superpower table to get the power names.",
+        "column_name": "hero_power.`power_id`"
+    },
+    {
+        "reasoning": "We need to select the power name from the superpower table to filter for the 'Intelligence' power.",
+        "column_name": "superpower.`power_name`"
+    }
+]

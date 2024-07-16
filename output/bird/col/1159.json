@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the patients with albumin level lower than 3.5, we need to reference the albumin level column from the Examination table.",
+        "column_name": "Examination.`aCL IgG`"
+    },
+    {
+        "reasoning": "To list the patient's ID, we need to reference the ID column from the Patient table.",
+        "column_name": "Patient.`ID`"
+    },
+    {
+        "reasoning": "To list the patient's sex, we need to reference the SEX column from the Patient table.",
+        "column_name": "Patient.`SEX`"
+    },
+    {
+        "reasoning": "To list the patient's diagnosis, we need to reference the Diagnosis column from the Patient table.",
+        "column_name": "Patient.`Diagnosis`"
+    }
+]

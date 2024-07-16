@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To calculate the percentage of players under 180 cm with an overall strength of more than 70, we need to count the number of players who meet both criteria.",
+        "column_name": "Player_Attributes.`overall_rating`"
+    },
+    {
+        "reasoning": "The `player_api_id` is used to join the Player_Attributes table with the Player table to get additional player information if needed.",
+        "column_name": "Player_Attributes.`player_api_id`"
+    },
+    {
+        "reasoning": "The `player_fifa_api_id` is used to join the Player_Attributes table with the Player table to get additional player information if needed.",
+        "column_name": "Player_Attributes.`player_fifa_api_id`"
+    },
+    {
+        "reasoning": "The `player_name` column is not directly needed for the calculation but could be useful for additional analysis or reporting.",
+        "column_name": "Player.`player_name`"
+    },
+    {
+        "reasoning": "The `player_fifa_api_id` column in the Player table is used to join with the Player_Attributes table to ensure we are considering the same players.",
+        "column_name": "Player.`player_fifa_api_id`"
+    }
+]

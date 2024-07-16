@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify the year for each record in the yearmonth table, we need to extract the year from the Date column.",
+        "column_name": "yearmonth.`Date`"
+    },
+    {
+        "reasoning": "We need to filter the records to only include those from the year 2012.",
+        "column_name": "yearmonth.`Date`"
+    },
+    {
+        "reasoning": "To calculate the monthly consumption, we need to sum the Consumption column.",
+        "column_name": "yearmonth.`Consumption`"
+    },
+    {
+        "reasoning": "To find the highest monthly consumption, we need to order the results by Consumption in descending order.",
+        "column_name": "yearmonth.`Consumption`"
+    },
+    {
+        "reasoning": "To ensure we are looking at the correct customers, we need to join the customers table using the CustomerID.",
+        "column_name": "customers.`CustomerID`"
+    },
+    {
+        "reasoning": "We need to select the CustomerID from the customers table to include it in the final result.",
+        "column_name": "customers.`CustomerID`"
+    }
+]

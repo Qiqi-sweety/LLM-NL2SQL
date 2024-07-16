@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To identify the superheroes associated with each publisher.",
+        "column_name": "superhero.`publisher_id`"
+    },
+    {
+        "reasoning": "To count the number of superheroes associated with each publisher.",
+        "column_name": "superhero.`id`"
+    },
+    {
+        "reasoning": "To retrieve the publisher names for comparison.",
+        "column_name": "publisher.`publisher_name`"
+    }
+]

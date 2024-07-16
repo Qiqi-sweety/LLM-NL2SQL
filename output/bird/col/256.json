@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To filter atoms by the element carbon and hydrogen.",
+        "column_name": "atom.`element`"
+    },
+    {
+        "reasoning": "To count the total number of atoms that match the element criteria.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "To join the atom table with the molecule table to access the molecule information.",
+        "column_name": "atom.`molecule_id`"
+    },
+    {
+        "reasoning": "To join the atom table with the connected table to access the bond information.",
+        "column_name": "connected.`atom_id`"
+    }
+]

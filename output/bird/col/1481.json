@@ -1,0 +1,62 @@
+[
+    {
+        "reasoning": "To identify the customers with the least amount of consumption paid in CZK for 2013.",
+        "column_name": "yearmonth.`CustomerID`"
+    },
+    {
+        "reasoning": "To link the customers to their segment.",
+        "column_name": "customers.`CustomerID`"
+    },
+    {
+        "reasoning": "To filter the transactions for the year 2013.",
+        "column_name": "transactions_1k.`Date`"
+    },
+    {
+        "reasoning": "To calculate the total consumption per year for each customer.",
+        "column_name": "yearmonth.`Consumption`"
+    },
+    {
+        "reasoning": "To identify the segment of the customers.",
+        "column_name": "customers.`Segment`"
+    },
+    {
+        "reasoning": "To link the transactions to the customers and their segments.",
+        "column_name": "transactions_1k.`CustomerID`"
+    },
+    {
+        "reasoning": "To link the transactions to the gas stations.",
+        "column_name": "transactions_1k.`GasStationID`"
+    },
+    {
+        "reasoning": "To link the gas stations to their chain and country.",
+        "column_name": "gasstations.`GasStationID`"
+    },
+    {
+        "reasoning": "To link the gas stations to their segment.",
+        "column_name": "gasstations.`Segment`"
+    },
+    {
+        "reasoning": "To link the transactions to the products.",
+        "column_name": "transactions_1k.`ProductID`"
+    },
+    {
+        "reasoning": "To link the products to their description.",
+        "column_name": "products.`ProductID`"
+    },
+    {
+        "reasoning": "To calculate the amount paid in CZK for each transaction.",
+        "column_name": "transactions_1k.`Amount`"
+    },
+    {
+        "reasoning": "To calculate the price of each product.",
+        "column_name": "transactions_1k.`Price`"
+    },
+    {
+        "reasoning": "To calculate the annual average consumption.",
+        "column_name": "yearmonth.`Date`"
+    },
+    {
+        "reasoning": "To filter the transactions for the year 2013.",
+        "column_name": "transactions_1k.`Date`"
+    }
+]

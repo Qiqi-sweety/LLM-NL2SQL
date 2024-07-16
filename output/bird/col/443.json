@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To retrieve the code of sets with an expansion type of 'expansion', we need to select the 'code' column from the 'sets' table.",
+        "column_name": "sets.`code`"
+    },
+    {
+        "reasoning": "To filter the sets by their expansion type, we need to select the 'type' column from the 'sets' table.",
+        "column_name": "sets.`type`"
+    }
+]

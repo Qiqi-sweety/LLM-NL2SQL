@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the schools with Breakfast Provision 2, we need to reference the 'Educational Option Type' column from the 'frpm' table.",
+        "column_name": "frpm.`Educational Option Type`"
+    },
+    {
+        "reasoning": "To filter schools by county code 37, we need to reference the 'County Code' column from the 'frpm' table.",
+        "column_name": "frpm.`County Code`"
+    },
+    {
+        "reasoning": "To get the name of the school, we need to reference the 'School' column from the 'schools' table.",
+        "column_name": "schools.`School`"
+    },
+    {
+        "reasoning": "To join the 'frpm' and 'schools' tables based on the common 'CDSCode' column, we need to reference the 'CDSCode' column from both tables.",
+        "column_name": "frpm.`CDSCode`"
+    },
+    {
+        "reasoning": "To join the 'frpm' and 'schools' tables based on the common 'CDSCode' column, we need to reference the 'CDSCode' column from both tables.",
+        "column_name": "schools.`CDSCode`"
+    }
+]

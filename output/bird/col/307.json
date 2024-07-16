@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify the atoms involved in the bond TR000_2_3, we need to join the `bond` table with the `connected` table using the `bond_id` to find the corresponding `atom_id`.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "The `bond_id` from the `bond` table is used to join with the `connected` table to find the `atom_id` of the atoms forming the bond.",
+        "column_name": "connected.`bond_id`"
+    },
+    {
+        "reasoning": "To retrieve the element of the atoms involved in the bond, we need to join the `atom` table using the `atom_id` from the `connected` table.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "The `element` column from the `atom` table is needed to provide the name of the elements that form the bond.",
+        "column_name": "atom.`element`"
+    },
+    {
+        "reasoning": "To filter the bond by its label, we need to join the `molecule` table using the `molecule_id` from the `bond` table.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "The `label` column from the `molecule` table is used to filter the bond by its label (TR000_2_3).",
+        "column_name": "molecule.`label`"
+    }
+]

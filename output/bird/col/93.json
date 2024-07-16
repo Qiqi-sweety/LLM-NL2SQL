@@ -1,0 +1,34 @@
+[
+    {
+        "reasoning": "To identify male customers, we need to reference the gender column from the client table.",
+        "column_name": "client.`gender`"
+    },
+    {
+        "reasoning": "To filter for the region 'North Bohemia', we need to reference the A3 column from the district table.",
+        "column_name": "district.`A3`"
+    },
+    {
+        "reasoning": "To calculate the average salary, we need to reference the frequency column from the account table.",
+        "column_name": "account.`frequency`"
+    },
+    {
+        "reasoning": "To count the number of male customers in North Bohemia with an average salary greater than 8000, we need to reference the client_id column from the client table.",
+        "column_name": "client.`client_id`"
+    },
+    {
+        "reasoning": "To join the client and district tables based on the district_id column.",
+        "column_name": "client.`district_id`"
+    },
+    {
+        "reasoning": "To join the client and district tables based on the district_id column.",
+        "column_name": "district.`district_id`"
+    },
+    {
+        "reasoning": "To join the account and client tables based on the district_id column.",
+        "column_name": "account.`district_id`"
+    },
+    {
+        "reasoning": "To join the account and client tables based on the district_id column.",
+        "column_name": "client.`district_id`"
+    }
+]

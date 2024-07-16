@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the schools with SAT scores over 1500.",
+        "column_name": "satscores.`NumGE1500`"
+    },
+    {
+        "reasoning": "To count the number of test takers for each school.",
+        "column_name": "satscores.`NumTstTakr`"
+    },
+    {
+        "reasoning": "To join the `satscores` table with the `schools` table using the common `cds` and `CDSCode` fields.",
+        "column_name": "satscores.`cds`"
+    },
+    {
+        "reasoning": "To join the `satscores` table with the `schools` table using the common `cds` and `CDSCode` fields.",
+        "column_name": "schools.`CDSCode`"
+    },
+    {
+        "reasoning": "To retrieve the phone number of the school.",
+        "column_name": "schools.`Phone`"
+    }
+]

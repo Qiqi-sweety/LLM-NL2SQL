@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To filter schools opened after 1991 or closed before 2000.",
+        "column_name": "schools.`OpenDate`"
+    },
+    {
+        "reasoning": "To filter schools opened after 1991 or closed before 2000.",
+        "column_name": "schools.`ClosedDate`"
+    },
+    {
+        "reasoning": "To retrieve the average score in writing for the schools.",
+        "column_name": "satscores.`AvgScrWrite`"
+    },
+    {
+        "reasoning": "To list the school names.",
+        "column_name": "schools.`School`"
+    },
+    {
+        "reasoning": "To join the schools table with the satscores table based on the CDSCode.",
+        "column_name": "schools.`CDSCode`"
+    },
+    {
+        "reasoning": "To join the schools table with the satscores table based on the CDSCode.",
+        "column_name": "satscores.`cds`"
+    },
+    {
+        "reasoning": "To list the communication number (phone number) of the schools if available.",
+        "column_name": "schools.`Phone`"
+    }
+]

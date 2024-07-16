@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To identify the cards that don't have a text box created by Aleksi Briclot.",
+        "column_name": "cards.`artist`"
+    },
+    {
+        "reasoning": "To filter out the cards that are textless.",
+        "column_name": "cards.`isTextless`"
+    },
+    {
+        "reasoning": "To retrieve the available printing types of the cards.",
+        "column_name": "cards.`availability`"
+    }
+]

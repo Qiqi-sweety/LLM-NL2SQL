@@ -21,7 +21,8 @@ def run(args):
     tokenizer, model = load_tokenizer_and_model(args.model_name)
     dataset = load_dataset(args.data_path)
     result_file = get_output_file(args.result_path)
-    schema_linker = schema_linking.load_schema_linker(args.strategy)
+    strategy = args.strategy
+    schema_linker = schema_linking.load_schema_linker(args.strategy) if strategy != 'llm_filter' else None
 
     for item in tqdm(dataset):
         db_name = item['db_id']
@@ -31,10 +32,9 @@ def run(args):
         sqlite_path = os.path.join(args.database_path, db_name, f'{db_name}.sqlite')
         db_path = os.path.join(args.schema_path, db_name, f'{db_name}.sql') 
 
-        strategy = args.strategy
         try:
             if strategy == 'llm_filter':
-                    filtered_schema_path = f'/data1/MrLiao/agents/NL2SQL/results/Qwen1.5-14B/select_tab_col/col/{item["question_id"]}.json'
+                    filtered_schema_path = f'output/bird/col/{item["question_id"]}.json'
                     schema = schema_linking.get_llm_filterd_table_schema(sqlite_path, filtered_schema_path)
             else:
                 question = db_name + '\t' + query

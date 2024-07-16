@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify Sebastian Vettel's driverId.",
+        "column_name": "drivers.`driverId`"
+    },
+    {
+        "reasoning": "To filter the races that occurred in 2009.",
+        "column_name": "seasons.`year`"
+    },
+    {
+        "reasoning": "To filter the races that are the Chinese Grand Prix.",
+        "column_name": "races.`name`"
+    },
+    {
+        "reasoning": "To join lapTimes with drivers table to get lap times for Sebastian Vettel.",
+        "column_name": "lapTimes.`driverId`"
+    },
+    {
+        "reasoning": "To join lapTimes with races table to filter lap times for the 2009 Chinese Grand Prix.",
+        "column_name": "lapTimes.`raceId`"
+    },
+    {
+        "reasoning": "To calculate the average lap time.",
+        "column_name": "lapTimes.`time`"
+    }
+]

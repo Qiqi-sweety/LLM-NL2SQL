@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To filter schools with a free meal count of 1,900-2,000 for students aged 5-17, we need the free meal count for this age group.",
+        "column_name": "frpm.`Free Meal Count (Ages 5-17)`"
+    },
+    {
+        "reasoning": "To identify the schools with the specified free meal count, we need to join the frpm table with the schools table using the CDSCode as the foreign key.",
+        "column_name": "frpm.`CDSCode`"
+    },
+    {
+        "reasoning": "To identify the schools with the specified free meal count, we need to join the frpm table with the schools table using the CDSCode as the foreign key.",
+        "column_name": "schools.`CDSCode`"
+    },
+    {
+        "reasoning": "To retrieve the school names, we need the school name column from the schools table.",
+        "column_name": "schools.`School`"
+    },
+    {
+        "reasoning": "To retrieve the website address of the schools, we need the website column from the schools table.",
+        "column_name": "schools.`Website`"
+    }
+]

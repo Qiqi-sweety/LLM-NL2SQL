@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To filter cards with the promotional type 'bundle'.",
+        "column_name": "cards.`promoTypes`"
+    },
+    {
+        "reasoning": "To retrieve the purchase URLs for the cards.",
+        "column_name": "cards.`purchaseUrls`"
+    }
+]

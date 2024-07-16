@@ -1,0 +1,34 @@
+[
+    {
+        "reasoning": "To identify the molecule with the label 'TR008', we need to join the 'molecule' table.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "To filter the bonds that are double bonds, we need to join the 'bond' table and filter by 'bond_type' = ' = '.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "To count the number of double bonds, we need to count the 'bond_id' from the 'bond' table.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "To calculate the total number of bonds in the molecule, we need to join the 'bond' table and count the 'bond_id'.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "To join the 'bond' table with the 'molecule' table, we need to use the 'molecule_id' from both tables.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "To join the 'bond' table with the 'connected' table, we need to use the 'bond_id' from both tables.",
+        "column_name": "connected.`bond_id`"
+    },
+    {
+        "reasoning": "To join the 'atom' table with the 'connected' table, we need to use the 'atom_id' from both tables.",
+        "column_name": "connected.`atom_id`"
+    },
+    {
+        "reasoning": "To join the 'molecule' table with the 'atom' table, we need to use the 'molecule_id' from both tables.",
+        "column_name": "atom.`molecule_id`"
+    }
+]

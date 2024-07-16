@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To identify the events held at MU 215, we need to match the event location with 'MU 215'.",
+        "column_name": "event.`location`"
+    },
+    {
+        "reasoning": "To retrieve the category of the event, we need to access the event type from the event table.",
+        "column_name": "event.`type`"
+    }
+]

@@ -1,0 +1,66 @@
+[
+    {
+        "reasoning": "To identify the event with the name 'Yearly Kickoff', we need to join the 'event' table and filter by the event name.",
+        "column_name": "event.`event_name`"
+    },
+    {
+        "reasoning": "To find the budget linked to the 'Yearly Kickoff' event, we need to join the 'budget' table using the foreign key 'link_to_event'.",
+        "column_name": "budget.`link_to_event`"
+    },
+    {
+        "reasoning": "To get the details of the budget, we need to select columns from the 'budget' table.",
+        "column_name": "budget.`budget_id`"
+    },
+    {
+        "reasoning": "To find the member who is linked to the budget, we need to join the 'expense' table using the foreign key 'link_to_budget'.",
+        "column_name": "expense.`link_to_budget`"
+    },
+    {
+        "reasoning": "To get the details of the member who manages the budget, we need to select columns from the 'member' table.",
+        "column_name": "member.`member_id`"
+    },
+    {
+        "reasoning": "To get the full name of the member managing the budget, we need to select the first name and last name from the 'member' table.",
+        "column_name": "member.`first_name`"
+    },
+    {
+        "reasoning": "To get the full name of the member managing the budget, we need to select the last name from the 'member' table.",
+        "column_name": "member.`last_name`"
+    },
+    {
+        "reasoning": "To join the 'member' table with the 'major' table using the foreign key 'link_to_major', we need to select the 'major_id' from the 'member' table.",
+        "column_name": "member.`link_to_major`"
+    },
+    {
+        "reasoning": "To get the major details of the member managing the budget, we need to select columns from the 'major' table.",
+        "column_name": "major.`major_id`"
+    },
+    {
+        "reasoning": "To get the major name of the member managing the budget, we need to select the 'major_name' from the 'major' table.",
+        "column_name": "major.`major_name`"
+    },
+    {
+        "reasoning": "To join the 'member' table with the 'zip_code' table using the foreign key 'zip', we need to select the 'zip_code' from the 'member' table.",
+        "column_name": "member.`zip`"
+    },
+    {
+        "reasoning": "To get the zip code details of the member managing the budget, we need to select columns from the 'zip_code' table.",
+        "column_name": "zip_code.`zip_code`"
+    },
+    {
+        "reasoning": "To get the city of the member managing the budget, we need to select the 'city' from the 'zip_code' table.",
+        "column_name": "zip_code.`city`"
+    },
+    {
+        "reasoning": "To get the county of the member managing the budget, we need to select the 'county' from the 'zip_code' table.",
+        "column_name": "zip_code.`county`"
+    },
+    {
+        "reasoning": "To get the state of the member managing the budget, we need to select the 'state' from the 'zip_code' table.",
+        "column_name": "zip_code.`state`"
+    },
+    {
+        "reasoning": "To get the short state of the member managing the budget, we need to select the 'short_state' from the 'zip_code' table.",
+        "column_name": "zip_code.`short_state`"
+    }
+]

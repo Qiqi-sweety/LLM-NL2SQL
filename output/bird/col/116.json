@@ -1,0 +1,58 @@
+[
+    {
+        "reasoning": "To identify the client who first applied for a loan on the specified date.",
+        "column_name": "client.`client_id`"
+    },
+    {
+        "reasoning": "To link the client's ID to their account information.",
+        "column_name": "account.`account_id`"
+    },
+    {
+        "reasoning": "To find the initial account balance on the start date (1993/3/22).",
+        "column_name": "trans.`balance`"
+    },
+    {
+        "reasoning": "To find the final account balance on the end date (1998/12/27).",
+        "column_name": "trans.`balance`"
+    },
+    {
+        "reasoning": "To determine the date when the loan was first applied.",
+        "column_name": "loan.`date`"
+    },
+    {
+        "reasoning": "To link the loan to the corresponding account.",
+        "column_name": "loan.`account_id`"
+    },
+    {
+        "reasoning": "To filter the loans by the client who first applied on the specified date.",
+        "column_name": "loan.`date`"
+    },
+    {
+        "reasoning": "To ensure the loan is linked to the correct account.",
+        "column_name": "loan.`account_id`"
+    },
+    {
+        "reasoning": "To find the initial balance of the account on the start date.",
+        "column_name": "trans.`date`"
+    },
+    {
+        "reasoning": "To find the final balance of the account on the end date.",
+        "column_name": "trans.`date`"
+    },
+    {
+        "reasoning": "To identify the transactions that affect the account balance.",
+        "column_name": "trans.`account_id`"
+    },
+    {
+        "reasoning": "To ensure the transactions are linked to the correct account.",
+        "column_name": "trans.`account_id`"
+    },
+    {
+        "reasoning": "To filter transactions by the start date.",
+        "column_name": "trans.`date`"
+    },
+    {
+        "reasoning": "To filter transactions by the end date.",
+        "column_name": "trans.`date`"
+    }
+]

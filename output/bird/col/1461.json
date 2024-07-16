@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To retrieve the last names of students, we need to reference the `last_name` column from the `member` table.",
+        "column_name": "member.`last_name`"
+    },
+    {
+        "reasoning": "To filter the students by the 'Elementary Education' major, we need to reference the `major_name` column from the `major` table to match the major name.",
+        "column_name": "major.`major_name`"
+    },
+    {
+        "reasoning": "To link the `member` table with the `major` table, we need to reference the `major_id` column from the `major` table and the `link_to_major` column from the `member` table.",
+        "column_name": "major.`major_id`"
+    },
+    {
+        "reasoning": "To retrieve the phone numbers of the students, we need to reference the `phone` column from the `member` table.",
+        "column_name": "member.`phone`"
+    }
+]

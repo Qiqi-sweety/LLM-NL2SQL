@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To count the number of transactions, we need to use the COUNT function on the `TransactionID` column from the `transactions_1k` table.",
+        "column_name": "transactions_1k.`TransactionID`"
+    },
+    {
+        "reasoning": "To filter transactions that occurred at gas stations in the Czech Republic, we need to join the `transactions_1k` table with the `gasstations` table on `GasStationID`.",
+        "column_name": "transactions_1k.`GasStationID`"
+    },
+    {
+        "reasoning": "To filter transactions that occurred at gas stations in the Czech Republic, we need to join the `transactions_1k` table with the `gasstations` table on `GasStationID`.",
+        "column_name": "gasstations.`GasStationID`"
+    },
+    {
+        "reasoning": "To specify that we are interested in gas stations located in the Czech Republic, we need to reference the `Country` column from the `gasstations` table.",
+        "column_name": "gasstations.`Country`"
+    },
+    {
+        "reasoning": "To ensure we are considering transactions with a price over 1000, we need to reference the `Price` column from the `transactions_1k` table.",
+        "column_name": "transactions_1k.`Price`"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To retrieve the overall ratings of Ariel Borysiuk and Paulin Puel.",
+        "column_name": "Player_Attributes.`overall_rating`"
+    },
+    {
+        "reasoning": "To identify the player records for Ariel Borysiuk and Paulin Puel.",
+        "column_name": "Player_Attributes.`player_api_id`"
+    },
+    {
+        "reasoning": "To link the player records with their attributes.",
+        "column_name": "Player_Attributes.`player_fifa_api_id`"
+    },
+    {
+        "reasoning": "To retrieve the player names for filtering the specific players.",
+        "column_name": "Player.`player_name`"
+    }
+]

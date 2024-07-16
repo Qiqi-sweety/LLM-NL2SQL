@@ -8,7 +8,7 @@ def get_llm_filterd_table_schema(sqlite_path, result_path):
     
     with open(result_path, 'r', encoding='utf-8') as file:
         selected_columns_json = json.load(file)
-    selected_columns = selected_columns_json['columns']
+    selected_columns = [column_json['column_name'] for column_json in selected_columns_json] 
 
     create_statements, insert_statements = create_new_database_with_selected_columns(sqlite_path, selected_columns, test_sql=True, insert_sql_num=5)
     
@@ -26,6 +26,7 @@ def create_new_database_with_selected_columns(original_db, selected_columns_ori,
     for item in selected_columns_ori:
         if '.' in item and len(item.split('.')) == 2:
             table, column = item.split('.')
+            column = column.strip('`')
             if table not in selected_columns_dict:
                 selected_columns_dict[table] = []
             selected_columns_dict[table].append(column)

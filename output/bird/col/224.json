@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the bond IDs with the same atom ID 2, we need to join the `connected` table with the `atom` table to find the corresponding bond IDs.",
+        "column_name": "connected.`bond_id`"
+    },
+    {
+        "reasoning": "We need to filter the records where `atom_id2` is equal to the given atom ID (TR000_2).",
+        "column_name": "connected.`atom_id2`"
+    },
+    {
+        "reasoning": "To ensure we are looking at the correct molecule, we need to join the `connected` table with the `molecule` table to filter by the molecule label.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "We need to filter the records by the molecule label 'TR000_2'.",
+        "column_name": "molecule.`label`"
+    },
+    {
+        "reasoning": "To retrieve the bond type information, we need to join the `bond` table with the `connected` table.",
+        "column_name": "bond.`bond_type`"
+    }
+]

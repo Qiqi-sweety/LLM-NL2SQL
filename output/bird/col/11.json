@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the schools with a total enrollment of over 500, we need to sum the `Enrollment (K-12)` and `Enrollment (Ages 5-17)` columns.",
+        "column_name": "frpm.`Enrollment (K-12)`"
+    },
+    {
+        "reasoning": "To identify the schools with a total enrollment of over 500, we need to sum the `Enrollment (K-12)` and `Enrollment (Ages 5-17)` columns.",
+        "column_name": "frpm.`Enrollment (Ages 5-17)`"
+    },
+    {
+        "reasoning": "To retrieve the school codes, we need to join the `frpm` table with the `schools` table using the `CDSCode` column.",
+        "column_name": "frpm.`CDSCode`"
+    },
+    {
+        "reasoning": "To retrieve the school codes, we need to join the `frpm` table with the `schools` table using the `CDSCode` column.",
+        "column_name": "schools.`CDSCode`"
+    },
+    {
+        "reasoning": "To list the school codes of the schools with a total enrollment of over 500, we need to select the `CDSCode` from the `schools` table.",
+        "column_name": "schools.`CDSCode`"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify users with more than 100 upvotes, we need to reference the 'UpVotes' column from the 'users' table.",
+        "column_name": "users.`UpVotes`"
+    },
+    {
+        "reasoning": "To filter users with more than 1 downvote, we need to reference the 'DownVotes' column from the 'users' table.",
+        "column_name": "users.`DownVotes`"
+    },
+    {
+        "reasoning": "To link the votes to the respective users, we need to reference the 'UserId' column from the 'votes' table.",
+        "column_name": "votes.`UserId`"
+    },
+    {
+        "reasoning": "To count the number of users meeting the criteria, we need to reference the 'Id' column from the 'users' table.",
+        "column_name": "users.`Id`"
+    }
+]

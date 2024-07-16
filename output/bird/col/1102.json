@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To filter players with an overall rating of 77.",
+        "column_name": "Player_Attributes.`overall_rating`"
+    },
+    {
+        "reasoning": "To filter players who played on the specific date 2016/6/23.",
+        "column_name": "Player_Attributes.`date`"
+    },
+    {
+        "reasoning": "To get the oldest player, we need to compare the birthdays.",
+        "column_name": "Player.`birthday`"
+    },
+    {
+        "reasoning": "To retrieve the player's name.",
+        "column_name": "Player.`player_name`"
+    },
+    {
+        "reasoning": "To join Player_Attributes with Player table using player_api_id.",
+        "column_name": "Player_Attributes.`player_api_id`"
+    },
+    {
+        "reasoning": "To join Player_Attributes with Player table using player_api_id.",
+        "column_name": "Player.`player_api_id`"
+    }
+]

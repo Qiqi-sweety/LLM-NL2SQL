@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To identify molecules containing carcinogenic compounds, we need to join the `molecule` table with the `bond` table to find the bond types associated with each molecule.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "The `bond_type` column in the `bond` table is used to determine if a bond is associated with a carcinogenic compound.",
+        "column_name": "bond.`bond_type`"
+    },
+    {
+        "reasoning": "To calculate the percentage, we need to count the number of molecules that contain at least one bond with a carcinogenic type.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "The `element` column in the `atom` table is used to filter for molecules containing hydrogen.",
+        "column_name": "atom.`element`"
+    },
+    {
+        "reasoning": "The `molecule_id` column in the `atom` table is used to join with the `molecule` table to ensure we are considering the correct molecules.",
+        "column_name": "atom.`molecule_id`"
+    },
+    {
+        "reasoning": "The `label` column in the `molecule` table is used to identify carcinogenic molecules.",
+        "column_name": "molecule.`label`"
+    },
+    {
+        "reasoning": "The `molecule_id` column in the `molecule` table is used to count the number of unique molecules containing hydrogen and carcinogenic compounds.",
+        "column_name": "molecule.`molecule_id`"
+    }
+]

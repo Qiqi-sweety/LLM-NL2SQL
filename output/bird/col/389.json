@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To retrieve the names of the cards with the original type 'Creature - Elf'.",
+        "column_name": "cards.`name`"
+    },
+    {
+        "reasoning": "To filter the cards by their original type 'Creature - Elf'.",
+        "column_name": "cards.`originalType`"
+    },
+    {
+        "reasoning": "To link the rulings to the respective cards based on the UUID.",
+        "column_name": "cards.`uuid`"
+    },
+    {
+        "reasoning": "To retrieve the date of the rulings for these cards.",
+        "column_name": "rulings.`date`"
+    }
+]

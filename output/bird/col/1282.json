@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify the patients, we need to join the Examination table with the Patient table using the patient ID.",
+        "column_name": "Examination.`ID`"
+    },
+    {
+        "reasoning": "To identify the patients, we need to join the Examination table with the Patient table using the patient ID.",
+        "column_name": "Patient.`ID`"
+    },
+    {
+        "reasoning": "To retrieve the patient's birthday, we need to select the Birthday column from the Patient table.",
+        "column_name": "Patient.`Birthday`"
+    },
+    {
+        "reasoning": "To filter the Laboratory records by the patient ID, we need to join the Laboratory table with the Patient table using the patient ID.",
+        "column_name": "Laboratory.`ID`"
+    },
+    {
+        "reasoning": "To filter the Laboratory records by the patient ID, we need to join the Laboratory table with the Patient table using the patient ID.",
+        "column_name": "Patient.`ID`"
+    },
+    {
+        "reasoning": "To find the GPT values within the normal range, we need to select the GPT column from the Laboratory table.",
+        "column_name": "Laboratory.`GPT`"
+    }
+]

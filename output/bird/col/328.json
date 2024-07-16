@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To identify the molecules with the label 'TR024'.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "To join the molecule table with the bond table based on molecule_id.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "To filter the bonds that have a bond_type of '=' indicating a double bond.",
+        "column_name": "bond.`bond_type`"
+    },
+    {
+        "reasoning": "To join the bond table with the connected table based on bond_id.",
+        "column_name": "connected.`bond_id`"
+    },
+    {
+        "reasoning": "To join the connected table with the atom table based on atom_id to get the elements of the atoms involved in the double bond.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "To join the connected table with the atom table based on atom_id2 to get the elements of the atoms involved in the double bond.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "To retrieve the element names for the atoms involved in the double bond.",
+        "column_name": "atom.`element`"
+    }
+]

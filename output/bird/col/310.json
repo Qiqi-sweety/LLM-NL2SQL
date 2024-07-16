@@ -1,0 +1,34 @@
+[
+    {
+        "reasoning": "To count the number of molecules with a double bond type.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "To filter for molecules with a double bond type.",
+        "column_name": "bond.`bond_type`"
+    },
+    {
+        "reasoning": "To count the number of carcinogenic compounds.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "To filter for carcinogenic compounds based on the label.",
+        "column_name": "molecule.`label`"
+    },
+    {
+        "reasoning": "To join the bond table with the molecule table to get the molecule information for bonds.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "To join the bond table with the molecule table to get the molecule information for bonds.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "To join the molecule table with the molecule table to get the molecule information for carcinogenic labels.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "To join the molecule table with the molecule table to get the molecule information for carcinogenic labels.",
+        "column_name": "molecule.`molecule_id`"
+    }
+]

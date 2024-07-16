@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To count the number of positive comments, we need to filter the comments based on the score being greater than 60.",
+        "column_name": "comments.`Score`"
+    },
+    {
+        "reasoning": "We need to count the number of such filtered comments, hence the COUNT function requires the column to be specified.",
+        "column_name": "comments.`Id`"
+    }
+]

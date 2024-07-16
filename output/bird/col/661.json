@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To determine the age of the user, we need to reference the 'Age' column from the 'users' table.",
+        "column_name": "users.`Age`"
+    },
+    {
+        "reasoning": "To identify the most influential user, we need to reference the 'Reputation' column from the 'users' table to calculate the maximum reputation.",
+        "column_name": "users.`Reputation`"
+    },
+    {
+        "reasoning": "We need to select the user with the maximum reputation, so we must include the 'Id' column to uniquely identify the user.",
+        "column_name": "users.`Id`"
+    }
+]

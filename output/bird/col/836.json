@@ -1,0 +1,6 @@
+[
+    {
+        "reasoning": "To identify superheroes with 'John' as their first name, we need to reference the full_name column.",
+        "column_name": "superhero.`full_name`"
+    }
+]

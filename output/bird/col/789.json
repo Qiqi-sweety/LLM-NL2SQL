@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To calculate the average weight of heroes, we need to access the weight information from the superhero table.",
+        "column_name": "superhero.`weight_kg`"
+    },
+    {
+        "reasoning": "To filter the heroes who are aliens, we need to join the superhero table with the race table to get the race information.",
+        "column_name": "race.`id`"
+    },
+    {
+        "reasoning": "To identify the heroes who are aliens, we need to access the race name from the race table.",
+        "column_name": "race.`race`"
+    },
+    {
+        "reasoning": "To join the superhero table with the race table, we need to use the foreign key relationship between them.",
+        "column_name": "superhero.`race_id`"
+    },
+    {
+        "reasoning": "To join the superhero table with the race table, we need to use the foreign key relationship between them.",
+        "column_name": "race.`id`"
+    }
+]

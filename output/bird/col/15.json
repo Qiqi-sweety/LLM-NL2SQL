@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the active districts, we need to filter the schools table for active schools.",
+        "column_name": "schools.`StatusType`"
+    },
+    {
+        "reasoning": "To filter for active districts, we need to join the schools table with the districts table.",
+        "column_name": "schools.`District`"
+    },
+    {
+        "reasoning": "To calculate the average score in Reading, we need to join the satscores table with the schools table.",
+        "column_name": "satscores.`cds`"
+    },
+    {
+        "reasoning": "To calculate the average score in Reading, we need to join the satscores table with the schools table.",
+        "column_name": "satscores.`AvgScrRead`"
+    },
+    {
+        "reasoning": "To group the results by district, we need to select the district name from the schools table.",
+        "column_name": "schools.`NCESDist`"
+    }
+]

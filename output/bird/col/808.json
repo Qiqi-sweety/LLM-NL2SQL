@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To find the race of the superhero, we need to join the superhero table with the race table using the race_id foreign key.",
+        "column_name": "superhero.`race_id`"
+    },
+    {
+        "reasoning": "To filter superheroes by weight, we need to reference the weight_kg column.",
+        "column_name": "superhero.`weight_kg`"
+    },
+    {
+        "reasoning": "To filter superheroes by height, we need to reference the height_cm column.",
+        "column_name": "superhero.`height_cm`"
+    },
+    {
+        "reasoning": "To retrieve the race name, we need to select the race column from the race table.",
+        "column_name": "race.`race`"
+    }
+]

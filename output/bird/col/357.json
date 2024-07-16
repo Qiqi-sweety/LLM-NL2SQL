@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To find the card 'Duress', we need to match the card name.",
+        "column_name": "cards.`name`"
+    },
+    {
+        "reasoning": "To identify the type of promotion, we need to reference the 'promoTypes' column which contains the promotion type information.",
+        "column_name": "cards.`promoTypes`"
+    }
+]

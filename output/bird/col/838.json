@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To retrieve the full name of the superhero named 'Alien', we need to access the superhero's full name from the superhero table.",
+        "column_name": "superhero.`full_name`"
+    },
+    {
+        "reasoning": "To identify the superhero named 'Alien', we need to access the superhero's name from the superhero table.",
+        "column_name": "superhero.`superhero_name`"
+    }
+]

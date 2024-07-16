@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To count the number of users who are teenagers, we need to filter the users based on their age. The `Age` column contains the age of the users.",
+        "column_name": "users.`Age`"
+    },
+    {
+        "reasoning": "The `Id` column is necessary to uniquely identify each user. It is used in the COUNT function to count the number of users.",
+        "column_name": "users.`Id`"
+    }
+]

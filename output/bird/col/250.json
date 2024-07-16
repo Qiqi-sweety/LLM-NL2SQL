@@ -1,0 +1,38 @@
+[
+    {
+        "reasoning": "To identify carcinogenic molecules, we need to filter by the 'label' column in the 'molecule' table.",
+        "column_name": "molecule.`label`"
+    },
+    {
+        "reasoning": "To find molecules with double bonds, we need to filter by the 'bond_type' column in the 'bond' table.",
+        "column_name": "bond.`bond_type`"
+    },
+    {
+        "reasoning": "To count the number of double bonds in each molecule, we need to join the 'bond' table with the 'molecule' table on 'molecule_id'.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "To identify the molecule with the most double bonds, we need to group the results by 'molecule_id' and 'label'.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "To count the number of double bonds, we need to count the number of rows where 'bond_type' equals ' = '.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "To join the 'bond' table with the 'molecule' table, we need to use the 'molecule_id' column from the 'bond' table and match it with the 'molecule_id' column from the 'molecule' table.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "To join the 'bond' table with the 'connected' table, we need to use the 'bond_id' column from the 'bond' table and match it with the 'bond_id' column from the 'connected' table.",
+        "column_name": "connected.`bond_id`"
+    },
+    {
+        "reasoning": "To join the 'atom' table with the 'connected' table, we need to use the 'atom_id' column from the 'connected' table and match it with the 'atom_id' column from the 'atom' table.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "To join the 'molecule' table with the 'atom' table, we need to use the 'molecule_id' column from the 'atom' table and match it with the 'molecule_id' column from the 'molecule' table.",
+        "column_name": "atom.`molecule_id`"
+    }
+]

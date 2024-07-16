@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To retrieve the superhero names, we need to select the `superhero_name` column from the superhero table.",
+        "column_name": "superhero.`superhero_name`"
+    },
+    {
+        "reasoning": "To filter superheroes with neutral alignment, we need to join the superhero table with the alignment table and select the `alignment` column from the alignment table.",
+        "column_name": "alignment.`alignment`"
+    },
+    {
+        "reasoning": "To establish the join between superhero and alignment tables, we need to use the `alignment_id` column from the superhero table and the `id` column from the alignment table.",
+        "column_name": "superhero.`alignment_id`"
+    },
+    {
+        "reasoning": "To establish the join between superhero and alignment tables, we need to use the `alignment_id` column from the superhero table and the `id` column from the alignment table.",
+        "column_name": "alignment.`id`"
+    }
+]

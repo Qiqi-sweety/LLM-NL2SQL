@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify accounts with loan validity more than 12 months.",
+        "column_name": "loan.`duration`"
+    },
+    {
+        "reasoning": "To filter accounts with account opening date in 1993.",
+        "column_name": "account.`date`"
+    },
+    {
+        "reasoning": "To link the loan details to the corresponding account.",
+        "column_name": "loan.`account_id`"
+    },
+    {
+        "reasoning": "To retrieve the account details, including the account opening date.",
+        "column_name": "account.`account_id`"
+    },
+    {
+        "reasoning": "To filter accounts based on the account opening date.",
+        "column_name": "account.`date`"
+    },
+    {
+        "reasoning": "To retrieve the highest approved amount for each account.",
+        "column_name": "loan.`amount`"
+    }
+]

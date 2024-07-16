@@ -1,0 +1,46 @@
+[
+    {
+        "reasoning": "To identify the segment of customers who have made transactions.",
+        "column_name": "customers.`Segment`"
+    },
+    {
+        "reasoning": "To filter transactions based on the country 'SVK'.",
+        "column_name": "gasstations.`Country`"
+    },
+    {
+        "reasoning": "To link the transactions to the customers who made them.",
+        "column_name": "transactions_1k.`CustomerID`"
+    },
+    {
+        "reasoning": "To link the transactions to the gas stations where they occurred.",
+        "column_name": "transactions_1k.`GasStationID`"
+    },
+    {
+        "reasoning": "To link the gas stations to their respective countries.",
+        "column_name": "gasstations.`ChainID`"
+    },
+    {
+        "reasoning": "To calculate the total amount of transactions for the 'premium' segment in 'SVK'.",
+        "column_name": "transactions_1k.`Amount`"
+    },
+    {
+        "reasoning": "To calculate the total amount of transactions for the overall segment in 'SVK'.",
+        "column_name": "transactions_1k.`Amount`"
+    },
+    {
+        "reasoning": "To link the transactions to the products they represent.",
+        "column_name": "transactions_1k.`ProductID`"
+    },
+    {
+        "reasoning": "To identify the products as 'premium'.",
+        "column_name": "products.`Description`"
+    },
+    {
+        "reasoning": "To link the customers to their consumption records.",
+        "column_name": "yearmonth.`CustomerID`"
+    },
+    {
+        "reasoning": "To link the consumption records to the dates of transactions.",
+        "column_name": "yearmonth.`Date`"
+    }
+]

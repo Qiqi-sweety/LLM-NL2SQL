@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To retrieve the weight of the superhero with ID 40, we need to access the 'weight_kg' column from the 'superhero' table.",
+        "column_name": "superhero.`weight_kg`"
+    },
+    {
+        "reasoning": "To identify the superhero with ID 40, we need to access the 'id' column from the 'superhero' table.",
+        "column_name": "superhero.`id`"
+    },
+    {
+        "reasoning": "To retrieve the race of the superhero with ID 40, we need to join the 'superhero' table with the 'race' table using the 'race_id' foreign key and access the 'race' column from the 'race' table.",
+        "column_name": "race.`race`"
+    },
+    {
+        "reasoning": "To establish the join between the 'superhero' and 'race' tables, we need to access the 'race_id' column from the 'superhero' table.",
+        "column_name": "superhero.`race_id`"
+    }
+]

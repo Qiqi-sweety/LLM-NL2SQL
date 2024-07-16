@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To count the number of cards with a specific frame version.",
+        "column_name": "cards.`frameVersion`"
+    },
+    {
+        "reasoning": "To filter cards that are available on paper.",
+        "column_name": "cards.`availability`"
+    },
+    {
+        "reasoning": "To identify cards with a sensitive content warning.",
+        "column_name": "cards.`hasContentWarning`"
+    },
+    {
+        "reasoning": "To count the total number of such cards.",
+        "column_name": "cards.`id`"
+    }
+]

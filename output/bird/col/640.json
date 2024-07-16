@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify the posts made by 'Mornington'.",
+        "column_name": "posts.`OwnerUserId`"
+    },
+    {
+        "reasoning": "To identify the posts made by 'Amos'.",
+        "column_name": "posts.`OwnerUserId`"
+    },
+    {
+        "reasoning": "To retrieve the view count of posts made by 'Mornington'.",
+        "column_name": "posts.`ViewCount`"
+    },
+    {
+        "reasoning": "To retrieve the view count of posts made by 'Amos'.",
+        "column_name": "posts.`ViewCount`"
+    },
+    {
+        "reasoning": "To join the posts table with the users table to get the DisplayName of the users who posted the posts.",
+        "column_name": "users.`Id`"
+    },
+    {
+        "reasoning": "To retrieve the DisplayName of the user who posted the posts.",
+        "column_name": "users.`DisplayName`"
+    }
+]

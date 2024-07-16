@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To find the set with the highest number of cards, we need to reference the `baseSetSize` column from the `sets` table, which represents the number of cards in the base set.",
+        "column_name": "sets.`baseSetSize`"
+    },
+    {
+        "reasoning": "To identify the unique id of the set, we need to reference the `id` column from the `sets` table, which is the primary key and uniquely identifies each set.",
+        "column_name": "sets.`id`"
+    }
+]

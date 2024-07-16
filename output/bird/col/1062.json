@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To filter players with an overall rating over 80.",
+        "column_name": "Player_Attributes.`overall_rating`"
+    },
+    {
+        "reasoning": "To filter the records from the years 2008 to 2010.",
+        "column_name": "Player_Attributes.`date`"
+    },
+    {
+        "reasoning": "To retrieve the player names.",
+        "column_name": "Player.`player_name`"
+    },
+    {
+        "reasoning": "To join Player_Attributes with Player table using player_api_id for retrieving player names.",
+        "column_name": "Player_Attributes.`player_api_id`"
+    },
+    {
+        "reasoning": "To join Player_Attributes with Player table using player_api_id for retrieving player names.",
+        "column_name": "Player.`player_api_id`"
+    }
+]

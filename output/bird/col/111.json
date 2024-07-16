@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the accounts opened in Litomerice, we need to join the `account` table with the `district` table using the `district_id` column.",
+        "column_name": "account.`account_id`"
+    },
+    {
+        "reasoning": "To filter the accounts opened in 1996, we need to use the `date` column from the `account` table.",
+        "column_name": "account.`date`"
+    },
+    {
+        "reasoning": "To filter the accounts opened in Litomerice, we need to use the `A2` column from the `district` table, which refers to the district name.",
+        "column_name": "district.`A2`"
+    },
+    {
+        "reasoning": "To join the `account` table with the `district` table, we need to use the `district_id` column from both tables.",
+        "column_name": "account.`district_id`"
+    },
+    {
+        "reasoning": "To join the `account` table with the `district` table, we need to use the `district_id` column from both tables.",
+        "column_name": "district.`district_id`"
+    }
+]

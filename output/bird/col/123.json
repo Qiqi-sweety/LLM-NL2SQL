@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To retrieve the account ID for loans with an amount greater than USD300,000.",
+        "column_name": "loan.`account_id`"
+    },
+    {
+        "reasoning": "To join the account table with the loan table using the account ID as a foreign key.",
+        "column_name": "account.`account_id`"
+    },
+    {
+        "reasoning": "To retrieve the district ID from the account table to join with the district table.",
+        "column_name": "account.`district_id`"
+    },
+    {
+        "reasoning": "To join the district table with the account table using the district ID as a foreign key.",
+        "column_name": "district.`district_id`"
+    },
+    {
+        "reasoning": "To retrieve the district name from the district table, as indicated by the knowledge evidence that A2 contains district names.",
+        "column_name": "district.`A2`"
+    },
+    {
+        "reasoning": "To retrieve the region name from the district table, as indicated by the knowledge evidence that A3 contains region names.",
+        "column_name": "district.`A3`"
+    },
+    {
+        "reasoning": "To filter the loans with an amount greater than USD300,000.",
+        "column_name": "loan.`amount`"
+    }
+]

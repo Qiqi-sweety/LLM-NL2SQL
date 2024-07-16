@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To filter the events by name 'October Speaker'.",
+        "column_name": "event.`event_name`"
+    },
+    {
+        "reasoning": "To match the event name with the budget linked to it.",
+        "column_name": "budget.`link_to_event`"
+    },
+    {
+        "reasoning": "To calculate the total budgeted amount for the specified event.",
+        "column_name": "budget.`amount`"
+    }
+]

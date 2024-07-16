@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the segment with the least consumption, we need to group the data by segment.",
+        "column_name": "customers.`Segment`"
+    },
+    {
+        "reasoning": "To calculate the consumption, we need to sum the Consumption column from the yearmonth table.",
+        "column_name": "yearmonth.`Consumption`"
+    },
+    {
+        "reasoning": "To join the customers and yearmonth tables based on the CustomerID, which is a foreign key in yearmonth referencing CustomerID in customers.",
+        "column_name": "yearmonth.`CustomerID`"
+    },
+    {
+        "reasoning": "To group the data by segment and calculate the total consumption for each segment, we need to use the CustomerID from the customers table.",
+        "column_name": "customers.`CustomerID`"
+    }
+]

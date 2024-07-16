@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the schools with mailing city address in Fresno, we need to join the `schools` table with the `satscores` table using the foreign key relationship.",
+        "column_name": "satscores.`cds`"
+    },
+    {
+        "reasoning": "To identify the schools with mailing city address in Fresno, we need to join the `schools` table with the `satscores` table using the foreign key relationship.",
+        "column_name": "schools.`CDSCode`"
+    },
+    {
+        "reasoning": "To filter the schools based on the mailing city being Fresno, we need to reference the `City` column from the `schools` table.",
+        "column_name": "schools.`City`"
+    },
+    {
+        "reasoning": "To count the number of test takers, we need to reference the `NumTstTakr` column from the `satscores` table.",
+        "column_name": "satscores.`NumTstTakr`"
+    },
+    {
+        "reasoning": "To group the results by school, we need to reference the `School` column from the `schools` table.",
+        "column_name": "schools.`School`"
+    }
+]

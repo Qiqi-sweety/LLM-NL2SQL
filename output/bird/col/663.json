@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To find the youngest user, we need to access the 'Age' column from the 'users' table to determine the minimum age.",
+        "column_name": "users.`Age`"
+    },
+    {
+        "reasoning": "The 'Id' column is required to retrieve the unique identifier of the youngest user.",
+        "column_name": "users.`Id`"
+    }
+]

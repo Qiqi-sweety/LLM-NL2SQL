@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To filter events by name 'Community Theater'.",
+        "column_name": "event.`event_name`"
+    },
+    {
+        "reasoning": "To filter events by year 2019.",
+        "column_name": "event.`event_date`"
+    },
+    {
+        "reasoning": "To count the number of members who attended the event.",
+        "column_name": "attendance.`link_to_member`"
+    },
+    {
+        "reasoning": "To join the attendance table with the event table using the event ID.",
+        "column_name": "attendance.`link_to_event`"
+    },
+    {
+        "reasoning": "To join the member table with the attendance table using the member ID.",
+        "column_name": "member.`member_id`"
+    }
+]

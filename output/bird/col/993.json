@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To find the location of the Hungaroring circuit, we need to reference the 'location' column from the circuits table.",
+        "column_name": "circuits.`location`"
+    },
+    {
+        "reasoning": "The country where the circuit is located can be found in the 'country' column of the circuits table.",
+        "column_name": "circuits.`country`"
+    },
+    {
+        "reasoning": "The latitude and longitude coordinates of the circuit are stored in the 'lat' and 'lng' columns respectively.",
+        "column_name": "circuits.`lat`"
+    },
+    {
+        "reasoning": "The longitude coordinate of the circuit is stored in the 'lng' column.",
+        "column_name": "circuits.`lng`"
+    }
+]

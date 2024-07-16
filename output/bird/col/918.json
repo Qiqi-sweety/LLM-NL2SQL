@@ -1,0 +1,6 @@
+[
+    {
+        "reasoning": "To find Lewis Hamilton's reference name, we need to retrieve the `driverRef` column from the `drivers` table, which is the column that stores the reference name of the driver.",
+        "column_name": "drivers.`driverRef`"
+    }
+]

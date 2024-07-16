@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To count the number of cards that are textless and have a normal layout.",
+        "column_name": "cards.`isTextless`"
+    },
+    {
+        "reasoning": "To count the number of cards that are textless and have a normal layout.",
+        "column_name": "cards.`layout`"
+    },
+    {
+        "reasoning": "To calculate the total number of cards in the database.",
+        "column_name": "cards.`id`"
+    }
+]

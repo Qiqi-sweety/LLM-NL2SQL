@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To retrieve leagues from Germany, we need to join the League and Country tables based on the foreign key relationship and filter by the country name.",
+        "column_name": "League.`id`"
+    },
+    {
+        "reasoning": "The `id` column from the League table is necessary to retrieve the leagues.",
+        "column_name": "League.`name`"
+    },
+    {
+        "reasoning": "The `name` column from the League table is required to list the leagues' names.",
+        "column_name": "Country.`name`"
+    },
+    {
+        "reasoning": "The `name` column from the Country table is needed to filter the leagues by the country name 'Germany'.",
+        "column_name": "Country.`id`"
+    }
+]

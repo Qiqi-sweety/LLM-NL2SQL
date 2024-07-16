@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To identify superheroes published by Dark Horse Comics, we need to match the publisher's name.",
+        "column_name": "publisher.`publisher_name`"
+    },
+    {
+        "reasoning": "To count the number of superheroes, we need to reference the superhero table.",
+        "column_name": "superhero.`id`"
+    },
+    {
+        "reasoning": "To establish the relationship between superheroes and their publishers, we need to use the foreign key column in the superhero table.",
+        "column_name": "superhero.`publisher_id`"
+    }
+]

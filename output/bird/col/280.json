@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To identify triple bond type molecules, we need to select the `bond_type` column from the `bond` table.",
+        "column_name": "bond.`bond_type`"
+    },
+    {
+        "reasoning": "To filter for molecules with a triple bond, we need to join the `bond` table with the `molecule` table using the `molecule_id` column.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "To filter for molecules with a triple bond, we need to join the `bond` table with the `molecule` table using the `molecule_id` column.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "To get the bond IDs of these molecules, we need to select the `bond_id` column from the `bond` table.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "To determine if the molecules are carcinogenic, we need to select the `label` column from the `molecule` table.",
+        "column_name": "molecule.`label`"
+    },
+    {
+        "reasoning": "To filter for carcinogenic molecules, we need to join the `molecule` table with the `bond` table using the `molecule_id` column.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "To filter for carcinogenic molecules, we need to join the `molecule` table with the `bond` table using the `molecule_id` column.",
+        "column_name": "bond.`molecule_id`"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To count the number of null power cards, we need to filter the cards with a null 'power' value.",
+        "column_name": "cards.`power`"
+    },
+    {
+        "reasoning": "To identify cards that contain information about the triggered ability, we need to check for the presence of 'flavorText' or 'text' which might contain such information.",
+        "column_name": "cards.`flavorText`"
+    },
+    {
+        "reasoning": "The 'flavorText' column might not always contain the triggered ability information, so we also need to check the 'text' column.",
+        "column_name": "cards.`text`"
+    },
+    {
+        "reasoning": "We need to count the total number of such cards, so we require the 'id' column to uniquely identify each card.",
+        "column_name": "cards.`id`"
+    }
+]

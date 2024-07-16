@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To identify the team with the short name 'CLB', we need to reference the `team_short_name` column from the Team table.",
+        "column_name": "Team.`team_short_name`"
+    },
+    {
+        "reasoning": "To match the team's short name with the team's attributes, we need to join the Team table with the Team_Attributes table using the `team_api_id` foreign key.",
+        "column_name": "Team_Attributes.`team_api_id`"
+    },
+    {
+        "reasoning": "The passing class is represented by the `buildUpPlayPassingClass` column in the Team_Attributes table.",
+        "column_name": "Team_Attributes.`buildUpPlayPassingClass`"
+    }
+]

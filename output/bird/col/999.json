@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the race that recorded the fastest lap speed, we need to join the 'races' table with the 'results' table using the foreign key relationship.",
+        "column_name": "races.`raceId`"
+    },
+    {
+        "reasoning": "To retrieve the name of the race, we need the 'name' column from the 'races' table.",
+        "column_name": "races.`name`"
+    },
+    {
+        "reasoning": "To find the race with the fastest lap speed, we need to filter the results based on the 'fastestLapSpeed' column.",
+        "column_name": "results.`fastestLapSpeed`"
+    },
+    {
+        "reasoning": "To join the 'races' and 'results' tables, we need to use the 'raceId' column from the 'results' table.",
+        "column_name": "results.`raceId`"
+    },
+    {
+        "reasoning": "To determine the race that recorded the fastest lap speed, we need to select the raceId where the fastestLapSpeed is the minimum across all results.",
+        "column_name": "results.`raceId`"
+    }
+]

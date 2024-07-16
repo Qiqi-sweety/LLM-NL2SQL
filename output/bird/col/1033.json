@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To calculate the average height, we need to sum up the heights of all players born between 1990 and 1995.",
+        "column_name": "Player.`height`"
+    },
+    {
+        "reasoning": "To filter the players born between 1990 and 1995, we need to use the birthday column.",
+        "column_name": "Player.`birthday`"
+    },
+    {
+        "reasoning": "To calculate the average, we need to count the number of players born between 1990 and 1995.",
+        "column_name": "Player.`id`"
+    }
+]

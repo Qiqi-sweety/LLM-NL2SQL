@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To filter drivers by nationality, we need to reference the nationality column from the drivers table.",
+        "column_name": "drivers.`nationality`"
+    },
+    {
+        "reasoning": "To retrieve the surnames of the drivers, we need to reference the surname column from the drivers table.",
+        "column_name": "drivers.`surname`"
+    },
+    {
+        "reasoning": "To filter for Italian drivers, we need to use the value 'italian' from the knowledge evidence.",
+        "column_name": "drivers.`nationality`"
+    }
+]

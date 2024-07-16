@@ -1,0 +1,50 @@
+[
+    {
+        "reasoning": "To identify the top spending customer, we need to find the CustomerID with the highest total spending. The total spending is calculated by multiplying the Amount and Price.",
+        "column_name": "transactions_1k.`CustomerID`"
+    },
+    {
+        "reasoning": "To calculate the total spending for each customer, we need to join the transactions_1k table with the customers table to get the Segment and Currency information.",
+        "column_name": "customers.`CustomerID`"
+    },
+    {
+        "reasoning": "The total spending for each customer is calculated by multiplying the Amount and Price. We need both columns to perform this calculation.",
+        "column_name": "transactions_1k.`Amount`"
+    },
+    {
+        "reasoning": "The total spending for each customer is calculated by multiplying the Amount and Price. We need both columns to perform this calculation.",
+        "column_name": "transactions_1k.`Price`"
+    },
+    {
+        "reasoning": "To calculate the average price per single item purchased by the top spending customer, we need to use the formula: average price per item = price / amount.",
+        "column_name": "transactions_1k.`Price`"
+    },
+    {
+        "reasoning": "To calculate the average price per single item purchased by the top spending customer, we need to use the formula: average price per item = price / amount.",
+        "column_name": "transactions_1k.`Amount`"
+    },
+    {
+        "reasoning": "We need to know the currency used by the top spending customer.",
+        "column_name": "customers.`Currency`"
+    },
+    {
+        "reasoning": "To group the data by customer and calculate the average spending, we need to use the CustomerID.",
+        "column_name": "transactions_1k.`CustomerID`"
+    },
+    {
+        "reasoning": "To calculate the average spending per customer, we need to use the Date to group the transactions by month.",
+        "column_name": "transactions_1k.`Date`"
+    },
+    {
+        "reasoning": "To calculate the average spending per customer, we need to use the Date to group the transactions by month.",
+        "column_name": "yearmonth.`Date`"
+    },
+    {
+        "reasoning": "To link the transactions to the corresponding customer segment, we need to join the yearmonth table with the customers table.",
+        "column_name": "yearmonth.`CustomerID`"
+    },
+    {
+        "reasoning": "To link the transactions to the corresponding customer segment, we need to join the yearmonth table with the customers table.",
+        "column_name": "customers.`CustomerID`"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the set 'Salvat 2011', we need to match the 'name' column in the 'sets' table.",
+        "column_name": "sets.`name`"
+    },
+    {
+        "reasoning": "To count the number of translations, we need to reference the 'setCode' from the 'sets' table to join with the 'set_translations' table.",
+        "column_name": "sets.`code`"
+    },
+    {
+        "reasoning": "To ensure we only count non-null translations, we need to reference the 'translation' column from the 'set_translations' table.",
+        "column_name": "set_translations.`translation`"
+    },
+    {
+        "reasoning": "To count the translations, we need to select the count of the 'id' column from the 'set_translations' table.",
+        "column_name": "set_translations.`id`"
+    }
+]

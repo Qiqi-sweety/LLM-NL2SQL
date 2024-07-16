@@ -1,0 +1,38 @@
+[
+    {
+        "reasoning": "To identify the branch located in south Bohemia, we need the region name 'A3' from the district table.",
+        "column_name": "district.`A3`"
+    },
+    {
+        "reasoning": "To find the number of inhabitants in south Bohemia, we need the value of 'A4' from the district table.",
+        "column_name": "district.`A4`"
+    },
+    {
+        "reasoning": "To calculate the percentage of male clients, we need to count the number of male clients.",
+        "column_name": "client.`gender`"
+    },
+    {
+        "reasoning": "We need to filter the male clients by gender, which is 'M'.",
+        "column_name": "client.`gender`"
+    },
+    {
+        "reasoning": "To calculate the total number of clients, we need to count all clients.",
+        "column_name": "client.`client_id`"
+    },
+    {
+        "reasoning": "To join the client table with the district table, we need the district_id from the client table.",
+        "column_name": "client.`district_id`"
+    },
+    {
+        "reasoning": "To join the disp table with the client table, we need the client_id from the disp table.",
+        "column_name": "disp.`client_id`"
+    },
+    {
+        "reasoning": "To join the account table with the disp table, we need the account_id from the disp table.",
+        "column_name": "disp.`account_id`"
+    },
+    {
+        "reasoning": "To calculate the percentage of male clients, we need to count the number of male clients.",
+        "column_name": "client.`client_id`"
+    }
+]

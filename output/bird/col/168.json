@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the clients who opened their accounts in the district with an average salary over 10000, we need to join the `account` table with the `district` table using the `district_id` column.",
+        "column_name": "account.`district_id`"
+    },
+    {
+        "reasoning": "To filter the clients based on the average salary, we need to use the `A11` column from the `district` table, which represents the average salary.",
+        "column_name": "district.`A11`"
+    },
+    {
+        "reasoning": "To calculate the percentage of women among the clients, we need to join the `client` table with the `account` table using the `district_id` column.",
+        "column_name": "client.`district_id`"
+    },
+    {
+        "reasoning": "To identify the gender of the clients, we need to use the `gender` column from the `client` table.",
+        "column_name": "client.`gender`"
+    },
+    {
+        "reasoning": "To count the number of women clients, we need to use the `client_id` column from the `client` table.",
+        "column_name": "client.`client_id`"
+    }
+]

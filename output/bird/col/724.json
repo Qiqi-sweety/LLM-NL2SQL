@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To retrieve superhero names, we need to access the superhero table.",
+        "column_name": "superhero.`superhero_name`"
+    },
+    {
+        "reasoning": "To filter superheroes with blue eyes, we need to join the superhero table with the colour table on the eye_colour_id column.",
+        "column_name": "superhero.`eye_colour_id`"
+    },
+    {
+        "reasoning": "To filter superheroes with blond hair, we need to join the superhero table with the colour table on the hair_colour_id column.",
+        "column_name": "superhero.`hair_colour_id`"
+    },
+    {
+        "reasoning": "To retrieve the blue eye colour, we need to access the colour table.",
+        "column_name": "colour.`colour`"
+    },
+    {
+        "reasoning": "To join the superhero table with the colour table on the eye_colour_id column, we need to access the id column from the colour table.",
+        "column_name": "colour.`id`"
+    },
+    {
+        "reasoning": "To join the superhero table with the colour table on the hair_colour_id column, we need to access the id column from the colour table.",
+        "column_name": "colour.`id`"
+    }
+]

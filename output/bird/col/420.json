@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To count the number of cards that are oversized, this column is necessary to filter out the oversized cards.",
+        "column_name": "cards.`isOversized`"
+    },
+    {
+        "reasoning": "To count the number of cards that are reprinted, this column is necessary to filter out the reprinted cards.",
+        "column_name": "cards.`isReprint`"
+    },
+    {
+        "reasoning": "To count the number of cards that are printed for promotions, this column is necessary to filter out the promotional cards.",
+        "column_name": "cards.`isPromo`"
+    },
+    {
+        "reasoning": "To count the total number of cards that meet all the criteria, this column is required to return the count.",
+        "column_name": "cards.`id`"
+    }
+]

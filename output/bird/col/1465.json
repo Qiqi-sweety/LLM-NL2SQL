@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the budget category of the expense with the description 'Posters', we need to join the 'expense' table with the 'budget' table using the foreign key 'link_to_budget'.",
+        "column_name": "expense.`link_to_budget`"
+    },
+    {
+        "reasoning": "To identify the budget category of the expense with the description 'Posters', we need to join the 'expense' table with the 'budget' table using the foreign key 'link_to_budget'.",
+        "column_name": "budget.`budget_id`"
+    },
+    {
+        "reasoning": "We need to filter the expenses by the description 'Posters'.",
+        "column_name": "expense.`expense_description`"
+    },
+    {
+        "reasoning": "To retrieve the category of the budget associated with the expense, we need to select the 'category' column from the 'budget' table.",
+        "column_name": "budget.`category`"
+    }
+]

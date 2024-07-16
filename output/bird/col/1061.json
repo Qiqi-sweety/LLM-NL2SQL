@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To filter players with the first name 'Adam', we need to reference the `player_name` column from the Player table.",
+        "column_name": "Player.`player_name`"
+    },
+    {
+        "reasoning": "To filter players weighing more than 170, we need to reference the `weight` column from the Player table.",
+        "column_name": "Player.`weight`"
+    },
+    {
+        "reasoning": "To link the Player table with the Player_Attributes table, we need to use the `player_api_id` column from the Player table and the corresponding `player_api_id` column from the Player_Attributes table.",
+        "column_name": "Player_Attributes.`player_api_id`"
+    },
+    {
+        "reasoning": "To link the Player table with the Player_Attributes table, we need to use the `player_api_id` column from the Player table and the corresponding `player_api_id` column from the Player_Attributes table.",
+        "column_name": "Player.`player_api_id`"
+    }
+]

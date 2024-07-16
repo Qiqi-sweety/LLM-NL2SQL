@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify if a molecule contains Calcium, we need to match the element with 'Ca'.",
+        "column_name": "atom.`element`"
+    },
+    {
+        "reasoning": "To link the atoms to their respective molecules, we need the molecule_id from the atom table.",
+        "column_name": "atom.`molecule_id`"
+    },
+    {
+        "reasoning": "To retrieve the label of the molecule, which indicates if it is carcinogenic or not.",
+        "column_name": "molecule.`label`"
+    },
+    {
+        "reasoning": "To join the atom table with the molecule table based on the molecule_id.",
+        "column_name": "molecule.`molecule_id`"
+    }
+]

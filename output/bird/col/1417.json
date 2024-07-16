@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To filter events by type.",
+        "column_name": "event.`type`"
+    },
+    {
+        "reasoning": "To filter events based on the remaining budget condition.",
+        "column_name": "budget.`remaining`"
+    },
+    {
+        "reasoning": "To join the event and budget tables based on the foreign key relationship.",
+        "column_name": "event.`event_id`"
+    },
+    {
+        "reasoning": "To join the event and budget tables based on the foreign key relationship.",
+        "column_name": "budget.`link_to_event`"
+    }
+]

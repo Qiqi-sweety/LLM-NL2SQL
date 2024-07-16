@@ -1,0 +1,50 @@
+[
+    {
+        "reasoning": "To identify the events that are 'September Meeting'.",
+        "column_name": "event.`event_name`"
+    },
+    {
+        "reasoning": "To filter the events that occurred in September.",
+        "column_name": "event.`event_date`"
+    },
+    {
+        "reasoning": "To link the events to the budget records.",
+        "column_name": "budget.`link_to_event`"
+    },
+    {
+        "reasoning": "To link the budget records to the expenses.",
+        "column_name": "expense.`link_to_budget`"
+    },
+    {
+        "reasoning": "To filter the expenses that are categorized as 'Food'.",
+        "column_name": "expense.`expense_description`"
+    },
+    {
+        "reasoning": "To calculate the total amount spent on food.",
+        "column_name": "expense.`cost`"
+    },
+    {
+        "reasoning": "To link the expenses to the members who spent the money.",
+        "column_name": "expense.`link_to_member`"
+    },
+    {
+        "reasoning": "To link the members to the student clubs they belong to.",
+        "column_name": "member.`link_to_major`"
+    },
+    {
+        "reasoning": "To identify the members who are part of the Student_Club.",
+        "column_name": "major.`college`"
+    },
+    {
+        "reasoning": "To link the members to their personal details.",
+        "column_name": "member.`member_id`"
+    },
+    {
+        "reasoning": "To link the members to their zip codes for date filtering.",
+        "column_name": "member.`zip`"
+    },
+    {
+        "reasoning": "To filter the records for September 2023.",
+        "column_name": "event.`event_date`"
+    }
+]

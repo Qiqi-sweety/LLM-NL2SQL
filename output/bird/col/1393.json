@@ -1,0 +1,38 @@
+[
+    {
+        "reasoning": "To retrieve the full name of the Secretary, we need the first name and last name from the member table.",
+        "column_name": "member.`first_name`"
+    },
+    {
+        "reasoning": "To retrieve the full name of the Secretary, we need the first name and last name from the member table.",
+        "column_name": "member.`last_name`"
+    },
+    {
+        "reasoning": "To identify the Secretary, we need to join the member table with the position information.",
+        "column_name": "member.`position`"
+    },
+    {
+        "reasoning": "To retrieve the email address of the Secretary, we need the email column from the member table.",
+        "column_name": "member.`email`"
+    },
+    {
+        "reasoning": "To link the member to their major, we need the link_to_major column from the member table.",
+        "column_name": "member.`link_to_major`"
+    },
+    {
+        "reasoning": "To retrieve the major details, we need to join the major table using the link_to_major column.",
+        "column_name": "major.`major_id`"
+    },
+    {
+        "reasoning": "To retrieve the major details, we need the major_name column from the major table.",
+        "column_name": "major.`major_name`"
+    },
+    {
+        "reasoning": "To retrieve the major details, we need the department column from the major table.",
+        "column_name": "major.`department`"
+    },
+    {
+        "reasoning": "To retrieve the major details, we need the college column from the major table.",
+        "column_name": "major.`college`"
+    }
+]

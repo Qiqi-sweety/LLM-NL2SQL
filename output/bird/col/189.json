@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To identify female clients, we need to reference the gender column from the client table.",
+        "column_name": "client.`gender`"
+    },
+    {
+        "reasoning": "To get the account numbers, we need to reference the account_id column from the account table.",
+        "column_name": "account.`account_id`"
+    },
+    {
+        "reasoning": "To link the clients to their corresponding accounts, we need to reference the client_id column from the client table.",
+        "column_name": "client.`client_id`"
+    },
+    {
+        "reasoning": "To link the accounts to their corresponding districts, we need to reference the district_id column from the account table.",
+        "column_name": "account.`district_id`"
+    },
+    {
+        "reasoning": "To link the clients to their corresponding districts, we need to reference the district_id column from the client table.",
+        "column_name": "client.`district_id`"
+    },
+    {
+        "reasoning": "To get the information about the districts, we need to reference the district_id column from the district table.",
+        "column_name": "district.`district_id`"
+    },
+    {
+        "reasoning": "To get the average salary information, we need to reference the A11 column from the district table.",
+        "column_name": "district.`A11`"
+    }
+]

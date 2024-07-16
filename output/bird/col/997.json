@@ -1,0 +1,6 @@
+[
+    {
+        "reasoning": "To determine the citizenship of drivers, we need to reference the nationality column from the drivers table.",
+        "column_name": "drivers.`nationality`"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the molecule containing the element Tellurium, we need to join the `atom` table with the `molecule` table using the `molecule_id` column.",
+        "column_name": "atom.`molecule_id`"
+    },
+    {
+        "reasoning": "To filter the atoms in the molecule that contain Tellurium, we need to use the `element` column from the `atom` table.",
+        "column_name": "atom.`element`"
+    },
+    {
+        "reasoning": "To get the bond types associated with the atoms, we need to join the `connected` table with the `bond` table using the `bond_id` column.",
+        "column_name": "connected.`bond_id`"
+    },
+    {
+        "reasoning": "To retrieve the bond types from the `bond` table, we need to use the `bond_type` column.",
+        "column_name": "bond.`bond_type`"
+    },
+    {
+        "reasoning": "To link the bond types to the specific molecule, we need to use the `molecule_id` column from the `bond` table.",
+        "column_name": "bond.`molecule_id`"
+    }
+]

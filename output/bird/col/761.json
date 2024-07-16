@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To filter superheroes by gender, we need to join the superhero table with the gender table and select the 'gender' column from the gender table.",
+        "column_name": "gender.`id`"
+    },
+    {
+        "reasoning": "To retrieve the full names of superheroes, we need to select the 'full_name' column from the superhero table.",
+        "column_name": "superhero.`full_name`"
+    },
+    {
+        "reasoning": "To filter superheroes by weight greater than 79% of the average weight, we need to calculate the average weight of all superheroes and then multiply it by 0.79. We need to select the 'weight_kg' column from the superhero table for this calculation.",
+        "column_name": "superhero.`weight_kg`"
+    },
+    {
+        "reasoning": "To join the superhero table with the gender table, we need to use the foreign key 'gender_id' from the superhero table that references the 'id' column in the gender table.",
+        "column_name": "superhero.`gender_id`"
+    }
+]

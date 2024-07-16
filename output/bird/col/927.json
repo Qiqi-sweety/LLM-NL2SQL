@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the driver who created the fastest lap speed, we need to join the 'drivers' table with the 'results' table using the foreign key relationship.",
+        "column_name": "drivers.`driverId`"
+    },
+    {
+        "reasoning": "To retrieve the driver's forename and surname, we need to select the corresponding columns from the 'drivers' table.",
+        "column_name": "drivers.`forename`"
+    },
+    {
+        "reasoning": "To identify the fastest lap speed, we need to join the 'results' table with the 'races' table to filter for Formula_1 races.",
+        "column_name": "results.`raceId`"
+    },
+    {
+        "reasoning": "To filter for Formula_1 races, we need to select the 'name' column from the 'races' table and compare it with 'Formula_1'.",
+        "column_name": "races.`name`"
+    },
+    {
+        "reasoning": "To find the fastest lap speed, we need to select the 'fastestLapSpeed' column from the 'results' table.",
+        "column_name": "results.`fastestLapSpeed`"
+    }
+]

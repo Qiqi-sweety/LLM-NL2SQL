@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To find the district ID of the account that placed the order with the ID 33333, we need to join the `account` table with the `order` table using the `account_id` column to identify the account associated with the order ID.",
+        "column_name": "account.`district_id`"
+    },
+    {
+        "reasoning": "To identify the account that placed the order with the ID 33333, we need to reference the `account_id` from the `order` table.",
+        "column_name": "order.`account_id`"
+    },
+    {
+        "reasoning": "To filter the orders by the specific order ID 33333, we need to reference the `order_id` from the `order` table.",
+        "column_name": "order.`order_id`"
+    }
+]

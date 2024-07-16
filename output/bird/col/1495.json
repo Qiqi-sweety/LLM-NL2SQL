@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the specific customer who consumed the most, we need to join the `customers` table with the `yearmonth` table to get the customer details.",
+        "column_name": "customers.`CustomerID`"
+    },
+    {
+        "reasoning": "The `CustomerID` from the `customers` table is needed to join with the `yearmonth` table to filter the records for the specific customer.",
+        "column_name": "yearmonth.`CustomerID`"
+    },
+    {
+        "reasoning": "We need to filter the records for September 2013, so the `Date` column from the `yearmonth` table is required.",
+        "column_name": "yearmonth.`Date`"
+    },
+    {
+        "reasoning": "To calculate the total consumption, we need to sum up the `Consumption` column from the `yearmonth` table.",
+        "column_name": "yearmonth.`Consumption`"
+    },
+    {
+        "reasoning": "To order the results by consumption and get the customer with the highest consumption, we need to use the `CustomerID` from the `yearmonth` table.",
+        "column_name": "yearmonth.`CustomerID`"
+    }
+]

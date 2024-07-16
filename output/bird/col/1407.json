@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To filter the budgets for the category 'Advertising'.",
+        "column_name": "budget.`category`"
+    },
+    {
+        "reasoning": "To retrieve the budgeted amount for each budget entry.",
+        "column_name": "budget.`amount`"
+    },
+    {
+        "reasoning": "To order the results by the budgeted amount in descending order.",
+        "column_name": "budget.`amount`"
+    },
+    {
+        "reasoning": "To limit the result set to the top three entries.",
+        "column_name": "budget.`budget_id`"
+    }
+]

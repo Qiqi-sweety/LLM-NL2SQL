@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To calculate the average overall rating, we need to reference the `overall_rating` column from the Player_Attributes table.",
+        "column_name": "Player_Attributes.`overall_rating`"
+    },
+    {
+        "reasoning": "To filter the records for Marko Arnautovic, we need to reference the `player_name` column from the Player table.",
+        "column_name": "Player.`player_name`"
+    },
+    {
+        "reasoning": "To join the Player table with the Player_Attributes table based on the player's name, we need to reference the `player_api_id` column from both tables.",
+        "column_name": "Player_Attributes.`player_api_id`"
+    },
+    {
+        "reasoning": "To join the Player table with the Player_Attributes table based on the player's name, we need to reference the `player_api_id` column from both tables.",
+        "column_name": "Player.`player_api_id`"
+    },
+    {
+        "reasoning": "To filter the records based on the date range, we need to reference the `date` column from the Player_Attributes table.",
+        "column_name": "Player_Attributes.`date`"
+    }
+]

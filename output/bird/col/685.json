@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the total views on the post, we need to reference the 'ViewCount' column from the 'posts' table.",
+        "column_name": "posts.`ViewCount`"
+    },
+    {
+        "reasoning": "To name the user who posted it last time, we need to reference the 'OwnerUserId' column from the 'posts' table to find the user associated with the post.",
+        "column_name": "posts.`OwnerUserId`"
+    },
+    {
+        "reasoning": "To retrieve the user's display name, we need to join the 'users' table using the 'OwnerUserId' column from the 'posts' table.",
+        "column_name": "users.`DisplayName`"
+    },
+    {
+        "reasoning": "The post title 'Computer Game Datasets' is used to filter the specific post. We need to reference the 'Title' column from the 'posts' table.",
+        "column_name": "posts.`Title`"
+    }
+]

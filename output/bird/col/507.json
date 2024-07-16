@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To identify the set of cards with Brazil Portuguese translation.",
+        "column_name": "set_translations.`setCode`"
+    },
+    {
+        "reasoning": "To link the set code to the corresponding set information.",
+        "column_name": "sets.`code`"
+    },
+    {
+        "reasoning": "To identify the cards that are part of the sets with Brazil Portuguese translation.",
+        "column_name": "cards.`cardKingdomId`"
+    },
+    {
+        "reasoning": "To link the card kingdom ID to the corresponding card information.",
+        "column_name": "cards.`cardKingdomFoilId`"
+    },
+    {
+        "reasoning": "To determine if the card is only available online.",
+        "column_name": "cards.`isOnlineOnly`"
+    },
+    {
+        "reasoning": "To calculate the total number of cards with Brazil Portuguese translation.",
+        "column_name": "set_translations.`translation`"
+    },
+    {
+        "reasoning": "To filter the translation for Brazil Portuguese.",
+        "column_name": "set_translations.`language`"
+    }
+]

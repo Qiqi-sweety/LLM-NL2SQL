@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the cards in the set 'Abyssal Horror', we need to join the 'cards' table with the 'sets' table using the 'setCode' column.",
+        "column_name": "cards.`setCode`"
+    },
+    {
+        "reasoning": "To filter the cards with a converted Mana Cost of 10, we need to use the 'convertedManaCost' column from the 'cards' table.",
+        "column_name": "cards.`convertedManaCost`"
+    },
+    {
+        "reasoning": "To calculate the percentage, we need to count the number of cards with a converted Mana Cost of 10.",
+        "column_name": "cards.`id`"
+    },
+    {
+        "reasoning": "To identify the set 'Abyssal Horror', we need to use the 'name' column from the 'sets' table.",
+        "column_name": "sets.`name`"
+    },
+    {
+        "reasoning": "To join the 'cards' table with the 'sets' table, we need to use the 'id' column from the 'sets' table.",
+        "column_name": "sets.`id`"
+    }
+]

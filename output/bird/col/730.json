@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To identify superheroes from Marvel Comics, we need to join the superhero table with the publisher table using the publisher_id column.",
+        "column_name": "publisher.`publisher_name`"
+    },
+    {
+        "reasoning": "To filter superheroes with the superpower 'Super Strength', we need to join the superhero table with the hero_power table using the hero_id column.",
+        "column_name": "hero_power.`hero_id`"
+    },
+    {
+        "reasoning": "To filter superheroes with the superpower 'Super Strength', we also need to join the hero_power table with the superpower table using the power_id column.",
+        "column_name": "superpower.`power_name`"
+    },
+    {
+        "reasoning": "To calculate the total number of superheroes with the superpower 'Super Strength', we need to count the superhero id.",
+        "column_name": "superhero.`id`"
+    },
+    {
+        "reasoning": "To calculate the total number of superheroes from Marvel Comics, we need to count the superhero id.",
+        "column_name": "superhero.`id`"
+    },
+    {
+        "reasoning": "To retrieve superhero details such as superhero_name and full_name, we need to select these columns from the superhero table.",
+        "column_name": "superhero.`superhero_name`"
+    },
+    {
+        "reasoning": "To retrieve superhero full name, we need to select this column from the superhero table.",
+        "column_name": "superhero.`full_name`"
+    }
+]

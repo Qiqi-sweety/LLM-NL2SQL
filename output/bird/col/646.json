@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To retrieve the post titles that have positive comments, we need to join the 'comments' table with the 'posts' table to get the post information.",
+        "column_name": "comments.`PostId`"
+    },
+    {
+        "reasoning": "To get the title of the post, we need to select the 'Title' column from the 'posts' table.",
+        "column_name": "posts.`Title`"
+    },
+    {
+        "reasoning": "To retrieve the display names of the users who posted those comments, we need to join the 'comments' table with the 'users' table to get the user information.",
+        "column_name": "comments.`UserId`"
+    },
+    {
+        "reasoning": "To get the display name of the user who posted the comment, we need to select the 'DisplayName' column from the 'users' table.",
+        "column_name": "users.`DisplayName`"
+    },
+    {
+        "reasoning": "To filter out only the positive comments, we need to use the 'Score' column from the 'comments' table and specify the condition 'Score > 60'.",
+        "column_name": "comments.`Score`"
+    }
+]

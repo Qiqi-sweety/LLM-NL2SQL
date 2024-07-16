@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify Story Spotlight cards, we need the `isStorySpotlight` column.",
+        "column_name": "cards.`isStorySpotlight`"
+    },
+    {
+        "reasoning": "To identify cards without a text box, we need the `isTextless` column.",
+        "column_name": "cards.`isTextless`"
+    },
+    {
+        "reasoning": "To calculate the percentage, we need to count the total number of cards that meet the criteria.",
+        "column_name": "cards.`id`"
+    },
+    {
+        "reasoning": "To list the cards by their ID, we need to select the `id` column.",
+        "column_name": "cards.`id`"
+    }
+]

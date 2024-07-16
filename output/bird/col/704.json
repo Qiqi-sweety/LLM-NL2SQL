@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To retrieve the excerpt post ID of the tag named 'sample', we need to select the 'ExcerptPostId' column from the 'tags' table.",
+        "column_name": "tags.`ExcerptPostId`"
+    },
+    {
+        "reasoning": "To retrieve the wiki post ID of the tag named 'sample', we need to select the 'WikiPostId' column from the 'tags' table.",
+        "column_name": "tags.`WikiPostId`"
+    }
+]

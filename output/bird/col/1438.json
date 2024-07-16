@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To retrieve the college of the person whose first name is Katy.",
+        "column_name": "major.`college`"
+    },
+    {
+        "reasoning": "To identify the major associated with the person's link_to_major.",
+        "column_name": "major.`major_id`"
+    },
+    {
+        "reasoning": "To find the member with the first name 'Katy'.",
+        "column_name": "member.`first_name`"
+    },
+    {
+        "reasoning": "To link the member's major to the major table.",
+        "column_name": "member.`link_to_major`"
+    },
+    {
+        "reasoning": "To identify the member with the specified link_to_major.",
+        "column_name": "member.`member_id`"
+    },
+    {
+        "reasoning": "To match the major name with the provided link to major.",
+        "column_name": "major.`major_name`"
+    }
+]

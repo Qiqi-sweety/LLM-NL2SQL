@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the post with the oldest post link, we need to join the `postLinks` table with the `posts` table to access the post details.",
+        "column_name": "postLinks.`Id`"
+    },
+    {
+        "reasoning": "We need to join the `postLinks` table with the `posts` table using the `PostId` column to get the details of the linked post.",
+        "column_name": "postLinks.`PostId`"
+    },
+    {
+        "reasoning": "We need to join the `postLinks` table with the `posts` table using the `PostId` column to get the details of the linked post.",
+        "column_name": "posts.`Id`"
+    },
+    {
+        "reasoning": "To find the oldest post link, we need to use the `CreationDate` column from the `postLinks` table to determine the date of the link creation.",
+        "column_name": "postLinks.`CreationDate`"
+    },
+    {
+        "reasoning": "To retrieve the title of the post, we need to access the `Title` column from the `posts` table.",
+        "column_name": "posts.`Title`"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the zip codes that have post office boxes, we need to filter the records where the type is 'PO Box'.",
+        "column_name": "zip_code.`type`"
+    },
+    {
+        "reasoning": "To find the zip codes in the country of San Juan Municipio, we need to match the city with 'San Juan'.",
+        "column_name": "zip_code.`city`"
+    },
+    {
+        "reasoning": "To find the zip codes in Puerto Rico, we need to match the state with 'Puerto Rico'.",
+        "column_name": "zip_code.`state`"
+    },
+    {
+        "reasoning": "The zip code itself is the primary identifier for the records we are querying.",
+        "column_name": "zip_code.`zip_code`"
+    }
+]

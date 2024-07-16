@@ -1,0 +1,42 @@
+[
+    {
+        "reasoning": "To identify the atoms in the molecule TR206 that contain hydrogen.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "To link the atoms to their respective molecules.",
+        "column_name": "atom.`molecule_id`"
+    },
+    {
+        "reasoning": "To filter the atoms that are part of the molecule with ID 'TR206'.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "To count the number of hydrogen atoms in the molecule.",
+        "column_name": "atom.`element`"
+    },
+    {
+        "reasoning": "To calculate the total number of atoms in the molecule.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "To identify the bonds between atoms, which is necessary to determine the hydrogen atoms' contribution to the molecule.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "To link the bonds to their respective molecules.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "To identify the connections between atoms and the bonds that link them.",
+        "column_name": "connected.`bond_id`"
+    },
+    {
+        "reasoning": "To identify the first atom in the bond connection.",
+        "column_name": "connected.`atom_id`"
+    },
+    {
+        "reasoning": "To identify the second atom in the bond connection.",
+        "column_name": "connected.`atom_id2`"
+    }
+]

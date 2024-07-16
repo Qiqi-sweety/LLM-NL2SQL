@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To calculate the average overall rating, we need to access the `overall_rating` column from the Player_Attributes table.",
+        "column_name": "Player_Attributes.`overall_rating`"
+    },
+    {
+        "reasoning": "To identify the specific player, we need to join the Player table with Player_Attributes using `player_api_id` or `player_fifa_api_id`.",
+        "column_name": "Player_Attributes.`player_api_id`"
+    },
+    {
+        "reasoning": "To filter the player 'Aaron Doran', we need to join the Player table to get the player's name.",
+        "column_name": "Player.`player_name`"
+    }
+]

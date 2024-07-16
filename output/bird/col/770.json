@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To find the eye colour of Abraham Sapien, we need to match the superhero's full name with the superhero table's full_name column.",
+        "column_name": "superhero.`full_name`"
+    },
+    {
+        "reasoning": "We need to retrieve the eye colour ID from the superhero table to join it with the colour table.",
+        "column_name": "superhero.`eye_colour_id`"
+    },
+    {
+        "reasoning": "To get the actual eye colour name, we need to join the superhero table with the colour table using the eye_colour_id.",
+        "column_name": "colour.`id`"
+    },
+    {
+        "reasoning": "The eye colour name is stored in the colour table's colour column.",
+        "column_name": "colour.`colour`"
+    }
+]

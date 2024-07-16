@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To find the expansion type of the set 'Hauptset Zehnte Edition', we need to match the translation with the set name.",
+        "column_name": "set_translations.`translation`"
+    },
+    {
+        "reasoning": "The set code is used to join the set translations table with the sets table to find the corresponding set details.",
+        "column_name": "set_translations.`setCode`"
+    },
+    {
+        "reasoning": "The set code is used to join the set translations table with the sets table to find the corresponding set details.",
+        "column_name": "sets.`code`"
+    },
+    {
+        "reasoning": "The 'type' column in the sets table contains the expansion type of the set.",
+        "column_name": "sets.`type`"
+    }
+]

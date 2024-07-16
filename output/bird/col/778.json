@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To retrieve the superhero names who have the adaptation power, we need to join the superhero table with the hero_power table to find the superheroes associated with the adaptation power.",
+        "column_name": "superhero.`superhero_name`"
+    },
+    {
+        "reasoning": "We need to join the hero_power table with the superpower table to filter out the superheroes with the power 'Adaptation'.",
+        "column_name": "superpower.`power_name`"
+    },
+    {
+        "reasoning": "The hero_power table connects the superhero and superpower tables, and we need to use the hero_id column to join with the superhero table.",
+        "column_name": "hero_power.`hero_id`"
+    },
+    {
+        "reasoning": "The hero_power table connects the superhero and superpower tables, and we need to use the power_id column to join with the superpower table.",
+        "column_name": "hero_power.`power_id`"
+    }
+]

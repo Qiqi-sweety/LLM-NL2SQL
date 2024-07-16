@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify patients with a normal IgG level.",
+        "column_name": "Patient.`ID`"
+    },
+    {
+        "reasoning": "To link the patient's ID with their examination records.",
+        "column_name": "Examination.`ID`"
+    },
+    {
+        "reasoning": "To filter for normal IgG levels (between 900 and 2000).",
+        "column_name": "Examination.`aCL IgG`"
+    },
+    {
+        "reasoning": "To count the number of patients with symptoms.",
+        "column_name": "Examination.`Symptoms`"
+    },
+    {
+        "reasoning": "To link the patient's ID with their laboratory records.",
+        "column_name": "Laboratory.`ID`"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the users who have obtained the 'Organizer' badge, we need to reference the badge's Name column.",
+        "column_name": "badges.`Name`"
+    },
+    {
+        "reasoning": "To filter the users who are teenagers, we need to reference the Age column from the users table.",
+        "column_name": "users.`Age`"
+    },
+    {
+        "reasoning": "To count the number of users who have the 'Organizer' badge, we need to reference the UserId from the badges table.",
+        "column_name": "badges.`UserId`"
+    },
+    {
+        "reasoning": "To count the total number of users, we need to reference the UserId from the users table.",
+        "column_name": "users.`Id`"
+    }
+]

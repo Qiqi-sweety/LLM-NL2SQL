@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To identify the set with the id '174', we need to reference the 'id' column from the 'sets' table.",
+        "column_name": "sets.`id`"
+    },
+    {
+        "reasoning": "To retrieve the language of the set, we need to join the 'sets' table with the 'set_translations' table using the 'setCode' column.",
+        "column_name": "set_translations.`setCode`"
+    },
+    {
+        "reasoning": "To get the language information, we need to reference the 'language' column from the 'set_translations' table.",
+        "column_name": "set_translations.`language`"
+    }
+]

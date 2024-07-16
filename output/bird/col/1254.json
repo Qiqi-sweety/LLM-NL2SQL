@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify patients with a normal IgA level, we need to filter the `IGA` column from the `Laboratory` table.",
+        "column_name": "Laboratory.`IGA`"
+    },
+    {
+        "reasoning": "To filter patients who came to the hospital after 1990/1/1, we need to compare the `First Date` column from the `Patient` table with the date 1990/1/1.",
+        "column_name": "Patient.`First Date`"
+    },
+    {
+        "reasoning": "To count the number of patients, we need to use the `ID` column from the `Patient` table.",
+        "column_name": "Patient.`ID`"
+    },
+    {
+        "reasoning": "To join the `Patient` and `Laboratory` tables based on the patient ID, we need to use the `ID` column from both tables.",
+        "column_name": "Patient.`ID`"
+    },
+    {
+        "reasoning": "To join the `Patient` and `Laboratory` tables based on the patient ID, we need to use the `ID` column from both tables.",
+        "column_name": "Laboratory.`ID`"
+    }
+]

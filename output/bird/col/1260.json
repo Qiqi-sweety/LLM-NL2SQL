@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the patients whose RF is normal, we need to reference the RF column from the Laboratory table.",
+        "column_name": "Laboratory.`RF`"
+    },
+    {
+        "reasoning": "To filter patients older than 60, we need to reference the Birthday column from the Patient table to calculate the age.",
+        "column_name": "Patient.`Birthday`"
+    },
+    {
+        "reasoning": "To retrieve the patient ID, we need to reference the ID column from the Patient table.",
+        "column_name": "Patient.`ID`"
+    },
+    {
+        "reasoning": "To perform the join between the Laboratory and Patient tables based on the patient ID, we need to reference the ID column from the Laboratory table.",
+        "column_name": "Laboratory.`ID`"
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To identify the molecule with the label 'TR008', we need to reference the `label` column from the `molecule` table.",
+        "column_name": "molecule.`label`"
+    },
+    {
+        "reasoning": "To count the number of carbons in the molecule, we need to join the `atom` table with the `molecule` table using the `molecule_id` column.",
+        "column_name": "atom.`molecule_id`"
+    },
+    {
+        "reasoning": "To filter the atoms that are carbons, we need to reference the `element` column from the `atom` table.",
+        "column_name": "atom.`element`"
+    }
+]

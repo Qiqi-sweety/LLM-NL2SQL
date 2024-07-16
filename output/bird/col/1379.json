@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To count the number of meeting events, we need to filter the events by type.",
+        "column_name": "event.`type`"
+    },
+    {
+        "reasoning": "To filter events held in 2020, we need to extract the year from the event date.",
+        "column_name": "event.`event_date`"
+    },
+    {
+        "reasoning": "To count the number of events, we need to use the event ID as a unique identifier.",
+        "column_name": "event.`event_id`"
+    }
+]

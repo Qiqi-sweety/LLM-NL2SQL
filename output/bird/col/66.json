@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the schools that opened between 1/1/2000 and 12/31/2005.",
+        "column_name": "schools.`OpenDate`"
+    },
+    {
+        "reasoning": "To filter for schools that are directly funded.",
+        "column_name": "schools.`FundingType`"
+    },
+    {
+        "reasoning": "To count the number of schools that opened in the county of Stanislaus.",
+        "column_name": "schools.`County`"
+    },
+    {
+        "reasoning": "To join the schools table with the frpm table using the CDSCode as a foreign key.",
+        "column_name": "schools.`CDSCode`"
+    },
+    {
+        "reasoning": "To ensure we are considering schools that are currently open.",
+        "column_name": "schools.`StatusType`"
+    }
+]

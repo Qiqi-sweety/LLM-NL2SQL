@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To find the user with the display name 'DatEpicCoderGuyWhoPrograms', we need to match the display name in the users table.",
+        "column_name": "users.`DisplayName`"
+    },
+    {
+        "reasoning": "To retrieve the badge's name for the user, we need to join the badges table with the users table using the foreign key relationship between them.",
+        "column_name": "badges.`Name`"
+    },
+    {
+        "reasoning": "To establish the join between the users and badges tables, we need to use the foreign key relationship where badges.UserId references users.Id.",
+        "column_name": "badges.`UserId`"
+    },
+    {
+        "reasoning": "To identify the user in the badges table, we need to use the user's ID from the users table.",
+        "column_name": "users.`Id`"
+    }
+]

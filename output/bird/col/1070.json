@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To identify the league with the name 'Italy Serie A', we need to reference the `name` column from the League table.",
+        "column_name": "League.`name`"
+    },
+    {
+        "reasoning": "To retrieve the country name associated with the league, we need to join the League table with the Country table using the foreign key relationship. The `id` column from the League table is used to join with the `id` column from the Country table.",
+        "column_name": "League.`id`"
+    },
+    {
+        "reasoning": "To get the country name, we need to reference the `name` column from the Country table.",
+        "column_name": "Country.`name`"
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To identify the molecule with the label 'TR151', we need to reference the `label` column from the 'molecule' table.",
+        "column_name": "molecule.`label`"
+    },
+    {
+        "reasoning": "To find the atoms that belong to the molecule 'TR151', we need to join the 'atom' table with the 'molecule' table using the foreign key relationship between `molecule_id` in 'atom' and `molecule_id` in 'molecule'.",
+        "column_name": "atom.`molecule_id`"
+    },
+    {
+        "reasoning": "To identify the toxic elements, we need to reference the `element` column from the 'atom' table.",
+        "column_name": "atom.`element`"
+    }
+]

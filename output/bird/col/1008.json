@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify the races in which Lewis Hamilton participated.",
+        "column_name": "drivers.`driverRef`"
+    },
+    {
+        "reasoning": "To filter the races by the year 2011 and the name 'Australian Grand Prix'.",
+        "column_name": "races.`year`"
+    },
+    {
+        "reasoning": "To link the races to the pit stops made by the drivers.",
+        "column_name": "pitStops.`raceId`"
+    },
+    {
+        "reasoning": "To identify the lap number where the pit stop occurred.",
+        "column_name": "pitStops.`lap`"
+    },
+    {
+        "reasoning": "To link the pit stops to the drivers.",
+        "column_name": "pitStops.`driverId`"
+    },
+    {
+        "reasoning": "To filter the results for Lewis Hamilton.",
+        "column_name": "drivers.`surname`"
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To filter the drivers by nationality, which is 'Australian'.",
+        "column_name": "drivers.`nationality`"
+    },
+    {
+        "reasoning": "To filter the drivers born in the year 1980, we need to extract the year from the `dob` column.",
+        "column_name": "drivers.`dob`"
+    },
+    {
+        "reasoning": "To count the number of drivers that meet the criteria.",
+        "column_name": "drivers.`driverId`"
+    }
+]

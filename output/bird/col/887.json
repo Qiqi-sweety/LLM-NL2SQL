@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To filter the races by the specified year (2017).",
+        "column_name": "races.`year`"
+    },
+    {
+        "reasoning": "To retrieve the race names for the filtered races.",
+        "column_name": "races.`name`"
+    },
+    {
+        "reasoning": "To join the races table with the seasons table based on the year to ensure we are considering races from the correct season.",
+        "column_name": "seasons.`year`"
+    }
+]

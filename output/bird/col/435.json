@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To filter cards with black border color.",
+        "column_name": "cards.`borderColor`"
+    },
+    {
+        "reasoning": "To retrieve the card IDs of the cards with black border color.",
+        "column_name": "cards.`id`"
+    }
+]

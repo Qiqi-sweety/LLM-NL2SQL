@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the users who have received the outliers badge, we need to reference the badge's name.",
+        "column_name": "badges.`Name`"
+    },
+    {
+        "reasoning": "To retrieve the last accessed date of the users, we need to reference the column that stores this information in the users table.",
+        "column_name": "users.`LastAccessDate`"
+    },
+    {
+        "reasoning": "To retrieve the location of the users, we need to reference the column that stores this information in the users table.",
+        "column_name": "users.`Location`"
+    },
+    {
+        "reasoning": "To join the badges table with the users table, we need to reference the foreign key in the badges table that points to the users table.",
+        "column_name": "badges.`UserId`"
+    },
+    {
+        "reasoning": "To join the badges table with the users table, we need to reference the foreign key in the badges table that points to the users table.",
+        "column_name": "users.`Id`"
+    }
+]

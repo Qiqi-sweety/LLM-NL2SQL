@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To identify the budget with the highest budgeted amount, we need to select the `amount` column from the `budget` table.",
+        "column_name": "budget.`amount`"
+    },
+    {
+        "reasoning": "To filter the budgets by category 'Food', we need to select the `category` column from the `budget` table.",
+        "column_name": "budget.`category`"
+    }
+]

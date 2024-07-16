@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To identify patients with a normal Rhuematoid Factor, we need to reference the `SEX` column to filter for 'M' or 'F' and the `Birthday` column to calculate age if needed.",
+        "column_name": "Patient.`SEX`"
+    },
+    {
+        "reasoning": "The `Birthday` column is necessary to calculate age, which can be used to determine if the Rhuematoid Factor is normal based on age-specific criteria.",
+        "column_name": "Patient.`Birthday`"
+    },
+    {
+        "reasoning": "The `Diagnosis` column in the Patient table is needed to filter patients with a specific diagnosis.",
+        "column_name": "Patient.`Diagnosis`"
+    },
+    {
+        "reasoning": "The `ID` column in the Examination table is used to join with the Patient table and to filter for the specific examination records.",
+        "column_name": "Examination.`ID`"
+    },
+    {
+        "reasoning": "The `KCT` column in the Examination table is used to filter for a positive measure of the degree of coagulation.",
+        "column_name": "Examination.`KCT`"
+    },
+    {
+        "reasoning": "The `ID` column in the Examination table is used to join with the Patient table to get patient details.",
+        "column_name": "Examination.`ID`"
+    },
+    {
+        "reasoning": "The `ID` column in the Examination table is used to join with the Patient table to get patient details.",
+        "column_name": "Patient.`ID`"
+    }
+]

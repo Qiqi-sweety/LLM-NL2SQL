@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To filter matches by the specific league name.",
+        "column_name": "League.`name`"
+    },
+    {
+        "reasoning": "To identify the country associated with the league.",
+        "column_name": "League.`country_id`"
+    },
+    {
+        "reasoning": "To filter matches by the season.",
+        "column_name": "Match.`season`"
+    },
+    {
+        "reasoning": "To count the number of matches.",
+        "column_name": "Match.`id`"
+    },
+    {
+        "reasoning": "To join the League table with the Country table to filter by country name.",
+        "column_name": "Country.`id`"
+    },
+    {
+        "reasoning": "To filter matches by country name, specifically Scotland.",
+        "column_name": "Country.`name`"
+    }
+]

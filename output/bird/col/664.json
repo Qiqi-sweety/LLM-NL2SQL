@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To retrieve the score of the post.",
+        "column_name": "posts.`Score`"
+    },
+    {
+        "reasoning": "To identify the post with the most popular tag, which is determined by the maximum count of tags.",
+        "column_name": "tags.`Count`"
+    },
+    {
+        "reasoning": "To join the posts table with the tags table to find the posts associated with tags.",
+        "column_name": "posts.`Id`"
+    },
+    {
+        "reasoning": "To join the tags table with the posts table to find the posts associated with tags.",
+        "column_name": "tags.`ExcerptPostId`"
+    },
+    {
+        "reasoning": "To group the results by post ID to find the post with the maximum tag count.",
+        "column_name": "posts.`Id`"
+    },
+    {
+        "reasoning": "To order the results by the tag count in descending order to find the post with the most popular tag.",
+        "column_name": "tags.`Count`"
+    }
+]

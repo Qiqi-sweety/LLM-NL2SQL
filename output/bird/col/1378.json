@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To find the highest amount of budget spend for an event, we need to select the maximum value of the 'spent' column from the 'budget' table.",
+        "column_name": "budget.`spent`"
+    },
+    {
+        "reasoning": "To link the budget spend to the corresponding event, we need to join the 'budget' table with the 'event' table using the foreign key 'link_to_event'.",
+        "column_name": "budget.`link_to_event`"
+    },
+    {
+        "reasoning": "To retrieve the event details, we need to select the 'event_id' from the 'event' table.",
+        "column_name": "event.`event_id`"
+    },
+    {
+        "reasoning": "To retrieve the event name, we need to select the 'event_name' from the 'event' table.",
+        "column_name": "event.`event_name`"
+    }
+]

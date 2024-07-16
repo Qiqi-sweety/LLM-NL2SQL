@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the races held at Silverstone Circuit.",
+        "column_name": "circuits.`name`"
+    },
+    {
+        "reasoning": "To filter the races by the name 'British Grand Prix', which refers to the United Kingdom Grand Prix.",
+        "column_name": "races.`name`"
+    },
+    {
+        "reasoning": "To link the races to the circuits where they were held.",
+        "column_name": "races.`circuitId`"
+    },
+    {
+        "reasoning": "To link the races to the seasons they belong to.",
+        "column_name": "races.`year`"
+    },
+    {
+        "reasoning": "To count the number of distinct seasons where the British Grand Prix was held at Silverstone Circuit.",
+        "column_name": "seasons.`year`"
+    }
+]

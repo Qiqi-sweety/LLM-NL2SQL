@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To identify the customer who made the payment.",
+        "column_name": "customers.`CustomerID`"
+    },
+    {
+        "reasoning": "To find the transactions made by the customer on the specified date.",
+        "column_name": "transactions_1k.`TransactionID`"
+    },
+    {
+        "reasoning": "To match the transaction with the customer.",
+        "column_name": "transactions_1k.`CustomerID`"
+    },
+    {
+        "reasoning": "To filter transactions made on the specified date.",
+        "column_name": "transactions_1k.`Date`"
+    },
+    {
+        "reasoning": "To calculate the consumption decrease rate from Year 2012 to 2013.",
+        "column_name": "yearmonth.`CustomerID`"
+    },
+    {
+        "reasoning": "To match the year 2012 consumption with the customer.",
+        "column_name": "yearmonth.`Date`"
+    },
+    {
+        "reasoning": "To calculate the consumption decrease rate from Year 2012 to 2013.",
+        "column_name": "yearmonth.`Consumption`"
+    }
+]

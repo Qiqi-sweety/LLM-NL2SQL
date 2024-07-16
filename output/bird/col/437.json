@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To identify cards with black borders, we need to filter by the `borderColor` column.",
+        "column_name": "cards.`borderColor`"
+    },
+    {
+        "reasoning": "To filter for cards with full artwork, we need to check the `isFullArt` column.",
+        "column_name": "cards.`isFullArt`"
+    },
+    {
+        "reasoning": "To retrieve the name of the card, which is the main output of the query.",
+        "column_name": "cards.`name`"
+    }
+]

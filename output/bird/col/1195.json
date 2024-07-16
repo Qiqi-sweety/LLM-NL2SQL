@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To calculate the average blood albumin level, we need to reference the ALB column from the Laboratory table.",
+        "column_name": "Laboratory.`ALB`"
+    },
+    {
+        "reasoning": "To filter for female patients, we need to reference the SEX column from the Patient table.",
+        "column_name": "Patient.`SEX`"
+    },
+    {
+        "reasoning": "To filter for patients with a PLT greater than 400, we need to reference the PLT column from the Laboratory table.",
+        "column_name": "Laboratory.`PLT`"
+    },
+    {
+        "reasoning": "To filter for patients diagnosed with SLE, we need to reference the Diagnosis column from the Patient table.",
+        "column_name": "Patient.`Diagnosis`"
+    },
+    {
+        "reasoning": "To join the Laboratory and Patient tables based on the patient ID, we need to reference the ID column from both tables.",
+        "column_name": "Laboratory.`ID`"
+    },
+    {
+        "reasoning": "To join the Laboratory and Patient tables based on the patient ID, we need to reference the ID column from both tables.",
+        "column_name": "Patient.`ID`"
+    }
+]

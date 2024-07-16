@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To filter the votes made in the year 2010, we need to reference the CreationDate column from the votes table.",
+        "column_name": "votes.`CreationDate`"
+    },
+    {
+        "reasoning": "To count the number of votes made in 2010, we need to filter the votes where the year of the CreationDate is 2010.",
+        "column_name": "votes.`Id`"
+    }
+]

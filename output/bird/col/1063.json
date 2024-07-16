@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To find Aaron Doran's potential score, we need to identify the player by name. The player's name is stored in the Player table.",
+        "column_name": "Player.`player_name`"
+    },
+    {
+        "reasoning": "Once we have the player's name, we can use the player's API ID to find the corresponding player attributes in the Player_Attributes table.",
+        "column_name": "Player_Attributes.`player_api_id`"
+    },
+    {
+        "reasoning": "The potential score is a specific attribute of the player, which is stored in the Player_Attributes table.",
+        "column_name": "Player_Attributes.`potential`"
+    }
+]

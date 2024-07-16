@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the bond with the specific ID 'TR004_8_9', we need to reference the bond_id column from the bond table.",
+        "column_name": "bond.`bond_id`"
+    },
+    {
+        "reasoning": "To find the atoms connected to the bond with ID 'TR004_8_9', we need to join the bond table with the connected table using the bond_id column.",
+        "column_name": "connected.`bond_id`"
+    },
+    {
+        "reasoning": "To get the atom IDs of the connected atoms, we need to reference the atom_id column from the connected table.",
+        "column_name": "connected.`atom_id`"
+    },
+    {
+        "reasoning": "To retrieve the elements of the atoms connected to the bond, we need to join the atom table with the connected table using the atom_id column.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "To get the element names corresponding to the atom IDs, we need to reference the element column from the atom table.",
+        "column_name": "atom.`element`"
+    }
+]

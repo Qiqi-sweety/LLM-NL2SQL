@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To count the number of posts with exactly one comment.",
+        "column_name": "posts.`CommentCount`"
+    },
+    {
+        "reasoning": "To filter posts with a CommentCount of 1.",
+        "column_name": "posts.`Id`"
+    },
+    {
+        "reasoning": "To join comments table with posts table based on PostId.",
+        "column_name": "comments.`PostId`"
+    },
+    {
+        "reasoning": "To count the number of comments with a score of 0 in posts with exactly one comment.",
+        "column_name": "comments.`Score`"
+    },
+    {
+        "reasoning": "To filter comments with a Score of 0.",
+        "column_name": "comments.`Id`"
+    }
+]

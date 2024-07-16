@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To identify cards that are promotional paintings, we need to check the 'isPromo' column which indicates if a card is promotional or not.",
+        "column_name": "cards.`isPromo`"
+    },
+    {
+        "reasoning": "To identify cards that have multiple faces on the same card, we need to check if the 'side' column is not null.",
+        "column_name": "cards.`side`"
+    },
+    {
+        "reasoning": "The 'name' column is required to list the names of the cards that meet the criteria.",
+        "column_name": "cards.`name`"
+    }
+]

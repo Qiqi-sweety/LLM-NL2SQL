@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the school with the highest number of test takers who received SAT scores of at least 1500, we need to join the `schools` table with the `satscores` table using the `CDSCode` to get the school details.",
+        "column_name": "schools.`CDSCode`"
+    },
+    {
+        "reasoning": "To filter the schools based on the number of test takers who received SAT scores of at least 1500, we need to use the `NumTstTakr` column from the `satscores` table.",
+        "column_name": "satscores.`NumTstTakr`"
+    },
+    {
+        "reasoning": "To filter the schools based on the SAT scores of at least 1500, we need to use the `NumGE1500` column from the `satscores` table.",
+        "column_name": "satscores.`NumGE1500`"
+    },
+    {
+        "reasoning": "To get the school name, we need to use the `School` column from the `schools` table.",
+        "column_name": "schools.`School`"
+    },
+    {
+        "reasoning": "To get the administrator's email address, we need to use the `AdmEmail1` column from the `schools` table.",
+        "column_name": "schools.`AdmEmail1`"
+    }
+]

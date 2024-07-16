@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To calculate the average time in milliseconds spent at a pit stop, we need to use the 'milliseconds' column from the 'pitStops' table.",
+        "column_name": "pitStops.`milliseconds`"
+    },
+    {
+        "reasoning": "To filter the pit stops of Lewis Hamilton, we need to join the 'pitStops' table with the 'drivers' table using the 'driverId' column.",
+        "column_name": "drivers.`driverId`"
+    },
+    {
+        "reasoning": "To ensure that we are considering pit stops from Formula_1 races, we need to join the 'pitStops' table with the 'races' table using the 'raceId' column.",
+        "column_name": "races.`raceId`"
+    },
+    {
+        "reasoning": "To filter the races that are part of Formula_1, we need to join the 'races' table with the 'seasons' table using the 'year' column.",
+        "column_name": "seasons.`year`"
+    },
+    {
+        "reasoning": "To filter for Lewis Hamilton, we need to use the 'surname' column from the 'drivers' table.",
+        "column_name": "drivers.`surname`"
+    }
+]

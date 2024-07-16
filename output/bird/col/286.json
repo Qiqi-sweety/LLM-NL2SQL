@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To count the number of compounds that form a triple-bond, we need to count the number of bonds with bond_type '#' in the bond table.",
+        "column_name": "bond.`bond_type`"
+    },
+    {
+        "reasoning": "To identify the compounds that have a triple-bond, we need to join the bond table with the molecule table using the molecule_id to get the compound labels.",
+        "column_name": "bond.`molecule_id`"
+    },
+    {
+        "reasoning": "To count the total number of compounds in the database, we need to count the number of entries in the molecule table.",
+        "column_name": "molecule.`molecule_id`"
+    }
+]

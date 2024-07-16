@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To calculate the total cost of game events, we need to sum the cost from the expense table.",
+        "column_name": "expense.`cost`"
+    },
+    {
+        "reasoning": "To count the number of game events, we need to count the distinct event IDs from the event table.",
+        "column_name": "event.`event_id`"
+    },
+    {
+        "reasoning": "To identify the game events, we need to filter the events by their type.",
+        "column_name": "event.`type`"
+    },
+    {
+        "reasoning": "To link the expenses to their respective events, we need the event ID from the event table.",
+        "column_name": "event.`event_id`"
+    },
+    {
+        "reasoning": "To link the expenses to their respective budgets, we need the budget ID from the budget table.",
+        "column_name": "budget.`budget_id`"
+    },
+    {
+        "reasoning": "To link the expenses to their respective events through the budget table, we need the link_to_event column from the budget table.",
+        "column_name": "budget.`link_to_event`"
+    },
+    {
+        "reasoning": "To link the expenses to their respective budgets through the expense table, we need the link_to_budget column from the expense table.",
+        "column_name": "expense.`link_to_budget`"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To calculate the annual average number of races, we need to count the number of races per year.",
+        "column_name": "races.`year`"
+    },
+    {
+        "reasoning": "To filter the races that occurred during the first 10 years of the 21st century, we need to compare the race date with the specified range.",
+        "column_name": "races.`date`"
+    },
+    {
+        "reasoning": "The `year` column from the `seasons` table is used to join with the `races` table to ensure we are considering races from the first 10 years of the 21st century.",
+        "column_name": "seasons.`year`"
+    },
+    {
+        "reasoning": "To calculate the average, we need to count the number of races. The `raceId` column is used to uniquely identify each race.",
+        "column_name": "races.`raceId`"
+    }
+]

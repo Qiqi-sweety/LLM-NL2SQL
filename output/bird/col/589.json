@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To find the user ID with the highest reputation, we need to reference the Reputation column to determine the maximum value.",
+        "column_name": "users.`Reputation`"
+    },
+    {
+        "reasoning": "The user ID is required to identify which user has the highest reputation. The Id column provides this information.",
+        "column_name": "users.`Id`"
+    }
+]

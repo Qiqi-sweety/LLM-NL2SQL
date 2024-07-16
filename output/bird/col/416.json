@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify cards in French, we need to reference the `language` column from the `foreign_data` table, which is linked to the `cards` table via the `uuid` foreign key.",
+        "column_name": "foreign_data.`language`"
+    },
+    {
+        "reasoning": "To count the number of cards without power, we need to reference the `power` column from the `cards` table.",
+        "column_name": "cards.`power`"
+    },
+    {
+        "reasoning": "To calculate the percentage, we need to count the total number of cards without power. We reference the `id` column from the `cards` table to count all cards.",
+        "column_name": "cards.`id`"
+    },
+    {
+        "reasoning": "The `uuid` column is necessary to join the `cards` table with the `foreign_data` table to filter cards by language.",
+        "column_name": "cards.`uuid`"
+    },
+    {
+        "reasoning": "The `uuid` column is necessary to join the `cards` table with the `legalities` table, although it is not directly used in the query.",
+        "column_name": "cards.`uuid`"
+    }
+]

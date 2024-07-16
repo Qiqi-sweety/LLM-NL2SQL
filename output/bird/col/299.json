@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify if the molecule is TR124, we need to retrieve the label associated with the molecule.",
+        "column_name": "molecule.`label`"
+    },
+    {
+        "reasoning": "To link the molecule to its label, we need to join the atom table with the molecule table.",
+        "column_name": "atom.`molecule_id`"
+    },
+    {
+        "reasoning": "To link the molecule to its label, we need to join the atom table with the molecule table.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "To filter the molecules by the specific label 'TR124', we need to use the molecule's label column.",
+        "column_name": "molecule.`label`"
+    }
+]

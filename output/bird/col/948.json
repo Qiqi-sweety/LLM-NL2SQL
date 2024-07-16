@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To calculate the average points of constructors, we need to access the points column from the constructorResults table.",
+        "column_name": "constructorResults.`points`"
+    },
+    {
+        "reasoning": "To filter the constructors by nationality, we need to access the nationality column from the constructors table.",
+        "column_name": "constructors.`nationality`"
+    },
+    {
+        "reasoning": "To join the constructors table with the constructorResults table, we need to use the constructorId column from both tables.",
+        "column_name": "constructors.`constructorId`"
+    },
+    {
+        "reasoning": "To join the constructorResults table with the races table, we need to use the raceId column from both tables.",
+        "column_name": "constructorResults.`raceId`"
+    },
+    {
+        "reasoning": "To join the races table with the seasons table, we need to use the year column from both tables.",
+        "column_name": "races.`year`"
+    },
+    {
+        "reasoning": "To filter the results by the nationality 'British', we need to use a WHERE clause that includes the nationality column from the constructors table.",
+        "column_name": "constructors.`nationality`"
+    }
+]

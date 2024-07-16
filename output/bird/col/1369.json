@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the event with the highest budget amount, we need to select the event name from the event table.",
+        "column_name": "event.`event_name`"
+    },
+    {
+        "reasoning": "We need to find the maximum budget amount, which is stored in the 'amount' column of the budget table.",
+        "column_name": "budget.`amount`"
+    },
+    {
+        "reasoning": "To join the event and budget tables based on the foreign key relationship, we need to reference the 'event_id' column from the event table and the 'link_to_event' column from the budget table.",
+        "column_name": "event.`event_id`"
+    },
+    {
+        "reasoning": "To join the event and budget tables based on the foreign key relationship, we need to reference the 'event_id' column from the event table and the 'link_to_event' column from the budget table.",
+        "column_name": "budget.`link_to_event`"
+    }
+]

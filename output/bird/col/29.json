@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the school with the largest enrollment, we need to use the enrollment count for grades K-12.",
+        "column_name": "frpm.`Enrollment (K-12)`"
+    },
+    {
+        "reasoning": "To find the school with the largest enrollment, we need to join the frpm table with the schools table using the CDSCode as the foreign key.",
+        "column_name": "frpm.`CDSCode`"
+    },
+    {
+        "reasoning": "To find the school with the largest enrollment, we need to join the frpm table with the schools table using the CDSCode as the foreign key.",
+        "column_name": "schools.`CDSCode`"
+    },
+    {
+        "reasoning": "To determine when the school opened, we need to use the OpenDate column from the schools table.",
+        "column_name": "schools.`OpenDate`"
+    }
+]

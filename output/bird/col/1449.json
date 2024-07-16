@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To retrieve the full name of the members.",
+        "column_name": "member.`first_name`"
+    },
+    {
+        "reasoning": "To retrieve the full name of the members.",
+        "column_name": "member.`last_name`"
+    },
+    {
+        "reasoning": "To retrieve the major name of the members.",
+        "column_name": "major.`major_name`"
+    },
+    {
+        "reasoning": "To link the expenses to the members who incurred them.",
+        "column_name": "expense.`link_to_member`"
+    },
+    {
+        "reasoning": "To link the members to their respective majors.",
+        "column_name": "member.`link_to_major`"
+    },
+    {
+        "reasoning": "To filter expenses where the cost is more than a hundred dollars.",
+        "column_name": "expense.`cost`"
+    }
+]

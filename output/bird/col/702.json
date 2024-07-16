@@ -1,0 +1,6 @@
+[
+    {
+        "reasoning": "To count the number of posts with a score less than 20, we need to reference the `Score` column from the `posts` table.",
+        "column_name": "posts.`Score`"
+    }
+]

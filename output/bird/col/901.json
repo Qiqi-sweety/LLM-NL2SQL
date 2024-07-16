@@ -1,0 +1,34 @@
+[
+    {
+        "reasoning": "To filter the races by the year 2005.",
+        "column_name": "races.`year`"
+    },
+    {
+        "reasoning": "To retrieve the race names.",
+        "column_name": "races.`name`"
+    },
+    {
+        "reasoning": "To retrieve the circuit names associated with the races.",
+        "column_name": "circuits.`name`"
+    },
+    {
+        "reasoning": "To retrieve the locations of the circuits.",
+        "column_name": "circuits.`location`"
+    },
+    {
+        "reasoning": "To join the races table with the circuits table on the circuitId column.",
+        "column_name": "races.`circuitId`"
+    },
+    {
+        "reasoning": "To join the races table with the circuits table on the circuitId column.",
+        "column_name": "circuits.`circuitId`"
+    },
+    {
+        "reasoning": "To join the races table with the seasons table on the year column.",
+        "column_name": "races.`year`"
+    },
+    {
+        "reasoning": "To join the races table with the seasons table on the year column.",
+        "column_name": "seasons.`year`"
+    }
+]

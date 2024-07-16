@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To calculate the average, we need to count the number of superheroes. This requires the superhero's ID.",
+        "column_name": "superhero.`id`"
+    },
+    {
+        "reasoning": "The question asks for superheroes with no skin colour, which requires us to filter by the skin_colour_id. This column is a foreign key that references the colour table.",
+        "column_name": "superhero.`skin_colour_id`"
+    },
+    {
+        "reasoning": "To identify superheroes with no skin colour, we need to join with the colour table to check if the skin_colour_id corresponds to an entry with id = 1.",
+        "column_name": "colour.`id`"
+    }
+]

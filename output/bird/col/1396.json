@@ -1,0 +1,50 @@
+[
+    {
+        "reasoning": "To count the number of events attended by Luisa Guidi.",
+        "column_name": "attendance.`link_to_event`"
+    },
+    {
+        "reasoning": "To identify the events attended by Luisa Guidi.",
+        "column_name": "event.`event_id`"
+    },
+    {
+        "reasoning": "To retrieve the first name and last name of the member to match with 'Luisa Guidi'.",
+        "column_name": "member.`first_name`"
+    },
+    {
+        "reasoning": "To retrieve the first name and last name of the member to match with 'Luisa Guidi'.",
+        "column_name": "member.`last_name`"
+    },
+    {
+        "reasoning": "To link the member to the event they attended.",
+        "column_name": "attendance.`link_to_member`"
+    },
+    {
+        "reasoning": "To retrieve the major name of the member.",
+        "column_name": "major.`major_name`"
+    },
+    {
+        "reasoning": "To link the member to their major.",
+        "column_name": "member.`link_to_major`"
+    },
+    {
+        "reasoning": "To link the member to their zip code.",
+        "column_name": "member.`zip`"
+    },
+    {
+        "reasoning": "To link the zip code to the city, county, state, and short state for address details.",
+        "column_name": "zip_code.`city`"
+    },
+    {
+        "reasoning": "To link the zip code to the city, county, state, and short state for address details.",
+        "column_name": "zip_code.`county`"
+    },
+    {
+        "reasoning": "To link the zip code to the city, county, state, and short state for address details.",
+        "column_name": "zip_code.`state`"
+    },
+    {
+        "reasoning": "To link the zip code to the city, county, state, and short state for address details.",
+        "column_name": "zip_code.`short_state`"
+    }
+]

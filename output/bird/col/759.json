@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To find the heaviest superhero, we need to use the superhero's weight.",
+        "column_name": "superhero.`weight_kg`"
+    },
+    {
+        "reasoning": "To retrieve the superhero's eye colour, we need to join the superhero table with the colour table using the eye_colour_id.",
+        "column_name": "superhero.`eye_colour_id`"
+    },
+    {
+        "reasoning": "The eye_colour_id is a foreign key that references the id in the colour table.",
+        "column_name": "colour.`id`"
+    },
+    {
+        "reasoning": "We need to select the superhero's name to identify the superhero.",
+        "column_name": "superhero.`superhero_name`"
+    },
+    {
+        "reasoning": "We need to join the superhero table with the colour table to get the eye colour name.",
+        "column_name": "colour.`colour`"
+    }
+]

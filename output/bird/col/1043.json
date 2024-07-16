@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To retrieve the short name of the football team, we need to access the `team_short_name` column from the Team table.",
+        "column_name": "Team.`team_short_name`"
+    },
+    {
+        "reasoning": "To filter the team by its long name, we need to access the `team_long_name` column from the Team table.",
+        "column_name": "Team.`team_long_name`"
+    }
+]

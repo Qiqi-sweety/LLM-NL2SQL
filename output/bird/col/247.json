@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the atoms that cannot bond with any other atoms, we need to select the `atom_id` from the `atom` table.",
+        "column_name": "atom.`atom_id`"
+    },
+    {
+        "reasoning": "We need to filter out the atoms based on their elements. Therefore, we need to select the `element` column from the `atom` table.",
+        "column_name": "atom.`element`"
+    },
+    {
+        "reasoning": "To ensure that we are only considering atoms that cannot bond with any other atoms, we need to exclude those that have a corresponding entry in the `connected` table. Hence, we need to join the `atom` table with the `connected` table on `atom_id`.",
+        "column_name": "connected.`atom_id`"
+    },
+    {
+        "reasoning": "We need to check if there is no bond associated with the atom, which means the `bond_id` should be NULL in the `connected` table.",
+        "column_name": "connected.`bond_id`"
+    }
+]

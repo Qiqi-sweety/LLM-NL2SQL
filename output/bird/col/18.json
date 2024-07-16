@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To filter schools by County Name, which is Contra Costa.",
+        "column_name": "schools.`County`"
+    },
+    {
+        "reasoning": "To filter schools that are directly funded, which is indicated by the FundingType column.",
+        "column_name": "schools.`FundingType`"
+    },
+    {
+        "reasoning": "To count the number of schools, we need to select the School column from the schools table.",
+        "column_name": "schools.`School`"
+    },
+    {
+        "reasoning": "To join the schools table with the satscores table using the CDSCode as a foreign key.",
+        "column_name": "schools.`CDSCode`"
+    },
+    {
+        "reasoning": "To filter the satscores by the number of test takers not more than 250, we need to select the NumTstTakr column.",
+        "column_name": "satscores.`NumTstTakr`"
+    },
+    {
+        "reasoning": "To join the satscores table with the schools table using the CDSCode as a foreign key.",
+        "column_name": "satscores.`cds`"
+    }
+]

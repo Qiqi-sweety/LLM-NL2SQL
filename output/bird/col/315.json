@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify molecules containing the 'cl' element.",
+        "column_name": "atom.`element`"
+    },
+    {
+        "reasoning": "To filter molecules that contain the 'cl' element.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "To link the atoms to their respective molecules.",
+        "column_name": "atom.`molecule_id`"
+    },
+    {
+        "reasoning": "To identify carcinogenic molecules based on the label.",
+        "column_name": "molecule.`label`"
+    }
+]

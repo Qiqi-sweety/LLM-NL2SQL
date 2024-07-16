@@ -1,0 +1,34 @@
+[
+    {
+        "reasoning": "To identify LAM customers, we need to join the customers table with the yearmonth table to filter by Segment.",
+        "column_name": "customers.`CustomerID`"
+    },
+    {
+        "reasoning": "To filter for LAM customers, we need to reference the Segment column from the customers table.",
+        "column_name": "customers.`Segment`"
+    },
+    {
+        "reasoning": "To calculate the total number of LAM customers, we need to count the unique CustomerID from the customers table.",
+        "column_name": "customers.`CustomerID`"
+    },
+    {
+        "reasoning": "To calculate the total number of LAM customers who consumed more than 46.73, we need to join the yearmonth table with the transactions_1k table to filter by Consumption.",
+        "column_name": "yearmonth.`CustomerID`"
+    },
+    {
+        "reasoning": "To filter for the specific consumption amount, we need to reference the Consumption column from the yearmonth table.",
+        "column_name": "yearmonth.`Consumption`"
+    },
+    {
+        "reasoning": "To calculate the total number of LAM customers who consumed more than 46.73, we need to join the transactions_1k table with the yearmonth table to filter by Amount.",
+        "column_name": "transactions_1k.`Amount`"
+    },
+    {
+        "reasoning": "To calculate the total number of LAM customers who consumed more than 46.73, we need to reference the Amount column from the transactions_1k table.",
+        "column_name": "transactions_1k.`Amount`"
+    },
+    {
+        "reasoning": "To calculate the percentage, we need to join the customers table with the transactions_1k table to ensure we are considering the correct customers.",
+        "column_name": "transactions_1k.`CustomerID`"
+    }
+]

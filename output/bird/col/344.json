@@ -1,0 +1,38 @@
+[
+    {
+        "reasoning": "To identify cards with mythic rarity.",
+        "column_name": "cards.`rarity`"
+    },
+    {
+        "reasoning": "To filter for cards that are banned in the gladiator format.",
+        "column_name": "legalities.`status`"
+    },
+    {
+        "reasoning": "To specify the format in which the cards are banned.",
+        "column_name": "legalities.`format`"
+    },
+    {
+        "reasoning": "To join the cards table with the legalities table based on the card's UUID.",
+        "column_name": "cards.`uuid`"
+    },
+    {
+        "reasoning": "To join the cards table with the legalities table based on the card's UUID.",
+        "column_name": "legalities.`uuid`"
+    },
+    {
+        "reasoning": "To select the name of the card, which is the primary identifier for the card.",
+        "column_name": "cards.`name`"
+    },
+    {
+        "reasoning": "To include the set information of the card, which can be useful for additional filtering or display.",
+        "column_name": "cards.`setCode`"
+    },
+    {
+        "reasoning": "To join the sets table with the cards table based on the set code.",
+        "column_name": "cards.`setCode`"
+    },
+    {
+        "reasoning": "To join the sets table with the cards table based on the set code.",
+        "column_name": "sets.`code`"
+    }
+]

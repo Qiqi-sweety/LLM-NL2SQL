@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To identify the patient who first came to the hospital on the specified date.",
+        "column_name": "Patient.`First Date`"
+    },
+    {
+        "reasoning": "To filter patients based on the diagnosis of SJS.",
+        "column_name": "Patient.`Diagnosis`"
+    },
+    {
+        "reasoning": "To count the total number of Laboratory tests for the patient.",
+        "column_name": "Laboratory.`ID`"
+    },
+    {
+        "reasoning": "To link the Laboratory table with the Patient table based on the patient ID.",
+        "column_name": "Patient.`ID`"
+    },
+    {
+        "reasoning": "To filter Laboratory tests that occurred in the year 1995.",
+        "column_name": "Laboratory.`Date`"
+    }
+]

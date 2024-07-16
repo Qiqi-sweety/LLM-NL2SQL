@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To find the highest and shortest football players, we need to calculate the maximum and minimum height.",
+        "column_name": "Player.`height`"
+    },
+    {
+        "reasoning": "To calculate the average finishing rate, we need to use the 'finishing' column.",
+        "column_name": "Player_Attributes.`finishing`"
+    },
+    {
+        "reasoning": "To link the player attributes to the player information, we need the player's API ID.",
+        "column_name": "Player_Attributes.`player_api_id`"
+    },
+    {
+        "reasoning": "To link the player information to the player attributes, we need the player's FIFA API ID.",
+        "column_name": "Player_Attributes.`player_fifa_api_id`"
+    },
+    {
+        "reasoning": "To identify the players, we need their names.",
+        "column_name": "Player.`player_name`"
+    }
+]

@@ -1,0 +1,54 @@
+[
+    {
+        "reasoning": "To identify the client with client_id 992.",
+        "column_name": "client.`client_id`"
+    },
+    {
+        "reasoning": "To retrieve the amount of debt associated with the client's loans.",
+        "column_name": "loan.`amount`"
+    },
+    {
+        "reasoning": "To determine the status of the client's payments.",
+        "column_name": "loan.`status`"
+    },
+    {
+        "reasoning": "To join the client table with the loan table using the client_id.",
+        "column_name": "client.`client_id`"
+    },
+    {
+        "reasoning": "To join the client table with the loan table using the client_id.",
+        "column_name": "loan.`account_id`"
+    },
+    {
+        "reasoning": "To join the loan table with the account table using the account_id.",
+        "column_name": "loan.`account_id`"
+    },
+    {
+        "reasoning": "To join the loan table with the account table using the account_id.",
+        "column_name": "account.`account_id`"
+    },
+    {
+        "reasoning": "To retrieve the frequency of the client's account activity.",
+        "column_name": "account.`frequency`"
+    },
+    {
+        "reasoning": "To join the account table with the client table using the district_id.",
+        "column_name": "account.`district_id`"
+    },
+    {
+        "reasoning": "To join the account table with the client table using the district_id.",
+        "column_name": "client.`district_id`"
+    },
+    {
+        "reasoning": "To retrieve the district information associated with the client's district_id.",
+        "column_name": "district.`district_id`"
+    },
+    {
+        "reasoning": "To join the account table with the district table using the district_id.",
+        "column_name": "account.`district_id`"
+    },
+    {
+        "reasoning": "To join the account table with the district table using the district_id.",
+        "column_name": "district.`district_id`"
+    }
+]

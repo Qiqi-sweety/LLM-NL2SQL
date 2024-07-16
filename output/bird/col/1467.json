@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To calculate the total amount spent on speaker gifts, we need to reference the 'spent' column from the 'budget' table.",
+        "column_name": "budget.`spent`"
+    },
+    {
+        "reasoning": "To identify the category of the spent amount, we need to reference the 'category' column from the 'budget' table.",
+        "column_name": "budget.`category`"
+    },
+    {
+        "reasoning": "To list the name of the event, we need to join the 'budget' table with the 'event' table using the foreign key 'link_to_event'.",
+        "column_name": "budget.`link_to_event`"
+    },
+    {
+        "reasoning": "To retrieve the name of the event, we need to reference the 'event_name' column from the 'event' table.",
+        "column_name": "event.`event_name`"
+    }
+]

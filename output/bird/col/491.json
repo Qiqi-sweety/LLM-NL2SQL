@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To retrieve the magic card market name for the set, we need to select the `mcmName` column from the `sets` table.",
+        "column_name": "sets.`mcmName`"
+    },
+    {
+        "reasoning": "To filter the set by its release date, we need to select the `releaseDate` column from the `sets` table.",
+        "column_name": "sets.`releaseDate`"
+    }
+]

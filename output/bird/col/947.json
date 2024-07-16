@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To count the number of British drivers, we need to filter the rows based on the nationality of the drivers.",
+        "column_name": "drivers.`nationality`"
+    },
+    {
+        "reasoning": "To filter drivers born after 1980, we need to compare the `dob` column with the year 1980.",
+        "column_name": "drivers.`dob`"
+    },
+    {
+        "reasoning": "The `nationality` column should be compared with the string 'British' to filter out the British drivers.",
+        "column_name": "drivers.`nationality`"
+    },
+    {
+        "reasoning": "The `dob` column should be compared with the year '1980' to filter out drivers born after 1980.",
+        "column_name": "drivers.`dob`"
+    }
+]

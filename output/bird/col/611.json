@@ -1,0 +1,14 @@
+[
+    {
+        "reasoning": "To identify the badges obtained by users on a specific date.",
+        "column_name": "badges.`Date`"
+    },
+    {
+        "reasoning": "To link the badges to the users who obtained them.",
+        "column_name": "badges.`UserId`"
+    },
+    {
+        "reasoning": "To retrieve the reputation of the users who obtained the badges.",
+        "column_name": "users.`Reputation`"
+    }
+]

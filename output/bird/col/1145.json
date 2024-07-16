@@ -1,0 +1,26 @@
+[
+    {
+        "reasoning": "To identify the league, we need to join the Match table with the League table to get the league name.",
+        "column_name": "League.`id`"
+    },
+    {
+        "reasoning": "To filter the matches for the 2015-2016 season, we need the season column from the Match table.",
+        "column_name": "Match.`season`"
+    },
+    {
+        "reasoning": "To count the number of games per league, we need to group by the league's id.",
+        "column_name": "League.`id`"
+    },
+    {
+        "reasoning": "To count the number of games per league, we need to count the Match table's id.",
+        "column_name": "Match.`id`"
+    },
+    {
+        "reasoning": "To join the Match table with the League table, we need the league_id column from the Match table.",
+        "column_name": "Match.`league_id`"
+    },
+    {
+        "reasoning": "To filter the matches for the 2015-2016 season, we need to compare the season column with the string '2015/2016'.",
+        "column_name": "Match.`season`"
+    }
+]

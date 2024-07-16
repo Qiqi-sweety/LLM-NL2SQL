@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To count the total number of Story Spotlight cards.",
+        "column_name": "cards.`isStorySpotlight`"
+    },
+    {
+        "reasoning": "To filter the cards that are Story Spotlight cards.",
+        "column_name": "cards.`isStorySpotlight`"
+    },
+    {
+        "reasoning": "To count the number of cards with French language.",
+        "column_name": "cards.`uuid`"
+    },
+    {
+        "reasoning": "To join with the foreign_data table to get the language information.",
+        "column_name": "cards.`uuid`"
+    },
+    {
+        "reasoning": "To filter the cards with French language.",
+        "column_name": "foreign_data.`language`"
+    },
+    {
+        "reasoning": "To count the total number of Story Spotlight cards.",
+        "column_name": "cards.`id`"
+    },
+    {
+        "reasoning": "To count the number of French Story Spotlight cards.",
+        "column_name": "cards.`id`"
+    }
+]

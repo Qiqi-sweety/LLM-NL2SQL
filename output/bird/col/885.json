@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To retrieve the name of the last round of the race.",
+        "column_name": "races.`name`"
+    },
+    {
+        "reasoning": "To retrieve the date of the last round of the race.",
+        "column_name": "races.`date`"
+    },
+    {
+        "reasoning": "To filter the races by the year 1999.",
+        "column_name": "races.`year`"
+    },
+    {
+        "reasoning": "To identify the last round, which requires ordering the results by round and selecting the maximum round.",
+        "column_name": "races.`round`"
+    },
+    {
+        "reasoning": "To join the races table with the seasons table to ensure that the race is from the year 1999.",
+        "column_name": "seasons.`year`"
+    }
+]

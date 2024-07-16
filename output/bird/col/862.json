@@ -1,0 +1,30 @@
+[
+    {
+        "reasoning": "To identify the race in question, we need the year and name of the race.",
+        "column_name": "races.`year`"
+    },
+    {
+        "reasoning": "To filter for the specific race, we need the name of the race.",
+        "column_name": "races.`name`"
+    },
+    {
+        "reasoning": "To link the race to the drivers' results, we need the raceId.",
+        "column_name": "races.`raceId`"
+    },
+    {
+        "reasoning": "To find the drivers who participated in the race, we need to join the results table with the drivers table using driverId.",
+        "column_name": "results.`driverId`"
+    },
+    {
+        "reasoning": "To filter for the drivers who did not finish the race, we need to join the results table with the status table using statusId.",
+        "column_name": "results.`statusId`"
+    },
+    {
+        "reasoning": "To filter for the drivers who did not finish the race, we need the status description.",
+        "column_name": "status.`status`"
+    },
+    {
+        "reasoning": "To count the number of drivers who did not finish the race, we need to count the driverId.",
+        "column_name": "drivers.`driverId`"
+    }
+]

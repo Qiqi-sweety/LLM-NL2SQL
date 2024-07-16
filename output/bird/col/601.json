@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To retrieve the score for the post with ID 395.",
+        "column_name": "posts.`Score`"
+    },
+    {
+        "reasoning": "To identify the link type for the post with ID 395.",
+        "column_name": "postLinks.`LinkTypeId`"
+    }
+]

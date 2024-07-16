@@ -1,0 +1,18 @@
+[
+    {
+        "reasoning": "To identify the specific event by name, we need to reference the `event_name` column from the `event` table.",
+        "column_name": "event.`event_name`"
+    },
+    {
+        "reasoning": "To count the number of members who attended the event, we need to join the `attendance` table with the `event` table using the foreign key `link_to_event`.",
+        "column_name": "attendance.`link_to_event`"
+    },
+    {
+        "reasoning": "To count the number of members, we need to join the `attendance` table with the `member` table using the foreign key `link_to_member`.",
+        "column_name": "attendance.`link_to_member`"
+    },
+    {
+        "reasoning": "To count the number of members, we need to reference the `member_id` column from the `member` table.",
+        "column_name": "member.`member_id`"
+    }
+]

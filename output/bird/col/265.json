@@ -1,0 +1,10 @@
+[
+    {
+        "reasoning": "To retrieve the molecule id for non-carcinogenic molecules, we need to select the `molecule_id` from the `molecule` table.",
+        "column_name": "molecule.`molecule_id`"
+    },
+    {
+        "reasoning": "To identify non-carcinogenic molecules, we need to filter based on the `label` column, which indicates whether a molecule is non-carcinogenic or not.",
+        "column_name": "molecule.`label`"
+    }
+]

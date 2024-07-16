@@ -1,0 +1,22 @@
+[
+    {
+        "reasoning": "To count the number of cards with a converted mana cost of 7.",
+        "column_name": "cards.`convertedManaCost`"
+    },
+    {
+        "reasoning": "To identify the cards that belong to the set 'Coldsnap'.",
+        "column_name": "cards.`name`"
+    },
+    {
+        "reasoning": "To calculate the total number of cards in the set 'Coldsnap'.",
+        "column_name": "sets.`totalSetSize`"
+    },
+    {
+        "reasoning": "To join the cards table with the sets table based on the set name.",
+        "column_name": "cards.`setCode`"
+    },
+    {
+        "reasoning": "To join the cards table with the sets table based on the set name.",
+        "column_name": "sets.`code`"
+    }
+]
