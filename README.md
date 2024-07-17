@@ -116,20 +116,13 @@ Chat-GLM-9B
                      simple               moderate             challenging          total               
 count                925                  465                  144                  1534                
 ======================================    ACCURACY    =====================================
-zero shot            46.05                24.52                18.75                36.96
-few shot             48.43                28.82                18.75                39.70
-llm filter           18.38                8.39                 3.47                 13.95
-
 vanilla              46.49                28.23                18.62                38.33
 gold filter          55.57                32.76                24.83                45.76
-bert filter          34.59                17.63                7.64                 26.92
-    + foreign key    38.05                19.14                15.28                30.18
-    + insert rows    39.03                22.84                17.93                32.14
-roberta filter       
-    + foreign key    43.78                23.44                15.28                34.94
-    + insert rows    46.78                24.13                19.30                37.33
+bert filter          39.03                22.84                17.93                32.14
+roberta filter       46.78                24.13                19.30                37.33
 gte filter           43.78                26.08                18.62                36.05
 qwen filter          35.89                20.04                13.79                29.01
+llm filter           37.95                19.61                15.86                30.31
 ```
 
 ```
@@ -167,6 +160,9 @@ gold filter          65.94                37.65                21.54            
                      simple               moderate             challenging          total               
 count                925                  465                  144                  1534                
 ======================================    ACCURACY    =====================================
+zero shot            46.05                24.52                18.75                36.96
+few shot             48.43                28.82                18.75                39.70
+
 vanilla              46.49                28.23                18.62                38.33
 gold filter          55.57                32.76                24.83                45.76
 bert filter          34.59                17.63                7.64                 26.92
