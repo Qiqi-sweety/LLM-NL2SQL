@@ -4,7 +4,9 @@ import argparse
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 # DEFAULT_LLM = "Qwen/Qwen2-7B-Instruct"
-DEFAULT_LLM = "THUDM/glm-4-9b-chat"
+# DEFAULT_LLM = "THUDM/glm-4-9b-chat"
+DEFAULT_LLM = "ibm-granite/granite-34b-code-instruct"
+# DEFAULT_LLM = "Qwen/Qwen2-72B-Instruct-GPTQ-Int4"
 
 constraint=" When generating SQL, we should always consider constraints: \n \
 【Constraints】\n \
