@@ -46,7 +46,12 @@ def run(args):
             schema = get_table_schema_with_insert_data(db_path)
         
         prompt = get_prompt(schema, query, evidence, args.chat_mode) 
-        response = generate_sql(prompt, tokenizer, model, args.chat_mode)
+        try:
+            response = generate_sql(prompt, tokenizer, model, args.chat_mode)
+        except Exception as e:
+            # "ibm-granite/granite-34b-code-instruct" is not stable
+            traceback.print_exc()
+            response = ';'
         
         print()
         print("On database:", db_name)
