@@ -1,6 +1,0 @@
-[
-    {
-        "reasoning": "To count the number of income records with an amount of 50, we need to reference the `amount` column from the `income` table.",
-        "column_name": "income.`amount`"
-    }
-]

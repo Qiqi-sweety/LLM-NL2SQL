@@ -1,6 +1,0 @@
-[
-    {
-        "reasoning": "To count the number of cards with infinite power, we need to reference the `power` column from the `cards` table to filter out the cards with the value '*' indicating infinite power.",
-        "column_name": "cards.`power`"
-    }
-]

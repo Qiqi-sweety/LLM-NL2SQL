@@ -1,6 +1,0 @@
-[
-    {
-        "reasoning": "To identify carcinogenic molecules, we need to reference the `label` column which indicates whether a molecule is carcinogenic or not.",
-        "column_name": "molecule.`label`"
-    }
-]

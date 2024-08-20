@@ -1,6 +1,0 @@
-[
-    {
-        "reasoning": "To calculate the total cost spent for Parking, we need to sum up the cost column from the expense table where the expense_description is 'Parking'.",
-        "column_name": "expense.`cost`"
-    }
-]

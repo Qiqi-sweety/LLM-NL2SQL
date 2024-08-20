@@ -1,6 +1,0 @@
-[
-    {
-        "reasoning": "To find the type of the card 'Ancestor's Chosen' as originally printed, we need to retrieve the 'originalType' column from the 'cards' table.",
-        "column_name": "cards.`originalType`"
-    }
-]

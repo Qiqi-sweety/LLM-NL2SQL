@@ -1,6 +1,0 @@
-[
-    {
-        "reasoning": "To count the number of drivers without a code, we need to reference the `code` column from the `drivers` table.",
-        "column_name": "drivers.`code`"
-    }
-]

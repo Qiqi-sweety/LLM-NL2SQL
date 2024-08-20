@@ -1,6 +1,0 @@
-[
-    {
-        "reasoning": "To filter tags with post count between 5,000 to 7,000, we need to reference the Count column from the tags table.",
-        "column_name": "tags.`Count`"
-    }
-]

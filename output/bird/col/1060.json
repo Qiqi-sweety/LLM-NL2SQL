@@ -1,6 +1,0 @@
-[
-    {
-        "reasoning": "To count the number of players born after 1990, we need to filter the players based on their birthday.",
-        "column_name": "Player.`birthday`"
-    }
-]
