@@ -1,20 +1,10 @@
 import os
 import json
 import argparse
-from transformers import AutoTokenizer, AutoModelForCausalLM
 
-DEFAULT_LLM = "Qwen/Qwen2-7B-Instruct"
+# DEFAULT_LLM = "Qwen/Qwen2-7B-Instruct"
 # DEFAULT_LLM = "THUDM/glm-4-9b-chat"
-# DEFAULT_LLM = "Qwen/Qwen2-72B-Instruct-GPTQ-Int4"
-
-constraint=" When generating SQL, we should always consider constraints: \n \
-【Constraints】\n \
-- In `SELECT <column>`, just select needed columns in the 【Question】 without any unnecessary column or value \n \
-- In `FROM <table>` or `JOIN <table>`, do not include unnecessary table \n \
-- If use max or min func, `JOIN <table>` FIRST, THEN use `SELECT MAX(<column>)` or `SELECT MIN(<column>)` \n \
-- If [Value examples] of <column> has 'None' or None, use `JOIN <table>` or `WHERE <column> is NOT NULL` is better \n \
-- If use `ORDER BY <column> ASC|DESC`, add `GROUP BY <column>` before to select distinct values \
-"
+DEFAULT_LLM = "Qwen/Qwen2-72B-Instruct"
 
 def seed_everything(seed: int):  
     import random, os
@@ -29,19 +19,6 @@ def seed_everything(seed: int):
     torch.backends.cudnn.deterministic = True
     os.environ['PYTHONHASHSEED'] = str(seed)
 
-def load_tokenizer_and_model(model_name):
-    tokenizer = AutoTokenizer.from_pretrained(
-        model_name,
-        trust_remote_code=True,
-    )
-    model = AutoModelForCausalLM.from_pretrained(
-        model_name,
-        torch_dtype="auto",
-        device_map="auto",
-        trust_remote_code=True,
-    ).eval()
-    return tokenizer, model
-
 def load_dataset(data_path):
     dev_path = os.path.join(data_path, 'dev.json')
     with open(dev_path, 'r', encoding='utf-8') as f:
@@ -54,7 +31,7 @@ def get_output_file(output_path, mode='w'):
 
     return open(output_path, mode, encoding='utf8')
 
-def get_prompt(schema:str, question:str, evidence:str = None, chat_mode:bool = True) -> str:
+def get_prompt(schema:str, question:str, evidence:str = None) -> str:
     # base prompt for the question
     base_prompt = "The databse schema is as follows:\n" + schema + "\nWrite Sql for the following question: " + question
     
@@ -65,57 +42,38 @@ def get_prompt(schema:str, question:str, evidence:str = None, chat_mode:bool = T
         knowledge_prompt = ""
     
     # if chat mode is enabled, add the chat mode prompt
-    if chat_mode:
-        base_ans_prompt = "\n" + "And lastly, only write sql with no comments." 
-    else:
-        base_ans_prompt = "\n" + "Answer : SELECT"
+    base_ans_prompt = "\n" + "And lastly, only write sql with no comments." 
 
     return base_prompt + knowledge_prompt + base_ans_prompt
 
-def get_cot_prompt(schema:str, question:str) -> str:
-    base_prompt = "The databse schema is as follows:\n" + schema + "\n Write Sql for the following question:" + question
-    ans_prompt = "\n" + "Think step by step, but only write sql with no comments." 
-    return base_prompt + constraint + ans_prompt
+def generate_sql(prompt, tokenizer, model):
+    messages = [
+        {"role": "system", "content": "You are a powerful data analysist, reading database schema and write SQL to analyse data."},
+        {"role": "user", "content": prompt}
+    ]
+    text = tokenizer.apply_chat_template(
+        messages,
+        tokenize=False,
+        add_generation_prompt=True
+    )
 
-def generate_sql(prompt, tokenizer, model, chat_mode:bool = True):
-    if chat_mode:
-        messages = [
-            {"role": "system", "content": "You are a powerful data analysist, reading database schema and write SQL to analyse data."},
-            {"role": "user", "content": prompt}
-        ]
-        text = tokenizer.apply_chat_template(
-            messages,
-            tokenize=False,
-            add_generation_prompt=True
-        )
+    model_inputs = tokenizer(
+        [text], 
+        return_tensors="pt",
+        return_attention_mask=True
+    ).to('cuda')
+    generated_ids = model.generate(
+        model_inputs.input_ids,
+        max_new_tokens=512,
+        attention_mask=model_inputs.attention_mask,
+        pad_token_id=tokenizer.eos_token_id
+    )
+    generated_ids = [
+        output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
+    ]
 
-        model_inputs = tokenizer(
-            [text], 
-            return_tensors="pt",
-            return_attention_mask=True
-        ).to('cuda')
-        generated_ids = model.generate(
-            model_inputs.input_ids,
-            max_new_tokens=512,
-            attention_mask=model_inputs.attention_mask,
-            pad_token_id=tokenizer.eos_token_id
-        )
-        generated_ids = [
-            output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
-        ]
+    response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
 
-        response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
-
-    else:
-        model_inputs = tokenizer.encode(prompt, return_tensors="pt").to('cuda')
-        outputs = model.generate(
-            model_inputs,
-            max_new_tokens=512,
-            attention_mask=model_inputs.new_full(model_inputs.shape, 1),
-            pad_token_id=tokenizer.eos_token_id
-        )
-        response = tokenizer.decode(outputs[0][len(model_inputs[0])-1:-1])
-    
     # fetch code block
     if "```" in response:
         sql = response.split("```")[1]
@@ -145,7 +103,5 @@ def get_args():
     args.schema_path = f'output/{args.data_name}/database'
     args.result_path = f'output/{args.data_name}/{args.model_name}/{args.strategy}/dev_pred.sql'
     args.gt_result_path = f'output/{args.data_name}/{args.model_name}/{args.strategy}/dev_pred_gt.sql'
-
-    args.chat_mode = all(keyword not in args.model_name for keyword in ["codes", "Symbol-LLM", "meta-llama"])
 
     return args

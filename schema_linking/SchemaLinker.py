@@ -50,7 +50,7 @@ class SchemaLinker():
     
     @abstractmethod
     def _get_selected_columns(self, query: str, table_name: str, columns_info: List, **kwargs) -> List[str]:
-        raise NotImplementedError
+        raise NotImplementedError()
 
     def _construct_create_table_statement(self, table_name: str, columns_info: List[List[str]], selected_columns: List[str], foreign_keys_map) -> str:
         if len(selected_columns) == 0:
