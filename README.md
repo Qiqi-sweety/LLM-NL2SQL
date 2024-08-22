@@ -47,9 +47,10 @@ python runner.py -m [model_name] -d [dataset_name] -s [schema_linking_strategy]
 | Symbol LLM 13B       | 25.84  | 9.89     | 8.33        | 19.36 |
 | Qwen1.5 14B          | 39.68  | 16.99    | 10.42       | 30.05 |
 | CodeS 15B            | 29.19  | 12.90    | 8.33        | 22.29 |
-| Qwen1.5 32B          | 47.68  | 26.45    | 17.36       | **38.40** |
+| Qwen1.5 32B          | 47.68  | 26.45    | 17.36       | 38.40 |
 | SQL Coder 34B        | 43.78  | 24.73    | 17.36       | 35.53 |
 | Granite code 34B     | 42.92  | 17.46    | 13.10       | 32.40 |
+| Qwen2 72B            | 60.43  | 40.73    | 35.86       | **52.15** |
 
 | **Bird**             | simple | moderate | challenging | total |
 |----------------------|--------|----------|-------------|-------|
@@ -68,3 +69,4 @@ python runner.py -m [model_name] -d [dataset_name] -s [schema_linking_strategy]
 | Qwen 32B             | 49.26  | 26.33    | 18.57       | 39.43 |
 | SQL Coder 34B        | 46.50  | 28.34    | 17.86       | 38.30 |
 | Granite code 34B     | 43.91  | 18.61    | 12.33       | 33.27 |
+| Qwen2 72B            | 62.63  | 43.47    | 33.84       | 54.11 |

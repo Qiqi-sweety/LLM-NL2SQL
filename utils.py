@@ -46,48 +46,6 @@ def get_prompt(schema:str, question:str, evidence:str = None) -> str:
 
     return base_prompt + knowledge_prompt + base_ans_prompt
 
-def generate_sql(prompt, tokenizer, model):
-    messages = [
-        {"role": "system", "content": "You are a powerful data analysist, reading database schema and write SQL to analyse data."},
-        {"role": "user", "content": prompt}
-    ]
-    text = tokenizer.apply_chat_template(
-        messages,
-        tokenize=False,
-        add_generation_prompt=True
-    )
-
-    model_inputs = tokenizer(
-        [text], 
-        return_tensors="pt",
-        return_attention_mask=True
-    ).to('cuda')
-    generated_ids = model.generate(
-        model_inputs.input_ids,
-        max_new_tokens=512,
-        attention_mask=model_inputs.attention_mask,
-        pad_token_id=tokenizer.eos_token_id
-    )
-    generated_ids = [
-        output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
-    ]
-
-    response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
-
-    # fetch code block
-    if "```" in response:
-        sql = response.split("```")[1]
-    else:
-        sql = response
-
-    if 'sql\n' in sql[:4]:
-        sql = sql[4:]
-
-    if sql == "":
-        sql = ";"
-
-    return sql
-
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('-m', '--model_name', type=str, default=DEFAULT_LLM)
