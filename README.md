@@ -70,3 +70,22 @@ python runner.py -m [model_name] -d [dataset_name] -s [schema_linking_strategy]
 | SQL Coder 34B        | 46.50  | 28.34    | 17.86       | 38.30 |
 | Granite code 34B     | 43.91  | 18.61    | 12.33       | 33.27 |
 | Qwen2 72B            | 62.63  | 43.47    | 33.84       | 54.11 |
+
+### The Impact of Schema Linking on NL2SQL
+
+The performance of LLMs on NL2SQL is highly sensitive to the schema linking strategy. We provide the performance of different schema linking strategies on the Bird dataset with Qwen2-72B-Instruct model. The performance is calculated by the accuracy of the SQL query.
+
+| **Bird**                 | simple | moderate | challenging | total |
+|--------------------------|--------|----------|-------------|-------|
+| count                    | 925    | 465      | 144         | 1534  |
+| **ACCURACY**             |        |          |             |       |
+| Vanilla Linker           | 60.43  | 40.73    | 35.86       | 52.15 |
+| Gold Linker              | 65.84  | 45.69    | 40.00       | 57.30 |
+
+
+| **Bird**             | simple | moderate | challenging | total |
+|----------------------|--------|----------|-------------|-------|
+| count                | 925    | 465      | 144         | 1534  |
+| **VES**              |        |          |             |       |
+| Vanilla Linker       | 62.63  | 43.47    | 33.84       | 54.11 |
+| Gold Linker          | 69.91  | 51.07    | 43.59       | 61.73 |
