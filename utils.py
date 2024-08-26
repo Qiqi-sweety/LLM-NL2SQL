@@ -41,10 +41,24 @@ def get_prompt(schema:str, question:str, evidence:str = None) -> str:
     else:
         knowledge_prompt = ""
     
-    # if chat mode is enabled, add the chat mode prompt
     base_ans_prompt = "\n" + "And lastly, only write sql with no comments." 
 
     return base_prompt + knowledge_prompt + base_ans_prompt
+
+def get_cot_prompt(schema:str, question:str, evidence:str = None) -> str:
+    # base prompt for the question
+    base_prompt = "The databse schema is as follows:\n" + schema + "\nWrite Sql for the following question: " + question
+    
+    # if extra knowledge is provided, add it to the prompt
+    if evidence is not None:
+        knowledge_prompt = "\n " + "Consider the extra knowledge, it is very useful to help you understand the question and the corresponding sql: " + evidence
+    else:
+        knowledge_prompt = ""
+    
+    base_ans_prompt = "\n" + "Let us consider the problem step by step." 
+
+    return base_prompt + knowledge_prompt + base_ans_prompt
+
 
 def get_args():
     parser = argparse.ArgumentParser()
