@@ -10,7 +10,6 @@ from scripts.vanilla import get_table_schema_with_insert_data
 from utils import (
     get_args,
     get_prompt,
-    get_cot_prompt,
     load_dataset,
     seed_everything,
     get_output_file,
@@ -40,8 +39,7 @@ def run(args):
             # few shot strategy
             schema = get_table_schema_with_insert_data(db_path)
         
-        # prompt = get_prompt(schema, query, evidence) 
-        prompt = get_cot_prompt(schema, question, evidence)
+        prompt = get_prompt(schema, query, evidence) 
         response = model.generate_sql(prompt)
         response = response.replace('\n',' ')
         
@@ -61,5 +59,8 @@ def run(args):
     evaluation(args)
 
 if __name__ == '__main__':
+    import dotenv
+    dotenv.load_dotenv()
+    
     args = get_args()
     run(args)
