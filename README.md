@@ -79,7 +79,7 @@ The performance of LLMs on NL2SQL is highly sensitive to the schema linking stra
 |--------------------------|--------|----------|-------------|-------|
 | count                    | 925    | 465      | 144         | 1534  |
 | **ACCURACY**             |        |          |             |       |
-| Vanilla                  | 60.43  | 40.73    | 35.86       | 52.15 |
+| Vanilla                  | 59.89  | 40.95    | 38.62       | 52.15 |
 | Gold Linker              | 65.84  | 46.12    | 40.69       | 57.50 |
 
 
@@ -87,5 +87,5 @@ The performance of LLMs on NL2SQL is highly sensitive to the schema linking stra
 |----------------------|--------|----------|-------------|-------|
 | count                | 925    | 465      | 144         | 1534  |
 | **VES**              |        |          |             |       |
-| Vanilla              | 62.63  | 43.47    | 33.84       | 54.11 |
-| Gold Linker          | 69.91  | 51.07    | 43.59       | 61.73 |
+| Vanilla              | 64.67  | 45.59    | 37.15       | 56.30 |
+| Gold Linker          | 70.40  | 51.30    | 42.28       | 61.96 |
